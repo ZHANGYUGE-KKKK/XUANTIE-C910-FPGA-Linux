@@ -1,0 +1,23 @@
+%rename link                minilibc_link
+%rename link_gcc_c_sequence                minilibc_link_gcc_c_sequence
+%rename cpp		minilibc_cpp
+
+*cpp:
+-isystem =/include/libc-minilibc -isystem=/include/minilibc %(minilibc_cpp)
+
+*minilibc_libc:
+-lc_minilibc
+
+*minilibc_libgloss:
+%{specs=nosys.specs:-lnosys} %{!specs=nosys.specs:-lgloss_minilibc}
+
+*link_gcc_c_sequence:
+%(minilibc_link_gcc_c_sequence) --start-group %G %(minilibc_libc) %(minilibc_libgloss) --end-group
+
+*link:
+%(minilibc_link) %:replace-outfile(-lc -lc_minilibc) %:replace-outfile(-lg -lg_minilibc) %:replace-outfile(-lm -lm_minilibc)
+
+*lib:
+%{!shared:%{g*:-lg_minilibc} %{!p:%{!pg:-lc_minilibc}}%{p:-lc_p}%{pg:-lc_p}}
+
+# ??? Maybe put --gc-sections option in here?

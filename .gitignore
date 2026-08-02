@@ -1,0 +1,23 @@
+# Vivado 自动生成目录
+*.cache/
+*.gen/
+*.hw/
+*.ip_user_files/
+*.runs/
+*.sim/
+.Xil/
+
+# Vivado 日志和运行产物
+*.jou
+*.log
+*.str
+*.wdb
+*.wcfg
+*.pb
+
+# 临时文件
+*.tmp
+*.bak
+*.swp
+Thumbs.db
+desktop.ini

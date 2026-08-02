@@ -1,0 +1,44 @@
+
+./program/BRAM/build/bram.elf:     file format elf64-littleriscv
+
+
+Disassembly of section .text:
+
+0000000000010000 <_start>:
+   10000:	00010117          	auipc	sp,0x10
+   10004:	00010113          	mv	sp,sp
+   10008:	00000297          	auipc	t0,0x0
+   1000c:	07428293          	addi	t0,t0,116 # 1007c <__bss_end>
+   10010:	00000317          	auipc	t1,0x0
+   10014:	06c30313          	addi	t1,t1,108 # 1007c <__bss_end>
+   10018:	0062f863          	bgeu	t0,t1,10028 <_start+0x28>
+   1001c:	00028023          	sb	zero,0(t0)
+   10020:	00128293          	addi	t0,t0,1
+   10024:	ff5ff06f          	j	10018 <_start+0x18>
+   10028:	00c000ef          	jal	10034 <main>
+   1002c:	10500073          	wfi
+   10030:	ffdff06f          	j	1002c <_start+0x2c>
+
+0000000000010034 <main>:
+   10034:	00000797          	auipc	a5,0x0
+   10038:	03c7b783          	ld	a5,60(a5) # 10070 <main+0x3c>
+   1003c:	1141                	addi	sp,sp,-16 # 1fff0 <__bss_end+0xff74>
+   1003e:	400006b7          	lui	a3,0x40000
+   10042:	e03e                	sd	a5,0(sp)
+   10044:	00000797          	auipc	a5,0x0
+   10048:	0347a783          	lw	a5,52(a5) # 10078 <main+0x44>
+   1004c:	40000637          	lui	a2,0x40000
+   10050:	870a                	mv	a4,sp
+   10052:	c43e                	sw	a5,8(sp)
+   10054:	06a1                	addi	a3,a3,8 # 40000008 <__stack_top+0x3ffe0008>
+   10056:	0611                	addi	a2,a2,4 # 40000004 <__stack_top+0x3ffe0004>
+   10058:	00074783          	lbu	a5,0(a4)
+   1005c:	e781                	bnez	a5,10064 <main+0x30>
+   1005e:	10500073          	wfi
+   10062:	bff5                	j	1005e <main+0x2a>
+   10064:	428c                	lw	a1,0(a3)
+   10066:	89a1                	andi	a1,a1,8
+   10068:	fdf5                	bnez	a1,10064 <main+0x30>
+   1006a:	c21c                	sw	a5,0(a2)
+   1006c:	0705                	addi	a4,a4,1
+   1006e:	b7ed                	j	10058 <main+0x24>
