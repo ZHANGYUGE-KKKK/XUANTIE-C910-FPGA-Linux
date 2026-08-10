@@ -4644,24 +4644,24 @@
         <xilinx:tag xilinx:name="ui.data.coregen.dd@5c29d225_ARCHIVE_LOCATION">d:/xilinx_fpga/c910_uart</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@22876a02_ARCHIVE_LOCATION">d:/xilinx_fpga/c910_uart</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@2e40bb18_ARCHIVE_LOCATION">d:/xilinx_fpga/c910_uart</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@621f373_ARCHIVE_LOCATION">d:/Xilinx_FPGA/C910_bare/MY_IP/c910_core_ip_migration</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@5cc88077_ARCHIVE_LOCATION">d:/Xilinx_FPGA/C910_bare/MY_IP/c910_core_ip_migration</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@189fa258_ARCHIVE_LOCATION">d:/Xilinx_FPGA/C910_bare/MY_IP/c910_core_ip_migration</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@75c02c30_ARCHIVE_LOCATION">d:/Xilinx_FPGA/C910_bare/MY_IP/c910_core_ip_migration</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@256d6964_ARCHIVE_LOCATION">d:/Xilinx_FPGA/C910_bare/MY_IP/c910_core_ip_migration</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@2a87b8ad_ARCHIVE_LOCATION">d:/Xilinx_FPGA/C910_bare/MY_IP/c910_core_ip_migration</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@22a7f35c_ARCHIVE_LOCATION">d:/Xilinx_FPGA/C910_bare/MY_IP/c910_core_ip_migration</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@27b01dcc_ARCHIVE_LOCATION">d:/Xilinx_FPGA/C910_bare/MY_IP/c910_core_ip_migration</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@564e635b_ARCHIVE_LOCATION">d:/Xilinx_FPGA/C910_bare/MY_IP/c910_core_ip_migration</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@7e8bcf0c_ARCHIVE_LOCATION">d:/Xilinx_FPGA/C910_bare/MY_IP/c910_core_ip_migration</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@4b720dd4_ARCHIVE_LOCATION">d:/Xilinx_FPGA/C910_bare/MY_IP/c910_core_ip_migration</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@fe7b3b8_ARCHIVE_LOCATION">d:/Xilinx_FPGA/C910_bare/MY_IP/c910_core_ip_migration</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@7c725c3e_ARCHIVE_LOCATION">d:/Xilinx_FPGA/C910_bare/MY_IP/c910_core_ip_migration</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@367378af_ARCHIVE_LOCATION">d:/Xilinx_FPGA/C910_bare/MY_IP/c910_core_ip_migration</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@66480061_ARCHIVE_LOCATION">d:/Xilinx_FPGA/C910_bare/MY_IP/c910_core_ip_migration</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@3c05e5cc_ARCHIVE_LOCATION">d:/Xilinx_FPGA/C910_bare/MY_IP/c910_core_ip_migration</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@1a2af75e_ARCHIVE_LOCATION">d:/Xilinx_FPGA/C910_bare/MY_IP/c910_core_ip_migration</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@35d4b0e9_ARCHIVE_LOCATION">d:/Xilinx_FPGA/C910_bare/MY_IP/c910_core_ip_migration</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@621f373_ARCHIVE_LOCATION">D:/Xilinx_FPGA/C910_SOC/VIVADO/MY_IP/c910_core_ip_migration</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5cc88077_ARCHIVE_LOCATION">D:/Xilinx_FPGA/C910_SOC/VIVADO/MY_IP/c910_core_ip_migration</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@189fa258_ARCHIVE_LOCATION">D:/Xilinx_FPGA/C910_SOC/VIVADO/MY_IP/c910_core_ip_migration</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@75c02c30_ARCHIVE_LOCATION">D:/Xilinx_FPGA/C910_SOC/VIVADO/MY_IP/c910_core_ip_migration</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@256d6964_ARCHIVE_LOCATION">D:/Xilinx_FPGA/C910_SOC/VIVADO/MY_IP/c910_core_ip_migration</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2a87b8ad_ARCHIVE_LOCATION">D:/Xilinx_FPGA/C910_SOC/VIVADO/MY_IP/c910_core_ip_migration</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@22a7f35c_ARCHIVE_LOCATION">D:/Xilinx_FPGA/C910_SOC/VIVADO/MY_IP/c910_core_ip_migration</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@27b01dcc_ARCHIVE_LOCATION">D:/Xilinx_FPGA/C910_SOC/VIVADO/MY_IP/c910_core_ip_migration</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@564e635b_ARCHIVE_LOCATION">D:/Xilinx_FPGA/C910_SOC/VIVADO/MY_IP/c910_core_ip_migration</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7e8bcf0c_ARCHIVE_LOCATION">D:/Xilinx_FPGA/C910_SOC/VIVADO/MY_IP/c910_core_ip_migration</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4b720dd4_ARCHIVE_LOCATION">D:/Xilinx_FPGA/C910_SOC/VIVADO/MY_IP/c910_core_ip_migration</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@fe7b3b8_ARCHIVE_LOCATION">D:/Xilinx_FPGA/C910_SOC/VIVADO/MY_IP/c910_core_ip_migration</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7c725c3e_ARCHIVE_LOCATION">D:/Xilinx_FPGA/C910_SOC/VIVADO/MY_IP/c910_core_ip_migration</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@367378af_ARCHIVE_LOCATION">D:/Xilinx_FPGA/C910_SOC/VIVADO/MY_IP/c910_core_ip_migration</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@66480061_ARCHIVE_LOCATION">D:/Xilinx_FPGA/C910_SOC/VIVADO/MY_IP/c910_core_ip_migration</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3c05e5cc_ARCHIVE_LOCATION">D:/Xilinx_FPGA/C910_SOC/VIVADO/MY_IP/c910_core_ip_migration</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1a2af75e_ARCHIVE_LOCATION">D:/Xilinx_FPGA/C910_SOC/VIVADO/MY_IP/c910_core_ip_migration</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@35d4b0e9_ARCHIVE_LOCATION">D:/Xilinx_FPGA/C910_SOC/VIVADO/MY_IP/c910_core_ip_migration</xilinx:tag>
       </xilinx:tags>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>

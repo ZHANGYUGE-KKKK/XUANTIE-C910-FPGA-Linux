@@ -66,13 +66,13 @@ preplace netloc val_1_dout 1 2 1 NJ 690
 preplace netloc clk_wiz_locked 1 2 1 540 520n
 preplace netloc rtsn2rst1_Res 1 4 2 1200 660 1600J
 preplace netloc smartconnect_0_M01_AXI 1 4 1 1190 340n
-preplace netloc smartconnect_M03_AXI 1 4 1 1230 520n
-preplace netloc smartconnect_0_M00_AXI 1 4 1 1170 120n
-preplace netloc smartconnect_0_M02_AXI 1 4 2 NJ 710 1610
-preplace netloc C910_core_0_m_axi 1 3 4 900 790 1240J 700 NJ 700 1990
-preplace netloc ddr4_0_C0_DDR4 1 6 2 NJ 520 NJ
-preplace netloc CLK_IN_D_0_1 1 0 1 NJ 570
 preplace netloc axi_clock_converter_1_M_AXI 1 5 1 1580 540n
+preplace netloc CLK_IN_D_0_1 1 0 1 NJ 570
+preplace netloc ddr4_0_C0_DDR4 1 6 2 NJ 520 NJ
+preplace netloc C910_core_0_m_axi 1 3 4 900 790 1240J 700 NJ 700 1990
+preplace netloc smartconnect_0_M00_AXI 1 4 1 1170 120n
+preplace netloc smartconnect_M03_AXI 1 4 1 1230 520n
+preplace netloc smartconnect_0_M02_AXI 1 4 2 NJ 710 1610
 levelinfo -pg 1 0 170 430 720 1040 1420 1810 2100 2220
 pagesize -pg 1 -db -bbox -sgen -120 0 2370 1100
 "

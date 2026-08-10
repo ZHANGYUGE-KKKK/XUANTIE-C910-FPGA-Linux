@@ -60,7 +60,7 @@ int main(void)
         1ULL, 2ULL, 3ULL, 4ULL, 5ULL,
         6ULL, 7ULL, 8ULL, 9ULL, 10ULL
     };
-    static const char write_text[] = "helloworld!!!!!!!";
+    static const char write_text[] = "helloworld from JTAG";
     volatile unsigned long long *ddr_words = (volatile unsigned long long *)DDR_BASE;
     volatile char *ddr_text = (volatile char *)(DDR_BASE + DDR_TEXT_OFF);
     unsigned int fail = 0U;

@@ -143,23 +143,21 @@ set_property PACKAGE_PIN BF25 [get_ports rx]
 set_property PACKAGE_PIN BE25 [get_ports tx]
 set_property IOSTANDARD LVCMOS18 [get_ports {rx tx}]
 
-## C910 JTAG 调试口，接到 J18 IO 扩展口右侧奇数脚，手册第 45 页
-## J18-1 EX_IO1_5P=BC8  -> jtag_tdi
-## J18-3 EX_IO1_4P=BD9  -> jtag_tms
-## J18-5 EX_IO1_3P=BA7  -> jtag_tclk
-## J18-7 EX_IO1_2P=BC12 -> jtag_tdo
-## J18-9 EX_IO1_1P=BB11 -> jtag_trstn
-set_property PACKAGE_PIN BC8  [get_ports jtag_tdi]
-set_property PACKAGE_PIN BD9  [get_ports jtag_tms]
-set_property PACKAGE_PIN BA7  [get_ports jtag_tclk]
-set_property PACKAGE_PIN BC12 [get_ports jtag_tdo]
-set_property PACKAGE_PIN BB11 [get_ports jtag_trstn]
+## C910 JTAG 调试口，接到 FMC1+ 子卡 J20 插针组
+## J20-17 FMC管脚K17=HA_N_17 -> FMC1_HA17_CC_N=BA23 -> jtag_tclk
+## J20-18 FMC管脚K16=HA_P_17 -> FMC1_HA17_CC_P=AY23 -> jtag_tms
+## J20-19 FMC管脚J19=HA_N_18 -> FMC1_HA18_N=AP23 -> jtag_tdi
+## J20-20 FMC管脚J18=HA_P_18 -> FMC1_HA18_P=AN23 -> jtag_tdo
+## J20-21 FMC管脚H20=LA_N_15 -> FMC1_LA15_N=AM15 -> jtag_trstn
+set_property PACKAGE_PIN AP23 [get_ports jtag_tdi]
+set_property PACKAGE_PIN AY23 [get_ports jtag_tms]
+set_property PACKAGE_PIN BA23 [get_ports jtag_tclk]
+set_property PACKAGE_PIN AN23 [get_ports jtag_tdo]
+set_property PACKAGE_PIN AM15 [get_ports jtag_trstn]
 set_property IOSTANDARD LVCMOS18 [get_ports {jtag_tclk jtag_tms jtag_tdi jtag_tdo jtag_trstn}]
 set_property PULLDOWN true [get_ports jtag_tclk]
 set_property PULLUP true [get_ports {jtag_tms jtag_tdi jtag_trstn}]
 set_property CLOCK_BUFFER_TYPE NONE [get_ports jtag_tclk]
 create_clock -period 100.000 -name C910_JTAG_TCK [get_ports jtag_tclk]
-# J18 扩展口的 TCK 不是理想全局时钟入口；低速 JTAG 调试时接受该专用布线降级
-set_property CLOCK_DEDICATED_ROUTE FALSE [get_nets jtag_tclk_IBUF_inst/O]
 set_clock_groups -asynchronous -group [get_clocks C910_JTAG_TCK] -group [get_clocks -include_generated_clocks C1_DDR4_CLKREF_200M]
 set_false_path -from [get_ports jtag_trstn]

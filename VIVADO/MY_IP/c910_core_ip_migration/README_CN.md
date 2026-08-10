@@ -7,7 +7,7 @@
 在目标 Vivado 工程 Tcl Console 中执行：
 
 ```tcl
-set_property ip_repo_paths {D:/Xilinx_FPGA/C910_bare/MY_IP/c910_core_ip_migration} [current_project]
+set_property ip_repo_paths {D:/Xilinx_FPGA/C910_SOC/VIVADO/MY_IP/c910_core_ip_migration} [current_project]
 update_ip_catalog
 ```
 

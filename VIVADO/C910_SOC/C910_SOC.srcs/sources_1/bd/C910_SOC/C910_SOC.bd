@@ -3,7 +3,7 @@
     "design_info": {
       "boundary_crc": "0x20956DC4C870D90E",
       "device": "xcvu13p-fhgb2104-2-i",
-      "gen_directory": "../../../../C910_bare.gen/sources_1/bd/C910_SOC",
+      "gen_directory": "../../../../C910_SOC.gen/sources_1/bd/C910_SOC",
       "name": "C910_SOC",
       "rev_ctrl_bd_flag": "RevCtrlBdOff",
       "synth_flow_mode": "Hierarchical",

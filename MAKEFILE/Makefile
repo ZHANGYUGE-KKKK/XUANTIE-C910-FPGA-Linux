@@ -17,8 +17,8 @@ BOOTROM_BIN := $(BOOTROM_BUILD_DIR)/bootrom.bin
 BOOTROM_DUMP := $(BOOTROM_BUILD_DIR)/bootrom.dump
 BOOTROM_COE := $(BOOTROM_BUILD_DIR)/bootrom.coe
 BOOTROM_MIF_TARGETS := \
-	$(PROJECT_ROOT)/C910_bare.gen/sources_1/bd/C910_SOC/ip/C910_SOC_blk_mem_gen_0_0/C910_SOC_blk_mem_gen_0_0.mif \
-	$(PROJECT_ROOT)/C910_bare.ip_user_files/mem_init_files/C910_SOC_blk_mem_gen_0_0.mif
+	$(PROJECT_ROOT)/VIVADO/C910_SOC/C910_SOC.gen/sources_1/bd/C910_SOC/ip/C910_SOC_blk_mem_gen_0_0/C910_SOC_blk_mem_gen_0_0.mif \
+	$(PROJECT_ROOT)/VIVADO/C910_SOC/C910_SOC.ip_user_files/mem_init_files/C910_SOC_blk_mem_gen_0_0.mif
 COEFILES_DIR := $(MAKEFILE_DIR)/COEFILES
 COEFILES_BOOTROM_BUILD_DIR := $(COEFILES_DIR)/build_bootrom
 
@@ -32,8 +32,8 @@ BRAM_BIN := $(BRAM_BUILD_DIR)/bram.bin
 BRAM_DUMP := $(BRAM_BUILD_DIR)/bram.dump
 BRAM_COE := $(BRAM_BUILD_DIR)/bram.coe
 BRAM_MIF_TARGETS := \
-	$(PROJECT_ROOT)/C910_bare.gen/sources_1/bd/C910_SOC/ip/C910_SOC_blk_mem_gen_0_1/C910_SOC_blk_mem_gen_0_1.mif \
-	$(PROJECT_ROOT)/C910_bare.ip_user_files/mem_init_files/C910_SOC_blk_mem_gen_0_1.mif
+	$(PROJECT_ROOT)/VIVADO/C910_SOC/C910_SOC.gen/sources_1/bd/C910_SOC/ip/C910_SOC_blk_mem_gen_0_1/C910_SOC_blk_mem_gen_0_1.mif \
+	$(PROJECT_ROOT)/VIVADO/C910_SOC/C910_SOC.ip_user_files/mem_init_files/C910_SOC_blk_mem_gen_0_1.mif
 COEFILES_BRAM_BUILD_DIR := $(COEFILES_DIR)/build_ram
 
 # 玄铁 RISC-V 裸机交叉工具链。
