@@ -97,7 +97,7 @@ Disassembly of section .text:
    100de:	1706                	slli	a4,a4,0x21
    100e0:	86a6                	mv	a3,s1
    100e2:	08078793          	addi	a5,a5,128
-   100e6:	09270713          	addi	a4,a4,146
+   100e6:	09470713          	addi	a4,a4,148
    100ea:	0006c603          	lbu	a2,0(a3)
    100ee:	0785                	addi	a5,a5,1
    100f0:	0685                	addi	a3,a3,1
@@ -134,7 +134,7 @@ Disassembly of section .text:
    10152:	1986                	slli	s3,s3,0x21
    10154:	ef7ff0ef          	jal	1004a <uart_puts>
    10158:	08040413          	addi	s0,s0,128
-   1015c:	09198993          	addi	s3,s3,145
+   1015c:	09398993          	addi	s3,s3,147
    10160:	00044503          	lbu	a0,0(s0)
    10164:	0004c783          	lbu	a5,0(s1)
    10168:	0405                	addi	s0,s0,1

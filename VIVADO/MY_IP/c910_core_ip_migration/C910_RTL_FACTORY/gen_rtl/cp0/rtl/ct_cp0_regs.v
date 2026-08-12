@@ -3645,7 +3645,7 @@ end
 //------------------------------------------------
 //                    CORENUM
 //------------------------------------------------
-    assign cpuid_index5_core_num_1 = 1'b1;
+    assign cpuid_index5_core_num_1 = 1'b0;
     assign cpuid_index5_core_num_2 = 1'b0;
     assign cpuid_index5_core_num_3 = 1'b0;
     assign cpuid_index5_value[2:0] = {2'b0, cpuid_index5_core_num_1}

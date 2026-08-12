@@ -138,6 +138,11 @@ set_property IOSTANDARD LVCMOS12 [get_ports sys_rstn]
 set_property PULLUP true [get_ports sys_rstn]
 set_false_path -from [get_ports sys_rstn]
 
+## 临时 FPGA 运行指示信号，FMC1+ -> BYSS-FMCH-BO J18-2
+## J18-2 FMC管脚D14=LA_P_9 -> FMC1_LA09_P=BD15
+set_property PACKAGE_PIN BD15 [get_ports fpga_alive_led]
+set_property IOSTANDARD LVCMOS18 [get_ports fpga_alive_led]
+
 ## CP2102GM USB-UART，手册第 44 页
 set_property PACKAGE_PIN BF25 [get_ports rx]
 set_property PACKAGE_PIN BE25 [get_ports tx]
@@ -148,12 +153,12 @@ set_property IOSTANDARD LVCMOS18 [get_ports {rx tx}]
 ## J20-18 FMC管脚K16=HA_P_17 -> FMC1_HA17_CC_P=AY23 -> jtag_tms
 ## J20-19 FMC管脚J19=HA_N_18 -> FMC1_HA18_N=AP23 -> jtag_tdi
 ## J20-20 FMC管脚J18=HA_P_18 -> FMC1_HA18_P=AN23 -> jtag_tdo
-## J20-21 FMC管脚H20=LA_N_15 -> FMC1_LA15_N=AM15 -> jtag_trstn
+## J20-21 FMC管脚H20=LA_N_15 -> FMC1_LA15_N=AL15 -> jtag_trstn
 set_property PACKAGE_PIN AP23 [get_ports jtag_tdi]
 set_property PACKAGE_PIN AY23 [get_ports jtag_tms]
 set_property PACKAGE_PIN BA23 [get_ports jtag_tclk]
 set_property PACKAGE_PIN AN23 [get_ports jtag_tdo]
-set_property PACKAGE_PIN AM15 [get_ports jtag_trstn]
+set_property PACKAGE_PIN AL15 [get_ports jtag_trstn]
 set_property IOSTANDARD LVCMOS18 [get_ports {jtag_tclk jtag_tms jtag_tdi jtag_tdo jtag_trstn}]
 set_property PULLDOWN true [get_ports jtag_tclk]
 set_property PULLUP true [get_ports {jtag_tms jtag_tdi jtag_trstn}]

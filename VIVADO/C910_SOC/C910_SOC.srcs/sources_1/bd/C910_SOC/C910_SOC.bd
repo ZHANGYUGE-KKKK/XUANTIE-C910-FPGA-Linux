@@ -661,6 +661,12 @@
       }
     },
     "interface_nets": {
+      "ddr4_0_C0_DDR4": {
+        "interface_ports": [
+          "C0_DDR4",
+          "ddr4/C0_DDR4"
+        ]
+      },
       "smartconnect_0_M01_AXI": {
         "interface_ports": [
           "bram_ctrl/S_AXI",
@@ -679,16 +685,10 @@
           "util_ds_buf_0/CLK_IN_D"
         ]
       },
-      "ddr4_0_C0_DDR4": {
+      "smartconnect_0_M02_AXI": {
         "interface_ports": [
-          "C0_DDR4",
-          "ddr4/C0_DDR4"
-        ]
-      },
-      "C910_core_0_m_axi": {
-        "interface_ports": [
-          "C910_core/m_axi",
-          "smartconnect/S00_AXI"
+          "smartconnect/M02_AXI",
+          "axi_uartlite/S_AXI"
         ]
       },
       "smartconnect_0_M00_AXI": {
@@ -697,16 +697,16 @@
           "smartconnect/M00_AXI"
         ]
       },
+      "C910_core_0_m_axi": {
+        "interface_ports": [
+          "C910_core/m_axi",
+          "smartconnect/S00_AXI"
+        ]
+      },
       "smartconnect_M03_AXI": {
         "interface_ports": [
           "smartconnect/M03_AXI",
           "axi_clock_converter_1/S_AXI"
-        ]
-      },
-      "smartconnect_0_M02_AXI": {
-        "interface_ports": [
-          "smartconnect/M02_AXI",
-          "axi_uartlite/S_AXI"
         ]
       }
     },

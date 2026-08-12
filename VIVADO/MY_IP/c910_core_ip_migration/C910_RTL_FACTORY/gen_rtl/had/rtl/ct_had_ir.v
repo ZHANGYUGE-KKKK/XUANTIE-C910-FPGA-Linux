@@ -203,9 +203,9 @@ assign rdata_2[63:0]     = 64'b0;
 assign rdata_3[63:0]     = 64'b0;
 
 assign core0_dbg_disable = 1'b0;
-assign core1_dbg_disable = 1'b0;
-assign core2_dbg_disable = 1'b0;
-assign core3_dbg_disable = 1'b0;
+assign core1_dbg_disable = 1'b1;
+assign core2_dbg_disable = 1'b1;
+assign core3_dbg_disable = 1'b1;
 
 assign ir_core0_sel   = (hacr_reg[1:0] == 2'b00) && !core0_dbg_disable;
 assign ir_core1_sel   = (hacr_reg[1:0] == 2'b01) && !core1_dbg_disable;
