@@ -1,5 +1,5 @@
 
-./DDR_JTAG/BRAM/build/bram.elf:     file format elf64-littleriscv
+MAKEFILE\DDR_JTAG\BRAM\build\bram.elf:     file format elf64-littleriscv
 
 
 Disassembly of section .text:
@@ -8,179 +8,46 @@ Disassembly of section .text:
    10000:	00010117          	auipc	sp,0x10
    10004:	00010113          	mv	sp,sp
    10008:	00000297          	auipc	t0,0x0
-   1000c:	2f028293          	addi	t0,t0,752 # 102f8 <__bss_end>
+   1000c:	08028293          	addi	t0,t0,128 # 10088 <__bss_end>
    10010:	00000317          	auipc	t1,0x0
-   10014:	2e830313          	addi	t1,t1,744 # 102f8 <__bss_end>
+   10014:	07830313          	addi	t1,t1,120 # 10088 <__bss_end>
    10018:	0062f863          	bgeu	t0,t1,10028 <_start+0x28>
    1001c:	00028023          	sb	zero,0(t0)
    10020:	00128293          	addi	t0,t0,1
    10024:	ff5ff06f          	j	10018 <_start+0x18>
-   10028:	040000ef          	jal	10068 <main>
+   10028:	00c000ef          	jal	10034 <main>
    1002c:	10500073          	wfi
    10030:	ffdff06f          	j	1002c <_start+0x2c>
 
-0000000000010034 <uart_putc>:
-   10034:	40000737          	lui	a4,0x40000
-   10038:	0721                	addi	a4,a4,8 # 40000008 <__stack_top+0x3ffe0008>
-   1003a:	431c                	lw	a5,0(a4)
-   1003c:	8ba1                	andi	a5,a5,8
-   1003e:	fff5                	bnez	a5,1003a <uart_putc+0x6>
-   10040:	2501                	sext.w	a0,a0
-   10042:	400007b7          	lui	a5,0x40000
-   10046:	c3c8                	sw	a0,4(a5)
-   10048:	8082                	ret
-
-000000000001004a <uart_puts>:
-   1004a:	1141                	addi	sp,sp,-16 # 1fff0 <__bss_end+0xfcf8>
-   1004c:	e022                	sd	s0,0(sp)
-   1004e:	e406                	sd	ra,8(sp)
-   10050:	842a                	mv	s0,a0
-   10052:	00044503          	lbu	a0,0(s0)
-   10056:	e509                	bnez	a0,10060 <uart_puts+0x16>
-   10058:	60a2                	ld	ra,8(sp)
-   1005a:	6402                	ld	s0,0(sp)
-   1005c:	0141                	addi	sp,sp,16
-   1005e:	8082                	ret
-   10060:	fd5ff0ef          	jal	10034 <uart_putc>
-   10064:	0405                	addi	s0,s0,1
-   10066:	b7f5                	j	10052 <uart_puts+0x8>
-
-0000000000010068 <main>:
-   10068:	7159                	addi	sp,sp,-112
-   1006a:	00000517          	auipc	a0,0x0
-   1006e:	1ae50513          	addi	a0,a0,430 # 10218 <main+0x1b0>
-   10072:	f486                	sd	ra,104(sp)
-   10074:	f0a2                	sd	s0,96(sp)
-   10076:	eca6                	sd	s1,88(sp)
-   10078:	e8ca                	sd	s2,80(sp)
-   1007a:	e4ce                	sd	s3,72(sp)
-   1007c:	e0d2                	sd	s4,64(sp)
-   1007e:	fc56                	sd	s5,56(sp)
-   10080:	f85a                	sd	s6,48(sp)
-   10082:	f45e                	sd	s7,40(sp)
-   10084:	fc7ff0ef          	jal	1004a <uart_puts>
-   10088:	00000517          	auipc	a0,0x0
-   1008c:	1b050513          	addi	a0,a0,432 # 10238 <main+0x1d0>
-   10090:	fbbff0ef          	jal	1004a <uart_puts>
-   10094:	000f47b7          	lui	a5,0xf4
-   10098:	e002                	sd	zero,0(sp)
-   1009a:	23f78793          	addi	a5,a5,575 # f423f <__stack_top+0xd423f>
-   1009e:	6702                	ld	a4,0(sp)
-   100a0:	10e7f663          	bgeu	a5,a4,101ac <main+0x144>
-   100a4:	4785                	li	a5,1
-   100a6:	1786                	slli	a5,a5,0x21
-   100a8:	4705                	li	a4,1
-   100aa:	e398                	sd	a4,0(a5)
-   100ac:	4709                	li	a4,2
-   100ae:	e798                	sd	a4,8(a5)
-   100b0:	470d                	li	a4,3
-   100b2:	eb98                	sd	a4,16(a5)
-   100b4:	4711                	li	a4,4
-   100b6:	ef98                	sd	a4,24(a5)
-   100b8:	4715                	li	a4,5
-   100ba:	f398                	sd	a4,32(a5)
-   100bc:	4719                	li	a4,6
-   100be:	f798                	sd	a4,40(a5)
-   100c0:	471d                	li	a4,7
-   100c2:	fb98                	sd	a4,48(a5)
-   100c4:	4721                	li	a4,8
-   100c6:	ff98                	sd	a4,56(a5)
-   100c8:	4725                	li	a4,9
-   100ca:	e3b8                	sd	a4,64(a5)
-   100cc:	4729                	li	a4,10
-   100ce:	e7b8                	sd	a4,72(a5)
-   100d0:	4785                	li	a5,1
-   100d2:	4705                	li	a4,1
-   100d4:	00000497          	auipc	s1,0x0
-   100d8:	1b448493          	addi	s1,s1,436 # 10288 <write_text.0>
-   100dc:	1786                	slli	a5,a5,0x21
-   100de:	1706                	slli	a4,a4,0x21
-   100e0:	86a6                	mv	a3,s1
-   100e2:	08078793          	addi	a5,a5,128
-   100e6:	09970713          	addi	a4,a4,153
-   100ea:	0006c603          	lbu	a2,0(a3)
-   100ee:	0785                	addi	a5,a5,1
-   100f0:	0685                	addi	a3,a3,1
-   100f2:	fec78fa3          	sb	a2,-1(a5)
-   100f6:	fee79ae3          	bne	a5,a4,100ea <main+0x82>
-   100fa:	0330000f          	fence	rw,rw
-   100fe:	4405                	li	s0,1
-   10100:	00000517          	auipc	a0,0x0
-   10104:	15850513          	addi	a0,a0,344 # 10258 <main+0x1f0>
-   10108:	1406                	slli	s0,s0,0x21
-   1010a:	f41ff0ef          	jal	1004a <uart_puts>
-   1010e:	00000a97          	auipc	s5,0x0
-   10112:	19aa8a93          	addi	s5,s5,410 # 102a8 <write_words.1>
-   10116:	4901                	li	s2,0
-   10118:	4b29                	li	s6,10
-   1011a:	4ba5                	li	s7,9
-   1011c:	05040a13          	addi	s4,s0,80
-   10120:	6018                	ld	a4,0(s0)
-   10122:	000ab783          	ld	a5,0(s5)
-   10126:	8f99                	sub	a5,a5,a4
-   10128:	00f037b3          	snez	a5,a5
-   1012c:	00f967b3          	or	a5,s2,a5
-   10130:	0007891b          	sext.w	s2,a5
-   10134:	e349                	bnez	a4,101b6 <main+0x14e>
-   10136:	03000513          	li	a0,48
-   1013a:	efbff0ef          	jal	10034 <uart_putc>
-   1013e:	0421                	addi	s0,s0,8
-   10140:	0b441863          	bne	s0,s4,101f0 <main+0x188>
-   10144:	4405                	li	s0,1
-   10146:	4985                	li	s3,1
-   10148:	00000517          	auipc	a0,0x0
-   1014c:	12050513          	addi	a0,a0,288 # 10268 <main+0x200>
-   10150:	1406                	slli	s0,s0,0x21
-   10152:	1986                	slli	s3,s3,0x21
-   10154:	ef7ff0ef          	jal	1004a <uart_puts>
-   10158:	08040413          	addi	s0,s0,128
-   1015c:	09898993          	addi	s3,s3,152
-   10160:	00044503          	lbu	a0,0(s0)
-   10164:	0004c783          	lbu	a5,0(s1)
-   10168:	0405                	addi	s0,s0,1
-   1016a:	0485                	addi	s1,s1,1
-   1016c:	8f89                	sub	a5,a5,a0
-   1016e:	00f037b3          	snez	a5,a5
-   10172:	00f967b3          	or	a5,s2,a5
-   10176:	0007891b          	sext.w	s2,a5
-   1017a:	ebbff0ef          	jal	10034 <uart_putc>
-   1017e:	ff3411e3          	bne	s0,s3,10160 <main+0xf8>
-   10182:	00000517          	auipc	a0,0x0
-   10186:	0f650513          	addi	a0,a0,246 # 10278 <main+0x210>
-   1018a:	ec1ff0ef          	jal	1004a <uart_puts>
-   1018e:	00000517          	auipc	a0,0x0
-   10192:	08250513          	addi	a0,a0,130 # 10210 <main+0x1a8>
-   10196:	00091663          	bnez	s2,101a2 <main+0x13a>
-   1019a:	00000517          	auipc	a0,0x0
-   1019e:	06650513          	addi	a0,a0,102 # 10200 <main+0x198>
-   101a2:	ea9ff0ef          	jal	1004a <uart_puts>
-   101a6:	10500073          	wfi
-   101aa:	bff5                	j	101a6 <main+0x13e>
-   101ac:	0001                	nop
-   101ae:	6702                	ld	a4,0(sp)
-   101b0:	0705                	addi	a4,a4,1
-   101b2:	e03a                	sd	a4,0(sp)
-   101b4:	b5ed                	j	1009e <main+0x36>
-   101b6:	003c                	addi	a5,sp,8
-   101b8:	4981                	li	s3,0
-   101ba:	036776b3          	remu	a3,a4,s6
-   101be:	2985                	addiw	s3,s3,1
-   101c0:	0785                	addi	a5,a5,1
-   101c2:	0306869b          	addiw	a3,a3,48
-   101c6:	fed78fa3          	sb	a3,-1(a5)
-   101ca:	86ba                	mv	a3,a4
-   101cc:	03675733          	divu	a4,a4,s6
-   101d0:	fedbe5e3          	bltu	s7,a3,101ba <main+0x152>
-   101d4:	39fd                	addiw	s3,s3,-1
-   101d6:	02099793          	slli	a5,s3,0x20
-   101da:	9381                	srli	a5,a5,0x20
-   101dc:	02078793          	addi	a5,a5,32
-   101e0:	978a                	add	a5,a5,sp
-   101e2:	fe87c503          	lbu	a0,-24(a5)
-   101e6:	e4fff0ef          	jal	10034 <uart_putc>
-   101ea:	fe0995e3          	bnez	s3,101d4 <main+0x16c>
-   101ee:	bf81                	j	1013e <main+0xd6>
-   101f0:	02c00513          	li	a0,44
-   101f4:	0aa1                	addi	s5,s5,8
-   101f6:	e3fff0ef          	jal	10034 <uart_putc>
-   101fa:	b71d                	j	10120 <main+0xb8>
+0000000000010034 <main>:
+   10034:	1141                	addi	sp,sp,-16 # 1fff0 <__bss_end+0xff68>
+   10036:	000f47b7          	lui	a5,0xf4
+   1003a:	e402                	sd	zero,8(sp)
+   1003c:	23f78793          	addi	a5,a5,575 # f423f <__stack_top+0xd423f>
+   10040:	6722                	ld	a4,8(sp)
+   10042:	02e7fe63          	bgeu	a5,a4,1007e <main+0x4a>
+   10046:	9002                	ebreak
+   10048:	0330000f          	fence	rw,rw
+   1004c:	4785                	li	a5,1
+   1004e:	1786                	slli	a5,a5,0x21
+   10050:	400005b7          	lui	a1,0x40000
+   10054:	40000637          	lui	a2,0x40000
+   10058:	05a1                	addi	a1,a1,8 # 40000008 <__stack_top+0x3ffe0008>
+   1005a:	0611                	addi	a2,a2,4 # 40000004 <__stack_top+0x3ffe0004>
+   1005c:	10078713          	addi	a4,a5,256
+   10060:	0007c683          	lbu	a3,0(a5)
+   10064:	0ff6f693          	zext.b	a3,a3
+   10068:	4188                	lw	a0,0(a1)
+   1006a:	8921                	andi	a0,a0,8
+   1006c:	fd75                	bnez	a0,10068 <main+0x34>
+   1006e:	2681                	sext.w	a3,a3
+   10070:	c214                	sw	a3,0(a2)
+   10072:	0785                	addi	a5,a5,1
+   10074:	fee796e3          	bne	a5,a4,10060 <main+0x2c>
+   10078:	10500073          	wfi
+   1007c:	bff5                	j	10078 <main+0x44>
+   1007e:	0001                	nop
+   10080:	6722                	ld	a4,8(sp)
+   10082:	0705                	addi	a4,a4,1
+   10084:	e43a                	sd	a4,8(sp)
+   10086:	bf6d                	j	10040 <main+0xc>

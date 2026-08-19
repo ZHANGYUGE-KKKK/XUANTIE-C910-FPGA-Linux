@@ -36,6 +36,9 @@ BRAM_MIF_TARGETS := \
 	$(PROJECT_ROOT)/VIVADO/C910_SOC/C910_SOC.ip_user_files/mem_init_files/C910_SOC_blk_mem_gen_0_1.mif
 COEFILES_BRAM_BUILD_DIR := $(COEFILES_DIR)/build_ram
 
+# 可选 JTAG 载荷构建入口；存在时由当前实验目录自行管理。
+JTAG_MAKEFILE := $(PROGRAM_DIR)/JTAG/Makefile
+
 # 玄铁 RISC-V 裸机交叉工具链。
 TOOLCHAIN_BIN := $(MAKEFILE_DIR)/Xuantie-900-gcc-elf-newlib-mingw-V3.2.0/bin
 CC := $(TOOLCHAIN_BIN)/riscv64-unknown-elf-gcc
@@ -57,13 +60,13 @@ BRAM_PAD_TO_ADDR := 131072
 INIT_WORD_BYTES := 16
 
 # 声明伪目标，避免与同名文件冲突。
-PROGRAM_GOALS := $(filter-out all bootrom bram copy-builds bootrom-check bram-check clean,$(MAKECMDGOALS))
-.PHONY: all bootrom bram copy-builds bootrom-check bram-check clean $(PROGRAM_GOALS)
+PROGRAM_GOALS := $(filter-out all bootrom bram jtag copy-builds bootrom-check bram-check clean,$(MAKECMDGOALS))
+.PHONY: all bootrom bram jtag copy-builds bootrom-check bram-check clean $(PROGRAM_GOALS)
 
 Makefile GNUmakefile MAKEFILE/Makefile: ;
 
-# 默认目标：同时构建 BootROM 和 BRAM 镜像，并复制构建结果。
-all: bootrom bram copy-builds
+# 默认目标：同时构建 BootROM、BRAM 和可选 JTAG 载荷，并复制构建结果。
+all: bootrom bram jtag copy-builds
 
 $(PROGRAM_GOALS):
 	@if exist "$(MAKEFILE_DIR)/$@" ($(MAKE) -f "$(MAKEFILE_PATH)" PROGRAM=$@ all) else (echo "Unknown program folder: $(MAKEFILE_DIR)/$@" & exit /B 1)
@@ -75,6 +78,10 @@ bootrom: $(BOOTROM_ELF) $(BOOTROM_BIN) $(BOOTROM_DUMP) $(BOOTROM_COE) $(BOOTROM_
 # BRAM 完整构建流程：ELF、BIN、反汇编、COE 和一致性检查。
 bram: $(BRAM_ELF) $(BRAM_BIN) $(BRAM_DUMP) $(BRAM_COE) $(BRAM_MIF_TARGETS) bram-check
 	@echo "BRAM image is ready: $(BRAM_COE)"
+
+# 若当前实验目录提供 JTAG/Makefile，则同步构建 JTAG 载荷。
+jtag:
+	@if exist "$(JTAG_MAKEFILE)" ($(MAKE) -f "$(JTAG_MAKEFILE)") else (echo "No JTAG payload Makefile for $(PROGRAM), skip.")
 
 # 将本次构建结果复制到统一输出目录。
 copy-builds: bootrom bram
@@ -153,3 +160,4 @@ bram-check: $(BRAM_ELF) $(BRAM_BIN) $(BRAM_DUMP)
 clean:
 	@if exist "$(BOOTROM_BUILD_DIR)" rmdir /S /Q "$(BOOTROM_BUILD_DIR)"
 	@if exist "$(BRAM_BUILD_DIR)" rmdir /S /Q "$(BRAM_BUILD_DIR)"
+	@if exist "$(JTAG_MAKEFILE)" $(MAKE) -f "$(JTAG_MAKEFILE)" clean

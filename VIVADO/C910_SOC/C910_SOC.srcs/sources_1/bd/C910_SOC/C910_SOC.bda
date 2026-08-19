@@ -49,28 +49,6 @@
       <data key="VT">AC</data>
     </node>
     <node id="n3">
-      <data key="VM">C910_SOC</data>
-      <data key="VT">BC</data>
-    </node>
-    <node id="n4">
-      <data key="BA">0x0000010000</data>
-      <data key="BP">C_S_AXI_BASEADDR</data>
-      <data key="HA">0x000001FFFF</data>
-      <data key="HP">C_S_AXI_HIGHADDR</data>
-      <data key="MA">m_axi</data>
-      <data key="MX">/C910_core</data>
-      <data key="MI">m_axi</data>
-      <data key="MS">SEG_bram_ctrl_Mem0</data>
-      <data key="MV">user.org:user:C910_core:1.0</data>
-      <data key="TM">both</data>
-      <data key="SX">/bram_ctrl</data>
-      <data key="SI">S_AXI</data>
-      <data key="SS">Mem0</data>
-      <data key="SV">xilinx.com:ip:axi_bram_ctrl:4.1</data>
-      <data key="TU">memory</data>
-      <data key="VT">AC</data>
-    </node>
-    <node id="n5">
       <data key="BA">0x0200000000</data>
       <data key="BP">C_BASEADDR</data>
       <data key="HA">0x03FFFFFFFF</data>
@@ -85,6 +63,28 @@
       <data key="SI">C0_DDR4_S_AXI</data>
       <data key="SS">C0_DDR4_ADDRESS_BLOCK</data>
       <data key="SV">xilinx.com:ip:ddr4:2.2</data>
+      <data key="TU">memory</data>
+      <data key="VT">AC</data>
+    </node>
+    <node id="n4">
+      <data key="VM">C910_SOC</data>
+      <data key="VT">BC</data>
+    </node>
+    <node id="n5">
+      <data key="BA">0x0000010000</data>
+      <data key="BP">C_S_AXI_BASEADDR</data>
+      <data key="HA">0x000001FFFF</data>
+      <data key="HP">C_S_AXI_HIGHADDR</data>
+      <data key="MA">m_axi</data>
+      <data key="MX">/C910_core</data>
+      <data key="MI">m_axi</data>
+      <data key="MS">SEG_bram_ctrl_Mem0</data>
+      <data key="MV">user.org:user:C910_core:1.0</data>
+      <data key="TM">both</data>
+      <data key="SX">/bram_ctrl</data>
+      <data key="SI">S_AXI</data>
+      <data key="SS">Mem0</data>
+      <data key="SV">xilinx.com:ip:axi_bram_ctrl:4.1</data>
       <data key="TU">memory</data>
       <data key="VT">AC</data>
     </node>
@@ -106,20 +106,20 @@
       <data key="TU">register</data>
       <data key="VT">AC</data>
     </node>
-    <edge id="e0" source="n3" target="n1">
+    <edge id="e0" source="n4" target="n1">
     </edge>
     <edge id="e1" source="n1" target="n0">
     </edge>
     <edge id="e2" source="n2" target="n0">
       <data key="EH">2</data>
     </edge>
-    <edge id="e3" source="n4" target="n0">
+    <edge id="e3" source="n5" target="n0">
       <data key="EH">2</data>
     </edge>
     <edge id="e4" source="n6" target="n0">
       <data key="EH">2</data>
     </edge>
-    <edge id="e5" source="n5" target="n0">
+    <edge id="e5" source="n3" target="n0">
       <data key="EH">2</data>
     </edge>
   </graph>

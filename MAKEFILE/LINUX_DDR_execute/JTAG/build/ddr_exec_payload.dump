@@ -1,0 +1,35 @@
+
+LINUX_DDR_execute/JTAG/build/ddr_exec_payload.elf:     file format elf64-littleriscv
+
+Sections:
+Idx Name          Size      VMA               LMA               File off  Algn
+  0 .text         0000004e  0000000200000000  0000000200000000  00001000  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .riscv.attributes 00000076  0000000000000000  0000000000000000  0000104e  2**0
+                  CONTENTS, READONLY
+
+Disassembly of section .text:
+
+0000000200000000 <_start>:
+   200000000:	00000297          	auipc	t0,0x0
+   200000004:	04028293          	addi	t0,t0,64 # 200000040 <ddr_exec_msg>
+   200000008:	0002c303          	lbu	t1,0(t0)
+   20000000c:	02030663          	beqz	t1,200000038 <_start+0x38>
+   200000010:	400003b7          	lui	t2,0x40000
+   200000014:	0083839b          	addiw	t2,t2,8 # 40000008 <_start-0x1bffffff8>
+   200000018:	0003ae03          	lw	t3,0(t2)
+   20000001c:	008e7e13          	andi	t3,t3,8
+   200000020:	fe0e18e3          	bnez	t3,200000010 <_start+0x10>
+   200000024:	400003b7          	lui	t2,0x40000
+   200000028:	0043839b          	addiw	t2,t2,4 # 40000004 <_start-0x1bffffffc>
+   20000002c:	0063a023          	sw	t1,0(t2)
+   200000030:	00128293          	addi	t0,t0,1
+   200000034:	fd5ff06f          	j	200000008 <_start+0x8>
+   200000038:	10500073          	wfi
+   20000003c:	ffdff06f          	j	200000038 <_start+0x38>
+
+0000000200000040 <ddr_exec_msg>:
+   200000040:	5f524444          	.word	0x5f524444
+   200000044:	43455845          	.word	0x43455845
+   200000048:	0d4b4f5f          	.word	0x0d4b4f5f
+   20000004c:	000a                	.short	0x000a

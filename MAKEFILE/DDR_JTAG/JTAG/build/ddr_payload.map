@@ -1,0 +1,33 @@
+
+There are no discarded input sections
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+DDR_PAYLOAD      0x0000000200000000 0x0000000000000100 r
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+
+.text           0x0000000200000000        0x0
+ .text          0x0000000200000000        0x0 C:\Users\KKKK\AppData\Local\Temp\cc1gRblD.o
+
+.ddr_payload    0x0000000200000000      0x100
+ *(.ddr_payload)
+ .ddr_payload   0x0000000200000000      0x100 C:\Users\KKKK\AppData\Local\Temp\cc1gRblD.o
+                0x0000000200000000                __ddr_payload_start
+                0x0000000200000100                __ddr_payload_end
+LOAD C:\Users\KKKK\AppData\Local\Temp\cc1gRblD.o
+OUTPUT(MAKEFILE\DDR_JTAG\JTAG\build\ddr_payload.elf elf64-littleriscv)
+
+.data           0x0000000200000100        0x0
+ .data          0x0000000200000100        0x0 C:\Users\KKKK\AppData\Local\Temp\cc1gRblD.o
+
+.bss            0x0000000200000100        0x0
+ .bss           0x0000000200000100        0x0 C:\Users\KKKK\AppData\Local\Temp\cc1gRblD.o
+
+.riscv.attributes
+                0x0000000000000000       0x72
+ .riscv.attributes
+                0x0000000000000000       0x72 C:\Users\KKKK\AppData\Local\Temp\cc1gRblD.o
