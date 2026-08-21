@@ -36,7 +36,7 @@ BRAM_MIF_TARGETS := \
 	$(PROJECT_ROOT)/VIVADO/C910_SOC/C910_SOC.ip_user_files/mem_init_files/C910_SOC_blk_mem_gen_0_1.mif
 COEFILES_BRAM_BUILD_DIR := $(COEFILES_DIR)/build_ram
 
-# 可选 JTAG 载荷构建入口；存在时由当前实验目录自行管理。
+# 可选 JTAG 载荷构建入口；需要时显式调用，不参与默认子工程构建。
 JTAG_MAKEFILE := $(PROGRAM_DIR)/JTAG/Makefile
 
 # 玄铁 RISC-V 裸机交叉工具链。
@@ -65,8 +65,8 @@ PROGRAM_GOALS := $(filter-out all bootrom bram jtag copy-builds bootrom-check br
 
 Makefile GNUmakefile MAKEFILE/Makefile: ;
 
-# 默认目标：同时构建 BootROM、BRAM 和可选 JTAG 载荷，并复制构建结果。
-all: bootrom bram jtag copy-builds
+# 默认目标：只构建 BootROM、BRAM，并复制构建结果到 COEFILES。
+all: bootrom bram copy-builds
 
 $(PROGRAM_GOALS):
 	@if exist "$(MAKEFILE_DIR)/$@" ($(MAKE) -f "$(MAKEFILE_PATH)" PROGRAM=$@ all) else (echo "Unknown program folder: $(MAKEFILE_DIR)/$@" & exit /B 1)
@@ -79,7 +79,7 @@ bootrom: $(BOOTROM_ELF) $(BOOTROM_BIN) $(BOOTROM_DUMP) $(BOOTROM_COE) $(BOOTROM_
 bram: $(BRAM_ELF) $(BRAM_BIN) $(BRAM_DUMP) $(BRAM_COE) $(BRAM_MIF_TARGETS) bram-check
 	@echo "BRAM image is ready: $(BRAM_COE)"
 
-# 若当前实验目录提供 JTAG/Makefile，则同步构建 JTAG 载荷。
+# 若当前实验目录提供 JTAG/Makefile，可通过显式目标构建 JTAG 载荷。
 jtag:
 	@if exist "$(JTAG_MAKEFILE)" ($(MAKE) -f "$(JTAG_MAKEFILE)") else (echo "No JTAG payload Makefile for $(PROGRAM), skip.")
 

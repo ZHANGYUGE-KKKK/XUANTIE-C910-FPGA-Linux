@@ -1,0 +1,21 @@
+
+./ebreaktest/BOOTROM/build/bootrom.elf:     file format elf64-littleriscv
+
+
+Disassembly of section .text:
+
+0000000000000000 <_start>:
+   0:	00000297          	auipc	t0,0x0
+   4:	01828293          	addi	t0,t0,24 # 18 <bootrom_trap>
+   8:	30529073          	csrw	mtvec,t0
+   c:	62c1                	lui	t0,0x10
+   e:	0000100f          	fence.i
+  12:	00028067          	jr	t0 # 10000 <bootrom_trap+0xffe8>
+  16:	0001                	nop
+
+0000000000000018 <bootrom_trap>:
+  18:	342022f3          	csrr	t0,mcause
+  1c:	34302373          	csrr	t1,mtval
+  20:	10500073          	wfi
+  24:	bff5                	j	20 <bootrom_trap+0x8>
+	...
