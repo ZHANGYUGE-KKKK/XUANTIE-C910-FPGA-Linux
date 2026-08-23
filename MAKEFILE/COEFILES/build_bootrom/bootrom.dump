@@ -1,5 +1,5 @@
 
-./LINUX_BOOT/BOOTROM/build/bootrom.elf:     file format elf64-littleriscv
+./LINUX_DDR_execute/BOOTROM/build/bootrom.elf:     file format elf64-littleriscv
 
 
 Disassembly of section .text:

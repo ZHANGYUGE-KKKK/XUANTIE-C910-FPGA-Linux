@@ -1,0 +1,79 @@
+/dts-v1/;
+
+/ {
+	#address-cells = <2>;
+	#size-cells = <2>;
+	compatible = "xuantie,c910-soc-fpga", "thead,c910";
+	model = "C910 minimal FPGA SoC";
+
+	aliases {
+		serial0 = &uart0;
+	};
+
+	chosen {
+		bootargs = "console=hvc0 earlycon=sbi root=/dev/ram0 rw norandmaps no_check_unaligned_access";
+		stdout-path = "serial0:115200n8";
+	};
+
+	cpus {
+		#address-cells = <1>;
+		#size-cells = <0>;
+		timebase-frequency = <50000000>;
+
+		cpu0: cpu@0 {
+			device_type = "cpu";
+			reg = <0>;
+			status = "okay";
+			compatible = "thead,c910", "riscv";
+			riscv,isa = "rv64imafdc";
+			mmu-type = "riscv,sv39";
+
+			cpu0_intc: interrupt-controller {
+				#address-cells = <0>;
+				#interrupt-cells = <1>;
+				compatible = "riscv,cpu-intc";
+				interrupt-controller;
+			};
+		};
+	};
+
+	memory@200000000 {
+		device_type = "memory";
+		reg = <0x00000002 0x00000000 0x00000002 0x00000000>;
+	};
+
+	soc {
+		#address-cells = <2>;
+		#size-cells = <2>;
+		compatible = "simple-bus";
+		ranges;
+
+		clint0: clint@c000000 {
+			compatible = "thead,c900-clint";
+			reg = <0x0 0x0c000000 0x0 0x04000000>;
+			interrupts-extended = <&cpu0_intc 3 &cpu0_intc 7>;
+			clint,has-no-64bit-mmio;
+		};
+
+		plic0: interrupt-controller@8000000 {
+			#address-cells = <0>;
+			#interrupt-cells = <2>;
+			compatible = "thead,c900-plic";
+			interrupt-controller;
+			interrupts-extended = <&cpu0_intc 0xffffffff
+					       &cpu0_intc 9>;
+			reg = <0x0 0x08000000 0x0 0x04000000>;
+			reg-names = "control";
+			riscv,max-priority = <7>;
+			riscv,ndev = <159>;
+		};
+
+		uart0: serial@40000000 {
+			compatible = "xlnx,xps-uartlite-1.00.a";
+			reg = <0x0 0x40000000 0x0 0x1000>;
+			clock-frequency = <50000000>;
+			current-speed = <115200>;
+			status = "okay";
+		};
+	};
+};

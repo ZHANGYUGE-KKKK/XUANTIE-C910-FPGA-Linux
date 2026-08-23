@@ -1,0 +1,271 @@
+
+D:\Xilinx_FPGA\C910_SOC\MAKEFILE\LINUX_AMO_TEST\JTAG\build\ddr_exec_payload.elf:     file format elf64-littleriscv
+
+Sections:
+Idx Name          Size      VMA               LMA               File off  Algn
+  0 .text         00000328  0000000200000000  0000000200000000  00001000  2**3
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .riscv.attributes 00000076  0000000000000000  0000000000000000  00001328  2**0
+                  CONTENTS, READONLY
+
+Disassembly of section .text:
+
+0000000200000000 <_start>:
+   200000000:	00000297          	auipc	t0,0x0
+   200000004:	12428293          	addi	t0,t0,292 # 200000124 <trap_handler>
+   200000008:	30529073          	csrw	mtvec,t0
+   20000000c:	00000517          	auipc	a0,0x0
+   200000010:	26450513          	addi	a0,a0,612 # 200000270 <msg_start>
+   200000014:	174000ef          	jal	200000188 <uart_puts>
+   200000018:	00002437          	lui	s0,0x2
+   20000001c:	0014041b          	addiw	s0,s0,1 # 2001 <UART_TX_FULL+0x1ff9>
+   200000020:	01441413          	slli	s0,s0,0x14
+   200000024:	123452b7          	lui	t0,0x12345
+   200000028:	6782829b          	addiw	t0,t0,1656 # 12345678 <UART_TX_FULL+0x12345670>
+   20000002c:	00542023          	sw	t0,0(s0)
+   200000030:	0330000f          	fence	rw,rw
+   200000034:	00042303          	lw	t1,0(s0)
+   200000038:	0c531263          	bne	t1,t0,2000000fc <sw_lw_fail>
+   20000003c:	00000517          	auipc	a0,0x0
+   200000040:	24750513          	addi	a0,a0,583 # 200000283 <msg_sw_lw_ok>
+   200000044:	144000ef          	jal	200000188 <uart_puts>
+   200000048:	00000517          	auipc	a0,0x0
+   20000004c:	25350513          	addi	a0,a0,595 # 20000029b <msg_before_swap>
+   200000050:	138000ef          	jal	200000188 <uart_puts>
+   200000054:	00000393          	li	t2,0
+   200000058:	0e742e2f          	amoswap.w.aqrl	t3,t2,(s0)
+   20000005c:	0330000f          	fence	rw,rw
+   200000060:	00000517          	auipc	a0,0x0
+   200000064:	24c50513          	addi	a0,a0,588 # 2000002ac <msg_swap_old>
+   200000068:	120000ef          	jal	200000188 <uart_puts>
+   20000006c:	000e0513          	mv	a0,t3
+   200000070:	194000ef          	jal	200000204 <uart_puthex64>
+   200000074:	16c000ef          	jal	2000001e0 <uart_newline>
+   200000078:	00042e83          	lw	t4,0(s0)
+   20000007c:	00000517          	auipc	a0,0x0
+   200000080:	23d50513          	addi	a0,a0,573 # 2000002b9 <msg_swap_mem>
+   200000084:	104000ef          	jal	200000188 <uart_puts>
+   200000088:	000e8513          	mv	a0,t4
+   20000008c:	178000ef          	jal	200000204 <uart_puthex64>
+   200000090:	150000ef          	jal	2000001e0 <uart_newline>
+   200000094:	00500293          	li	t0,5
+   200000098:	00542023          	sw	t0,0(s0)
+   20000009c:	0330000f          	fence	rw,rw
+   2000000a0:	00000517          	auipc	a0,0x0
+   2000000a4:	22650513          	addi	a0,a0,550 # 2000002c6 <msg_before_add>
+   2000000a8:	0e0000ef          	jal	200000188 <uart_puts>
+   2000000ac:	00700313          	li	t1,7
+   2000000b0:	066423af          	amoadd.w.aqrl	t2,t1,(s0)
+   2000000b4:	0330000f          	fence	rw,rw
+   2000000b8:	00000517          	auipc	a0,0x0
+   2000000bc:	21e50513          	addi	a0,a0,542 # 2000002d6 <msg_add_old>
+   2000000c0:	0c8000ef          	jal	200000188 <uart_puts>
+   2000000c4:	00038513          	mv	a0,t2
+   2000000c8:	13c000ef          	jal	200000204 <uart_puthex64>
+   2000000cc:	114000ef          	jal	2000001e0 <uart_newline>
+   2000000d0:	00042e03          	lw	t3,0(s0)
+   2000000d4:	00000517          	auipc	a0,0x0
+   2000000d8:	20e50513          	addi	a0,a0,526 # 2000002e2 <msg_add_mem>
+   2000000dc:	0ac000ef          	jal	200000188 <uart_puts>
+   2000000e0:	000e0513          	mv	a0,t3
+   2000000e4:	120000ef          	jal	200000204 <uart_puthex64>
+   2000000e8:	0f8000ef          	jal	2000001e0 <uart_newline>
+   2000000ec:	00000517          	auipc	a0,0x0
+   2000000f0:	20250513          	addi	a0,a0,514 # 2000002ee <msg_done>
+   2000000f4:	094000ef          	jal	200000188 <uart_puts>
+   2000000f8:	1700006f          	j	200000268 <hang>
+
+00000002000000fc <sw_lw_fail>:
+   2000000fc:	00000517          	auipc	a0,0x0
+   200000100:	19250513          	addi	a0,a0,402 # 20000028e <msg_sw_lw_fail>
+   200000104:	084000ef          	jal	200000188 <uart_puts>
+   200000108:	00000517          	auipc	a0,0x0
+   20000010c:	21650513          	addi	a0,a0,534 # 20000031e <msg_value>
+   200000110:	078000ef          	jal	200000188 <uart_puts>
+   200000114:	00030513          	mv	a0,t1
+   200000118:	0ec000ef          	jal	200000204 <uart_puthex64>
+   20000011c:	0c4000ef          	jal	2000001e0 <uart_newline>
+   200000120:	1480006f          	j	200000268 <hang>
+
+0000000200000124 <trap_handler>:
+   200000124:	342024f3          	csrr	s1,mcause
+   200000128:	34102973          	csrr	s2,mepc
+   20000012c:	343029f3          	csrr	s3,mtval
+   200000130:	00000517          	auipc	a0,0x0
+   200000134:	1ce50513          	addi	a0,a0,462 # 2000002fe <msg_trap>
+   200000138:	050000ef          	jal	200000188 <uart_puts>
+   20000013c:	00000517          	auipc	a0,0x0
+   200000140:	1cd50513          	addi	a0,a0,461 # 200000309 <msg_mcause>
+   200000144:	044000ef          	jal	200000188 <uart_puts>
+   200000148:	00048513          	mv	a0,s1
+   20000014c:	0b8000ef          	jal	200000204 <uart_puthex64>
+   200000150:	090000ef          	jal	2000001e0 <uart_newline>
+   200000154:	00000517          	auipc	a0,0x0
+   200000158:	1bd50513          	addi	a0,a0,445 # 200000311 <msg_mepc>
+   20000015c:	02c000ef          	jal	200000188 <uart_puts>
+   200000160:	00090513          	mv	a0,s2
+   200000164:	0a0000ef          	jal	200000204 <uart_puthex64>
+   200000168:	078000ef          	jal	2000001e0 <uart_newline>
+   20000016c:	00000517          	auipc	a0,0x0
+   200000170:	1ab50513          	addi	a0,a0,427 # 200000317 <msg_mtval>
+   200000174:	014000ef          	jal	200000188 <uart_puts>
+   200000178:	00098513          	mv	a0,s3
+   20000017c:	088000ef          	jal	200000204 <uart_puthex64>
+   200000180:	060000ef          	jal	2000001e0 <uart_newline>
+   200000184:	0e40006f          	j	200000268 <hang>
+
+0000000200000188 <uart_puts>:
+   200000188:	ff010113          	addi	sp,sp,-16
+   20000018c:	00113423          	sd	ra,8(sp)
+   200000190:	00813023          	sd	s0,0(sp)
+   200000194:	00050413          	mv	s0,a0
+   200000198:	00044503          	lbu	a0,0(s0)
+   20000019c:	00050863          	beqz	a0,2000001ac <uart_puts+0x24>
+   2000001a0:	01c000ef          	jal	2000001bc <uart_putc>
+   2000001a4:	00140413          	addi	s0,s0,1
+   2000001a8:	ff1ff06f          	j	200000198 <uart_puts+0x10>
+   2000001ac:	00013403          	ld	s0,0(sp)
+   2000001b0:	00813083          	ld	ra,8(sp)
+   2000001b4:	01010113          	addi	sp,sp,16
+   2000001b8:	00008067          	ret
+
+00000002000001bc <uart_putc>:
+   2000001bc:	40000f37          	lui	t5,0x40000
+   2000001c0:	008f0f1b          	addiw	t5,t5,8 # 40000008 <UART_STATUS>
+   2000001c4:	000f2f83          	lw	t6,0(t5)
+   2000001c8:	008fff93          	andi	t6,t6,8
+   2000001cc:	fe0f9ce3          	bnez	t6,2000001c4 <uart_putc+0x8>
+   2000001d0:	40000f37          	lui	t5,0x40000
+   2000001d4:	004f0f1b          	addiw	t5,t5,4 # 40000004 <UART_TX>
+   2000001d8:	00af2023          	sw	a0,0(t5)
+   2000001dc:	00008067          	ret
+
+00000002000001e0 <uart_newline>:
+   2000001e0:	ff010113          	addi	sp,sp,-16
+   2000001e4:	00113423          	sd	ra,8(sp)
+   2000001e8:	00d00513          	li	a0,13
+   2000001ec:	fd1ff0ef          	jal	2000001bc <uart_putc>
+   2000001f0:	00a00513          	li	a0,10
+   2000001f4:	fc9ff0ef          	jal	2000001bc <uart_putc>
+   2000001f8:	00813083          	ld	ra,8(sp)
+   2000001fc:	01010113          	addi	sp,sp,16
+   200000200:	00008067          	ret
+
+0000000200000204 <uart_puthex64>:
+   200000204:	fe010113          	addi	sp,sp,-32
+   200000208:	00113c23          	sd	ra,24(sp)
+   20000020c:	00813823          	sd	s0,16(sp)
+   200000210:	00913423          	sd	s1,8(sp)
+   200000214:	00050413          	mv	s0,a0
+   200000218:	03000513          	li	a0,48
+   20000021c:	fa1ff0ef          	jal	2000001bc <uart_putc>
+   200000220:	07800513          	li	a0,120
+   200000224:	f99ff0ef          	jal	2000001bc <uart_putc>
+   200000228:	03c00493          	li	s1,60
+   20000022c:	009452b3          	srl	t0,s0,s1
+   200000230:	00f2f293          	andi	t0,t0,15
+   200000234:	00a00313          	li	t1,10
+   200000238:	0062e663          	bltu	t0,t1,200000244 <uart_puthex64+0x40>
+   20000023c:	05728513          	addi	a0,t0,87
+   200000240:	0080006f          	j	200000248 <uart_puthex64+0x44>
+   200000244:	03028513          	addi	a0,t0,48
+   200000248:	f75ff0ef          	jal	2000001bc <uart_putc>
+   20000024c:	ffc48493          	addi	s1,s1,-4
+   200000250:	fc04dee3          	bgez	s1,20000022c <uart_puthex64+0x28>
+   200000254:	00813483          	ld	s1,8(sp)
+   200000258:	01013403          	ld	s0,16(sp)
+   20000025c:	01813083          	ld	ra,24(sp)
+   200000260:	02010113          	addi	sp,sp,32
+   200000264:	00008067          	ret
+
+0000000200000268 <hang>:
+   200000268:	10500073          	wfi
+   20000026c:	ffdff06f          	j	200000268 <hang>
+
+0000000200000270 <msg_start>:
+   200000270:	4d410a0d          	.word	0x4d410a0d
+   200000274:	45545f4f          	.word	0x45545f4f
+   200000278:	535f5453          	.word	0x535f5453
+   20000027c:	54524154          	.word	0x54524154
+   200000280:	Address 0x200000280 is out of bounds.
+
+
+0000000200000283 <msg_sw_lw_ok>:
+   200000283:	4c5f5753          	.word	0x4c5f5753
+   200000287:	4b4f5f57          	.word	0x4b4f5f57
+   20000028b:	Address 0x20000028b is out of bounds.
+
+
+000000020000028e <msg_sw_lw_fail>:
+   20000028e:	4c5f5753          	.word	0x4c5f5753
+   200000292:	41465f57          	.word	0x41465f57
+   200000296:	0a0d4c49          	.word	0x0a0d4c49
+	...
+
+000000020000029b <msg_before_swap>:
+   20000029b:	4f464542          	.word	0x4f464542
+   20000029f:	415f4552          	.word	0x415f4552
+   2000002a3:	57534f4d          	.word	0x57534f4d
+   2000002a7:	0a0d5041          	.word	0x0a0d5041
+	...
+
+00000002000002ac <msg_swap_old>:
+   2000002ac:	534f4d41          	.word	0x534f4d41
+   2000002b0:	5f504157          	.word	0x5f504157
+   2000002b4:	3d444c4f          	.word	0x3d444c4f
+	...
+
+00000002000002b9 <msg_swap_mem>:
+   2000002b9:	534f4d41          	.word	0x534f4d41
+   2000002bd:	5f504157          	.word	0x5f504157
+   2000002c1:	3d4d454d          	.word	0x3d4d454d
+	...
+
+00000002000002c6 <msg_before_add>:
+   2000002c6:	4f464542          	.word	0x4f464542
+   2000002ca:	415f4552          	.word	0x415f4552
+   2000002ce:	44414f4d          	.word	0x44414f4d
+   2000002d2:	000a0d44          	.word	0x000a0d44
+
+00000002000002d6 <msg_add_old>:
+   2000002d6:	414f4d41          	.word	0x414f4d41
+   2000002da:	4f5f4444          	.word	0x4f5f4444
+   2000002de:	003d444c          	.word	0x003d444c
+
+00000002000002e2 <msg_add_mem>:
+   2000002e2:	414f4d41          	.word	0x414f4d41
+   2000002e6:	4d5f4444          	.word	0x4d5f4444
+   2000002ea:	003d4d45          	.word	0x003d4d45
+
+00000002000002ee <msg_done>:
+   2000002ee:	5f4f4d41          	.word	0x5f4f4d41
+   2000002f2:	54534554          	.word	0x54534554
+   2000002f6:	4e4f445f          	.word	0x4e4f445f
+   2000002fa:	000a0d45          	.word	0x000a0d45
+
+00000002000002fe <msg_trap>:
+   2000002fe:	5f4f4d41          	.word	0x5f4f4d41
+   200000302:	50415254          	.word	0x50415254
+   200000306:	Address 0x200000306 is out of bounds.
+
+
+0000000200000309 <msg_mcause>:
+   200000309:	7561636d          	.word	0x7561636d
+   20000030d:	003d6573          	.word	0x003d6573
+
+0000000200000311 <msg_mepc>:
+   200000311:	6370656d          	.word	0x6370656d
+   200000315:	Address 0x200000315 is out of bounds.
+
+
+0000000200000317 <msg_mtval>:
+   200000317:	6176746d          	.word	0x6176746d
+   20000031b:	Address 0x20000031b is out of bounds.
+
+
+000000020000031e <msg_value>:
+   20000031e:	756c6176          	.word	0x756c6176
+   200000322:	3d65                	.short	0x3d65
+   200000324:	00                	.byte	0x00
+   200000325:	0000                	unimp
+	...
