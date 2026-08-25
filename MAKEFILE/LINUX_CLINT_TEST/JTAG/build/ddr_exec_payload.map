@@ -1,0 +1,32 @@
+
+There are no discarded input sections
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+DDR_EXEC         0x0000000200000000 0x0000000000001000 xr
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+
+.text           0x0000000200000000      0x47c
+ *(.text.init)
+ .text.init     0x0000000200000000      0x47c C:\Users\KKKK\AppData\Local\Temp\ccougFBS.o
+                0x0000000200000000                _start
+ *(.text*)
+ .text          0x000000020000047c        0x0 C:\Users\KKKK\AppData\Local\Temp\ccougFBS.o
+ *(.rodata*)
+LOAD C:\Users\KKKK\AppData\Local\Temp\ccougFBS.o
+OUTPUT(D:\Xilinx_FPGA\C910_SOC\MAKEFILE\LINUX_CLINT_TEST\JTAG\build\ddr_exec_payload.elf elf64-littleriscv)
+
+.data           0x000000020000047c        0x0
+ .data          0x000000020000047c        0x0 C:\Users\KKKK\AppData\Local\Temp\ccougFBS.o
+
+.bss            0x000000020000047c        0x0
+ .bss           0x000000020000047c        0x0 C:\Users\KKKK\AppData\Local\Temp\ccougFBS.o
+
+.riscv.attributes
+                0x0000000000000000       0x76
+ .riscv.attributes
+                0x0000000000000000       0x76 C:\Users\KKKK\AppData\Local\Temp\ccougFBS.o

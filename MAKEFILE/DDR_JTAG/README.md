@@ -103,8 +103,6 @@ FileSiz/MemSiz         = 0x100
 
 ## 5. 构建
 
-### 5.1 构建 BRAM 镜像
-
 在工程根目录执行：
 
 ```powershell
@@ -118,6 +116,10 @@ BRAM/build/bram.elf
 BRAM/build/bram.bin
 BRAM/build/bram.dump
 BRAM/build/bram.coe
+JTAG/build/ddr_payload.elf
+JTAG/build/ddr_payload.bin
+JTAG/build/ddr_payload.dump
+JTAG/build/ddr_payload.map
 ```
 
 如果重新编译 BRAM，需要从 `BRAM/build/bram.dump` 重新确认 `ebreak` 地址和下一条指令地址。
@@ -129,24 +131,10 @@ ebreak 地址       = 0x10046
 ebreak 后一条地址 = 0x10048
 ```
 
-### 5.2 构建 JTAG payload
-
-进入：
-
-```powershell
-cd D:\Xilinx_FPGA\C910_SOC\MAKEFILE\DDR_JTAG\JTAG
-```
-
-执行：
-
-```powershell
-make
-```
-
 检查 ELF load 地址：
 
 ```powershell
-..\..\Xuantie-900-gcc-elf-newlib-mingw-V3.2.0\bin\riscv64-unknown-elf-readelf.exe -l build\ddr_payload.elf
+MAKEFILE\Xuantie-900-gcc-elf-newlib-mingw-V3.2.0\bin\riscv64-unknown-elf-readelf.exe -l MAKEFILE\DDR_JTAG\JTAG\build\ddr_payload.elf
 ```
 
 应看到 `LOAD` 段地址为：

@@ -172,6 +172,8 @@ parameter STIMECMP2  = 16'hD010;
 parameter STIMECMPH2 = 16'hD014;
 parameter STIMECMP3  = 16'hD018;
 parameter STIMECMPH3 = 16'hD01C;
+parameter MTIME      = 16'hBFF8;
+parameter MTIMEH     = 16'hBFFC;
 
 // &Force("output", "pready_clint"); @57
 // &Force("output", "perr_clint"); @58
@@ -262,6 +264,9 @@ case(paddr[15:0])
   SSIP1:      acc_err = 1'b0;
   STIMECMP1:  acc_err = 1'b0;
   STIMECMPH1: acc_err = 1'b0;
+
+  MTIME:      acc_err = 1'b0;
+  MTIMEH:     acc_err = 1'b0;
 
 
 
@@ -422,6 +427,7 @@ assign stimecmph1_value[31:0] = stimecmph1_reg[31:0];
 // &CombBeg; @454
 always @( mtimecmp0_value[31:0]
        or paddr[15:0]
+       or clint_mtime_reg[63:0]
        or msip1_value[31:0]
        or ssip1_value[31:0]
        or stimecmp1_value[31:0]
@@ -450,6 +456,9 @@ case(paddr[15:0])
   SSIP1:      data_out[31:0] = ssip1_value[31:0];
   STIMECMP1:  data_out[31:0] = stimecmp1_value[31:0];
   STIMECMPH1: data_out[31:0] = stimecmph1_value[31:0];
+
+  MTIME:      data_out[31:0] = clint_mtime_reg[31:0];
+  MTIMEH:     data_out[31:0] = clint_mtime_reg[63:32];
 
 
 

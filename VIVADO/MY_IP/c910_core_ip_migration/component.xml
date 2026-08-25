@@ -1087,7 +1087,7 @@
       <spirit:modelParameter spirit:dataType="std_logic_vector">
         <spirit:name>CPU_APB_BASE</spirit:name>
         <spirit:displayName>Cpu Apb Base</spirit:displayName>
-        <spirit:value spirit:format="bitString" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.CPU_APB_BASE" spirit:bitStringLength="40">0</spirit:value>
+        <spirit:value spirit:format="bitString" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.CPU_APB_BASE" spirit:bitStringLength="40">134217728</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>HART_ID</spirit:name>
@@ -4587,7 +4587,7 @@
     <spirit:parameter>
       <spirit:name>CPU_APB_BASE</spirit:name>
       <spirit:displayName>Cpu Apb Base</spirit:displayName>
-      <spirit:value spirit:format="bitString" spirit:resolve="user" spirit:id="PARAM_VALUE.CPU_APB_BASE" spirit:bitStringLength="40">0</spirit:value>
+      <spirit:value spirit:format="bitString" spirit:resolve="user" spirit:id="PARAM_VALUE.CPU_APB_BASE" spirit:bitStringLength="40">134217728</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>HART_ID</spirit:name>

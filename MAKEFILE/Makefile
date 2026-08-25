@@ -36,8 +36,12 @@ BRAM_MIF_TARGETS := \
 	$(PROJECT_ROOT)/VIVADO/C910_SOC/C910_SOC.ip_user_files/mem_init_files/C910_SOC_blk_mem_gen_0_1.mif
 COEFILES_BRAM_BUILD_DIR := $(COEFILES_DIR)/build_ram
 
-# 可选 JTAG 载荷构建入口；需要时显式调用，不参与默认子工程构建。
+# 可选 JTAG 载荷构建入口；LINUX_BOOT 的 Linux/OpenSBI 流程已独立出去。
+ifeq ($(PROGRAM),LINUX_BOOT)
+JTAG_MAKEFILE :=
+else
 JTAG_MAKEFILE := $(PROGRAM_DIR)/JTAG/Makefile
+endif
 
 # 玄铁 RISC-V 裸机交叉工具链。
 TOOLCHAIN_BIN := $(MAKEFILE_DIR)/Xuantie-900-gcc-elf-newlib-mingw-V3.2.0/bin
@@ -61,11 +65,11 @@ INIT_WORD_BYTES := 16
 
 # 声明伪目标，避免与同名文件冲突。
 PROGRAM_GOALS := $(filter-out all bootrom bram jtag copy-builds bootrom-check bram-check clean,$(MAKECMDGOALS))
-.PHONY: all bootrom bram jtag copy-builds bootrom-check bram-check clean $(PROGRAM_GOALS)
+.PHONY: all bootrom bram jtag copy-builds bootrom-check bram-check clean FORCE $(PROGRAM_GOALS)
 
 Makefile GNUmakefile MAKEFILE/Makefile: ;
 
-# 默认目标：只构建 BootROM、BRAM，并复制构建结果到 COEFILES。
+# 默认目标：构建当前项目的 BootROM、BRAM，并复制 BRAM/BootROM 结果到 COEFILES。
 all: bootrom bram copy-builds
 
 $(PROGRAM_GOALS):
@@ -81,11 +85,11 @@ bram: $(BRAM_ELF) $(BRAM_BIN) $(BRAM_DUMP) $(BRAM_COE) $(BRAM_MIF_TARGETS) bram-
 
 # 若当前实验目录提供 JTAG/Makefile，可通过显式目标构建 JTAG 载荷。
 jtag:
-	@if exist "$(JTAG_MAKEFILE)" ($(MAKE) -f "$(JTAG_MAKEFILE)") else (echo "No JTAG payload Makefile for $(PROGRAM), skip.")
+	@if "$(JTAG_MAKEFILE)"=="" (echo "No JTAG/OpenSBI build for $(PROGRAM), skip.") else (if exist "$(JTAG_MAKEFILE)" ($(MAKE) -f "$(JTAG_MAKEFILE)") else (echo "No JTAG payload Makefile for $(PROGRAM), skip."))
 
 # 将本次构建结果复制到统一输出目录。
 copy-builds: bootrom bram
-	@powershell -NoProfile -ExecutionPolicy Bypass -Command "$$targets = @('$(COEFILES_BOOTROM_BUILD_DIR)', '$(COEFILES_BRAM_BUILD_DIR)'); foreach ($$target in $$targets) { if ([System.IO.Directory]::Exists($$target)) { Remove-Item -LiteralPath $$target -Recurse -Force } }; if (-not [System.IO.Directory]::Exists('$(COEFILES_DIR)')) { [System.IO.Directory]::CreateDirectory('$(COEFILES_DIR)') | Out-Null }; Copy-Item -LiteralPath '$(BOOTROM_BUILD_DIR)' -Destination '$(COEFILES_BOOTROM_BUILD_DIR)' -Recurse; Copy-Item -LiteralPath '$(BRAM_BUILD_DIR)' -Destination '$(COEFILES_BRAM_BUILD_DIR)' -Recurse"
+	@powershell -NoProfile -ExecutionPolicy Bypass -Command "$$targets = @('$(COEFILES_BOOTROM_BUILD_DIR)', '$(COEFILES_BRAM_BUILD_DIR)'); foreach ($$target in $$targets) { if ([System.IO.Directory]::Exists($$target)) { Remove-Item -LiteralPath $$target -Recurse -Force } }; if (-not [System.IO.Directory]::Exists('$(COEFILES_DIR)')) { [System.IO.Directory]::CreateDirectory('$(COEFILES_DIR)') | Out-Null }; Copy-Item -LiteralPath '$(BOOTROM_BUILD_DIR)' -Destination '$(COEFILES_BOOTROM_BUILD_DIR)' -Recurse; Copy-Item -LiteralPath '$(BRAM_BUILD_DIR)' -Destination '$(COEFILES_BRAM_BUILD_DIR)' -Recurse; $$now = Get-Date; Get-ChildItem -LiteralPath '$(COEFILES_BOOTROM_BUILD_DIR)', '$(COEFILES_BRAM_BUILD_DIR)' -Recurse | ForEach-Object { $$_.LastWriteTime = $$now }"
 	@echo "Build outputs copied to: $(COEFILES_DIR)"
 
 # 创建 BootROM 构建输出目录。
@@ -97,56 +101,62 @@ $(BRAM_BUILD_DIR):
 	@if not exist "$(BRAM_BUILD_DIR)" mkdir "$(BRAM_BUILD_DIR)"
 
 # 编译并链接 BootROM，生成 ELF；不使用标准库和默认启动文件。
-$(BOOTROM_ELF): $(BOOTROM_SRC) $(BOOTROM_LD) | $(BOOTROM_BUILD_DIR)
+FORCE:
+
+$(BOOTROM_ELF): $(BOOTROM_SRC) $(BOOTROM_LD) FORCE | $(BOOTROM_BUILD_DIR)
 	@echo "Building BootROM ELF..."
+	@powershell -NoProfile -ExecutionPolicy Bypass -Command "if ([System.IO.File]::Exists('$(BOOTROM_ELF)')) { Remove-Item -LiteralPath '$(BOOTROM_ELF)' -Force }"
 	@$(CC) $(ARCH_FLAGS) -nostdlib -nostartfiles "-Wl,-T,$(BOOTROM_LD)" $< -o $@
 	@$(SIZE) $@
 
 # 编译并链接 BRAM 用户程序，生成裸机 ELF。
-$(BRAM_ELF): $(BRAM_SRCS) $(BRAM_LD) | $(BRAM_BUILD_DIR)
+$(BRAM_ELF): $(BRAM_SRCS) $(BRAM_LD) FORCE | $(BRAM_BUILD_DIR)
 	@echo "Building BRAM ELF..."
+	@powershell -NoProfile -ExecutionPolicy Bypass -Command "if ([System.IO.File]::Exists('$(BRAM_ELF)')) { Remove-Item -LiteralPath '$(BRAM_ELF)' -Force }"
 	@$(CC) $(ARCH_FLAGS) -mcmodel=medany -msmall-data-limit=0 -nostdlib -nostartfiles -ffreestanding -fno-builtin -Os "-Wl,-T,$(BRAM_LD)" $(BRAM_SRCS) -o $@
 	@$(SIZE) $@
 
 # 将 BootROM ELF 转为裸二进制，并填充到固定 4KB 大小。
-$(BOOTROM_BIN): $(BOOTROM_ELF)
+$(BOOTROM_BIN): $(BOOTROM_ELF) FORCE
 	@echo "Generating BootROM binary..."
+	@powershell -NoProfile -ExecutionPolicy Bypass -Command "if ([System.IO.File]::Exists('$(BOOTROM_BIN)')) { Remove-Item -LiteralPath '$(BOOTROM_BIN)' -Force }"
 	@$(OBJCOPY) -O binary --gap-fill 0x00 --pad-to $(BOOTROM_SIZE_BYTES) $< $@
 
 # 将 BRAM ELF 转为裸二进制，按链接地址填充到 0x20000。
-$(BRAM_BIN): $(BRAM_ELF)
+$(BRAM_BIN): $(BRAM_ELF) FORCE
 	@echo "Generating BRAM binary..."
+	@powershell -NoProfile -ExecutionPolicy Bypass -Command "if ([System.IO.File]::Exists('$(BRAM_BIN)')) { Remove-Item -LiteralPath '$(BRAM_BIN)' -Force }"
 	@$(OBJCOPY) -O binary --gap-fill 0x00 --pad-to $(BRAM_PAD_TO_ADDR) $< $@
 
 # 生成 BootROM 反汇编文件，用于人工查看和后续自动检查。
-$(BOOTROM_DUMP): $(BOOTROM_ELF)
+$(BOOTROM_DUMP): $(BOOTROM_ELF) FORCE
 	@echo "Generating BootROM dump..."
-	@powershell -NoProfile -ExecutionPolicy Bypass -Command "$$dump = & '$(OBJDUMP)' -d -S '$(BOOTROM_ELF)'; if ($$LASTEXITCODE -ne 0) { exit $$LASTEXITCODE }; [System.IO.File]::WriteAllLines('$(BOOTROM_DUMP)', $$dump, [System.Text.Encoding]::ASCII)"
+	@powershell -NoProfile -ExecutionPolicy Bypass -Command "if ([System.IO.File]::Exists('$(BOOTROM_DUMP)')) { Remove-Item -LiteralPath '$(BOOTROM_DUMP)' -Force }; $$dump = & '$(OBJDUMP)' -d -S '$(BOOTROM_ELF)'; if ($$LASTEXITCODE -ne 0) { exit $$LASTEXITCODE }; [System.IO.File]::WriteAllLines('$(BOOTROM_DUMP)', $$dump, [System.Text.Encoding]::ASCII)"
 
 # 生成 BRAM 反汇编文件，用于人工查看和后续自动检查。
-$(BRAM_DUMP): $(BRAM_ELF)
+$(BRAM_DUMP): $(BRAM_ELF) FORCE
 	@echo "Generating BRAM dump..."
-	@powershell -NoProfile -ExecutionPolicy Bypass -Command "$$dump = & '$(OBJDUMP)' -d -S '$(BRAM_ELF)'; if ($$LASTEXITCODE -ne 0) { exit $$LASTEXITCODE }; [System.IO.File]::WriteAllLines('$(BRAM_DUMP)', $$dump, [System.Text.Encoding]::ASCII)"
+	@powershell -NoProfile -ExecutionPolicy Bypass -Command "if ([System.IO.File]::Exists('$(BRAM_DUMP)')) { Remove-Item -LiteralPath '$(BRAM_DUMP)' -Force }; $$dump = & '$(OBJDUMP)' -d -S '$(BRAM_ELF)'; if ($$LASTEXITCODE -ne 0) { exit $$LASTEXITCODE }; [System.IO.File]::WriteAllLines('$(BRAM_DUMP)', $$dump, [System.Text.Encoding]::ASCII)"
 
 # 将 BootROM 二进制按 128-bit 小端数据字转换为 Vivado BRAM 初始化用的 COE 文件。
-$(BOOTROM_COE): $(BOOTROM_BIN) $(MAKEFILE_PATH)
+$(BOOTROM_COE): $(BOOTROM_BIN) $(MAKEFILE_PATH) FORCE
 	@echo "Generating BootROM COE..."
-	@powershell -NoProfile -ExecutionPolicy Bypass -Command "$$bytes = [System.IO.File]::ReadAllBytes('$(BOOTROM_BIN)'); if ($$bytes.Length -ne $(BOOTROM_SIZE_BYTES)) { throw 'BootROM binary size must be $(BOOTROM_SIZE_BYTES) bytes.' }; $$lines = New-Object System.Collections.Generic.List[string]; $$lines.Add('memory_initialization_radix=16;'); $$lines.Add('memory_initialization_vector='); for ($$i = 0; $$i -lt $$bytes.Length; $$i += $(INIT_WORD_BYTES)) { $$word = -join ($$bytes[($$i + $(INIT_WORD_BYTES) - 1)..$$i] | ForEach-Object { $$_.ToString('x2') }); if ($$i -eq $$bytes.Length - $(INIT_WORD_BYTES)) { $$lines.Add($$word + ';') } else { $$lines.Add($$word + ',') } }; [System.IO.File]::WriteAllLines('$(BOOTROM_COE)', $$lines, [System.Text.Encoding]::ASCII)"
+	@powershell -NoProfile -ExecutionPolicy Bypass -Command "if ([System.IO.File]::Exists('$(BOOTROM_COE)')) { Remove-Item -LiteralPath '$(BOOTROM_COE)' -Force }; $$bytes = [System.IO.File]::ReadAllBytes('$(BOOTROM_BIN)'); if ($$bytes.Length -ne $(BOOTROM_SIZE_BYTES)) { throw 'BootROM binary size must be $(BOOTROM_SIZE_BYTES) bytes.' }; $$lines = New-Object System.Collections.Generic.List[string]; $$lines.Add('memory_initialization_radix=16;'); $$lines.Add('memory_initialization_vector='); for ($$i = 0; $$i -lt $$bytes.Length; $$i += $(INIT_WORD_BYTES)) { $$word = -join ($$bytes[($$i + $(INIT_WORD_BYTES) - 1)..$$i] | ForEach-Object { $$_.ToString('x2') }); if ($$i -eq $$bytes.Length - $(INIT_WORD_BYTES)) { $$lines.Add($$word + ';') } else { $$lines.Add($$word + ',') } }; [System.IO.File]::WriteAllLines('$(BOOTROM_COE)', $$lines, [System.Text.Encoding]::ASCII)"
 
 # 将 BootROM 二进制按 128-bit 小端数据字同步为 Vivado BMG 仿真实际加载的 MIF 文件。
-$(BOOTROM_MIF_TARGETS): $(BOOTROM_BIN) $(MAKEFILE_PATH)
+$(BOOTROM_MIF_TARGETS): $(BOOTROM_BIN) $(MAKEFILE_PATH) FORCE
 	@echo "Generating BootROM MIF: $@"
-	@powershell -NoProfile -ExecutionPolicy Bypass -Command "$$target = '$@'; $$dir = [System.IO.Path]::GetDirectoryName($$target); if ($$dir -and -not [System.IO.Directory]::Exists($$dir)) { [System.IO.Directory]::CreateDirectory($$dir) | Out-Null }; $$bytes = [System.IO.File]::ReadAllBytes('$(BOOTROM_BIN)'); if ($$bytes.Length -ne $(BOOTROM_SIZE_BYTES)) { throw 'BootROM binary size must be $(BOOTROM_SIZE_BYTES) bytes.' }; $$lines = New-Object System.Collections.Generic.List[string]; for ($$i = 0; $$i -lt $$bytes.Length; $$i += $(INIT_WORD_BYTES)) { $$word = -join ($$bytes[($$i + $(INIT_WORD_BYTES) - 1)..$$i] | ForEach-Object { [Convert]::ToString($$_, 2).PadLeft(8, '0') }); $$lines.Add($$word) }; [System.IO.File]::WriteAllLines($$target, $$lines, [System.Text.Encoding]::ASCII)"
+	@powershell -NoProfile -ExecutionPolicy Bypass -Command "$$target = '$@'; $$dir = [System.IO.Path]::GetDirectoryName($$target); if ($$dir -and -not [System.IO.Directory]::Exists($$dir)) { [System.IO.Directory]::CreateDirectory($$dir) | Out-Null }; if ([System.IO.File]::Exists($$target)) { Remove-Item -LiteralPath $$target -Force }; $$bytes = [System.IO.File]::ReadAllBytes('$(BOOTROM_BIN)'); if ($$bytes.Length -ne $(BOOTROM_SIZE_BYTES)) { throw 'BootROM binary size must be $(BOOTROM_SIZE_BYTES) bytes.' }; $$lines = New-Object System.Collections.Generic.List[string]; for ($$i = 0; $$i -lt $$bytes.Length; $$i += $(INIT_WORD_BYTES)) { $$word = -join ($$bytes[($$i + $(INIT_WORD_BYTES) - 1)..$$i] | ForEach-Object { [Convert]::ToString($$_, 2).PadLeft(8, '0') }); $$lines.Add($$word) }; [System.IO.File]::WriteAllLines($$target, $$lines, [System.Text.Encoding]::ASCII)"
 
 # 将 BRAM 二进制按 128-bit 小端数据字转换为 Vivado BRAM 初始化用的 COE 文件。
-$(BRAM_COE): $(BRAM_BIN) $(MAKEFILE_PATH)
+$(BRAM_COE): $(BRAM_BIN) $(MAKEFILE_PATH) FORCE
 	@echo "Generating BRAM COE..."
-	@powershell -NoProfile -ExecutionPolicy Bypass -Command "$$bytes = [System.IO.File]::ReadAllBytes('$(BRAM_BIN)'); if ($$bytes.Length -ne $(BRAM_SIZE_BYTES)) { throw 'BRAM binary size must be $(BRAM_SIZE_BYTES) bytes.' }; $$lines = New-Object System.Collections.Generic.List[string]; $$lines.Add('memory_initialization_radix=16;'); $$lines.Add('memory_initialization_vector='); for ($$i = 0; $$i -lt $$bytes.Length; $$i += $(INIT_WORD_BYTES)) { $$word = -join ($$bytes[($$i + $(INIT_WORD_BYTES) - 1)..$$i] | ForEach-Object { $$_.ToString('x2') }); if ($$i -eq $$bytes.Length - $(INIT_WORD_BYTES)) { $$lines.Add($$word + ';') } else { $$lines.Add($$word + ',') } }; [System.IO.File]::WriteAllLines('$(BRAM_COE)', $$lines, [System.Text.Encoding]::ASCII)"
+	@powershell -NoProfile -ExecutionPolicy Bypass -Command "if ([System.IO.File]::Exists('$(BRAM_COE)')) { Remove-Item -LiteralPath '$(BRAM_COE)' -Force }; $$bytes = [System.IO.File]::ReadAllBytes('$(BRAM_BIN)'); if ($$bytes.Length -ne $(BRAM_SIZE_BYTES)) { throw 'BRAM binary size must be $(BRAM_SIZE_BYTES) bytes.' }; $$lines = New-Object System.Collections.Generic.List[string]; $$lines.Add('memory_initialization_radix=16;'); $$lines.Add('memory_initialization_vector='); for ($$i = 0; $$i -lt $$bytes.Length; $$i += $(INIT_WORD_BYTES)) { $$word = -join ($$bytes[($$i + $(INIT_WORD_BYTES) - 1)..$$i] | ForEach-Object { $$_.ToString('x2') }); if ($$i -eq $$bytes.Length - $(INIT_WORD_BYTES)) { $$lines.Add($$word + ';') } else { $$lines.Add($$word + ',') } }; [System.IO.File]::WriteAllLines('$(BRAM_COE)', $$lines, [System.Text.Encoding]::ASCII)"
 
 # 将 BRAM 二进制按 128-bit 小端数据字同步为 Vivado BMG 仿真实际加载的 MIF 文件。
-$(BRAM_MIF_TARGETS): $(BRAM_BIN) $(MAKEFILE_PATH)
+$(BRAM_MIF_TARGETS): $(BRAM_BIN) $(MAKEFILE_PATH) FORCE
 	@echo "Generating BRAM MIF: $@"
-	@powershell -NoProfile -ExecutionPolicy Bypass -Command "$$target = '$@'; $$dir = [System.IO.Path]::GetDirectoryName($$target); if ($$dir -and -not [System.IO.Directory]::Exists($$dir)) { [System.IO.Directory]::CreateDirectory($$dir) | Out-Null }; $$bytes = [System.IO.File]::ReadAllBytes('$(BRAM_BIN)'); if ($$bytes.Length -ne $(BRAM_SIZE_BYTES)) { throw 'BRAM binary size must be $(BRAM_SIZE_BYTES) bytes.' }; $$lines = New-Object System.Collections.Generic.List[string]; for ($$i = 0; $$i -lt $$bytes.Length; $$i += $(INIT_WORD_BYTES)) { $$word = -join ($$bytes[($$i + $(INIT_WORD_BYTES) - 1)..$$i] | ForEach-Object { [Convert]::ToString($$_, 2).PadLeft(8, '0') }); $$lines.Add($$word) }; [System.IO.File]::WriteAllLines($$target, $$lines, [System.Text.Encoding]::ASCII)"
+	@powershell -NoProfile -ExecutionPolicy Bypass -Command "$$target = '$@'; $$dir = [System.IO.Path]::GetDirectoryName($$target); if ($$dir -and -not [System.IO.Directory]::Exists($$dir)) { [System.IO.Directory]::CreateDirectory($$dir) | Out-Null }; if ([System.IO.File]::Exists($$target)) { Remove-Item -LiteralPath $$target -Force }; $$bytes = [System.IO.File]::ReadAllBytes('$(BRAM_BIN)'); if ($$bytes.Length -ne $(BRAM_SIZE_BYTES)) { throw 'BRAM binary size must be $(BRAM_SIZE_BYTES) bytes.' }; $$lines = New-Object System.Collections.Generic.List[string]; for ($$i = 0; $$i -lt $$bytes.Length; $$i += $(INIT_WORD_BYTES)) { $$word = -join ($$bytes[($$i + $(INIT_WORD_BYTES) - 1)..$$i] | ForEach-Object { [Convert]::ToString($$_, 2).PadLeft(8, '0') }); $$lines.Add($$word) }; [System.IO.File]::WriteAllLines($$target, $$lines, [System.Text.Encoding]::ASCII)"
 
 # 检查 BootROM 入口地址、trap 向量和跳转到 BRAM 的关键指令是否存在。
 bootrom-check: $(BOOTROM_ELF) $(BOOTROM_DUMP)
@@ -160,4 +170,4 @@ bram-check: $(BRAM_ELF) $(BRAM_BIN) $(BRAM_DUMP)
 clean:
 	@if exist "$(BOOTROM_BUILD_DIR)" rmdir /S /Q "$(BOOTROM_BUILD_DIR)"
 	@if exist "$(BRAM_BUILD_DIR)" rmdir /S /Q "$(BRAM_BUILD_DIR)"
-	@if exist "$(JTAG_MAKEFILE)" $(MAKE) -f "$(JTAG_MAKEFILE)" clean
+	@if not "$(JTAG_MAKEFILE)"=="" if exist "$(JTAG_MAKEFILE)" $(MAKE) -f "$(JTAG_MAKEFILE)" clean

@@ -11,7 +11,7 @@
 
 module c910_core_bd_wrapper #(
   parameter [39:0] RESET_VECTOR = 40'h0000_0000,
-  parameter [39:0] CPU_APB_BASE = 40'h0000_0000,
+  parameter [39:0] CPU_APB_BASE = 40'h0800_0000,
   parameter [2:0]  HART_ID      = 3'b000
 ) (
   input  wire         aclk,

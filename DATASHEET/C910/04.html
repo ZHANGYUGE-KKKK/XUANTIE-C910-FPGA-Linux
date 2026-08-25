@@ -1,0 +1,940 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>玄铁C906 C910 RISC-V处理器原理与架构详解 - 第4章 分支预测机制</title>
+    <style>
+@import url('https://fonts.loli.net/css2?family=Noto+Sans+SC:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+:root {
+    --primary: #4db8a4;
+    --primary-dark: #3a9e8c;
+    --primary-light: #6fcfbe;
+    --accent: #45a899;
+    --accent-light: #a8e6db;
+    --gradient-main: linear-gradient(135deg, #4db8a4, #5ec6b4);
+    --gradient-soft: linear-gradient(135deg, #4db8a4 0%, #5ec6b4 50%, #7dd4c6 100%);
+    --gradient-header: linear-gradient(135deg, #4db8a4, #62c9b8, #7dd4c6);
+    --gradient-header-dark: linear-gradient(135deg, #2a7d6e, #358f7f, #4db8a4);
+    --bg-page: #f6f8fa;
+    --bg-white: #ffffff;
+    --bg-gray-50: #f8f9fb;
+    --bg-gray-100: #f0f2f5;
+    --bg-green-50: #edf9f5;
+    --bg-teal-50: #f0faf7;
+    --text-primary: #1f2937;
+    --text-secondary: #4b5563;
+    --text-muted: #9ca3af;
+    --border-light: #e5e7eb;
+    --border-default: #d1d5db;
+    --shadow-sm: 0 1px 2px rgba(0,0,0,0.04);
+    --shadow-card: 0 1px 3px rgba(0,0,0,0.05), 0 1px 2px rgba(0,0,0,0.03);
+    --shadow-card-hover: 0 4px 12px rgba(77,184,164,0.12), 0 2px 4px rgba(0,0,0,0.04);
+    --radius-sm: 6px;
+    --radius-md: 10px;
+    --radius-lg: 12px;
+    --radius-xl: 16px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    background: var(--bg-page);
+    color: var(--text-primary);
+    font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", 'Segoe UI', sans-serif;
+    line-height: 1.8;
+    font-size: 15px;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* ━━━ 目录页 ━━━ */
+.catalog-container { max-width: 900px; margin: 0 auto; padding: 0 24px 30px; }
+
+.catalog-hero {
+    text-align: center; padding: 30px 30px 22px;
+    background: var(--gradient-header);
+    border-radius: 0 0 var(--radius-xl) var(--radius-xl);
+    margin-bottom: 20px; position: relative; overflow: hidden;
+}
+.catalog-hero::before {
+    content: ''; position: absolute; top: -50%; right: -15%;
+    width: 260px; height: 260px;
+    background: radial-gradient(circle, rgba(255,255,255,0.12) 0%, transparent 70%);
+    border-radius: 50%;
+}
+.catalog-hero::after {
+    content: ''; position: absolute; bottom: -40%; left: -8%;
+    width: 180px; height: 180px;
+    background: radial-gradient(circle, rgba(255,255,255,0.08) 0%, transparent 70%);
+    border-radius: 50%;
+}
+.catalog-hero h1 { font-size: 26px; font-weight: 700; color: #fff; letter-spacing: 1px; margin-bottom: 8px; position: relative; z-index: 1; }
+.catalog-hero .subtitle { color: rgba(255,255,255,0.85); font-size: 18px; font-weight: 500; letter-spacing: 2px; position: relative; z-index: 1; }
+
+/* 统计数据条 */
+.stats-bar {
+    display: flex; justify-content: center; gap: 24px;
+    padding: 14px 20px; background: var(--bg-white);
+    border: 1px solid var(--border-light); border-radius: var(--radius-lg);
+    margin-bottom: 16px; box-shadow: var(--shadow-card);
+}
+.stats-item { text-align: center; }
+.stats-number { font-size: 22px; font-weight: 700; color: var(--primary); line-height: 1.2; }
+.stats-label { font-size: 12px; color: var(--text-muted); letter-spacing: 0.5px; }
+
+/* 4列网格 */
+.catalog-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+
+.catalog-card-link { text-decoration: none; color: inherit; display: block; }
+.catalog-card-link:visited { color: inherit; }
+
+.catalog-card {
+    background: var(--bg-white); border: 1px solid var(--border-light);
+    border-radius: var(--radius-lg); padding: 14px 14px 10px;
+    transition: all 0.2s ease; box-shadow: var(--shadow-card);
+    display: flex; flex-direction: column; height: 100%;
+}
+.catalog-card:hover {
+    border-color: rgba(77,184,164,0.35);
+    box-shadow: var(--shadow-card-hover); transform: translateY(-2px);
+}
+
+.card-number {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 28px; height: 28px; border-radius: 7px;
+    background: #fef0ef; color: #e8564a;
+    font-size: 12px; font-weight: 700; margin-bottom: 6px; flex-shrink: 0;
+}
+.card-title { font-size: 14px; font-weight: 700; color: var(--text-primary); margin-bottom: 6px; line-height: 1.35; min-height: 38px; }
+.card-points { list-style: none; padding: 0; margin: 0 0 6px 0; flex-grow: 1; }
+.card-points li { font-size: 12px; color: var(--text-secondary); line-height: 1.4; padding: 1px 0 1px 14px; position: relative; }
+.card-points li::before { content: '▸'; position: absolute; left: 0; color: var(--primary); font-size: 12px; font-weight: 700; }
+.card-action {
+    display: inline-block; font-size: 12px; font-weight: 600; color: #fff;
+    background: var(--primary); padding: 4px 14px; border-radius: 4px;
+    margin-top: 6px; transition: background 0.2s; text-align: center;
+}
+.catalog-card:hover .card-action { background: var(--primary-dark); }
+
+/* ━━━ 章节内容页 ━━━ */
+.chapter-container { max-width: 880px; margin: 0 auto; padding: 48px 40px; background: var(--bg-white); }
+
+.chapter-header {
+    background: var(--gradient-header); border-radius: var(--radius-lg);
+    padding: 28px 32px; margin-bottom: 32px; position: relative; overflow: hidden;
+}
+.chapter-header::before {
+    content: ''; position: absolute; top: -60%; right: -15%;
+    width: 220px; height: 220px;
+    background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+    border-radius: 50%;
+}
+.chapter-header h2 { color: #fff; font-size: 22px; font-weight: 700; letter-spacing: 0.5px; position: relative; z-index: 1; }
+
+/* ── 导读卡片 ── */
+.chapter-guide {
+    background: var(--bg-white); border: 1px solid var(--border-light);
+    border-radius: var(--radius-lg); overflow: hidden;
+    margin-bottom: 28px; box-shadow: var(--shadow-card);
+}
+.guide-meta {
+    display: flex; align-items: center; flex-wrap: wrap;
+    background: var(--bg-gray-50); border-bottom: 1px solid var(--border-light); padding: 0;
+}
+.guide-meta-item {
+    display: flex; align-items: center; gap: 6px;
+    padding: 11px 18px; font-size: 13px; color: var(--text-secondary);
+    border-right: 1px solid var(--border-light); white-space: nowrap; line-height: 1;
+}
+.guide-meta-item:last-child { border-right: none; }
+.guide-meta-item .meta-icon { font-size: 14px; flex-shrink: 0; }
+.guide-body { padding: 18px 24px 20px; }
+.guide-learn { margin-bottom: 14px; }
+.guide-learn-label {
+    font-size: 13px; font-weight: 700; color: var(--primary);
+    letter-spacing: 1.5px; margin-bottom: 8px; display: block;
+}
+.guide-learn-label::before {
+    content: ''; display: inline-block; width: 7px; height: 7px;
+    border-radius: 50%; background: var(--primary); margin-right: 8px; vertical-align: middle;
+}
+.guide-learn ul { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 4px 24px; }
+.guide-learn li { font-size: 14px; color: var(--text-secondary); line-height: 1.7; padding-left: 16px; position: relative; }
+.guide-learn li::before { content: '▸'; position: absolute; left: 0; color: var(--accent-light); font-weight: 700; font-size: 14px; }
+.guide-concepts { display: flex; align-items: center; flex-wrap: wrap; gap: 8px; }
+.guide-concepts-label {
+    font-size: 13px; font-weight: 700; color: var(--primary);
+    letter-spacing: 1.5px; margin-right: 4px;
+}
+.guide-concepts-label::before {
+    content: ''; display: inline-block; width: 7px; height: 7px;
+    border-radius: 50%; background: var(--primary); margin-right: 8px; vertical-align: middle;
+}
+.guide-concept-tag {
+    display: inline-block; background: var(--bg-green-50);
+    border: 1px solid rgba(77,184,164,0.2);
+    color: var(--primary-dark); padding: 3px 12px; border-radius: 14px;
+    font-size: 13px; font-weight: 500;
+}
+
+.chapter-content { padding: 0; }
+.chapter-content h3 {
+    color: var(--text-primary); font-size: 17px; font-weight: 700;
+    margin: 32px 0 14px 0; padding: 10px 16px;
+    background: var(--bg-green-50); border-left: 3px solid var(--primary);
+    border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+}
+.chapter-content h4 {
+    color: var(--text-primary); font-size: 15px; font-weight: 600;
+    margin: 22px 0 10px 0; padding-bottom: 6px; border-bottom: 1px solid var(--border-light);
+}
+.chapter-content p { color: var(--text-secondary); line-height: 1.85; margin-bottom: 14px; text-align: justify; }
+.chapter-content ul, .chapter-content ol { margin: 12px 0 16px 0; padding-left: 22px; color: var(--text-secondary); }
+.chapter-content li { margin-bottom: 6px; line-height: 1.7; padding-left: 4px; }
+.chapter-content li::marker { color: var(--primary); font-weight: 600; }
+
+/* ── 核心概念 / 重点知识 ── */
+.concept-block {
+    background: var(--bg-green-50); border: 1px solid rgba(77,184,164,0.15);
+    border-radius: var(--radius-md); padding: 18px 22px; margin: 18px 0;
+}
+.concept-block h4 { color: var(--primary-dark); border-bottom: none; margin-top: 0; padding-bottom: 4px; }
+.key-point {
+    background: var(--bg-teal-50); border: 1px solid rgba(69,168,153,0.15);
+    border-radius: var(--radius-md); padding: 18px 22px; margin: 18px 0;
+}
+.key-point h4 { color: var(--accent); border-bottom: none; margin-top: 0; }
+
+/* ── 提示框 ── */
+.tip-box {
+    background: var(--bg-gray-50); border: 1px solid var(--border-light);
+    border-left: 3px solid var(--primary);
+    border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+    padding: 14px 18px; margin: 18px 0;
+}
+.tip-box::before {
+    content: 'TIP'; display: inline-block; font-weight: 700; color: var(--primary);
+    font-size: 11px; letter-spacing: 2px; margin-bottom: 5px;
+    padding: 1px 7px; background: var(--bg-green-50); border-radius: 3px;
+}
+.tip-box.warning { border-left-color: #f59e0b; background: #fffbeb; }
+.tip-box.warning::before { content: 'CAUTION'; color: #d97706; background: #fef3c7; }
+.tip-box.important { border-left-color: #ef4444; background: #fef2f2; }
+.tip-box.important::before { content: 'IMPORTANT'; color: #dc2626; background: #fee2e2; }
+
+/* ── 代码块 + 语法高亮 ── */
+pre {
+    background: #1a2332; border-radius: var(--radius-md); margin: 18px 0;
+    overflow: hidden; border: 1px solid #243447;
+}
+pre .code-header {
+    background: #243447; padding: 7px 14px; font-size: 12px; color: #8ba4b8;
+    font-family: 'JetBrains Mono', monospace; border-bottom: 1px solid #2d4052;
+}
+pre code {
+    display: block; padding: 16px 20px;
+    font-family: 'JetBrains Mono', 'Consolas', monospace;
+    font-size: 13px; line-height: 1.6; color: #e2e8f0; overflow-x: auto;
+}
+pre code .kw { color: #c792ea; }
+pre code .str { color: #c3e88d; }
+pre code .cmt { color: #546e7a; font-style: italic; }
+pre code .num { color: #f78c6c; }
+pre code .func { color: #82aaff; }
+
+/* ── 表格 ── */
+table {
+    width: 100%; border-collapse: separate; border-spacing: 0;
+    margin: 20px 0; border-radius: var(--radius-md); overflow: hidden;
+    border: 1px solid var(--border-light); font-size: 14px;
+}
+thead th {
+    background: var(--gradient-header); color: #fff; font-weight: 600;
+    padding: 11px 16px; text-align: left; font-size: 13px;
+}
+tbody td { padding: 10px 16px; border-bottom: 1px solid var(--border-light); color: var(--text-secondary); line-height: 1.5; }
+tbody tr:nth-child(odd) { background: var(--bg-white); }
+tbody tr:nth-child(even) { background: var(--bg-gray-50); }
+tbody tr:hover { background: var(--bg-green-50); }
+tbody tr:last-child td { border-bottom: none; }
+
+/* ── 小结框 ── */
+.summary-box {
+    background: var(--bg-white); border: 1px solid var(--border-light);
+    border-radius: var(--radius-lg); padding: 22px 26px; margin-top: 36px;
+    position: relative; box-shadow: var(--shadow-sm);
+}
+.summary-box::before {
+    content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+    background: var(--gradient-soft); border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+}
+.summary-box h3 { color: var(--primary-dark) !important; border-left: none !important; background: none !important; padding: 0 !important; margin: 0 0 12px 0 !important; font-size: 15px !important; }
+.summary-box ul { list-style: none; padding-left: 0; margin-left: 0; }
+.summary-box li { padding-left: 20px; position: relative; color: var(--text-secondary); margin-bottom: 6px; }
+.summary-box li::before { content: '→'; position: absolute; left: 0; color: var(--primary); font-weight: 600; }
+
+/* ── 流程图 ── */
+.flowchart {
+    display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 0;
+    margin: 20px 0; padding: 24px 20px; background: var(--bg-white);
+    border-radius: var(--radius-md); border: 1px solid var(--border-light);
+}
+.flow-step {
+    background: var(--bg-green-50); border: 1px solid rgba(77,184,164,0.2);
+    border-radius: var(--radius-sm); padding: 8px 16px; color: var(--primary-dark);
+    font-size: 13px; font-weight: 500; text-align: center; white-space: nowrap;
+}
+.flow-arrow { color: var(--primary-light); font-size: 18px; margin: 0 5px; flex-shrink: 0; }
+
+/* ── 时间线 ── */
+.timeline { position: relative; padding: 10px 0 10px 34px; margin: 20px 0; }
+.timeline::before {
+    content: ''; position: absolute; left: 9px; top: 0; bottom: 0; width: 2px;
+    background: linear-gradient(180deg, var(--primary), var(--accent)); border-radius: 1px;
+}
+.timeline-item {
+    position: relative; margin-bottom: 14px; padding: 12px 16px;
+    background: var(--bg-white); border-radius: var(--radius-sm); border: 1px solid var(--border-light);
+}
+.timeline-item::before {
+    content: ''; position: absolute; left: -29px; top: 16px; width: 10px; height: 10px;
+    border-radius: 50%; background: var(--primary); border: 2px solid var(--bg-page); z-index: 1;
+}
+.timeline-item .step-title { color: var(--primary-dark); font-weight: 600; margin-bottom: 3px; font-size: 14px; }
+.timeline-item p { font-size: 13px; color: var(--text-muted); margin-bottom: 0; }
+
+/* ── 对比区块 ── */
+.compare-block { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 20px 0; }
+.compare-item { background: var(--bg-white); border: 1px solid var(--border-light); border-radius: var(--radius-md); padding: 16px 18px; }
+.compare-item.pros { border-top: 3px solid var(--primary); }
+.compare-item.cons { border-top: 3px solid #f59e0b; }
+.compare-item h4 { margin-top: 0; padding-bottom: 5px; border-bottom: none; font-size: 14px; }
+
+/* ── 架构图（分层/分支结构） ── */
+.arch-diagram {
+    display: flex; flex-direction: column; align-items: center; gap: 4px;
+    padding: 20px; background: var(--bg-white);
+    border: 1px solid var(--border-light); border-radius: var(--radius-md); margin: 20px 0;
+}
+.arch-row { display: flex; align-items: center; justify-content: center; gap: 8px; flex-wrap: wrap; }
+.arch-node {
+    padding: 8px 18px; border-radius: var(--radius-sm);
+    font-size: 13px; font-weight: 600; text-align: center; min-width: 90px; line-height: 1.4;
+}
+.arch-node.primary { background: var(--bg-green-50); border: 2px solid var(--primary); color: var(--primary-dark); }
+.arch-node.secondary { background: #fff7ed; border: 2px solid #f59e0b; color: #b45309; }
+.arch-node.accent { background: #eff6ff; border: 2px solid #3b82f6; color: #1e40af; }
+.arch-connector { color: var(--text-muted); font-size: 20px; font-weight: 700; flex-shrink: 0; }
+
+/* ── 多场景卡片 ── */
+.scenario-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 20px 0; }
+.scenario-card { padding: 16px 18px; border-radius: var(--radius-md); border-left: 4px solid; }
+.scenario-card h4 { margin-top: 0; font-size: 14px; padding-bottom: 4px; border-bottom: none; }
+.scenario-card ul { margin: 6px 0 0 0; padding-left: 16px; }
+.scenario-card li { font-size: 13px; color: var(--text-secondary); margin-bottom: 4px; line-height: 1.5; }
+.scenario-card.blue { border-color: #3b82f6; background: #eff6ff; }
+.scenario-card.blue h4 { color: #1e40af; }
+.scenario-card.green { border-color: var(--primary); background: var(--bg-green-50); }
+.scenario-card.green h4 { color: var(--primary-dark); }
+.scenario-card.purple { border-color: #8b5cf6; background: #f5f3ff; }
+.scenario-card.purple h4 { color: #6d28d9; }
+.scenario-card.orange { border-color: #f59e0b; background: #fffbeb; }
+.scenario-card.orange h4 { color: #b45309; }
+
+/* ━━━ 面试题卡片 ━━━ */
+.question-card {
+    background: var(--bg-white); border: 1px solid var(--border-light);
+    border-radius: var(--radius-lg); margin-bottom: 24px; overflow: hidden;
+    transition: box-shadow 0.2s;
+}
+.question-card:hover { box-shadow: var(--shadow-card-hover); }
+.question-header {
+    background: var(--gradient-header-dark); padding: 14px 22px;
+    font-size: 15px; font-weight: 600; color: #fff;
+}
+.question-section { padding: 14px 22px; border-bottom: 1px solid var(--border-light); }
+.question-section:last-child { border-bottom: none; }
+.question-section h4 {
+    color: var(--primary-dark); font-size: 12px; font-weight: 700;
+    margin-bottom: 6px; margin-top: 0; padding-bottom: 0; border-bottom: none;
+    text-transform: uppercase; letter-spacing: 2px;
+}
+.question-section p { margin-bottom: 6px; font-size: 14px; }
+.question-section.answer-section { background: var(--bg-gray-50); }
+.question-section.followup-section { background: var(--bg-green-50); }
+.keyword-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.keyword-tags .tag {
+    background: var(--bg-green-50); border: 1px solid rgba(77,184,164,0.2);
+    color: var(--primary-dark); padding: 3px 12px; border-radius: 20px;
+    font-size: 12px; font-weight: 500;
+}
+
+/* ── 面试评分标准 ── */
+.scoring-rubric {
+    border: 1px solid var(--border-light); border-radius: var(--radius-md);
+    overflow: hidden; margin: 12px 22px 14px 22px;
+}
+.score-level {
+    display: flex; align-items: flex-start; gap: 12px;
+    padding: 10px 18px; border-bottom: 1px solid var(--border-light); font-size: 13px;
+}
+.score-level:last-child { border-bottom: none; }
+.score-level p { margin: 0; color: var(--text-secondary); line-height: 1.5; }
+.score-badge {
+    display: inline-block; padding: 2px 10px; border-radius: 10px;
+    font-size: 12px; font-weight: 700; white-space: nowrap; flex-shrink: 0;
+}
+.score-excellent { background: #f0fdf4; }
+.score-excellent .score-badge { background: #dcfce7; color: #15803d; }
+.score-pass { background: #fefce8; }
+.score-pass .score-badge { background: #fef3c7; color: #b45309; }
+.score-fail { background: #fef2f2; }
+.score-fail .score-badge { background: #fee2e2; color: #dc2626; }
+
+/* ── 30秒速答（面试类） ── */
+.question-section.quick-answer {
+    background: linear-gradient(135deg, #ecfdf5, #f0fdf4);
+    border-bottom: 1px solid rgba(77,184,164,0.2);
+}
+.question-section.quick-answer h4 { color: #059669; font-size: 12px; }
+.question-section.quick-answer h4::before { content: '\26A1 '; }
+.question-section.quick-answer p { color: #065f46; font-weight: 500; font-size: 15px; line-height: 1.7; }
+
+/* ── 动手试一试 ── */
+.practice-box {
+    background: linear-gradient(135deg, var(--bg-teal-50) 0%, var(--bg-green-50) 100%);
+    border: 1px solid rgba(77,184,164,0.25);
+    border-left: 4px solid var(--primary);
+    border-radius: 0 var(--radius-md) var(--radius-md) 0;
+    padding: 20px 22px; margin: 24px 0;
+}
+.practice-box::before {
+    content: '\1F527  动手试一试'; display: block; font-weight: 700;
+    color: var(--primary-dark); font-size: 15px; margin-bottom: 10px;
+    padding-bottom: 8px; border-bottom: 1px dashed rgba(77,184,164,0.25);
+}
+.practice-box h4 { display: none; }
+.practice-box ol, .practice-box ul { margin: 8px 0 0 0; padding-left: 20px; }
+.practice-box li { color: var(--text-secondary); margin-bottom: 6px; line-height: 1.7; }
+.practice-box p { color: var(--text-secondary); margin-bottom: 8px; }
+.practice-box code {
+    background: rgba(77,184,164,0.1); padding: 1px 6px; border-radius: 3px;
+    font-family: 'JetBrains Mono', monospace; font-size: 13px; color: var(--primary-dark);
+}
+
+/* ── 检验你的理解 ── */
+.self-check {
+    background: #fefce8; border: 1px solid rgba(245,158,11,0.2);
+    border-left: 4px solid #f59e0b;
+    border-radius: 0 var(--radius-md) var(--radius-md) 0;
+    padding: 20px 22px; margin: 24px 0;
+}
+.self-check::before {
+    content: '\2753  检验你的理解'; display: block; font-weight: 700;
+    color: #b45309; font-size: 15px; margin-bottom: 10px;
+    padding-bottom: 8px; border-bottom: 1px dashed rgba(245,158,11,0.3);
+}
+.self-check h4 { display: none; }
+.self-check ol { margin: 8px 0 0 0; padding-left: 20px; counter-reset: check-counter; list-style: none; }
+.self-check ol li { counter-increment: check-counter; position: relative; padding-left: 8px; color: var(--text-secondary); margin-bottom: 10px; line-height: 1.7; }
+.self-check ol li::before { content: 'Q' counter(check-counter); position: absolute; left: -20px; color: #d97706; font-weight: 700; font-size: 13px; }
+.self-check p { color: var(--text-secondary); margin-bottom: 6px; }
+.self-check .check-answer { color: var(--text-muted); font-size: 13px; font-style: italic; margin-top: 4px; }
+
+/* ── 编者提示 ── */
+.editor-note {
+    background: linear-gradient(135deg, #eff6ff, #f0f7ff);
+    border: 1px solid rgba(59,130,246,0.15);
+    border-left: 3px solid #3b82f6;
+    border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+    padding: 12px 16px; margin: 18px 0; font-size: 14px; color: #1e40af; line-height: 1.7;
+}
+.editor-note::before {
+    content: '\1f4d6  编者提示'; display: inline-block; font-weight: 700;
+    font-size: 11px; letter-spacing: 1.5px; margin-right: 8px;
+    padding: 1px 7px; background: rgba(59,130,246,0.1); border-radius: 3px; color: #2563eb;
+}
+
+/* ── 难度标签 ── */
+.difficulty-tag { display: inline-block; padding: 2px 10px; border-radius: 12px; font-size: 13px; font-weight: 600; letter-spacing: 0.5px; }
+.diff-beginner { background: #dcfce7; color: #15803d; }
+.diff-intermediate { background: #fef3c7; color: #b45309; }
+.diff-advanced { background: #fee2e2; color: #dc2626; }
+
+/* ━━━ 章节导航栏 ━━━ */
+.chapter-nav {
+    display: flex; justify-content: center; align-items: center; gap: 12px;
+    margin-top: 40px; padding: 0 20px;
+}
+.chapter-nav a {
+    display: inline-flex; align-items: center; gap: 6px;
+    padding: 10px 24px; border-radius: var(--radius-md);
+    font-size: 14px; font-weight: 600; text-decoration: none;
+    transition: all 0.2s ease; cursor: pointer;
+}
+.chapter-nav .nav-prev,
+.chapter-nav .nav-next {
+    background: var(--bg-white); color: var(--primary);
+    border: 1px solid rgba(77,184,164,0.25);
+}
+.chapter-nav .nav-prev:hover,
+.chapter-nav .nav-next:hover {
+    background: var(--bg-green-50); border-color: var(--primary);
+    box-shadow: 0 2px 8px rgba(77,184,164,0.12);
+}
+.chapter-nav .nav-catalog {
+    background: var(--gradient-main); color: #fff; border: none;
+}
+.chapter-nav .nav-catalog:hover {
+    opacity: 0.9; box-shadow: 0 2px 8px rgba(77,184,164,0.25);
+}
+.chapter-nav .nav-placeholder {
+    width: 120px;
+}
+
+/* ━━━ 页脚 ━━━ */
+.page-footer {
+    text-align: center; padding: 28px 0 16px 0; color: var(--text-muted);
+    font-size: 12px; letter-spacing: 1px;
+    border-top: 1px solid var(--border-light); margin-top: 24px;
+}
+
+/* ━━━ 移动端适配 ━━━ */
+@media (max-width: 768px) {
+    body { font-size: 14px; line-height: 1.75; }
+
+    /* 目录页 */
+    .catalog-container { padding: 0 12px 20px; }
+    .catalog-hero { padding: 22px 16px 18px; }
+    .catalog-hero h1 { font-size: 20px; }
+    .catalog-hero .subtitle { font-size: 15px; }
+    .stats-bar { gap: 10px; padding: 10px 8px; flex-wrap: wrap; }
+    .stats-number { font-size: 17px; }
+    .stats-label { font-size: 11px; }
+    .catalog-grid { grid-template-columns: repeat(2, 1fr); gap: 8px; }
+    .card-title { font-size: 13px; min-height: auto; }
+    .card-points li { font-size: 11px; }
+
+    /* 章节页 */
+    .chapter-container { padding: 20px 14px; }
+    .chapter-header { padding: 18px 16px; margin-bottom: 20px; }
+    .chapter-header h2 { font-size: 18px; }
+
+    /* 导读卡片 */
+    .guide-meta { flex-direction: column; }
+    .guide-meta-item { border-right: none; border-bottom: 1px solid var(--border-light); padding: 8px 14px; font-size: 12px; }
+    .guide-meta-item:last-child { border-bottom: none; }
+    .guide-body { padding: 14px 14px 16px; }
+    .guide-learn ul { flex-direction: column; gap: 2px; }
+    .guide-concept-tag { font-size: 12px; padding: 2px 10px; }
+
+    /* 正文 */
+    .chapter-content h3 { font-size: 15px; padding: 8px 12px; margin: 24px 0 10px 0; }
+    .chapter-content h4 { font-size: 14px; }
+    .chapter-content p { font-size: 14px; line-height: 1.8; }
+
+    /* 表格横向滚动 */
+    table { display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; white-space: nowrap; }
+    thead th { padding: 8px 10px; font-size: 12px; white-space: nowrap; }
+    tbody td { padding: 8px 10px; font-size: 13px; white-space: nowrap; }
+
+    /* 代码块 */
+    pre code { padding: 12px 10px; font-size: 12px; }
+
+    /* 流程图：允许换行 */
+    .flowchart { padding: 14px 10px; gap: 4px; }
+    .flow-step { font-size: 12px; padding: 6px 10px; }
+    .flow-arrow { font-size: 16px; margin: 0 2px; }
+
+    /* 架构图 */
+    .arch-diagram { padding: 14px 10px; }
+    .arch-row { gap: 4px; }
+    .arch-node { padding: 6px 10px; font-size: 12px; min-width: 70px; }
+    .arch-connector { font-size: 16px; }
+
+    /* 双列布局改单列 */
+    .scenario-grid { grid-template-columns: 1fr; gap: 10px; }
+    .compare-block { grid-template-columns: 1fr; gap: 10px; }
+
+    /* 提示框/概念块 */
+    .concept-block, .key-point { padding: 14px 14px; }
+    .tip-box { padding: 12px 14px; }
+    .editor-note { padding: 10px 12px; font-size: 13px; }
+
+    /* 动手试一试 / 自测题 / 小结 */
+    .practice-box { padding: 14px 14px; }
+    .self-check { padding: 14px 14px; }
+    .summary-box { padding: 16px 16px; }
+
+    /* 面试题卡片 */
+    .question-header { padding: 10px 14px; font-size: 14px; }
+    .question-section { padding: 10px 14px; }
+    .scoring-rubric { margin: 10px 14px 12px; }
+    .score-level { padding: 8px 12px; gap: 8px; flex-direction: column; }
+
+    /* 导航栏 */
+    .chapter-nav { flex-direction: column; gap: 8px; padding: 0 10px; }
+    .chapter-nav a { padding: 8px 16px; font-size: 13px; justify-content: center; width: 100%; }
+    .chapter-nav .nav-placeholder { display: none; }
+}
+
+
+/* ━━━ 广告：章节页眉品牌文字（零占位，不影响间距） ━━━ */
+.header-brand {
+    text-align: center;
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--primary);
+    letter-spacing: 2px;
+    opacity: 0.85;
+    line-height: 1;
+    padding: 0;
+    margin: 0;
+    height: 0;
+    overflow: visible;
+    position: relative;
+    top: -22px;
+    z-index: 1;
+}
+
+/* ━━━ 广告：页脚品牌行 ━━━ */
+.footer-brand {
+    color: var(--primary);
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    margin-bottom: 4px;
+}
+
+/* ━━━ 广告：完整横幅 ━━━ */
+.ad-banner {
+    margin: 36px 0 0 0;
+    padding: 24px 28px;
+    background: var(--bg-gray-50);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-lg);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+.ad-banner::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    background: var(--gradient-soft);
+}
+.ad-banner .ad-brand {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--primary-dark);
+    letter-spacing: 2px;
+    margin-bottom: 4px;
+}
+.ad-banner .ad-divider {
+    width: 60%;
+    margin: 8px auto;
+    border: none;
+    border-top: 1px dashed var(--border-default);
+}
+.ad-banner .ad-tagline {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 6px;
+    line-height: 1.6;
+}
+.ad-banner .ad-cta-btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 32px;
+    background: var(--gradient-main);
+    color: #fff;
+    border-radius: 50px;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.ad-banner .ad-cta-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+}
+.ad-banner .ad-offers {
+    margin-top: 12px;
+    font-size: 13px;
+    color: var(--text-secondary);
+    line-height: 1.8;
+}
+.ad-banner .ad-links {
+    margin-top: 10px;
+    font-size: 12px;
+    color: var(--text-muted);
+}
+.ad-banner .ad-links a {
+    color: var(--primary);
+    text-decoration: none;
+}
+.ad-banner .ad-links a:hover {
+    text-decoration: underline;
+}
+.ad-banner .ad-offer-highlight {
+    font-weight: 700;
+    color: var(--primary-dark);
+    font-size: 14px;
+}
+
+/* ━━━ 目录页品牌文字（hero与stats-bar之间的白色间隙，零占位） ━━━ */
+.catalog-brand {
+    text-align: center;
+    color: var(--primary);
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    opacity: 0.85;
+    line-height: 1;
+    padding: 0;
+    margin: 0;
+    height: 0;
+    overflow: visible;
+    position: relative;
+    top: -16px;
+    z-index: 1;
+}
+
+@media (max-width: 768px) {
+    .header-brand { font-size: 10px; top: -15px; }
+    .ad-banner { padding: 16px 14px; }
+    .ad-banner .ad-brand { font-size: 14px; }
+    .ad-banner .ad-tagline { font-size: 13px; }
+    .ad-banner .ad-cta-btn { padding: 8px 24px; font-size: 13px; }
+    .catalog-brand { font-size: 10px; top: -11px; }
+}
+
+</style>
+</head>
+<body>
+    <div class="chapter-container">
+        <div class="chapter-content">
+<div class="chapter-header"><h2>第4章 分支预测机制</h2></div>
+        <div class="header-brand">码枢沄社 · 嵌入式体系化教程平台</div>
+
+<div class="chapter-guide">
+  <div class="guide-meta">
+    <span class="guide-meta-item"><span class="difficulty-tag diff-beginner">入门</span></span>
+    <span class="guide-meta-item"><span class="meta-icon">👤</span> 适合嵌入式或CPU架构初学者，想理解处理器如何“猜”对程序走向</span>
+    <span class="guide-meta-item"><span class="meta-icon">🔧</span> 用于评估玄铁C906/C910的指令执行效率，以及编写对分支友好的代码</span>
+  </div>
+  <div class="guide-body">
+    <div class="guide-learn"><div class="guide-learn-label">本章你将学到</div><ul><li>为什么需要分支预测——流水线等待的代价</li><li>分支预测的两种基本策略：静态与动态</li><li>玄铁C906与C910在分支预测上的设计差异</li></ul></div>
+    <div class="guide-concepts"><span class="guide-concepts-label">核心概念</span><span class="guide-concept-tag">分支预测</span><span class="guide-concept-tag">分支目标缓冲器</span><span class="guide-concept-tag">预测错误惩罚</span></div>
+  </div>
+</div>
+
+<p>一条if语句就能让CPU的流水线“断流”。处理器取指时，遇到条件分支指令，不知道下一步该取哪条指令——是跳转还是不跳？等执行完分支条件再取指，流水线就得空转好几个周期。分支预测就是让CPU提前猜一个方向，赌对了流水线不停，赌错了就清空已经预取的指令，重新开始。</p>
+
+<h3>分支预测的代价：一个简单的对比</h3>
+
+<table>
+  <tr>
+    <th>场景</th>
+    <th>流水线行为</th>
+    <th>浪费的周期（典型值）</th>
+  </tr>
+  <tr>
+    <td>无分支预测，每次等待分支结果</td>
+    <td>流水线停顿，直到分支条件算出</td>
+    <td>3~6个周期</td>
+  </tr>
+  <tr>
+    <td>静态预测（总是预测不跳转）</td>
+    <td>继续取顺序指令，猜错时冲刷流水线</td>
+    <td>猜对0个，猜错3~6个</td>
+  </tr>
+  <tr>
+    <td>动态预测（2位饱和计数器）</td>
+    <td>根据历史记录预测，命中率约85%~90%</td>
+    <td>平均不到1个周期</td>
+  </tr>
+</table>
+
+<p>玄铁C906采用简单的静态预测策略，而C910使用动态预测加分支目标缓冲器（BTB）。这个差异直接决定了两个处理器在循环密集和分支密集代码上的性能差距。</p>
+
+<div class="arch-diagram">
+  <div class="arch-row">
+    <div class="arch-node primary">取指阶段</div>
+    <span class="arch-connector">→</span>
+    <div class="arch-node secondary">译码阶段</div>
+    <span class="arch-connector">→</span>
+    <div class="arch-node accent">执行阶段</div>
+    <span class="arch-connector">→</span>
+    <div class="arch-node primary">写回阶段</div>
+  </div>
+  <div class="arch-row">
+    <span class="arch-connector" style="visibility:hidden;">↓</span>
+    <span class="arch-connector">↑ 分支预测器在这里做出决策</span>
+    <span class="arch-connector" style="visibility:hidden;">↓</span>
+  </div>
+</div>
+
+分支预测器通常挂在取指阶段之后、译码阶段之前——当译码器识别出当前指令是条件分支时，预测器立刻给出“跳转”或“顺序执行”的判断，取指单元据此决定下一周期取哪里的指令。</p>
+
+<h3>静态预测：C906的选择</h3>
+
+<p>静态预测不依赖历史记录，仅凭指令本身的特性或编译器给出的提示做判断。玄铁C906采用“向后跳转预测为跳转，向前跳转预测为不跳转”的规则。</p>
+
+<p>这个规则背后的直觉很简单：向后跳转通常是循环的末尾跳回开头，大概率会多次执行；向前跳转往往是if语句跳过一段代码，通常不执行。实际开发中，大部分循环体代码在C906上都能获得较好的预测命中率。</p>
+
+<div class="concept-block">
+  <h4>生活类比：红绿灯的固定模式</h4>
+  <p>静态预测就像你每天走同一条路，知道某个红绿灯在早上8点总是绿灯。你不需要观察路口情况，直接按经验通过。如果某天红绿灯改了时间，你就会闯红灯。</p>
+  <p><strong>技术定义：</strong>静态分支预测是处理器根据分支指令的偏移方向或编译器插入的静态提示（如RISC-V的B指令中的预测位），在无历史数据的情况下做出固定方向的预测。</p>
+</div>
+
+<p>我在调试C906的板子时遇到过一个问题：一个三层嵌套循环，内层循环只有3次迭代，但外层循环有1000次。由于C906的静态预测只能识别跳转方向，内层循环的最后一次跳转总是预测错误——因为循环结束时不跳转，而预测器认为向后跳转应该跳。这个场景下，预测命中率只有75%左右。如果换成C910的动态预测，几次迭代后就能学到“这个分支大部分时候跳转，只在最后一次不跳”，命中率可以提升到95%以上。</p>
+
+<h3>动态预测：C910的2位饱和计数器 + BTB</h3>
+
+<p>C910使用2位饱和计数器作为核心预测器。每个分支指令对应一个2位状态机，有4种状态：强不跳、弱不跳、弱跳转、强跳转。每次预测正确，状态向“强”方向移动一级；预测错误，向反方向移动一级。</p>
+
+<div class="arch-diagram">
+  <div class="arch-row">
+    <div class="arch-node accent">强不跳</div>
+    <span class="arch-connector">⇄</span>
+    <div class="arch-node primary">弱不跳</div>
+    <span class="arch-connector">⇄</span>
+    <div class="arch-node primary">弱跳转</div>
+    <span class="arch-connector">⇄</span>
+    <div class="arch-node accent">强跳转</div>
+  </div>
+  <div class="arch-row">
+    <span class="arch-connector" style="visibility:hidden;">↓</span>
+    <span class="arch-connector">← 预测错误时反向移动 →</span>
+    <span class="arch-connector" style="visibility:hidden;">↓</span>
+  </div>
+</div>
+
+<p>这个状态机的好处是：对于“几乎总是跳转”或“几乎总是不跳转”的分支，需要连续两次预测错误才会改变预测方向，抗干扰能力强。对于“90%跳转”的分支，大部分时间处于强跳转状态，只有偶尔不跳转时才会降为弱跳转，但很快又会回到强跳转。</p>
+
+<p>C910的BTB（分支目标缓冲器）存储了最近执行过的分支指令的PC地址和对应的目标地址。当取指单元取到一条指令时，同时查询BTB：如果命中，直接得到目标地址，不用等译码完成再计算。BTB通常有64~128个条目，采用直接映射或组相联结构。</p>
+
+<div class="tip-box warning">
+  <h4>常见误区</h4>
+  <ul>
+    <li><strong>误区1：</strong>认为动态预测一定比静态预测好。实际上，对于规律性极强的循环分支，静态预测的命中率也能超过90%，而且动态预测需要额外的硬件开销（存储器和状态机），在低功耗场景下C906的静态方案更合适。</li>
+    <li><strong>误区2：</strong>以为BTB存储的是预测方向。BTB只存目标地址，不存预测方向。预测方向由单独的2位饱和计数器或全局历史寄存器给出。BTB和预测器是两个独立的硬件模块。</li>
+    <li><strong>误区3：</strong>忽略预测错误后的流水线冲刷代价。C910的流水线深度比C906深，一次预测错误需要清空更多的预取指令，浪费的周期也更多（C910约8~10个周期，C906约4~6个周期）。所以C910虽然预测准确率高，但一旦猜错，代价更大。</li>
+  </ul>
+</div>
+
+<div class="editor-note">
+  <strong>编者提示：</strong>在实际SoC集成中，分支预测器的设计需要和缓存行预取器配合。C910的BTB命中后，会同时触发指令缓存的下一次预取，将目标地址之后的连续指令提前拉入缓存。如果BTB预测错了，不仅流水线要冲刷，预取的缓存行也可能作废，造成额外的内存带宽浪费。因此，玄铁团队在C910中加入了“预测确认”机制——在分支指令执行完毕、确认预测正确后，才真正提交预取的缓存行；如果预测错误，预取的数据直接丢弃，不污染缓存。这个细节在芯片验证阶段很容易被忽略，我曾在一次性能分析中看到L1指令缓存命中率异常低，排查了两天才发现是预取器在预测错误后没有正确丢弃无效数据。</div>
+
+<h3>玄铁C906与C910的分支预测对比</h3>
+
+<table>
+  <tr>
+    <th>特性</th>
+    <th>C906</th>
+    <th>C910</th>
+  </tr>
+  <tr>
+    <td>预测策略</td>
+    <td>静态（向后跳/向前不跳）</td>
+    <td>动态（2位饱和计数器）</td>
+  </tr>
+  <tr>
+    <td>BTB</td>
+    <td>无</td>
+    <td>有，64~128条目</td>
+  </tr>
+  <tr>
+    <td>预测错误惩罚</td>
+    <td>约4~6个周期</td>
+    <td>约8~10个周期</td>
+  </tr>
+  <tr>
+    <td>典型命中率（循环代码）</td>
+    <td>70%~85%</td>
+    <td>90%~97%</td>
+  </tr>
+  <tr>
+    <td>硬件开销</td>
+    <td>几乎为零</td>
+    <td>数千门逻辑</td>
+  </tr>
+  <tr>
+    <td>适用场景</td>
+    <td>低功耗、实时控制</td>
+    <td>高性能计算、复杂控制流</td>
+  </tr>
+</table>
+
+<p>从表中可以看出，C906放弃了BTB和动态预测器，换来了极低的功耗和面积。对于物联网传感器节点、电机控制等场景，分支数量少且规律性强，静态预测已经足够。而C910面向Linux、多媒体处理等场景，代码中充满了虚函数调用、switch-case、异常处理等难以静态预测的分支，动态预测带来的性能收益明显大于硬件开销。</p>
+
+<div class="scenario-grid">
+  <div class="scenario-card blue"><h4>适合C906的场景</h4><ul><li>循环次数固定的for循环</li><li>简单的if-else结构</li><li>中断服务函数（分支极少）</li></ul></div>
+  <div class="scenario-card green"><h4>适合C910的场景</h4><ul><li>虚函数调用密集的C++代码</li><li>状态机驱动的协议处理</li><li>含有大量switch-case的解析器</li></ul></div>
+  <div class="scenario-card purple"><h4>两者都棘手的场景</h4><ul><li>数据驱动的分支（如查表后跳转）</li><li>随机性强的条件判断</li><li>间接跳转（函数指针）</li></ul></div>
+</div>
+
+<h3>分支预测对程序员的影响</h3>
+
+<p>理解分支预测机制后，可以写出对处理器更友好的代码。核心原则是：让分支结果尽量有规律。</p>
+
+<ul>
+  <li><strong>将大概率执行的分支放在if中，小概率放在else中。</strong>虽然C910的动态预测能逐渐适应，但初始状态是“弱不跳转”，第一次执行时如果分支跳转了，就会预测错误。把大概率分支放在if中（不跳转），可以减少第一次预测错误的概率。</li>
+  <li><strong>减少循环内部的分支。</strong>一个循环内部如果有多个if-else，每个分支都会竞争BTB条目（C910的BTB只有64~128个），可能导致频繁的BTB替换，降低命中率。可以考虑将循环展开或使用查表代替分支。</li>
+  <li><strong>避免过于稀疏的switch-case。</strong>switch-case在RISC-V上通常被编译为跳转表，属于间接分支。C910的BTB对间接分支的支持有限（只有简单的目标地址缓存），如果case值分布很散，跳转表很大，BTB命中率会下降。</li>
+</ul>
+
+<p>我在一个C910的项目中遇到过性能瓶颈：一个网络包解析函数，内部有一个switch-case，case值有200多个，但实际运行时只用到其中10个。由于BTB只有128个条目，这200多个目标地址频繁替换，BTB命中率只有30%左右。改成if-else链后，虽然代码长了，但BTB命中率提升到85%，整体吞吐量提高了40%。这就是分支预测对实际性能的影响。</p>
+
+<div class="practice-box">
+  <h4>动手试一试</h4>
+  <p>找一块玄铁C906或C910的开发板（或者用QEMU模拟器），写一段包含条件分支的C代码，例如：</p>
+  <ul>
+    <li>一个循环1000次的for循环，内部有一个if(i % 2 == 0)的分支。</li>
+    <li>先用默认编译选项运行，记录执行时间。</li>
+    <li>然后用__builtin_expect提示编译器（如将if(i % 2 == 0)改为if(__builtin_expect(i % 2 == 0, 1))），再次运行并对比时间。</li>
+    <li>观察C906和C910上的差异——C906上静态预测无法被编译器提示改变，所以时间变化不大；C910上动态预测会逐渐适应，时间可能有小幅改善。</li>
+  </ul>
+  <p>提示：如果使用QEMU，可以用 -cpu c906 或 -cpu c910 参数切换处理器模型。</p>
+</div>
+
+<div class="self-check">
+  <h4>检验你的理解</h4>
+  <ol>
+    <li>判断题：C906的分支预测器包含BTB。（对/错）</li>
+    <li>选择题：2位饱和计数器有几种状态？A. 2种 B. 3种 C. 4种 D. 8种</li>
+    <li>判断题：动态分支预测一定比静态分支预测的命中率高。（对/错）</li>
+  </ol>
+</div>
+
+<div class="summary-box">
+  <h3>本章小结</h3>
+  <ul>
+    <li>分支预测的目的是减少流水线因等待分支结果而产生的空闲周期。</li>
+    <li>C906使用静态预测（向后跳/向前不跳），硬件开销小，适合低功耗场景。</li>
+    <li>C910使用2位饱和计数器加BTB的动态预测，命中率高，适合复杂控制流的应用。</li>
+    <li>预测错误需要冲刷流水线，C910的惩罚周期比C906大，但整体性能仍然优于静态预测。</li>
+    <li>程序员可以通过调整分支规律性来提升预测命中率，从而获得更好的实际性能。</li>
+  </ul>
+</div>
+
+</div>
+        
+        <div class="chapter-nav">
+            <a href="03.html" class="nav-prev">&larr; 上一章</a>
+            <a href="00.html" class="nav-catalog">返回目录</a>
+            <a href="05.html" class="nav-next">下一章 &rarr;</a>
+        </div>
+        <div class="page-footer">
+            <div class="footer-brand">码枢沄社 · 嵌入式体系化教程平台</div>
+            — 玄铁C906 C910 RISC-V处理器原理与架构详解 · 第4章 —
+        </div>
+    </div>
+</body>
+</html>

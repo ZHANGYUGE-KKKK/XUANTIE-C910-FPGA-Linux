@@ -1,0 +1,945 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>玄铁C906 C910 RISC-V处理器原理与架构详解 - 第20章 芯片集成与SoC</title>
+    <style>
+@import url('https://fonts.loli.net/css2?family=Noto+Sans+SC:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+:root {
+    --primary: #4db8a4;
+    --primary-dark: #3a9e8c;
+    --primary-light: #6fcfbe;
+    --accent: #45a899;
+    --accent-light: #a8e6db;
+    --gradient-main: linear-gradient(135deg, #4db8a4, #5ec6b4);
+    --gradient-soft: linear-gradient(135deg, #4db8a4 0%, #5ec6b4 50%, #7dd4c6 100%);
+    --gradient-header: linear-gradient(135deg, #4db8a4, #62c9b8, #7dd4c6);
+    --gradient-header-dark: linear-gradient(135deg, #2a7d6e, #358f7f, #4db8a4);
+    --bg-page: #f6f8fa;
+    --bg-white: #ffffff;
+    --bg-gray-50: #f8f9fb;
+    --bg-gray-100: #f0f2f5;
+    --bg-green-50: #edf9f5;
+    --bg-teal-50: #f0faf7;
+    --text-primary: #1f2937;
+    --text-secondary: #4b5563;
+    --text-muted: #9ca3af;
+    --border-light: #e5e7eb;
+    --border-default: #d1d5db;
+    --shadow-sm: 0 1px 2px rgba(0,0,0,0.04);
+    --shadow-card: 0 1px 3px rgba(0,0,0,0.05), 0 1px 2px rgba(0,0,0,0.03);
+    --shadow-card-hover: 0 4px 12px rgba(77,184,164,0.12), 0 2px 4px rgba(0,0,0,0.04);
+    --radius-sm: 6px;
+    --radius-md: 10px;
+    --radius-lg: 12px;
+    --radius-xl: 16px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    background: var(--bg-page);
+    color: var(--text-primary);
+    font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", 'Segoe UI', sans-serif;
+    line-height: 1.8;
+    font-size: 15px;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* ━━━ 目录页 ━━━ */
+.catalog-container { max-width: 900px; margin: 0 auto; padding: 0 24px 30px; }
+
+.catalog-hero {
+    text-align: center; padding: 30px 30px 22px;
+    background: var(--gradient-header);
+    border-radius: 0 0 var(--radius-xl) var(--radius-xl);
+    margin-bottom: 20px; position: relative; overflow: hidden;
+}
+.catalog-hero::before {
+    content: ''; position: absolute; top: -50%; right: -15%;
+    width: 260px; height: 260px;
+    background: radial-gradient(circle, rgba(255,255,255,0.12) 0%, transparent 70%);
+    border-radius: 50%;
+}
+.catalog-hero::after {
+    content: ''; position: absolute; bottom: -40%; left: -8%;
+    width: 180px; height: 180px;
+    background: radial-gradient(circle, rgba(255,255,255,0.08) 0%, transparent 70%);
+    border-radius: 50%;
+}
+.catalog-hero h1 { font-size: 26px; font-weight: 700; color: #fff; letter-spacing: 1px; margin-bottom: 8px; position: relative; z-index: 1; }
+.catalog-hero .subtitle { color: rgba(255,255,255,0.85); font-size: 18px; font-weight: 500; letter-spacing: 2px; position: relative; z-index: 1; }
+
+/* 统计数据条 */
+.stats-bar {
+    display: flex; justify-content: center; gap: 24px;
+    padding: 14px 20px; background: var(--bg-white);
+    border: 1px solid var(--border-light); border-radius: var(--radius-lg);
+    margin-bottom: 16px; box-shadow: var(--shadow-card);
+}
+.stats-item { text-align: center; }
+.stats-number { font-size: 22px; font-weight: 700; color: var(--primary); line-height: 1.2; }
+.stats-label { font-size: 12px; color: var(--text-muted); letter-spacing: 0.5px; }
+
+/* 4列网格 */
+.catalog-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+
+.catalog-card-link { text-decoration: none; color: inherit; display: block; }
+.catalog-card-link:visited { color: inherit; }
+
+.catalog-card {
+    background: var(--bg-white); border: 1px solid var(--border-light);
+    border-radius: var(--radius-lg); padding: 14px 14px 10px;
+    transition: all 0.2s ease; box-shadow: var(--shadow-card);
+    display: flex; flex-direction: column; height: 100%;
+}
+.catalog-card:hover {
+    border-color: rgba(77,184,164,0.35);
+    box-shadow: var(--shadow-card-hover); transform: translateY(-2px);
+}
+
+.card-number {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 28px; height: 28px; border-radius: 7px;
+    background: #fef0ef; color: #e8564a;
+    font-size: 12px; font-weight: 700; margin-bottom: 6px; flex-shrink: 0;
+}
+.card-title { font-size: 14px; font-weight: 700; color: var(--text-primary); margin-bottom: 6px; line-height: 1.35; min-height: 38px; }
+.card-points { list-style: none; padding: 0; margin: 0 0 6px 0; flex-grow: 1; }
+.card-points li { font-size: 12px; color: var(--text-secondary); line-height: 1.4; padding: 1px 0 1px 14px; position: relative; }
+.card-points li::before { content: '▸'; position: absolute; left: 0; color: var(--primary); font-size: 12px; font-weight: 700; }
+.card-action {
+    display: inline-block; font-size: 12px; font-weight: 600; color: #fff;
+    background: var(--primary); padding: 4px 14px; border-radius: 4px;
+    margin-top: 6px; transition: background 0.2s; text-align: center;
+}
+.catalog-card:hover .card-action { background: var(--primary-dark); }
+
+/* ━━━ 章节内容页 ━━━ */
+.chapter-container { max-width: 880px; margin: 0 auto; padding: 48px 40px; background: var(--bg-white); }
+
+.chapter-header {
+    background: var(--gradient-header); border-radius: var(--radius-lg);
+    padding: 28px 32px; margin-bottom: 32px; position: relative; overflow: hidden;
+}
+.chapter-header::before {
+    content: ''; position: absolute; top: -60%; right: -15%;
+    width: 220px; height: 220px;
+    background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+    border-radius: 50%;
+}
+.chapter-header h2 { color: #fff; font-size: 22px; font-weight: 700; letter-spacing: 0.5px; position: relative; z-index: 1; }
+
+/* ── 导读卡片 ── */
+.chapter-guide {
+    background: var(--bg-white); border: 1px solid var(--border-light);
+    border-radius: var(--radius-lg); overflow: hidden;
+    margin-bottom: 28px; box-shadow: var(--shadow-card);
+}
+.guide-meta {
+    display: flex; align-items: center; flex-wrap: wrap;
+    background: var(--bg-gray-50); border-bottom: 1px solid var(--border-light); padding: 0;
+}
+.guide-meta-item {
+    display: flex; align-items: center; gap: 6px;
+    padding: 11px 18px; font-size: 13px; color: var(--text-secondary);
+    border-right: 1px solid var(--border-light); white-space: nowrap; line-height: 1;
+}
+.guide-meta-item:last-child { border-right: none; }
+.guide-meta-item .meta-icon { font-size: 14px; flex-shrink: 0; }
+.guide-body { padding: 18px 24px 20px; }
+.guide-learn { margin-bottom: 14px; }
+.guide-learn-label {
+    font-size: 13px; font-weight: 700; color: var(--primary);
+    letter-spacing: 1.5px; margin-bottom: 8px; display: block;
+}
+.guide-learn-label::before {
+    content: ''; display: inline-block; width: 7px; height: 7px;
+    border-radius: 50%; background: var(--primary); margin-right: 8px; vertical-align: middle;
+}
+.guide-learn ul { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 4px 24px; }
+.guide-learn li { font-size: 14px; color: var(--text-secondary); line-height: 1.7; padding-left: 16px; position: relative; }
+.guide-learn li::before { content: '▸'; position: absolute; left: 0; color: var(--accent-light); font-weight: 700; font-size: 14px; }
+.guide-concepts { display: flex; align-items: center; flex-wrap: wrap; gap: 8px; }
+.guide-concepts-label {
+    font-size: 13px; font-weight: 700; color: var(--primary);
+    letter-spacing: 1.5px; margin-right: 4px;
+}
+.guide-concepts-label::before {
+    content: ''; display: inline-block; width: 7px; height: 7px;
+    border-radius: 50%; background: var(--primary); margin-right: 8px; vertical-align: middle;
+}
+.guide-concept-tag {
+    display: inline-block; background: var(--bg-green-50);
+    border: 1px solid rgba(77,184,164,0.2);
+    color: var(--primary-dark); padding: 3px 12px; border-radius: 14px;
+    font-size: 13px; font-weight: 500;
+}
+
+.chapter-content { padding: 0; }
+.chapter-content h3 {
+    color: var(--text-primary); font-size: 17px; font-weight: 700;
+    margin: 32px 0 14px 0; padding: 10px 16px;
+    background: var(--bg-green-50); border-left: 3px solid var(--primary);
+    border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+}
+.chapter-content h4 {
+    color: var(--text-primary); font-size: 15px; font-weight: 600;
+    margin: 22px 0 10px 0; padding-bottom: 6px; border-bottom: 1px solid var(--border-light);
+}
+.chapter-content p { color: var(--text-secondary); line-height: 1.85; margin-bottom: 14px; text-align: justify; }
+.chapter-content ul, .chapter-content ol { margin: 12px 0 16px 0; padding-left: 22px; color: var(--text-secondary); }
+.chapter-content li { margin-bottom: 6px; line-height: 1.7; padding-left: 4px; }
+.chapter-content li::marker { color: var(--primary); font-weight: 600; }
+
+/* ── 核心概念 / 重点知识 ── */
+.concept-block {
+    background: var(--bg-green-50); border: 1px solid rgba(77,184,164,0.15);
+    border-radius: var(--radius-md); padding: 18px 22px; margin: 18px 0;
+}
+.concept-block h4 { color: var(--primary-dark); border-bottom: none; margin-top: 0; padding-bottom: 4px; }
+.key-point {
+    background: var(--bg-teal-50); border: 1px solid rgba(69,168,153,0.15);
+    border-radius: var(--radius-md); padding: 18px 22px; margin: 18px 0;
+}
+.key-point h4 { color: var(--accent); border-bottom: none; margin-top: 0; }
+
+/* ── 提示框 ── */
+.tip-box {
+    background: var(--bg-gray-50); border: 1px solid var(--border-light);
+    border-left: 3px solid var(--primary);
+    border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+    padding: 14px 18px; margin: 18px 0;
+}
+.tip-box::before {
+    content: 'TIP'; display: inline-block; font-weight: 700; color: var(--primary);
+    font-size: 11px; letter-spacing: 2px; margin-bottom: 5px;
+    padding: 1px 7px; background: var(--bg-green-50); border-radius: 3px;
+}
+.tip-box.warning { border-left-color: #f59e0b; background: #fffbeb; }
+.tip-box.warning::before { content: 'CAUTION'; color: #d97706; background: #fef3c7; }
+.tip-box.important { border-left-color: #ef4444; background: #fef2f2; }
+.tip-box.important::before { content: 'IMPORTANT'; color: #dc2626; background: #fee2e2; }
+
+/* ── 代码块 + 语法高亮 ── */
+pre {
+    background: #1a2332; border-radius: var(--radius-md); margin: 18px 0;
+    overflow: hidden; border: 1px solid #243447;
+}
+pre .code-header {
+    background: #243447; padding: 7px 14px; font-size: 12px; color: #8ba4b8;
+    font-family: 'JetBrains Mono', monospace; border-bottom: 1px solid #2d4052;
+}
+pre code {
+    display: block; padding: 16px 20px;
+    font-family: 'JetBrains Mono', 'Consolas', monospace;
+    font-size: 13px; line-height: 1.6; color: #e2e8f0; overflow-x: auto;
+}
+pre code .kw { color: #c792ea; }
+pre code .str { color: #c3e88d; }
+pre code .cmt { color: #546e7a; font-style: italic; }
+pre code .num { color: #f78c6c; }
+pre code .func { color: #82aaff; }
+
+/* ── 表格 ── */
+table {
+    width: 100%; border-collapse: separate; border-spacing: 0;
+    margin: 20px 0; border-radius: var(--radius-md); overflow: hidden;
+    border: 1px solid var(--border-light); font-size: 14px;
+}
+thead th {
+    background: var(--gradient-header); color: #fff; font-weight: 600;
+    padding: 11px 16px; text-align: left; font-size: 13px;
+}
+tbody td { padding: 10px 16px; border-bottom: 1px solid var(--border-light); color: var(--text-secondary); line-height: 1.5; }
+tbody tr:nth-child(odd) { background: var(--bg-white); }
+tbody tr:nth-child(even) { background: var(--bg-gray-50); }
+tbody tr:hover { background: var(--bg-green-50); }
+tbody tr:last-child td { border-bottom: none; }
+
+/* ── 小结框 ── */
+.summary-box {
+    background: var(--bg-white); border: 1px solid var(--border-light);
+    border-radius: var(--radius-lg); padding: 22px 26px; margin-top: 36px;
+    position: relative; box-shadow: var(--shadow-sm);
+}
+.summary-box::before {
+    content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+    background: var(--gradient-soft); border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+}
+.summary-box h3 { color: var(--primary-dark) !important; border-left: none !important; background: none !important; padding: 0 !important; margin: 0 0 12px 0 !important; font-size: 15px !important; }
+.summary-box ul { list-style: none; padding-left: 0; margin-left: 0; }
+.summary-box li { padding-left: 20px; position: relative; color: var(--text-secondary); margin-bottom: 6px; }
+.summary-box li::before { content: '→'; position: absolute; left: 0; color: var(--primary); font-weight: 600; }
+
+/* ── 流程图 ── */
+.flowchart {
+    display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 0;
+    margin: 20px 0; padding: 24px 20px; background: var(--bg-white);
+    border-radius: var(--radius-md); border: 1px solid var(--border-light);
+}
+.flow-step {
+    background: var(--bg-green-50); border: 1px solid rgba(77,184,164,0.2);
+    border-radius: var(--radius-sm); padding: 8px 16px; color: var(--primary-dark);
+    font-size: 13px; font-weight: 500; text-align: center; white-space: nowrap;
+}
+.flow-arrow { color: var(--primary-light); font-size: 18px; margin: 0 5px; flex-shrink: 0; }
+
+/* ── 时间线 ── */
+.timeline { position: relative; padding: 10px 0 10px 34px; margin: 20px 0; }
+.timeline::before {
+    content: ''; position: absolute; left: 9px; top: 0; bottom: 0; width: 2px;
+    background: linear-gradient(180deg, var(--primary), var(--accent)); border-radius: 1px;
+}
+.timeline-item {
+    position: relative; margin-bottom: 14px; padding: 12px 16px;
+    background: var(--bg-white); border-radius: var(--radius-sm); border: 1px solid var(--border-light);
+}
+.timeline-item::before {
+    content: ''; position: absolute; left: -29px; top: 16px; width: 10px; height: 10px;
+    border-radius: 50%; background: var(--primary); border: 2px solid var(--bg-page); z-index: 1;
+}
+.timeline-item .step-title { color: var(--primary-dark); font-weight: 600; margin-bottom: 3px; font-size: 14px; }
+.timeline-item p { font-size: 13px; color: var(--text-muted); margin-bottom: 0; }
+
+/* ── 对比区块 ── */
+.compare-block { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 20px 0; }
+.compare-item { background: var(--bg-white); border: 1px solid var(--border-light); border-radius: var(--radius-md); padding: 16px 18px; }
+.compare-item.pros { border-top: 3px solid var(--primary); }
+.compare-item.cons { border-top: 3px solid #f59e0b; }
+.compare-item h4 { margin-top: 0; padding-bottom: 5px; border-bottom: none; font-size: 14px; }
+
+/* ── 架构图（分层/分支结构） ── */
+.arch-diagram {
+    display: flex; flex-direction: column; align-items: center; gap: 4px;
+    padding: 20px; background: var(--bg-white);
+    border: 1px solid var(--border-light); border-radius: var(--radius-md); margin: 20px 0;
+}
+.arch-row { display: flex; align-items: center; justify-content: center; gap: 8px; flex-wrap: wrap; }
+.arch-node {
+    padding: 8px 18px; border-radius: var(--radius-sm);
+    font-size: 13px; font-weight: 600; text-align: center; min-width: 90px; line-height: 1.4;
+}
+.arch-node.primary { background: var(--bg-green-50); border: 2px solid var(--primary); color: var(--primary-dark); }
+.arch-node.secondary { background: #fff7ed; border: 2px solid #f59e0b; color: #b45309; }
+.arch-node.accent { background: #eff6ff; border: 2px solid #3b82f6; color: #1e40af; }
+.arch-connector { color: var(--text-muted); font-size: 20px; font-weight: 700; flex-shrink: 0; }
+
+/* ── 多场景卡片 ── */
+.scenario-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 20px 0; }
+.scenario-card { padding: 16px 18px; border-radius: var(--radius-md); border-left: 4px solid; }
+.scenario-card h4 { margin-top: 0; font-size: 14px; padding-bottom: 4px; border-bottom: none; }
+.scenario-card ul { margin: 6px 0 0 0; padding-left: 16px; }
+.scenario-card li { font-size: 13px; color: var(--text-secondary); margin-bottom: 4px; line-height: 1.5; }
+.scenario-card.blue { border-color: #3b82f6; background: #eff6ff; }
+.scenario-card.blue h4 { color: #1e40af; }
+.scenario-card.green { border-color: var(--primary); background: var(--bg-green-50); }
+.scenario-card.green h4 { color: var(--primary-dark); }
+.scenario-card.purple { border-color: #8b5cf6; background: #f5f3ff; }
+.scenario-card.purple h4 { color: #6d28d9; }
+.scenario-card.orange { border-color: #f59e0b; background: #fffbeb; }
+.scenario-card.orange h4 { color: #b45309; }
+
+/* ━━━ 面试题卡片 ━━━ */
+.question-card {
+    background: var(--bg-white); border: 1px solid var(--border-light);
+    border-radius: var(--radius-lg); margin-bottom: 24px; overflow: hidden;
+    transition: box-shadow 0.2s;
+}
+.question-card:hover { box-shadow: var(--shadow-card-hover); }
+.question-header {
+    background: var(--gradient-header-dark); padding: 14px 22px;
+    font-size: 15px; font-weight: 600; color: #fff;
+}
+.question-section { padding: 14px 22px; border-bottom: 1px solid var(--border-light); }
+.question-section:last-child { border-bottom: none; }
+.question-section h4 {
+    color: var(--primary-dark); font-size: 12px; font-weight: 700;
+    margin-bottom: 6px; margin-top: 0; padding-bottom: 0; border-bottom: none;
+    text-transform: uppercase; letter-spacing: 2px;
+}
+.question-section p { margin-bottom: 6px; font-size: 14px; }
+.question-section.answer-section { background: var(--bg-gray-50); }
+.question-section.followup-section { background: var(--bg-green-50); }
+.keyword-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.keyword-tags .tag {
+    background: var(--bg-green-50); border: 1px solid rgba(77,184,164,0.2);
+    color: var(--primary-dark); padding: 3px 12px; border-radius: 20px;
+    font-size: 12px; font-weight: 500;
+}
+
+/* ── 面试评分标准 ── */
+.scoring-rubric {
+    border: 1px solid var(--border-light); border-radius: var(--radius-md);
+    overflow: hidden; margin: 12px 22px 14px 22px;
+}
+.score-level {
+    display: flex; align-items: flex-start; gap: 12px;
+    padding: 10px 18px; border-bottom: 1px solid var(--border-light); font-size: 13px;
+}
+.score-level:last-child { border-bottom: none; }
+.score-level p { margin: 0; color: var(--text-secondary); line-height: 1.5; }
+.score-badge {
+    display: inline-block; padding: 2px 10px; border-radius: 10px;
+    font-size: 12px; font-weight: 700; white-space: nowrap; flex-shrink: 0;
+}
+.score-excellent { background: #f0fdf4; }
+.score-excellent .score-badge { background: #dcfce7; color: #15803d; }
+.score-pass { background: #fefce8; }
+.score-pass .score-badge { background: #fef3c7; color: #b45309; }
+.score-fail { background: #fef2f2; }
+.score-fail .score-badge { background: #fee2e2; color: #dc2626; }
+
+/* ── 30秒速答（面试类） ── */
+.question-section.quick-answer {
+    background: linear-gradient(135deg, #ecfdf5, #f0fdf4);
+    border-bottom: 1px solid rgba(77,184,164,0.2);
+}
+.question-section.quick-answer h4 { color: #059669; font-size: 12px; }
+.question-section.quick-answer h4::before { content: '\26A1 '; }
+.question-section.quick-answer p { color: #065f46; font-weight: 500; font-size: 15px; line-height: 1.7; }
+
+/* ── 动手试一试 ── */
+.practice-box {
+    background: linear-gradient(135deg, var(--bg-teal-50) 0%, var(--bg-green-50) 100%);
+    border: 1px solid rgba(77,184,164,0.25);
+    border-left: 4px solid var(--primary);
+    border-radius: 0 var(--radius-md) var(--radius-md) 0;
+    padding: 20px 22px; margin: 24px 0;
+}
+.practice-box::before {
+    content: '\1F527  动手试一试'; display: block; font-weight: 700;
+    color: var(--primary-dark); font-size: 15px; margin-bottom: 10px;
+    padding-bottom: 8px; border-bottom: 1px dashed rgba(77,184,164,0.25);
+}
+.practice-box h4 { display: none; }
+.practice-box ol, .practice-box ul { margin: 8px 0 0 0; padding-left: 20px; }
+.practice-box li { color: var(--text-secondary); margin-bottom: 6px; line-height: 1.7; }
+.practice-box p { color: var(--text-secondary); margin-bottom: 8px; }
+.practice-box code {
+    background: rgba(77,184,164,0.1); padding: 1px 6px; border-radius: 3px;
+    font-family: 'JetBrains Mono', monospace; font-size: 13px; color: var(--primary-dark);
+}
+
+/* ── 检验你的理解 ── */
+.self-check {
+    background: #fefce8; border: 1px solid rgba(245,158,11,0.2);
+    border-left: 4px solid #f59e0b;
+    border-radius: 0 var(--radius-md) var(--radius-md) 0;
+    padding: 20px 22px; margin: 24px 0;
+}
+.self-check::before {
+    content: '\2753  检验你的理解'; display: block; font-weight: 700;
+    color: #b45309; font-size: 15px; margin-bottom: 10px;
+    padding-bottom: 8px; border-bottom: 1px dashed rgba(245,158,11,0.3);
+}
+.self-check h4 { display: none; }
+.self-check ol { margin: 8px 0 0 0; padding-left: 20px; counter-reset: check-counter; list-style: none; }
+.self-check ol li { counter-increment: check-counter; position: relative; padding-left: 8px; color: var(--text-secondary); margin-bottom: 10px; line-height: 1.7; }
+.self-check ol li::before { content: 'Q' counter(check-counter); position: absolute; left: -20px; color: #d97706; font-weight: 700; font-size: 13px; }
+.self-check p { color: var(--text-secondary); margin-bottom: 6px; }
+.self-check .check-answer { color: var(--text-muted); font-size: 13px; font-style: italic; margin-top: 4px; }
+
+/* ── 编者提示 ── */
+.editor-note {
+    background: linear-gradient(135deg, #eff6ff, #f0f7ff);
+    border: 1px solid rgba(59,130,246,0.15);
+    border-left: 3px solid #3b82f6;
+    border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+    padding: 12px 16px; margin: 18px 0; font-size: 14px; color: #1e40af; line-height: 1.7;
+}
+.editor-note::before {
+    content: '\1f4d6  编者提示'; display: inline-block; font-weight: 700;
+    font-size: 11px; letter-spacing: 1.5px; margin-right: 8px;
+    padding: 1px 7px; background: rgba(59,130,246,0.1); border-radius: 3px; color: #2563eb;
+}
+
+/* ── 难度标签 ── */
+.difficulty-tag { display: inline-block; padding: 2px 10px; border-radius: 12px; font-size: 13px; font-weight: 600; letter-spacing: 0.5px; }
+.diff-beginner { background: #dcfce7; color: #15803d; }
+.diff-intermediate { background: #fef3c7; color: #b45309; }
+.diff-advanced { background: #fee2e2; color: #dc2626; }
+
+/* ━━━ 章节导航栏 ━━━ */
+.chapter-nav {
+    display: flex; justify-content: center; align-items: center; gap: 12px;
+    margin-top: 40px; padding: 0 20px;
+}
+.chapter-nav a {
+    display: inline-flex; align-items: center; gap: 6px;
+    padding: 10px 24px; border-radius: var(--radius-md);
+    font-size: 14px; font-weight: 600; text-decoration: none;
+    transition: all 0.2s ease; cursor: pointer;
+}
+.chapter-nav .nav-prev,
+.chapter-nav .nav-next {
+    background: var(--bg-white); color: var(--primary);
+    border: 1px solid rgba(77,184,164,0.25);
+}
+.chapter-nav .nav-prev:hover,
+.chapter-nav .nav-next:hover {
+    background: var(--bg-green-50); border-color: var(--primary);
+    box-shadow: 0 2px 8px rgba(77,184,164,0.12);
+}
+.chapter-nav .nav-catalog {
+    background: var(--gradient-main); color: #fff; border: none;
+}
+.chapter-nav .nav-catalog:hover {
+    opacity: 0.9; box-shadow: 0 2px 8px rgba(77,184,164,0.25);
+}
+.chapter-nav .nav-placeholder {
+    width: 120px;
+}
+
+/* ━━━ 页脚 ━━━ */
+.page-footer {
+    text-align: center; padding: 28px 0 16px 0; color: var(--text-muted);
+    font-size: 12px; letter-spacing: 1px;
+    border-top: 1px solid var(--border-light); margin-top: 24px;
+}
+
+/* ━━━ 移动端适配 ━━━ */
+@media (max-width: 768px) {
+    body { font-size: 14px; line-height: 1.75; }
+
+    /* 目录页 */
+    .catalog-container { padding: 0 12px 20px; }
+    .catalog-hero { padding: 22px 16px 18px; }
+    .catalog-hero h1 { font-size: 20px; }
+    .catalog-hero .subtitle { font-size: 15px; }
+    .stats-bar { gap: 10px; padding: 10px 8px; flex-wrap: wrap; }
+    .stats-number { font-size: 17px; }
+    .stats-label { font-size: 11px; }
+    .catalog-grid { grid-template-columns: repeat(2, 1fr); gap: 8px; }
+    .card-title { font-size: 13px; min-height: auto; }
+    .card-points li { font-size: 11px; }
+
+    /* 章节页 */
+    .chapter-container { padding: 20px 14px; }
+    .chapter-header { padding: 18px 16px; margin-bottom: 20px; }
+    .chapter-header h2 { font-size: 18px; }
+
+    /* 导读卡片 */
+    .guide-meta { flex-direction: column; }
+    .guide-meta-item { border-right: none; border-bottom: 1px solid var(--border-light); padding: 8px 14px; font-size: 12px; }
+    .guide-meta-item:last-child { border-bottom: none; }
+    .guide-body { padding: 14px 14px 16px; }
+    .guide-learn ul { flex-direction: column; gap: 2px; }
+    .guide-concept-tag { font-size: 12px; padding: 2px 10px; }
+
+    /* 正文 */
+    .chapter-content h3 { font-size: 15px; padding: 8px 12px; margin: 24px 0 10px 0; }
+    .chapter-content h4 { font-size: 14px; }
+    .chapter-content p { font-size: 14px; line-height: 1.8; }
+
+    /* 表格横向滚动 */
+    table { display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; white-space: nowrap; }
+    thead th { padding: 8px 10px; font-size: 12px; white-space: nowrap; }
+    tbody td { padding: 8px 10px; font-size: 13px; white-space: nowrap; }
+
+    /* 代码块 */
+    pre code { padding: 12px 10px; font-size: 12px; }
+
+    /* 流程图：允许换行 */
+    .flowchart { padding: 14px 10px; gap: 4px; }
+    .flow-step { font-size: 12px; padding: 6px 10px; }
+    .flow-arrow { font-size: 16px; margin: 0 2px; }
+
+    /* 架构图 */
+    .arch-diagram { padding: 14px 10px; }
+    .arch-row { gap: 4px; }
+    .arch-node { padding: 6px 10px; font-size: 12px; min-width: 70px; }
+    .arch-connector { font-size: 16px; }
+
+    /* 双列布局改单列 */
+    .scenario-grid { grid-template-columns: 1fr; gap: 10px; }
+    .compare-block { grid-template-columns: 1fr; gap: 10px; }
+
+    /* 提示框/概念块 */
+    .concept-block, .key-point { padding: 14px 14px; }
+    .tip-box { padding: 12px 14px; }
+    .editor-note { padding: 10px 12px; font-size: 13px; }
+
+    /* 动手试一试 / 自测题 / 小结 */
+    .practice-box { padding: 14px 14px; }
+    .self-check { padding: 14px 14px; }
+    .summary-box { padding: 16px 16px; }
+
+    /* 面试题卡片 */
+    .question-header { padding: 10px 14px; font-size: 14px; }
+    .question-section { padding: 10px 14px; }
+    .scoring-rubric { margin: 10px 14px 12px; }
+    .score-level { padding: 8px 12px; gap: 8px; flex-direction: column; }
+
+    /* 导航栏 */
+    .chapter-nav { flex-direction: column; gap: 8px; padding: 0 10px; }
+    .chapter-nav a { padding: 8px 16px; font-size: 13px; justify-content: center; width: 100%; }
+    .chapter-nav .nav-placeholder { display: none; }
+}
+
+
+/* ━━━ 广告：章节页眉品牌文字（零占位，不影响间距） ━━━ */
+.header-brand {
+    text-align: center;
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--primary);
+    letter-spacing: 2px;
+    opacity: 0.85;
+    line-height: 1;
+    padding: 0;
+    margin: 0;
+    height: 0;
+    overflow: visible;
+    position: relative;
+    top: -22px;
+    z-index: 1;
+}
+
+/* ━━━ 广告：页脚品牌行 ━━━ */
+.footer-brand {
+    color: var(--primary);
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    margin-bottom: 4px;
+}
+
+/* ━━━ 广告：完整横幅 ━━━ */
+.ad-banner {
+    margin: 36px 0 0 0;
+    padding: 24px 28px;
+    background: var(--bg-gray-50);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-lg);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+.ad-banner::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    background: var(--gradient-soft);
+}
+.ad-banner .ad-brand {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--primary-dark);
+    letter-spacing: 2px;
+    margin-bottom: 4px;
+}
+.ad-banner .ad-divider {
+    width: 60%;
+    margin: 8px auto;
+    border: none;
+    border-top: 1px dashed var(--border-default);
+}
+.ad-banner .ad-tagline {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 6px;
+    line-height: 1.6;
+}
+.ad-banner .ad-cta-btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 32px;
+    background: var(--gradient-main);
+    color: #fff;
+    border-radius: 50px;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.ad-banner .ad-cta-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+}
+.ad-banner .ad-offers {
+    margin-top: 12px;
+    font-size: 13px;
+    color: var(--text-secondary);
+    line-height: 1.8;
+}
+.ad-banner .ad-links {
+    margin-top: 10px;
+    font-size: 12px;
+    color: var(--text-muted);
+}
+.ad-banner .ad-links a {
+    color: var(--primary);
+    text-decoration: none;
+}
+.ad-banner .ad-links a:hover {
+    text-decoration: underline;
+}
+.ad-banner .ad-offer-highlight {
+    font-weight: 700;
+    color: var(--primary-dark);
+    font-size: 14px;
+}
+
+/* ━━━ 目录页品牌文字（hero与stats-bar之间的白色间隙，零占位） ━━━ */
+.catalog-brand {
+    text-align: center;
+    color: var(--primary);
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    opacity: 0.85;
+    line-height: 1;
+    padding: 0;
+    margin: 0;
+    height: 0;
+    overflow: visible;
+    position: relative;
+    top: -16px;
+    z-index: 1;
+}
+
+@media (max-width: 768px) {
+    .header-brand { font-size: 10px; top: -15px; }
+    .ad-banner { padding: 16px 14px; }
+    .ad-banner .ad-brand { font-size: 14px; }
+    .ad-banner .ad-tagline { font-size: 13px; }
+    .ad-banner .ad-cta-btn { padding: 8px 24px; font-size: 13px; }
+    .catalog-brand { font-size: 10px; top: -11px; }
+}
+
+</style>
+</head>
+<body>
+    <div class="chapter-container">
+        <div class="chapter-content">
+<div class="chapter-header"><h2>第20章 芯片集成与SoC</h2></div>
+        <div class="header-brand">码枢沄社 · 嵌入式体系化教程平台</div>
+
+<div class="chapter-guide">
+  <div class="guide-meta">
+    <span class="guide-meta-item"><span class="difficulty-tag diff-advanced">高级</span></span>
+    <span class="guide-meta-item"><span class="meta-icon">👤</span> SoC架构师、芯片集成工程师、系统验证工程师</span>
+    <span class="guide-meta-item"><span class="meta-icon">🔧</span> 从单核处理器到完整SoC芯片的集成设计与验证</span>
+  </div>
+  <div class="guide-body">
+    <div class="guide-learn"><div class="guide-learn-label">本章你将学到</div><ul><li>玄铁C906/C910在SoC中的典型集成架构</li><li>时钟、复位、电源域的设计要点与集成约束</li><li>片内互联拓扑、内存映射与系统调试方案</li></ul></div>
+    <div class="guide-concepts"><span class="guide-concepts-label">核心概念</span><span class="guide-concept-tag">SoC集成</span><span class="guide-concept-tag">时钟域</span><span class="guide-concept-tag">复位策略</span><span class="guide-concept-tag">内存映射</span><span class="guide-concept-tag">互联拓扑</span></div>
+  </div>
+</div>
+
+<h3>SoC集成全景：从Core到Chip</h3>
+
+<div class="arch-diagram">
+  <div class="arch-row">
+    <div class="arch-node primary">C906/C910 Core</div>
+    <span class="arch-connector">⇄</span>
+    <div class="arch-node secondary">L2 Cache (可选)</div>
+    <span class="arch-connector">⇄</span>
+    <div class="arch-node accent">系统总线矩阵</div>
+  </div>
+  <div class="arch-row"><span class="arch-connector">↓</span></div>
+  <div class="arch-row">
+    <div class="arch-node primary">DDR控制器</div>
+    <span class="arch-connector">↔</span>
+    <div class="arch-node secondary">外设总线桥</div>
+    <span class="arch-connector">↔</span>
+    <div class="arch-node accent">低速外设 (UART/I2C/SPI)</div>
+  </div>
+  <div class="arch-row"><span class="arch-connector">↓</span></div>
+  <div class="arch-row">
+    <div class="arch-node primary">中断控制器 (PLIC)</div>
+    <span class="arch-connector">→</span>
+    <div class="arch-node accent">DMA控制器</div>
+    <span class="arch-connector">→</span>
+    <div class="arch-node secondary">高速外设 (USB/GMAC)</div>
+  </div>
+</div>
+
+<div class="concept-block">
+  <div class="concept-icon">💡</div>
+  <div class="concept-content">
+    <strong>生活类比：</strong>将C906/C910处理器核想象成一台高性能发动机。SoC集成就像把发动机装进整车——需要匹配变速箱（总线）、油箱（DDR）、仪表盘（调试接口）和各个功能模块（外设）。发动机再强，装错变速箱也跑不起来。
+    <br><br>
+    <strong>技术定义：</strong>SoC（System on Chip）集成是将处理器核、存储控制器、外设接口、时钟复位管理、调试模块等IP整合到单一芯片上，通过片内互联总线实现数据通路和地址映射，形成完整的计算系统。
+  </div>
+</div>
+
+<h3>时钟与复位：芯片的"心跳"与"开关"</h3>
+
+<table>
+  <thead>
+    <tr><th>集成要素</th><th>C906典型配置</th><th>C910典型配置</th><th>设计要点</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>核心时钟</td><td>单频点（如800MHz）</td><td>动态调频（如1.2GHz~2GHz）</td><td>C910需要更复杂的PLL与时钟门控</td></tr>
+    <tr><td>总线时钟</td><td>核心时钟的1/2或1/3</td><td>独立PLL，可异步</td><td>总线频率需与外设时序匹配</td></tr>
+    <tr><td>复位层次</td><td>冷复位 → 热复位 → 调试复位</td><td>同左 + 电源域独立复位</td><td>C910多核需同步复位释放</td></tr>
+    <tr><td>电源域</td><td>Core域 + I/O域</td><td>Core域 + L2域 + I/O域 + 调试域</td><td>C910支持部分掉电，需隔离单元</td></tr>
+  </tbody>
+</table>
+
+<div class="tip-box warning">
+  <h4>⚠️ 常见误区</h4>
+  <ol>
+    <li><strong>时钟树平衡想当然：</strong>以为把PLL输出直接连到核心时钟输入就行。实际项目中，时钟树综合（CTS）必须保证skew在核心时钟周期的5%以内，否则时序收敛会失败。C910的高频设计对时钟树要求更苛刻。</li>
+    <li><strong>复位同步器漏掉：</strong>异步复位直接接到核心的全局复位网络，导致跨时钟域（CDC）问题。每个复位信号必须经过两级同步器再进入核心的复位域，否则可能引发寄存器亚稳态。</li>
+    <li><strong>电源域隔离忽视：</strong>C910如果启用L2 Cache独立电源域，必须在域边界加隔离单元（isolation cell）和电平转换器（level shifter），否则断电后再上电，接口信号可能出现毛刺。</li>
+  </ol>
+</div>
+
+<div class="editor-note">
+  <strong>编者提示：</strong>我在集成C910的一个项目中，遇到上电后核心无法正常启动的问题。排查了三天，最后发现是时钟复位管理单元（CRG）的复位释放时序不满足核心要求——核心的复位信号必须在时钟稳定后至少保持32个时钟周期再释放。这个参数在核心的集成手册中有明确说明，但很容易被当作"默认值"忽略。建议你在做SoC集成时，把每个IP的时序约束条件做成一张检查表，逐项核对。
+</div>
+
+<h3>互联拓扑与内存映射</h3>
+
+<div class="flowchart">
+  <div class="flow-step">处理器核发起访问</div><span class="flow-arrow">→</span>
+  <div class="flow-step">系统总线仲裁</div><span class="flow-arrow">→</span>
+  <div class="flow-step">地址译码匹配</div><span class="flow-arrow">→</span>
+  <div class="flow-step">目标设备响应</div><span class="flow-arrow">→</span>
+  <div class="flow-step">数据返回</div>
+</div>
+
+<p>玄铁C906和C910都支持AHB/AXI系统总线接口。C906通常使用单层AHB总线矩阵，适合中等复杂度SoC；C910采用多层AXI互联结构，支持多主设备并发访问。内存映射是SoC集成的核心——每个外设和内存区域被分配唯一的基地址，处理器通过地址译码器找到目标设备。</p>
+
+<div class="key-point">
+  <div class="key-point-icon">📌</div>
+  <div class="key-point-content">
+    <strong>内存映射设计原则：</strong>
+    <ul>
+      <li>DDR控制器通常映射在地址空间的高端（如0x80000000以上），便于缓存一致性处理</li>
+      <li>片上SRAM映射在低端（如0x00000000~0x000FFFFF），用于中断向量表或快速数据区</li>
+      <li>外设寄存器映射在非缓存区域（如0x10000000~0x1FFFFFFF），避免缓存导致读写异常</li>
+      <li>PLIC中断控制器的地址必须与RISC-V特权规范一致，否则中断处理无法正确响应</li>
+    </ul>
+  </div>
+</div>
+
+<h3>外设集成：从PLIC到DMA</h3>
+
+<table>
+  <thead>
+    <tr><th>外设模块</th><th>与核心的连接方式</th><th>集成注意事项</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>PLIC（平台级中断控制器）</td><td>通过中断线直连核心的IRQ引脚</td><td>C906支持最多63个中断源，C910支持127个；中断优先级寄存器需按规范配置</td></tr>
+    <tr><td>DMA控制器</td><td>通过总线矩阵访问内存与外设</td><td>DMA描述符必须放在非缓存内存区，否则DMA读到的数据可能是旧值</td></tr>
+    <tr><td>UART/I2C/SPI</td><td>通过外设总线桥（APB）连接</td><td>APB桥的时钟频率通常不超过总线时钟的1/2，避免跨时钟域问题</td></tr>
+    <tr><td>USB 2.0/3.0</td><td>通过AXI接口直接连接系统总线</td><td>需要独立的DMA引擎和端点缓冲区，缓冲区地址必须物理连续</td></tr>
+    <tr><td>GMAC（千兆以太网）</td><td>通过AXI接口与DMA协同工作</td><td>描述符环和缓冲区必须在同一4KB页内，否则硬件可能无法正确遍历</td></tr>
+  </tbody>
+</table>
+
+<div class="tip-box">
+  <h4>💡 实用技巧</h4>
+  <p>集成DMA时，建议将描述符放在片上SRAM中，而不是DDR里。原因有两个：一是DDR访问延迟大，DMA在搬运数据时频繁读取描述符会降低效率；二是片上SRAM的访问延迟固定，便于DMA时序预测。我在一个项目中把描述符从DDR移到SRAM，DMA吞吐量提升了约15%。</p>
+</div>
+
+<h3>调试与验证：让SoC"开口说话"</h3>
+
+<p>SoC集成后，第一个任务不是跑操作系统，而是让核心"开口说话"——通过调试接口验证最基本的读写通路。玄铁处理器支持JTAG调试接口，通过RISC-V调试规范（Debug Specification 0.13或1.0）与外部调试器通信。</p>
+
+<div class="scenario-grid">
+  <div class="scenario-card blue">
+    <h4>集成验证阶段</h4>
+    <ul>
+      <li>上电复位测试：验证时钟、复位、电源域时序</li>
+      <li>内存读写测试：验证DDR和SRAM的地址通路</li>
+      <li>外设寄存器读写：验证APB/AXI桥的地址译码</li>
+    </ul>
+  </div>
+  <div class="scenario-card green">
+    <h4>功能验证阶段</h4>
+    <ul>
+      <li>启动代码执行：验证指令取指和异常处理</li>
+      <li>中断响应测试：验证PLIC到核心的中断路径</li>
+      <li>DMA传输测试：验证描述符解析和搬运正确性</li>
+    </ul>
+  </div>
+  <div class="scenario-card purple">
+    <h4>性能验证阶段</h4>
+    <ul>
+      <li>CoreMark/Dhrystone跑分：验证核心频率与流水线效率</li>
+      <li>内存带宽测试：验证总线矩阵的并发能力</li>
+      <li>外设压力测试：验证DMA与中断的协同工作</li>
+    </ul>
+  </div>
+</div>
+
+<div class="key-point">
+  <div class="key-point-icon">🔍</div>
+  <div class="key-point-content">
+    <strong>调试集成踩坑记录：</strong>我在一个C906项目中，JTAG链始终无法识别核心。检查了三个地方：一是核心的JTAG TAP控制器需要上电后通过TRST复位，否则状态机卡在未知状态；二是TCK时钟频率不能超过核心时钟的1/4，否则边界扫描时序不满足；三是核心的调试使能位（在某个CSR中）必须在复位后立即置位，否则调试器无法访问核心寄存器。最终发现是复位序列中漏掉了调试使能位的初始化。
+  </div>
+</div>
+
+<h3>集成约束与性能权衡</h3>
+
+<table>
+  <thead>
+    <tr><th>约束类型</th><th>C906典型限制</th><th>C910典型限制</th><th>影响</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>最大核心频率</td><td>1.2GHz（28nm）</td><td>2.0GHz（12nm）</td><td>影响时序收敛和功耗</td></tr>
+    <tr><td>L2 Cache大小</td><td>最大512KB</td><td>最大2MB</td><td>影响面积和缓存命中率</td></tr>
+    <tr><td>总线最大主设备数</td><td>8个</td><td>16个</td><td>影响系统扩展性</td></tr>
+    <tr><td>支持的内存类型</td><td>DDR3/DDR4</td><td>DDR4/LPDDR4</td><td>影响带宽和功耗</td></tr>
+    <tr><td>外设中断源数</td><td>63个</td><td>127个</td><td>影响系统可扩展性</td></tr>
+  </tbody>
+</table>
+
+<p>选择C906还是C910做SoC集成，取决于目标应用。如果面向IoT或低功耗场景，C906的集成复杂度低、面积小、功耗可控；如果面向边缘计算或AI推理场景，C910的多核性能和L2 Cache容量是硬需求。我在一个边缘计算项目中，最初选了C906，后来发现DDR带宽成为瓶颈，不得不改用C910——但代价是芯片面积增加了约40%，时钟树设计也更复杂。</p>
+
+<div class="practice-box">
+  <h4>动手试一试</h4>
+  <p>假设你要设计一个基于C910的SoC，系统包含以下模块：2个C910核心、1个DDR4控制器、1个GMAC、2个UART、1个SPI、1个I2C和1个PLIC。</p>
+  <ol>
+    <li>画出一个简单的互联架构图，标注每个模块连接到哪个总线节点（AXI或APB）。</li>
+    <li>为每个外设分配一个基地址（假设DDR起始地址为0x80000000，片上SRAM为0x00000000~0x0003FFFF）。</li>
+    <li>列出至少3个你在集成过程中需要重点验证的时序约束条件。</li>
+  </ol>
+  <p><em>提示：不需要精确到寄存器级，重点是理解集成思路。</em></p>
+</div>
+
+<div class="self-check">
+  <h4>检验你的理解</h4>
+  <ol>
+    <li>判断题：C910的复位信号可以直接接到核心的全局复位网络，不需要同步器。（对/错）</li>
+    <li>选择题：在SoC内存映射中，外设寄存器通常映射在以下哪个区域？<br>
+      A. 缓存区域  B. 非缓存区域  C. 指令缓存区域  D. 数据缓存区域</li>
+    <li>判断题：DMA描述符放在DDR中比放在SRAM中效率更高。（对/错）</li>
+  </ol>
+</div>
+
+<div class="summary-box">
+  <h3>本章小结</h3>
+  <ul>
+    <li>SoC集成是将处理器核、存储控制器、外设接口等IP整合到单一芯片，核心是时钟复位管理、互联拓扑和内存映射。</li>
+    <li>C906适合低功耗IoT场景，集成复杂度低；C910适合高性能边缘计算，需要更复杂的时钟树和电源域设计。</li>
+    <li>时钟树平衡、复位同步器、电源域隔离是集成中最容易出错的三个环节。</li>
+    <li>外设集成时，PLIC中断源数、DMA描述符位置、APB桥时钟频率是关键设计参数。</li>
+    <li>集成验证分三个阶段：基础读写验证、功能验证、性能验证，每个阶段都有特定的测试重点。</li>
+  </ul>
+</div>
+
+</div>
+        
+        <div class="chapter-nav">
+            <a href="19.html" class="nav-prev">&larr; 上一章</a>
+            <a href="00.html" class="nav-catalog">返回目录</a>
+            <a href="21.html" class="nav-next">下一章 &rarr;</a>
+        </div>
+        <div class="page-footer">
+            <div class="footer-brand">码枢沄社 · 嵌入式体系化教程平台</div>
+            — 玄铁C906 C910 RISC-V处理器原理与架构详解 · 第20章 —
+        </div>
+    </div>
+</body>
+</html>

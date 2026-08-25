@@ -1,0 +1,63 @@
+
+./LINUX_DDR_execute/BRAM/build/bram.elf:     file format elf64-littleriscv
+
+
+Disassembly of section .text:
+
+0000000000010000 <_start>:
+   10000:	00010117          	auipc	sp,0x10
+   10004:	00010113          	mv	sp,sp
+   10008:	00000297          	auipc	t0,0x0
+   1000c:	0c028293          	addi	t0,t0,192 # 100c8 <__bss_end>
+   10010:	00000317          	auipc	t1,0x0
+   10014:	0b830313          	addi	t1,t1,184 # 100c8 <__bss_end>
+   10018:	0062f863          	bgeu	t0,t1,10028 <_start+0x28>
+   1001c:	00028023          	sb	zero,0(t0)
+   10020:	00128293          	addi	t0,t0,1
+   10024:	ff5ff06f          	j	10018 <_start+0x18>
+   10028:	02c000ef          	jal	10054 <main>
+   1002c:	10500073          	wfi
+   10030:	ffdff06f          	j	1002c <_start+0x2c>
+
+0000000000010034 <uart_puts>:
+   10034:	40000737          	lui	a4,0x40000
+   10038:	400006b7          	lui	a3,0x40000
+   1003c:	0721                	addi	a4,a4,8 # 40000008 <__stack_top+0x3ffe0008>
+   1003e:	0691                	addi	a3,a3,4 # 40000004 <__stack_top+0x3ffe0004>
+   10040:	00054783          	lbu	a5,0(a0)
+   10044:	e391                	bnez	a5,10048 <uart_puts+0x14>
+   10046:	8082                	ret
+   10048:	4310                	lw	a2,0(a4)
+   1004a:	8a21                	andi	a2,a2,8
+   1004c:	fe75                	bnez	a2,10048 <uart_puts+0x14>
+   1004e:	c29c                	sw	a5,0(a3)
+   10050:	0505                	addi	a0,a0,1
+   10052:	b7fd                	j	10040 <uart_puts+0xc>
+
+0000000000010054 <main>:
+   10054:	1101                	addi	sp,sp,-32 # 1ffe0 <__bss_end+0xff18>
+   10056:	000f47b7          	lui	a5,0xf4
+   1005a:	ec06                	sd	ra,24(sp)
+   1005c:	e402                	sd	zero,8(sp)
+   1005e:	23f78793          	addi	a5,a5,575 # f423f <__stack_top+0xd423f>
+   10062:	6722                	ld	a4,8(sp)
+   10064:	02e7f963          	bgeu	a5,a4,10096 <main+0x42>
+   10068:	00000517          	auipc	a0,0x0
+   1006c:	03850513          	addi	a0,a0,56 # 100a0 <main+0x4c>
+   10070:	fc5ff0ef          	jal	10034 <uart_puts>
+   10074:	9002                	ebreak
+   10076:	0330000f          	fence	rw,rw
+   1007a:	0000100f          	fence.i
+   1007e:	00000517          	auipc	a0,0x0
+   10082:	03a50513          	addi	a0,a0,58 # 100b8 <main+0x64>
+   10086:	fafff0ef          	jal	10034 <uart_puts>
+   1008a:	4785                	li	a5,1
+   1008c:	1786                	slli	a5,a5,0x21
+   1008e:	9782                	jalr	a5
+   10090:	10500073          	wfi
+   10094:	bff5                	j	10090 <main+0x3c>
+   10096:	0001                	nop
+   10098:	6722                	ld	a4,8(sp)
+   1009a:	0705                	addi	a4,a4,1
+   1009c:	e43a                	sd	a4,8(sp)
+   1009e:	b7d1                	j	10062 <main+0xe>

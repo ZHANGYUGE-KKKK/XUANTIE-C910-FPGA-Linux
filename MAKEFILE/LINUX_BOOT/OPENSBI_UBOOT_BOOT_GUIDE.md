@@ -41,6 +41,10 @@ interrupt
 
 在 GDB 中依次执行：
 
+调试阶段，正常不用
+cd D:/Xilinx_FPGA/C910_SOC/MAKEFILE/LINUX_BOOT/timer-debug-image
+restore opensbi-c910-fpga-timer-debug-fw_jump.bin binary 0x0200000000
+
 ```gdb
 cd D:/Xilinx_FPGA/C910_SOC/MAKEFILE/LINUX_BOOT/complete-image
 restore opensbi-c910-fpga-fw_jump.bin binary 0x0200000000
@@ -56,6 +60,7 @@ set $pc = 0x0200000000
 x/4i $pc
 x/16xb 0x0200600000
 x/4wx 0x0210000000
+
 continue
 ```
 

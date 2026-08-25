@@ -14,9 +14,15 @@
 `rootfs-c910-lite.cpio.gz` 的实际大小生成。不要只替换 rootfs 而不重新运行
 `build-c910-fpga-complete.sh package`。
 
+本目录的 OpenSBI 在 C910 FPGA early init 中会清除
+`MXSTATUS[21]` 和 `SXSTATUS[21]` 的 MAEE 位，然后再跳转 U-Boot。
+启动 Linux 时不需要再用 GDB 手动修改这两个 CSR。
+
 ## JTAG 启动
 
-先连接并停止 CPU，然后把 GDB 当前目录切换到 `complete-image`，执行：
+完整操作见同目录 `烧录与启动说明.md`。先下载 FPGA bitstream，
+等 BRAM stub 输出 `LINUX_BOOT_STUB_READY` 并停在 `ebreak`，然后把 GDB
+当前目录切换到 `complete-image` 并执行：
 
 ```gdb
 source load-c910-complete.gdb

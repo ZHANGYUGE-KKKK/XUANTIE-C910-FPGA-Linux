@@ -26,7 +26,6 @@ BootROM -> BRAM stub -> ebreak -> GDB load DDR AMO payload -> BRAM stub 跳 DDR 
 
 ```powershell
 make -f MAKEFILE\Makefile LINUX_AMO_TEST
-make -f MAKEFILE\Makefile PROGRAM=LINUX_AMO_TEST jtag
 ```
 
 生成文件：
@@ -35,6 +34,8 @@ make -f MAKEFILE\Makefile PROGRAM=LINUX_AMO_TEST jtag
 MAKEFILE/LINUX_AMO_TEST/BOOTROM/build/bootrom.coe
 MAKEFILE/LINUX_AMO_TEST/BRAM/build/bram.coe
 MAKEFILE/LINUX_AMO_TEST/JTAG/build/ddr_exec_payload.elf
+MAKEFILE/LINUX_AMO_TEST/JTAG/build/ddr_exec_payload.bin
+MAKEFILE/LINUX_AMO_TEST/JTAG/build/ddr_exec_payload.dump
 ```
 
 ## 4. 上板验证流程

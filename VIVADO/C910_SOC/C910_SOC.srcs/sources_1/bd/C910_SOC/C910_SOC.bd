@@ -673,6 +673,24 @@
           "smartconnect/M01_AXI"
         ]
       },
+      "smartconnect_M03_AXI": {
+        "interface_ports": [
+          "smartconnect/M03_AXI",
+          "axi_clock_converter_1/S_AXI"
+        ]
+      },
+      "smartconnect_0_M00_AXI": {
+        "interface_ports": [
+          "bootrom_ctrl/S_AXI",
+          "smartconnect/M00_AXI"
+        ]
+      },
+      "C910_core_0_m_axi": {
+        "interface_ports": [
+          "C910_core/m_axi",
+          "smartconnect/S00_AXI"
+        ]
+      },
       "axi_clock_converter_1_M_AXI": {
         "interface_ports": [
           "axi_clock_converter_1/M_AXI",
@@ -689,24 +707,6 @@
         "interface_ports": [
           "smartconnect/M02_AXI",
           "axi_uartlite/S_AXI"
-        ]
-      },
-      "smartconnect_0_M00_AXI": {
-        "interface_ports": [
-          "bootrom_ctrl/S_AXI",
-          "smartconnect/M00_AXI"
-        ]
-      },
-      "C910_core_0_m_axi": {
-        "interface_ports": [
-          "C910_core/m_axi",
-          "smartconnect/S00_AXI"
-        ]
-      },
-      "smartconnect_M03_AXI": {
-        "interface_ports": [
-          "smartconnect/M03_AXI",
-          "axi_clock_converter_1/S_AXI"
         ]
       }
     },
