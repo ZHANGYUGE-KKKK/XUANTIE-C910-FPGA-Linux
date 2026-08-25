@@ -27,7 +27,7 @@ FPGA PL端包含以下部分：
 | `已完成` | 添加DDR4控制器，验证DDR读写回环测试。 |
 | `已完成` | 验证C910 JTAG接口，使用debugserver修改bram程序，复位运行查看结果。 |
 | `已完成` | 使用ebreak停止核心并使用debugserver修改DDR数据，设置PC地址跳转串口打印修改内容。 |
-| `待完成` | 搭建linux系统,完成OpenSBI、U-Boot、Linux Kernel、设备树的启动链路适配，最终实现 Linux 串口启动日志输出|
+| `已完成` | 搭建linux系统,完成OpenSBI、U-Boot、Linux Kernel、设备树的启动链路适配，最终实现 Linux 串口启动日志输出|
 
 ## 维护约束
 
