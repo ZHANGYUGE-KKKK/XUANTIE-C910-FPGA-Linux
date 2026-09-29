@@ -1,0 +1,25 @@
+[2017.05.17 05:36:30] [0000m.01s.621ms] [0] WELCOME
+[2017.05.17 05:36:30] [0000m.01s.621ms] [1] iCDB Server ver.1.094, vt40T8RtWJOG2cE2Nlvc5A, build:535943 created 2013-01-08 09:09:26, sources stamp:vt40T8RtWJOG2cE2Nlvc5A
+[2017.05.17 05:36:30] [0000m.01s.621ms] [1] Copyright 2013 Mentor Graphics Corporation. All Rights Reserved.
+[2017.05.17 05:36:30] [0000m.01s.621ms] [1] Base flow version [7.9.4]
+[2017.05.17 05:36:30] [0000m.01s.621ms] [1] GBS Install Id [30043], Flow Id [IND7.9.5_SW], Full Flow Name [Vendor-Independent Flow], Exact Access Date [Jun 1 2012]
+[2017.05.17 05:36:30] [0000m.01s.621ms] [1] Machine [XCODNAYLOR31]  User [dnaylor]  PID [7900]
+[2017.05.17 05:36:30] [0000m.01s.621ms] [1] Operating system [Microsoft Windows 7 Enterprise Edition, 64-bit Service Pack 1 (build 7601)]
+[2017.05.17 05:36:30] [0000m.01s.621ms] [1] Current working dir [C:\Mentor_Projects\HW-U1-VCU118_IND795\REV2_0]
+[2017.05.17 05:36:30] [0000m.01s.621ms] [1] PATH [C:\MGC_IND795\7.9.5IND\SDD_HOME\wv\win32\bin;C:\MGC_IND795\7.9.5IND\SDD_HOME\common\win32\bin;C:\MGC_IND795\7.9.5IND\SDD_HOME\common\win32\lib;C:\MGC_IND795\7.9.5IND\MGC_HOME.ixn\bin;C:\MGC_IND795\7.9.5IND\MGC_HOME.ixn\lib;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Texas Instruments Fusion Digital Power Designer\bin;C:\Program Files\gs\gs9.20\bin;C:\Cadence\SPB_16.6\openaccess\bin\win32\opt;C:\Cadence\SPB_16.6\tools\capture;C:\Cadence\SPB_16.6\tools\pspice;C:\Cadence\SPB_16.6\tools\specctra\bin;C:\Cadence\SPB_16.6\tools\fet\bin;C:\Cadence\SPB_16.6\tools\libutil\bin;C:\Cadence\SPB_16.6\tools\bin;C:\Cadence\SPB_16.6\tools\pcb\bin]
+[2017.05.17 05:36:30] [0000m.01s.621ms] [1] SDD_HOME [C:\MGC_IND795\7.9.5IND\SDD_HOME] on file system [NTFS]
+[2017.05.17 05:36:30] [0000m.01s.621ms] [1] SDD_PLATFORM [win32]
+[2017.05.17 05:36:30] [0000m.01s.621ms] [1] WDIR [C:\MGC_WDIR;C:\MGC_IND795\7.9.5IND\SDD_HOME\standard]
+[2017.05.17 05:36:30] [0000m.01s.621ms] [1] Local iCDB working dir [C:\MGC_WDIR\iCDB] on file system [NTFS]
+[2017.05.17 05:36:30] [0000m.01s.621ms] [0] Creating database content backup before upgrade
+[2017.05.17 05:36:31] [0000m.03s.320ms] [0] Database content backed up to [C:\Mentor_Projects\HW-U1-VCU118_IND795\REV2_0\database\cdbback\2017-05-17 05.36.30-7900.zip] of size [2 924 250 bytes (2.8 MB)] in [1s 699ms]
+[2017.05.17 05:36:31] [0000m.03s.335ms] [0] Upgrading constraint definitions from version [ce_ee.cns=7.10.24;user.cns=179d-6348-adf2-5a75-48d6-7b19-8d67-b150-41b3-c16d-7a6b-0b9b]
+[2017.05.17 05:36:31] [0000m.03s.335ms] [0] Loading snapshot [1:DxD] version [2709]
+[2017.05.17 05:36:31] [0000m.03s.569ms] [0] Snapshot [1:DxD] loaded in [233ms 974us]
+[2017.05.17 05:36:31] [0000m.03s.569ms] [0] Upgrading constraint definitions for snapshot [1:DxD]
+[2017.05.17 05:36:31] [0000m.03s.585ms] [0] Constraint definitions for snapshot [1:DxD] upgraded in [20ms 202us]
+[2017.05.17 05:36:31] [0000m.03s.585ms] [0] Saving snapshot [1:DxD]
+[2017.05.17 05:36:31] [0000m.03s.585ms] [0] Snapshot [1:DxD] saved in [66us]
+[2017.05.17 05:36:32] [0000m.04s.567ms] [0] Constraint definitions upgraded to version [ce_ee.cns=7.10.24;user.cns=50e5-a5e1-f353-b25e-f837-7274-9377-2750-82d5-1230-1bf9-7bfa]
+[2017.05.17 05:36:32] [0000m.04s.567ms] [0] DONE
+[2017.05.17 05:36:32] [0000m.04s.567ms] [0] .

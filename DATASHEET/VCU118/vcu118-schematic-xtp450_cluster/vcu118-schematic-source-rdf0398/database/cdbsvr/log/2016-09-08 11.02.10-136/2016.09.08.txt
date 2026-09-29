@@ -1,0 +1,163 @@
+[2016.09.08 11:02:10] [0000m.00s.187ms] [0] WELCOME
+[2016.09.08 11:02:10] [0000m.00s.187ms] [1] iCDB Server ver.1.094, vt40T8RtWJOG2cE2Nlvc5A, build:535943 created 2013-01-08 09:09:26, sources stamp:vt40T8RtWJOG2cE2Nlvc5A
+[2016.09.08 11:02:10] [0000m.00s.187ms] [1] Copyright 2013 Mentor Graphics Corporation. All Rights Reserved.
+[2016.09.08 11:02:10] [0000m.00s.187ms] [1] Base flow version [7.9.4]
+[2016.09.08 11:02:10] [0000m.00s.187ms] [1] GBS Install Id [30043], Flow Id [IND7.9.5_SW], Full Flow Name [Vendor-Independent Flow], Exact Access Date [Jun 1 2012]
+[2016.09.08 11:02:10] [0000m.00s.187ms] [1] Machine [XCOLMORRIS30]  User [dnaylor]  PID [136]
+[2016.09.08 11:02:10] [0000m.00s.187ms] [1] Operating system [Microsoft Windows 7 Enterprise Edition, 64-bit Service Pack 1 (build 7601)]
+[2016.09.08 11:02:10] [0000m.00s.187ms] [1] Current working dir [C:\Mentor_Projects\16_US-Zync_non-Memory_Boards\HW-U1-VCU118_IND795\REV_B]
+[2016.09.08 11:02:10] [0000m.00s.187ms] [1] PATH [C:\MentorGraphics\7.9.5IND\SDD_HOME\wv\win32\bin;C:\MentorGraphics\7.9.5IND\SDD_HOME\common\win32\bin;C:\MentorGraphics\7.9.5IND\SDD_HOME\common\win32\lib;C:\MentorGraphics\7.9.5IND\MGC_HOME.ixn\bin;C:\MentorGraphics\7.9.5IND\MGC_HOME.ixn\lib;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Python27;C:\Cadence\SPB_16.3\tools\Capture;C:\Cadence\SPB_16.3\tools\PSpice\Library;C:\Cadence\SPB_16.3\tools\PSpice;C:\Cadence\SPB_16.3\OpenAccess\bin\win32\opt;C:\Cadence\SPB_16.3\tools\fet\bin;C:\Cadence\SPB_16.3\tools\libutil\bin;C:\Cadence\SPB_16.3\tools\bin;C:\Cadence\SPB_16.3\tools\specctra\bin;C:\Cadence\SPB_16.3\tools\pcb\bin;C:\Program Files (x86)\Enterprise Vault\EVClient\;C:\Program Files (x86)\Texas Instruments Fusion Digital Power Designer\bin;c:\Program Files (x86)\Common Files\Seagate\SnapAPI\]
+[2016.09.08 11:02:10] [0000m.00s.187ms] [1] SDD_HOME [C:\MentorGraphics\7.9.5IND\SDD_HOME] on file system [NTFS]
+[2016.09.08 11:02:10] [0000m.00s.187ms] [1] SDD_PLATFORM [win32]
+[2016.09.08 11:02:10] [0000m.00s.187ms] [1] WDIR [C:\Mentor_Projects;C:\MentorGraphics\7.9.5IND\SDD_HOME\standard]
+[2016.09.08 11:02:10] [0000m.00s.187ms] [1] Local iCDB working dir [C:\Mentor_Projects\iCDB] on file system [NTFS]
+[2016.09.08 11:02:10] [0000m.00s.187ms] [2] S: Loading config files
+[2016.09.08 11:02:10] [0000m.00s.202ms] [1] Config file [C:\Mentor_Projects\16_US-Zync_non-Memory_Boards\HW-U1-VCU118_IND795\REV_B\database\cdbsvr\Server.cfg] not found
+[2016.09.08 11:02:10] [0000m.00s.218ms] [3] S: Config loaded
+[2016.09.08 11:02:10] [0000m.00s.265ms] [0] S: Project path [C:\Mentor_Projects\16_US-Zync_non-Memory_Boards\HW-U1-VCU118_IND795\REV_B\database] on file system [NTFS]
+[2016.09.08 11:02:10] [0000m.00s.265ms] [0] S: Project file (.prj) path [C:\Mentor_Projects\16_US-Zync_non-Memory_Boards\HW-U1-VCU118_IND795\REV_B\HW-U1-VCU118b.prj] on file system [NTFS]
+[2016.09.08 11:02:10] [0000m.00s.265ms] [1] S: WARNING: Database auto-repair support DISABLED
+[2016.09.08 11:02:10] [0000m.00s.265ms] [0] S: Single-user mode (auto)
+[2016.09.08 11:02:10] [0000m.00s.265ms] [0] S: Event polling mode autodetection
+[2016.09.08 11:02:10] [0000m.00s.405ms] [0] S: Started up automatically by iCDB Client: XCOLMORRIS30:dnaylor:8516
+[2016.09.08 11:02:10] [0000m.00s.405ms] [0] S: Auto close mode
+[2016.09.08 11:02:10] [0000m.00s.405ms] [0] S: Database ID [4b0a-d92f-b721-f56f-967f-6b7e-67f6-b750-a155-c1f0-0bda-0b4b]
+[2016.09.08 11:02:10] [0000m.00s.405ms] [0] PathTranslator: BEGIN dumping
+[2016.09.08 11:02:10] [0000m.00s.405ms] [0] PathTranslator: Local -> global path prefix list
+[2016.09.08 11:02:10] [0000m.00s.405ms] [0] PathTranslator: [C:\Windows\system32\spool\drivers] -> [\\XCOLMORRIS30\print$]
+[2016.09.08 11:02:10] [0000m.00s.405ms] [0] PathTranslator: [E:\RICK] -> [\\XCOLMORRIS30\RICK]
+[2016.09.08 11:02:10] [0000m.00s.405ms] [0] PathTranslator: [Z:\] -> [\\vs-siapps\afx\]
+[2016.09.08 11:02:10] [0000m.00s.421ms] [0] PathTranslator: [E:\] -> [\\XCOLMORRIS30\E]
+[2016.09.08 11:02:10] [0000m.00s.421ms] [0] PathTranslator: [F:\] -> [\\XCOLMORRIS30\DVT Reports]
+[2016.09.08 11:02:10] [0000m.00s.421ms] [0] PathTranslator: Global -> local path prefix list
+[2016.09.08 11:02:10] [0000m.00s.421ms] [0] PathTranslator: [\\XCOLMORRIS30\DVT Reports] -> [F:\]
+[2016.09.08 11:02:10] [0000m.00s.421ms] [0] PathTranslator: [\\XCOLMORRIS30\print$] -> [C:\Windows\system32\spool\drivers]
+[2016.09.08 11:02:10] [0000m.00s.421ms] [0] PathTranslator: [\\XCOLMORRIS30\RICK] -> [E:\RICK]
+[2016.09.08 11:02:10] [0000m.00s.421ms] [0] PathTranslator: [\\vs-siapps\afx\] -> [Z:\]
+[2016.09.08 11:02:10] [0000m.00s.421ms] [0] PathTranslator: [\\XCOLMORRIS30\E] -> [E:\]
+[2016.09.08 11:02:10] [0000m.00s.421ms] [0] PathTranslator: END dumping
+[2016.09.08 11:02:10] [0000m.00s.421ms] [0] S: START
+[2016.09.08 11:02:10] [0000m.00s.421ms] [0] S: Server startup lock file created
+[2016.09.08 11:02:10] [0000m.00s.421ms] [0] S: Listening for client connections on port [10000]
+[2016.09.08 11:02:10] [0000m.00s.421ms] [0] S: Server network ID [XCOLMORRIS30:172.20.4.206,XCOLMORRIS30,XCOLMORRIS30.xlnx.xilinx.com:10000]
+[2016.09.08 11:02:10] [0000m.00s.421ms] [0] S: Server GUID [c252-c42c-496c-f18e-2999-1d77-9991-d750-67d5-c1f0-0bda-0b4b]
+[2016.09.08 11:02:10] [0000m.00s.421ms] [0] S: Project GUID [4b0a-d92f-b721-f56f-967f-6b7e-67f6-b750-a155-c1f0-0bda-0b4b]
+[2016.09.08 11:02:10] [0000m.00s.421ms] [0] S: Wrote data to server address file
+[2016.09.08 11:02:10] [0000m.00s.421ms] [0] S: Server startup lock file removed
+[2016.09.08 11:02:10] [0000m.00s.421ms] [1] ProjectBackupManager: Setting project file (.prj) path: [C:\Mentor_Projects\16_US-Zync_non-Memory_Boards\HW-U1-VCU118_IND795\REV_B\HW-U1-VCU118b.prj]
+[2016.09.08 11:02:10] [0000m.00s.468ms] [0] PrjBackupMgr: Migrating iCDB upgrade backups from directory [REV_B\database\cdbback] to Project Backup format.
+[2016.09.08 11:02:10] [0000m.00s.468ms] [0] PrjBackupMgr: WARNING: Ignoring iCDB backup file [2014-06-18 11.57.29-7220-iw.zip] - will not be migrated.
+[2016.09.08 11:02:10] [0000m.00s.468ms] [0] PrjBackupMgr: WARNING: Ignoring iCDB backup file [2014-06-18 11.57.29-7220-f.zip] - will not be migrated.
+[2016.09.08 11:02:10] [0000m.00s.468ms] [0] PrjBackupMgr: WARNING: Ignoring iCDB backup file [2014-06-18 11.57.27-7220-il.zip] - will not be migrated.
+[2016.09.08 11:02:10] [0000m.00s.468ms] [0] PrjBackupMgr: WARNING: Ignoring iCDB backup file [2013-09-30 11.55.34-6360-iw.zip] - will not be migrated.
+[2016.09.08 11:02:10] [0000m.00s.468ms] [0] PrjBackupMgr: WARNING: Ignoring iCDB backup file [2013-09-30 11.55.34-6360-f.zip] - will not be migrated.
+[2016.09.08 11:02:10] [0000m.00s.468ms] [0] PrjBackupMgr: WARNING: Ignoring iCDB backup file [2013-09-30 11.55.30-6360-il.zip] - will not be migrated.
+[2016.09.08 11:02:10] [0000m.00s.468ms] [0] PrjBackupMgr: WARNING: Ignoring iCDB backup file [2013-08-14 12.09.47-8068-f.zip] - will not be migrated.
+[2016.09.08 11:02:10] [0000m.00s.468ms] [0] PrjBackupMgr: WARNING: Ignoring iCDB backup file [2013-08-14 12.09.46-8068-iw.zip] - will not be migrated.
+[2016.09.08 11:02:10] [0000m.00s.468ms] [0] PrjBackupMgr: WARNING: Ignoring iCDB backup file [2013-08-14 12.09.44-8068-il.zip] - will not be migrated.
+[2016.09.08 11:02:10] [0000m.00s.639ms] [0] S: Plugins loaded: [PIM] [ENetGen70] 
+[2016.09.08 11:02:10] [0000m.00s.639ms] [0] S: Local disc access time: 94 us
+[2016.09.08 11:02:10] [0000m.00s.639ms] [0] S: File server access time: 101 us
+[2016.09.08 11:02:10] [0000m.00s.655ms] [0] Single file [C:\Mentor_Projects\16_US-Zync_non-Memory_Boards\HW-U1-VCU118_IND795\REV_B\database\icdb.dat] size [3280816 (3.1 MB)]
+[2016.09.08 11:02:10] [0000m.00s.655ms] [1] Single file [C:\Mentor_Projects\16_US-Zync_non-Memory_Boards\HW-U1-VCU118_IND795\REV_B\database\icdb.dat] opened in read-write mode
+[2016.09.08 11:02:10] [0000m.00s.655ms] [0] SingleFile: [0000-0000-0000-0000] SFI header version check [1009] [1009]
+[2016.09.08 11:02:10] [0000m.00s.655ms] [0] Database GUARD OK: [3280816]
+[2016.09.08 11:02:10] [0000m.00s.655ms] [0] SingleFile: [0000-0000-0000-0000] SFI header version check [1009] [1009]
+[2016.09.08 11:02:10] [0000m.00s.655ms] [0] Database GUARD OK: [3280816]
+[2016.09.08 11:02:10] [0000m.00s.655ms] [0] SingleFile: [73de-079e-2af2-b80b] SFI version check [1009] [1009]
+[2016.09.08 11:02:10] [0000m.00s.655ms] [0] SingleFile: [73de-079e-2af2-b80b] Database SFI header has been read in [3ms 549us]
+[2016.09.08 11:02:10] [0000m.00s.670ms] [0] iCDB Server PI: Server & plugin session [3095]
+[2016.09.08 11:02:10] [0000m.00s.670ms] [0] iCDB Server PI: Opening database [C:\Mentor_Projects\16_US-Zync_non-Memory_Boards\HW-U1-VCU118_IND795\REV_B\database]
+[2016.09.08 11:02:10] [0000m.00s.670ms] [0] iCDB Server PI: Database [C:\Mentor_Projects\16_US-Zync_non-Memory_Boards\HW-U1-VCU118_IND795\REV_B\database] opened
+[2016.09.08 11:02:10] [0000m.00s.764ms] [0] iCDB Database: Checking existence of constraint definitions
+[2016.09.08 11:02:10] [0000m.00s.764ms] [0] iCDB Database: Checking constraint definitions version
+[2016.09.08 11:02:10] [0000m.00s.826ms] [1] iCDB Database: Constraint definitions version [ce_ee.cns=7.10.24;user.cns=4d75-062c-b1d4-aab4-9937-c33e-937c-3350-380c-08f6-81ed-edee] up to date
+[2016.09.08 11:02:10] [0000m.00s.842ms] [0] iCDB Server PI: Initializing plugins
+[2016.09.08 11:02:10] [0000m.00s.842ms] [0] iCDB Server PI: Plugins initialized
+[2016.09.08 11:02:10] [0000m.00s.842ms] [0] S: iCDB database loaded
+[2016.09.08 11:02:10] [0000m.00s.842ms] [0] S: Starting threads
+[2016.09.08 11:02:10] [0000m.00s.842ms] [0] BT: Listening for broadcast messages on port [10000]
+[2016.09.08 11:02:10] [0000m.00s.842ms] [1] CMT: There are no clients - waiting [10 seconds]
+[2016.09.08 11:02:10] [0000m.00s.842ms] [0] IT: Session [3096] for host [XCOLMORRIS30] user [dnaylor] with process ID [8516] created
+[2016.09.08 11:02:10] [0000m.00s.842ms] [1] SC[3096]: Registered sub-client [DxD] with ID [1] for session ID [3096] host [XCOLMORRIS30] user [dnaylor] process ID [8516]
+[2016.09.08 11:02:11] [0000m.00s.951ms] [1] CMT: There are [1] clients now: 3096
+[2016.09.08 11:02:11] [0000m.01s.341ms] [1] SC[3096]: Registered sub-client [TransactionRollbackSubClient] with ID [2] for session ID [3096] host [XCOLMORRIS30] user [dnaylor] process ID [8516]
+[2016.09.08 11:02:11] [0000m.01s.341ms] [1] SC[3096]: Registered sub-client [xprob] with ID [3] for session ID [3096] host [XCOLMORRIS30] user [dnaylor] process ID [8516]
+[2016.09.08 11:02:13] [0000m.03s.182ms] [1] SC[3096]: Registered sub-client [SelectionHolder] with ID [4] for session ID [3096] host [XCOLMORRIS30] user [dnaylor] process ID [8516]
+[2016.09.08 11:02:13] [0000m.03s.260ms] [1] SC[3096]: Registered sub-client [SymbolEditor] with ID [5] for session ID [3096] host [XCOLMORRIS30] user [dnaylor] process ID [8516]
+[2016.09.08 11:02:13] [0000m.03s.260ms] [1] SC[3096]: Registered sub-client [EEVM_EEVM_368490196] with ID [6] for session ID [3096] host [XCOLMORRIS30] user [dnaylor] process ID [8516]
+[2016.09.08 11:02:13] [0000m.03s.260ms] [1] SC[3096]: UnRegistered sub-client [EEVM_EEVM_368490196] with ID [6] for session ID [3096] host [XCOLMORRIS30] user [dnaylor] process ID [8516]
+[2016.09.08 11:02:13] [0000m.03s.276ms] [1] SC[3096]: Registered sub-client [EEVM_EEVM_368490196] with ID [7] for session ID [3096] host [XCOLMORRIS30] user [dnaylor] process ID [8516]
+[2016.09.08 11:02:13] [0000m.03s.276ms] [1] SC[3096]: UnRegistered sub-client [EEVM_EEVM_368490196] with ID [7] for session ID [3096] host [XCOLMORRIS30] user [dnaylor] process ID [8516]
+[2016.09.08 11:02:13] [0000m.03s.276ms] [1] SC[3096]: Registered sub-client [EEVM_EEVM_368490196] with ID [8] for session ID [3096] host [XCOLMORRIS30] user [dnaylor] process ID [8516]
+[2016.09.08 11:02:13] [0000m.03s.276ms] [1] SC[3096]: UnRegistered sub-client [EEVM_EEVM_368490196] with ID [8] for session ID [3096] host [XCOLMORRIS30] user [dnaylor] process ID [8516]
+[2016.09.08 11:02:13] [0000m.03s.291ms] [1] SC[3096]: Registered sub-client [EEVM_EEVM_368490196] with ID [9] for session ID [3096] host [XCOLMORRIS30] user [dnaylor] process ID [8516]
+[2016.09.08 11:02:13] [0000m.03s.291ms] [1] SC[3096]: UnRegistered sub-client [EEVM_EEVM_368490196] with ID [9] for session ID [3096] host [XCOLMORRIS30] user [dnaylor] process ID [8516]
+[2016.09.08 11:02:17] [0000m.07s.566ms] [1] SC[3096]: Registered sub-client [HdlProject] with ID [10] for session ID [3096] host [XCOLMORRIS30] user [dnaylor] process ID [8516]
+[2016.09.08 11:02:17] [0000m.07s.581ms] [1] SC[3096]: Registered sub-client [Navigator] with ID [11] for session ID [3096] host [XCOLMORRIS30] user [dnaylor] process ID [8516]
+[2016.09.08 11:02:17] [0000m.07s.706ms] [1] SC[3096]: Registered sub-client [OutputWindow] with ID [12] for session ID [3096] host [XCOLMORRIS30] user [dnaylor] process ID [8516]
+[2016.09.08 11:02:17] [0000m.07s.722ms] [1] SC[3096]: Registered sub-client [PlaceDevice] with ID [13] for session ID [3096] host [XCOLMORRIS30] user [dnaylor] process ID [8516]
+[2016.09.08 11:02:18] [0000m.08s.424ms] [1] SC[3096]: Registered sub-client [SAE] with ID [14] for session ID [3096] host [XCOLMORRIS30] user [dnaylor] process ID [8516]
+[2016.09.08 11:02:20] [0000m.09s.968ms] [1] SC[3096]: Registered sub-client [DxConstraints] with ID [15] for session ID [3096] host [XCOLMORRIS30] user [dnaylor] process ID [8516]
+[2016.09.08 11:02:20] [0000m.09s.984ms] [1] SC[3096]: Registered sub-client [CCZAddin] with ID [16] for session ID [3096] host [XCOLMORRIS30] user [dnaylor] process ID [8516]
+[2016.09.08 11:02:20] [0000m.09s.999ms] [1] SC[3096]: Registered sub-client [DxThumbnails] with ID [17] for session ID [3096] host [XCOLMORRIS30] user [dnaylor] process ID [8516]
+[2016.09.08 11:02:22] [0000m.12s.292ms] [1] SC[3096]: Registered sub-client [SheetConnectorsCacheDxD:1473354142] with ID [18] for session ID [3096] host [XCOLMORRIS30] user [dnaylor] process ID [8516]
+[2016.09.08 11:02:22] [0000m.12s.573ms] [1] SC[3096]: Registered sub-client [NetsNamesCollectorDxD:1473354142] with ID [19] for session ID [3096] host [XCOLMORRIS30] user [dnaylor] process ID [8516]
+[2016.09.08 11:02:24] [0000m.14s.492ms] [1] SC[3096]: Registered sub-client [DxDbSearch] with ID [20] for session ID [3096] host [XCOLMORRIS30] user [dnaylor] process ID [8516]
+[2016.09.08 11:02:40] [0000m.30s.484ms] [0] DFAMT: File server access time: 277 us
+[2016.09.08 11:03:28] [0001m.17s.978ms] [1] SC[3096]: Registered sub-client [ObjectHolder_467051408] with ID [21] for session ID [3096] host [XCOLMORRIS30] user [dnaylor] process ID [8516]
+[2016.09.08 11:03:28] [0001m.17s.978ms] [1] SC[3096]: Registered sub-client [BlockCacheDxD:510112112] with ID [22] for session ID [3096] host [XCOLMORRIS30] user [dnaylor] process ID [8516]
+[2016.09.08 11:03:28] [0001m.17s.994ms] [1] SC[3096]: Registered sub-client [GlobalNetAliasUpdater_467051584] with ID [23] for session ID [3096] host [XCOLMORRIS30] user [dnaylor] process ID [8516]
+[2016.09.08 11:03:28] [0001m.17s.994ms] [1] SC[3096]: Registered sub-client [IcdbNetProcessorSubClientDxD:336228752] with ID [24] for session ID [3096] host [XCOLMORRIS30] user [dnaylor] process ID [8516]
+[2016.09.08 11:24:35] [0022m.25s.561ms] [1] SC[3096]: UnRegistered sub-client [GlobalNetAliasUpdater_467051584] with ID [23] for session ID [3096] host [XCOLMORRIS30] user [dnaylor] process ID [8516]
+[2016.09.08 11:24:35] [0022m.25s.561ms] [1] SC[3096]: UnRegistered sub-client [BlockCacheDxD:510112112] with ID [22] for session ID [3096] host [XCOLMORRIS30] user [dnaylor] process ID [8516]
+[2016.09.08 11:24:35] [0022m.25s.561ms] [1] SC[3096]: UnRegistered sub-client [ObjectHolder_467051408] with ID [21] for session ID [3096] host [XCOLMORRIS30] user [dnaylor] process ID [8516]
+[2016.09.08 11:24:35] [0022m.25s.561ms] [1] SC[3096]: UnRegistered sub-client [IcdbNetProcessorSubClientDxD:336228752] with ID [24] for session ID [3096] host [XCOLMORRIS30] user [dnaylor] process ID [8516]
+[2016.09.08 11:24:35] [0022m.25s.577ms] [1] SC[3096]: UnRegistered sub-client [SelectionHolder] with ID [4] for session ID [3096] host [XCOLMORRIS30] user [dnaylor] process ID [8516]
+[2016.09.08 11:24:35] [0022m.25s.577ms] [1] SC[3096]: UnRegistered sub-client [SheetConnectorsCacheDxD:1473354142] with ID [18] for session ID [3096] host [XCOLMORRIS30] user [dnaylor] process ID [8516]
+[2016.09.08 11:24:35] [0022m.25s.577ms] [1] SC[3096]: UnRegistered sub-client [NetsNamesCollectorDxD:1473354142] with ID [19] for session ID [3096] host [XCOLMORRIS30] user [dnaylor] process ID [8516]
+[2016.09.08 11:24:35] [0022m.25s.577ms] [1] SC[3096]: UnRegistered sub-client [TransactionRollbackSubClient] with ID [2] for session ID [3096] host [XCOLMORRIS30] user [dnaylor] process ID [8516]
+[2016.09.08 11:24:35] [0022m.25s.577ms] [1] SC[3096]: UnRegistered sub-client [DxD] with ID [1] for session ID [3096] host [XCOLMORRIS30] user [dnaylor] process ID [8516]
+[2016.09.08 11:24:35] [0022m.25s.624ms] [1] SC[3096]: UnRegistered sub-client [xprob] with ID [3] for session ID [3096] host [XCOLMORRIS30] user [dnaylor] process ID [8516]
+[2016.09.08 11:24:35] [0022m.25s.624ms] [1] SC[3096]: UnRegistered sub-client [SymbolEditor] with ID [5] for session ID [3096] host [XCOLMORRIS30] user [dnaylor] process ID [8516]
+[2016.09.08 11:24:35] [0022m.25s.655ms] [1] SC[3096]: UnRegistered sub-client [Navigator] with ID [11] for session ID [3096] host [XCOLMORRIS30] user [dnaylor] process ID [8516]
+[2016.09.08 11:24:35] [0022m.25s.670ms] [1] SC[3096]: UnRegistered sub-client [OutputWindow] with ID [12] for session ID [3096] host [XCOLMORRIS30] user [dnaylor] process ID [8516]
+[2016.09.08 11:24:36] [0022m.26s.684ms] [1] SC[3096]: UnRegistered sub-client [DxDbSearch] with ID [20] for session ID [3096] host [XCOLMORRIS30] user [dnaylor] process ID [8516]
+[2016.09.08 11:24:36] [0022m.26s.872ms] [1] SC[3096]: UnRegistered sub-client [SAE] with ID [14] for session ID [3096] host [XCOLMORRIS30] user [dnaylor] process ID [8516]
+[2016.09.08 11:24:37] [0022m.26s.934ms] [1] SC[3096]: UnRegistered sub-client [CCZAddin] with ID [16] for session ID [3096] host [XCOLMORRIS30] user [dnaylor] process ID [8516]
+[2016.09.08 11:24:37] [0022m.26s.934ms] [1] SC[3096]: UnRegistered sub-client [DxThumbnails] with ID [17] for session ID [3096] host [XCOLMORRIS30] user [dnaylor] process ID [8516]
+[2016.09.08 11:24:37] [0022m.27s.028ms] [1] SC[3096]: UnRegistered sub-client [DxConstraints] with ID [15] for session ID [3096] host [XCOLMORRIS30] user [dnaylor] process ID [8516]
+[2016.09.08 11:24:40] [0022m.29s.916ms] [1] SC[3096]: UnRegistered sub-client [PlaceDevice] with ID [13] for session ID [3096] host [XCOLMORRIS30] user [dnaylor] process ID [8516]
+[2016.09.08 11:24:40] [0022m.30s.056ms] [1] SC[3096]: UnRegistered sub-client [HdlProject] with ID [10] for session ID [3096] host [XCOLMORRIS30] user [dnaylor] process ID [8516]
+[2016.09.08 11:24:40] [0022m.30s.134ms] [1] CMT: Removed client [3096]
+[2016.09.08 11:24:40] [0022m.30s.134ms] [1] CMT: There are no clients left - waiting [1 seconds]
+[2016.09.08 11:24:42] [0022m.31s.990ms] [0] CMT: Starting server auto-close
+[2016.09.08 11:24:42] [0022m.32s.022ms] [0] S: Closing server
+[2016.09.08 11:24:42] [0022m.32s.146ms] [0] iCDB Server PI: Closing plugins
+[2016.09.08 11:24:42] [0022m.32s.146ms] [0] iCDB Server PI: Plugins closed
+[2016.09.08 11:24:42] [0022m.32s.146ms] [0] iCDB Server PI: Unloading database
+[2016.09.08 11:24:42] [0022m.32s.146ms] [0] iCDB Server PI: Saving storage
+[2016.09.08 11:24:42] [0022m.32s.146ms] [0] iCDB Server PI: Closing database
+[2016.09.08 11:24:42] [0022m.32s.146ms] [1] iCDB Server PI: Stats: Database defragmentation: max[1] avg[1] holes[98%] data[99%]
+[2016.09.08 11:24:42] [0022m.32s.146ms] [1] iCDB Server PI: Stats: Database file size [6507760 (6.2 MB)]
+[2016.09.08 11:24:42] [0022m.32s.146ms] [1] iCDB Server PI: WARNING: Database needs defragmentation!
+[2016.09.08 11:24:42] [0022m.32s.162ms] [0] iCDB Server PI: Database closed
+[2016.09.08 11:24:42] [0022m.32s.162ms] [0] iCDB Server PI: Defragmenting database
+[2016.09.08 11:24:42] [0022m.32s.162ms] [0] iCDB Server PI: Creating database [C:\Mentor_Projects\16_US-Zync_non-Memory_Boards\HW-U1-VCU118_IND795\REV_B\database] backup to file [C:\Mentor_Projects\16_US-Zync_non-Memory_Boards\HW-U1-VCU118_IND795\REV_B\database\cdbback\2016-09-08 11.24.42-136-d.zip]
+[2016.09.08 11:24:43] [0022m.33s.207ms] [0] iCDB Server PI: Database backup: DONE
+[2016.09.08 11:24:43] [0022m.33s.550ms] [0] SingleFile: [0000-0000-0000-0000] SFI header version check [1009] [1009]
+[2016.09.08 11:24:43] [0022m.33s.550ms] [0] Database GUARD OK: [6507760]
+[2016.09.08 11:24:43] [0022m.33s.550ms] [0] SingleFile: [73de-079e-2af2-b80b] SFI version check [1009] [1009]
+[2016.09.08 11:24:43] [0022m.33s.550ms] [0] SingleFile: [73de-079e-2af2-b80b] Database SFI header has been read in [3ms 531us]
+[2016.09.08 11:24:43] [0022m.33s.660ms] [1] iCDB Server PI: Stats: Database file sizes: before[6507760 (6.2 MB)], after[3281264 (3.1 MB)], gain[3226496 (3.1 MB)]
+[2016.09.08 11:24:43] [0022m.33s.660ms] [0] Single file [C:\Mentor_Projects\16_US-Zync_non-Memory_Boards\HW-U1-VCU118_IND795\REV_B\database\icdb.dat] closed with size [3281264 (3.1 MB)]
+[2016.09.08 11:24:43] [0022m.33s.675ms] [0] iCDB Server PI: Database defragmentation completed successfully
+[2016.09.08 11:24:43] [0022m.33s.675ms] [1] BackupTransaction: Removing database backup [C:\Mentor_Projects\16_US-Zync_non-Memory_Boards\HW-U1-VCU118_IND795\REV_B\database\cdbback\2016-09-08 11.24.42-136-d.zip]
+[2016.09.08 11:24:43] [0022m.33s.675ms] [1] iCDB Server PI: Stats: Total iCDB execution time: [230157] ticks
+[2016.09.08 11:24:43] [0022m.33s.675ms] [1] iCDB Server PI: Stats: Total iCDB execution time: [136301] microseconds
+[2016.09.08 11:24:43] [0022m.33s.675ms] [1] iCDB Server PI: Stats: Total iCDB commands count: [41]
+[2016.09.08 11:24:43] [0022m.33s.675ms] [1] iCDB Server PI: Stats: Average iCDB speed:        [300] commands per second
+[2016.09.08 11:24:46] [0022m.36s.468ms] [1] PrjBackupMgr: Successfully created Project Backup [C:\Mentor_Projects\16_US-Zync_non-Memory_Boards\HW-U1-VCU118_IND795\REV_B\ProjectBackup\backups\2016-09-08 11.24.43 - close.zip] with GUID [c62f-4aae-7cb0-62c8-bde9-1d70-ee91-d750-67d5-c1f0-0bda-0b4b]
+[2016.09.08 11:24:46] [0022m.36s.468ms] [0] PrjBackupMgr: Removing excessive backup:  BackupGUID[5017-fc38-6521-93a0-10b8-1d76-0b81-d750-e5a5-c1f0-0bda-0b4b] CreationTime[Thursday, September 08, 2016 16:00:01] Type[Final] Creator[iCDB Server (2016-09-08 09.42.10-11780)] ApplicationName[iCDB Server (2016-09-08 09.42.10-11780)] UserName[dnaylor] MachineName[XCOLMORRIS30] Description[Session with GUID [5bc6-7d40-f4b5-8287-2d68-1d77-d681-d750-e5a5-c1f0-0bda-0b4b]] FullFlowName[Vendor-Independent Flow] FlowId[IND7.9.5_SW] GBSInstallId[30043] GBSBuildId[535943] IcdbVersion[2709] ReferenceLogFilePath[] BackupFilePath[C:\Mentor_Projects\16_US-Zync_non-Memory_Boards\HW-U1-VCU118_IND795\REV_B\ProjectBackup\backups\2016-09-08 10.00.01 - close.zip] BackupFileSize[20370823] Persistent[FALSE]
+[2016.09.08 11:24:46] [0022m.36s.468ms] [0] PrjBackupMgr: Project Backup file [C:\Mentor_Projects\16_US-Zync_non-Memory_Boards\HW-U1-VCU118_IND795\REV_B\ProjectBackup\backups\2016-09-08 10.00.01 - close.zip] with GUID [5017-fc38-6521-93a0-10b8-1d76-0b81-d750-e5a5-c1f0-0bda-0b4b] removed
+[2016.09.08 11:24:46] [0022m.36s.624ms] [0] S: STOP

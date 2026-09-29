@@ -1,0 +1,206 @@
+[2016.11.22 17:19:21] [0000m.00s.038ms] [0] WELCOME
+[2016.11.22 17:19:21] [0000m.00s.045ms] [1] iCDB Server ver.1.094, vt40T8RtWJOG2cE2Nlvc5A, build:535943 created 2013-01-08 09:09:26, sources stamp:vt40T8RtWJOG2cE2Nlvc5A
+[2016.11.22 17:19:21] [0000m.00s.046ms] [1] Copyright 2013 Mentor Graphics Corporation. All Rights Reserved.
+[2016.11.22 17:19:21] [0000m.00s.046ms] [1] Base flow version [7.9.4]
+[2016.11.22 17:19:21] [0000m.00s.046ms] [1] GBS Install Id [30043], Flow Id [IND7.9.5_SW], Full Flow Name [Vendor-Independent Flow], Exact Access Date [Jun 1 2012]
+[2016.11.22 17:19:21] [0000m.00s.046ms] [1] Machine [XSJBFORSSE20]  User [bforsse]  PID [20808]
+[2016.11.22 17:19:21] [0000m.00s.046ms] [1] Operating system [Microsoft Windows 7 Enterprise Edition, 64-bit Service Pack 1 (build 7601)]
+[2016.11.22 17:19:21] [0000m.00s.046ms] [1] Current working dir [Z:\afx\Board_Projects\1_ULTRA_SCALE\EVAL\HW-U1-VCU118\REV1_0\SCHEMATIC\CURRENT]
+[2016.11.22 17:19:21] [0000m.00s.046ms] [1] PATH [C:\MentorGraphics\7.9.5IND\SDD_HOME\wv\win32\bin;C:\Perl64\site\bin;C:\Perl64\bin;C:\MentorGraphics\7.9.5IND\SDD_HOME\common\win32\bin;C:\MentorGraphics\7.9.5IND\SDD_HOME\common\win32\lib;C:\MentorGraphics\7.9.5IND\MGC_HOME.ixn\bin;C:\MentorGraphics\7.9.5IND\MGC_HOME.ixn\lib;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Enterprise Vault\EVClient\;;C:\Program Files (x86)\Texas Instruments Fusion Digital Power Designer\bin;C:\Cadence\SPB_16.6\tools\pspice\library;C:\Cadence\SPB_16.6\openaccess\bin\win32\opt;C:\Cadence\SPB_16.6\tools\capture;C:\Cadence\SPB_16.6\tools\pspice;C:\Cadence\SPB_16.6\tools\specctra\bin;C:\Cadence\SPB_16.6\tools\fet\bin;C:\Cadence\SPB_16.6\tools\libutil\bin;C:\Cadence\SPB_16.6\tools\bin;C:\Cadence\SPB_16.6\tools\pcb\bin;;C:\Program Files (x86)\Silicon Laboratories\ClockBuilder Pro\Bin]
+[2016.11.22 17:19:21] [0000m.00s.047ms] [1] SDD_HOME [C:\MentorGraphics\7.9.5IND\SDD_HOME] on file system [NTFS]
+[2016.11.22 17:19:21] [0000m.00s.047ms] [1] SDD_PLATFORM [win32]
+[2016.11.22 17:19:21] [0000m.00s.047ms] [1] WDIR [C:\WDIR;C:\MentorGraphics\7.9.5IND\SDD_HOME\standard]
+[2016.11.22 17:19:21] [0000m.00s.047ms] [1] Local iCDB working dir [C:\WDIR\iCDB] on file system [NTFS]
+[2016.11.22 17:19:21] [0000m.00s.047ms] [2] S: Loading config files
+[2016.11.22 17:19:21] [0000m.00s.050ms] [1] Config file [Z:\afx\Board_Projects\1_ULTRA_SCALE\EVAL\HW-U1-VCU118\REV1_0\SCHEMATIC\CURRENT\database\cdbsvr\Server.cfg] not found
+[2016.11.22 17:19:21] [0000m.00s.052ms] [3] S: Config loaded
+[2016.11.22 17:19:21] [0000m.00s.065ms] [0] S: Project path [Z:\afx\Board_Projects\1_ULTRA_SCALE\EVAL\HW-U1-VCU118\REV1_0\SCHEMATIC\CURRENT\database] on file system [NTFS]
+[2016.11.22 17:19:21] [0000m.00s.065ms] [0] S: Project global path [\\vs-siapps\afx\afx\Board_Projects\1_ULTRA_SCALE\EVAL\HW-U1-VCU118\REV1_0\SCHEMATIC\CURRENT\database] on file system [NTFS]
+[2016.11.22 17:19:21] [0000m.00s.065ms] [0] S: Project file (.prj) path [\\vs-siapps\afx\afx\Board_Projects\1_ULTRA_SCALE\EVAL\HW-U1-VCU118\REV1_0\SCHEMATIC\CURRENT\HW-U1-VCU118.prj] on file system [UNKNOWN]
+[2016.11.22 17:19:21] [0000m.00s.065ms] [0] S: Project file (.prj) local path [Z:\afx\Board_Projects\1_ULTRA_SCALE\EVAL\HW-U1-VCU118\REV1_0\SCHEMATIC\CURRENT\HW-U1-VCU118.prj] on file system [NTFS]
+[2016.11.22 17:19:21] [0000m.00s.068ms] [1] S: WARNING: Database auto-repair support DISABLED
+[2016.11.22 17:19:21] [0000m.00s.068ms] [0] S: Single-user mode (auto)
+[2016.11.22 17:19:21] [0000m.00s.068ms] [0] S: Event polling mode autodetection
+[2016.11.22 17:19:21] [0000m.00s.073ms] [0] S: Started up automatically by iCDB Client: XSJBFORSSE20:bforsse:20472
+[2016.11.22 17:19:21] [0000m.00s.074ms] [0] S: Auto close mode
+[2016.11.22 17:19:21] [0000m.00s.074ms] [0] S: Database ID [1938-bf3a-0f22-f40f-99ee-438e-9ee4-3850-ed07-7120-ad6b-0b7b]
+[2016.11.22 17:19:21] [0000m.00s.074ms] [0] PathTranslator: BEGIN dumping
+[2016.11.22 17:19:21] [0000m.00s.074ms] [0] PathTranslator: Local -> global path prefix list
+[2016.11.22 17:19:21] [0000m.00s.074ms] [0] PathTranslator: [C:\Users] -> [\\XSJBFORSSE20\Users]
+[2016.11.22 17:19:21] [0000m.00s.075ms] [0] PathTranslator: [C:\temp] -> [\\XSJBFORSSE20\temp]
+[2016.11.22 17:19:21] [0000m.00s.075ms] [0] PathTranslator: [C:\vids] -> [\\XSJBFORSSE20\vids]
+[2016.11.22 17:19:21] [0000m.00s.075ms] [0] PathTranslator: [K:\] -> [\\icdev8\bforsse\]
+[2016.11.22 17:19:21] [0000m.00s.075ms] [0] PathTranslator: [W:\] -> [\\lin.xcoeng2\ifs\test\xbuilds\]
+[2016.11.22 17:19:21] [0000m.00s.075ms] [0] PathTranslator: [X:\] -> [\\xsjswsvm2-lif1\bugcases\CR\]
+[2016.11.22 17:19:21] [0000m.00s.075ms] [0] PathTranslator: [Y:\] -> [\\ppdeng\gdrive\xbuilds\]
+[2016.11.22 17:19:21] [0000m.00s.075ms] [0] PathTranslator: [Z:\] -> [\\vs-siapps\afx\]
+[2016.11.22 17:19:21] [0000m.00s.075ms] [0] PathTranslator: [I:\] -> [\\XSJBFORSSE20\I]
+[2016.11.22 17:19:21] [0000m.00s.075ms] [0] PathTranslator: Global -> local path prefix list
+[2016.11.22 17:19:21] [0000m.00s.075ms] [0] PathTranslator: [\\lin.xcoeng2\ifs\test\xbuilds\] -> [W:\]
+[2016.11.22 17:19:21] [0000m.00s.075ms] [0] PathTranslator: [\\xsjswsvm2-lif1\bugcases\CR\] -> [X:\]
+[2016.11.22 17:19:21] [0000m.00s.075ms] [0] PathTranslator: [\\ppdeng\gdrive\xbuilds\] -> [Y:\]
+[2016.11.22 17:19:21] [0000m.00s.075ms] [0] PathTranslator: [\\XSJBFORSSE20\Users] -> [C:\Users]
+[2016.11.22 17:19:21] [0000m.00s.075ms] [0] PathTranslator: [\\XSJBFORSSE20\temp] -> [C:\temp]
+[2016.11.22 17:19:21] [0000m.00s.075ms] [0] PathTranslator: [\\XSJBFORSSE20\vids] -> [C:\vids]
+[2016.11.22 17:19:21] [0000m.00s.075ms] [0] PathTranslator: [\\icdev8\bforsse\] -> [K:\]
+[2016.11.22 17:19:21] [0000m.00s.075ms] [0] PathTranslator: [\\vs-siapps\afx\] -> [Z:\]
+[2016.11.22 17:19:21] [0000m.00s.075ms] [0] PathTranslator: [\\XSJBFORSSE20\I] -> [I:\]
+[2016.11.22 17:19:21] [0000m.00s.075ms] [0] PathTranslator: END dumping
+[2016.11.22 17:19:21] [0000m.00s.075ms] [0] S: START
+[2016.11.22 17:19:21] [0000m.00s.077ms] [0] S: Server startup lock file created
+[2016.11.22 17:19:21] [0000m.00s.079ms] [0] S: Listening for client connections on port [10000]
+[2016.11.22 17:19:21] [0000m.00s.080ms] [0] S: Server network ID [XSJBFORSSE20:172.19.68.132,XSJBFORSSE20,XSJBFORSSE20.xlnx.xilinx.com:10000]
+[2016.11.22 17:19:21] [0000m.00s.081ms] [0] S: Server GUID [3c14-c01d-f431-06d5-99ee-438e-9ee4-3850-eac3-7120-ad6b-0b7b]
+[2016.11.22 17:19:21] [0000m.00s.081ms] [0] S: Project GUID [1938-bf3a-0f22-f40f-99ee-438e-9ee4-3850-ed07-7120-ad6b-0b7b]
+[2016.11.22 17:19:21] [0000m.00s.093ms] [0] S: Wrote data to server address file
+[2016.11.22 17:19:21] [0000m.00s.096ms] [0] S: Server startup lock file removed
+[2016.11.22 17:19:21] [0000m.00s.096ms] [1] ProjectBackupManager: Setting project file (.prj) path: [Z:\afx\Board_Projects\1_ULTRA_SCALE\EVAL\HW-U1-VCU118\REV1_0\SCHEMATIC\CURRENT\HW-U1-VCU118.prj]
+[2016.11.22 17:19:21] [0000m.00s.124ms] [0] PrjBackupMgr: Migrating iCDB upgrade backups from directory [CURRENT\database\cdbback] to Project Backup format.
+[2016.11.22 17:19:21] [0000m.00s.126ms] [0] PrjBackupMgr: WARNING: Ignoring iCDB backup file [2014-06-18 11.57.29-7220-iw.zip] - will not be migrated.
+[2016.11.22 17:19:21] [0000m.00s.128ms] [0] PrjBackupMgr: WARNING: Ignoring iCDB backup file [2014-06-18 11.57.29-7220-f.zip] - will not be migrated.
+[2016.11.22 17:19:21] [0000m.00s.130ms] [0] PrjBackupMgr: WARNING: Ignoring iCDB backup file [2014-06-18 11.57.27-7220-il.zip] - will not be migrated.
+[2016.11.22 17:19:21] [0000m.00s.132ms] [0] PrjBackupMgr: WARNING: Ignoring iCDB backup file [2013-09-30 11.55.34-6360-iw.zip] - will not be migrated.
+[2016.11.22 17:19:21] [0000m.00s.134ms] [0] PrjBackupMgr: WARNING: Ignoring iCDB backup file [2013-09-30 11.55.34-6360-f.zip] - will not be migrated.
+[2016.11.22 17:19:21] [0000m.00s.135ms] [0] PrjBackupMgr: WARNING: Ignoring iCDB backup file [2013-09-30 11.55.30-6360-il.zip] - will not be migrated.
+[2016.11.22 17:19:21] [0000m.00s.137ms] [0] PrjBackupMgr: WARNING: Ignoring iCDB backup file [2013-08-14 12.09.47-8068-f.zip] - will not be migrated.
+[2016.11.22 17:19:21] [0000m.00s.139ms] [0] PrjBackupMgr: WARNING: Ignoring iCDB backup file [2013-08-14 12.09.46-8068-iw.zip] - will not be migrated.
+[2016.11.22 17:19:21] [0000m.00s.141ms] [0] PrjBackupMgr: WARNING: Ignoring iCDB backup file [2013-08-14 12.09.44-8068-il.zip] - will not be migrated.
+[2016.11.22 17:19:21] [0000m.00s.167ms] [0] S: Plugins loaded: [PIM] [ENetGen70] 
+[2016.11.22 17:19:21] [0000m.00s.167ms] [0] S: Local disc access time: 63 us
+[2016.11.22 17:19:21] [0000m.00s.168ms] [0] S: File server access time: 174 us
+[2016.11.22 17:19:21] [0000m.00s.176ms] [0] Single file [Z:\afx\Board_Projects\1_ULTRA_SCALE\EVAL\HW-U1-VCU118\REV1_0\SCHEMATIC\CURRENT\database\icdb.dat] size [3310640 (3.2 MB)]
+[2016.11.22 17:19:21] [0000m.00s.177ms] [1] Single file [Z:\afx\Board_Projects\1_ULTRA_SCALE\EVAL\HW-U1-VCU118\REV1_0\SCHEMATIC\CURRENT\database\icdb.dat] opened in read-write mode
+[2016.11.22 17:19:21] [0000m.00s.181ms] [0] SingleFile: [0000-0000-0000-0000] SFI header version check [1009] [1009]
+[2016.11.22 17:19:21] [0000m.00s.181ms] [0] Database GUARD OK: [3310640]
+[2016.11.22 17:19:21] [0000m.00s.187ms] [0] SingleFile: [0000-0000-0000-0000] SFI header version check [1009] [1009]
+[2016.11.22 17:19:21] [0000m.00s.187ms] [0] Database GUARD OK: [3310640]
+[2016.11.22 17:19:21] [0000m.00s.187ms] [0] SingleFile: [803e-74e8-4b82-38da] SFI version check [1009] [1009]
+[2016.11.22 17:19:21] [0000m.00s.210ms] [0] SingleFile: [803e-74e8-4b82-38da] Database SFI header has been read in [22ms 743us]
+[2016.11.22 17:19:21] [0000m.00s.212ms] [0] iCDB Server PI: Server & plugin session [3171]
+[2016.11.22 17:19:21] [0000m.00s.212ms] [0] iCDB Server PI: Opening database [Z:\afx\Board_Projects\1_ULTRA_SCALE\EVAL\HW-U1-VCU118\REV1_0\SCHEMATIC\CURRENT\database]
+[2016.11.22 17:19:21] [0000m.00s.212ms] [0] iCDB Server PI: Database [Z:\afx\Board_Projects\1_ULTRA_SCALE\EVAL\HW-U1-VCU118\REV1_0\SCHEMATIC\CURRENT\database] opened
+[2016.11.22 17:19:21] [0000m.00s.232ms] [0] iCDB Database: Checking existence of constraint definitions
+[2016.11.22 17:19:21] [0000m.00s.232ms] [0] iCDB Database: Checking constraint definitions version
+[2016.11.22 17:19:22] [0000m.00s.282ms] [0] iCDB Database: Creating database content backup before upgrade
+[2016.11.22 17:19:22] [0000m.00s.282ms] [1] iCDB Storage Server: Database backup: ProjectPath[Z:\afx\Board_Projects\1_ULTRA_SCALE\EVAL\HW-U1-VCU118\REV1_0\SCHEMATIC\CURRENT\database]
+[2016.11.22 17:19:22] [0000m.00s.330ms] [0] iCDB Storage Server Backup Thread: Database backup: BackupPath[Z:\afx\Board_Projects\1_ULTRA_SCALE\EVAL\HW-U1-VCU118\REV1_0\SCHEMATIC\CURRENT\database\cdbback\2016-11-22 17.19.22-20808.zip]
+[2016.11.22 17:19:22] [0000m.00s.919ms] [0] iCDB Storage Server Backup Thread: Backup database DONE: Result[ Succeeded[TRUE]] BackupPath[Z:\afx\Board_Projects\1_ULTRA_SCALE\EVAL\HW-U1-VCU118\REV1_0\SCHEMATIC\CURRENT\database\cdbback\2016-11-22 17.19.22-20808.zip]
+[2016.11.22 17:19:22] [0000m.00s.924ms] [0] iCDB Database: Database content backed up to [Z:\afx\Board_Projects\1_ULTRA_SCALE\EVAL\HW-U1-VCU118\REV1_0\SCHEMATIC\CURRENT\database\cdbback\2016-11-22 17.19.22-20808.zip] of size [2 922 387 bytes (2.8 MB)]  in [640ms 304us]
+[2016.11.22 17:19:22] [0000m.00s.947ms] [0] iCDB Database: Upgrading constraint definitions from version [ce_ee.cns=7.10.24;user.cns=4d75-062c-b1d4-aab4-9937-c33e-937c-3350-380c-08f6-81ed-edee]
+[2016.11.22 17:19:22] [0000m.00s.955ms] [0] iCDB Database: Loading snapshot [1:DxD] version [2709]
+[2016.11.22 17:19:22] [0000m.01s.242ms] [0] iCDB Database: Snapshot [1:DxD] loaded in [286ms 480us]
+[2016.11.22 17:19:22] [0000m.01s.242ms] [0] iCDB Database: Upgrading constraint definitions for snapshot [1:DxD]
+[2016.11.22 17:19:23] [0000m.01s.268ms] [0] iCDB Database: Constraint definitions for snapshot [1:DxD] upgraded in [25ms 331us]
+[2016.11.22 17:19:23] [0000m.01s.268ms] [0] iCDB Database: Saving snapshot [1:DxD]
+[2016.11.22 17:19:23] [0000m.01s.268ms] [0] iCDB Database: Snapshot [1:DxD] saved in [115us]
+[2016.11.22 17:19:24] [0000m.02s.422ms] [0] iCDB Database: Constraint definitions upgraded to version [ce_ee.cns=7.10.24;user.cns=179d-6348-adf2-5a75-48d6-7b19-8d67-b150-41b3-c16d-7a6b-0b9b]
+[2016.11.22 17:19:24] [0000m.02s.452ms] [0] iCDB Server PI: Initializing plugins
+[2016.11.22 17:19:24] [0000m.02s.453ms] [0] iCDB Server PI: Plugins initialized
+[2016.11.22 17:19:24] [0000m.02s.453ms] [0] S: iCDB database loaded
+[2016.11.22 17:19:24] [0000m.02s.602ms] [1] PrjBackupMgr: Successfully created Project Backup [Z:\afx\Board_Projects\1_ULTRA_SCALE\EVAL\HW-U1-VCU118\REV1_0\SCHEMATIC\CURRENT\ProjectBackup\backups\2016-11-22 17.19.24 - consDefUpgr.zip] with GUID [f81a-1027-7c28-2c56-c9ee-4381-aee4-3850-eac3-7120-ad6b-0b7b]
+[2016.11.22 17:19:24] [0000m.02s.609ms] [1] PrjBackupMgr: Migrated iCDB content backup file [Z:\afx\Board_Projects\1_ULTRA_SCALE\EVAL\HW-U1-VCU118\REV1_0\SCHEMATIC\CURRENT\database\cdbback\2016-11-22 17.19.22-20808.zip] removed
+[2016.11.22 17:19:24] [0000m.02s.610ms] [0] S: Starting threads
+[2016.11.22 17:19:24] [0000m.02s.611ms] [0] BT: Listening for broadcast messages on port [10000]
+[2016.11.22 17:19:24] [0000m.02s.611ms] [1] CMT: There are no clients - waiting [10 seconds]
+[2016.11.22 17:19:24] [0000m.02s.612ms] [0] IT: Session [3172] for host [XSJBFORSSE20] user [bforsse] with process ID [20472] created
+[2016.11.22 17:19:24] [0000m.02s.613ms] [1] SC[3172]: Registered sub-client [DxD] with ID [1] for session ID [3172] host [XSJBFORSSE20] user [bforsse] process ID [20472]
+[2016.11.22 17:19:24] [0000m.02s.711ms] [1] CMT: There are [1] clients now: 3172
+[2016.11.22 17:19:24] [0000m.02s.977ms] [1] SC[3172]: Registered sub-client [TransactionRollbackSubClient] with ID [2] for session ID [3172] host [XSJBFORSSE20] user [bforsse] process ID [20472]
+[2016.11.22 17:19:24] [0000m.02s.982ms] [1] SC[3172]: Registered sub-client [xprob] with ID [3] for session ID [3172] host [XSJBFORSSE20] user [bforsse] process ID [20472]
+[2016.11.22 17:19:26] [0000m.04s.760ms] [1] SC[3172]: Registered sub-client [SelectionHolder] with ID [4] for session ID [3172] host [XSJBFORSSE20] user [bforsse] process ID [20472]
+[2016.11.22 17:19:26] [0000m.04s.829ms] [1] SC[3172]: Registered sub-client [SymbolEditor] with ID [5] for session ID [3172] host [XSJBFORSSE20] user [bforsse] process ID [20472]
+[2016.11.22 17:19:26] [0000m.04s.834ms] [1] SC[3172]: Registered sub-client [EEVM_EEVM_481411908] with ID [6] for session ID [3172] host [XSJBFORSSE20] user [bforsse] process ID [20472]
+[2016.11.22 17:19:26] [0000m.04s.835ms] [1] SC[3172]: UnRegistered sub-client [EEVM_EEVM_481411908] with ID [6] for session ID [3172] host [XSJBFORSSE20] user [bforsse] process ID [20472]
+[2016.11.22 17:19:26] [0000m.04s.839ms] [1] SC[3172]: Registered sub-client [EEVM_EEVM_481411908] with ID [7] for session ID [3172] host [XSJBFORSSE20] user [bforsse] process ID [20472]
+[2016.11.22 17:19:26] [0000m.04s.839ms] [1] SC[3172]: UnRegistered sub-client [EEVM_EEVM_481411908] with ID [7] for session ID [3172] host [XSJBFORSSE20] user [bforsse] process ID [20472]
+[2016.11.22 17:19:26] [0000m.04s.843ms] [1] SC[3172]: Registered sub-client [EEVM_EEVM_481411908] with ID [8] for session ID [3172] host [XSJBFORSSE20] user [bforsse] process ID [20472]
+[2016.11.22 17:19:26] [0000m.04s.844ms] [1] SC[3172]: UnRegistered sub-client [EEVM_EEVM_481411908] with ID [8] for session ID [3172] host [XSJBFORSSE20] user [bforsse] process ID [20472]
+[2016.11.22 17:19:26] [0000m.04s.848ms] [1] SC[3172]: Registered sub-client [EEVM_EEVM_481411908] with ID [9] for session ID [3172] host [XSJBFORSSE20] user [bforsse] process ID [20472]
+[2016.11.22 17:19:26] [0000m.04s.848ms] [1] SC[3172]: UnRegistered sub-client [EEVM_EEVM_481411908] with ID [9] for session ID [3172] host [XSJBFORSSE20] user [bforsse] process ID [20472]
+[2016.11.22 17:19:27] [0000m.05s.761ms] [1] SC[3172]: Registered sub-client [HdlProject] with ID [10] for session ID [3172] host [XSJBFORSSE20] user [bforsse] process ID [20472]
+[2016.11.22 17:19:27] [0000m.05s.769ms] [1] SC[3172]: Registered sub-client [Navigator] with ID [11] for session ID [3172] host [XSJBFORSSE20] user [bforsse] process ID [20472]
+[2016.11.22 17:19:27] [0000m.05s.835ms] [1] SC[3172]: Registered sub-client [OutputWindow] with ID [12] for session ID [3172] host [XSJBFORSSE20] user [bforsse] process ID [20472]
+[2016.11.22 17:19:27] [0000m.05s.839ms] [1] SC[3172]: Registered sub-client [PlaceDevice] with ID [13] for session ID [3172] host [XSJBFORSSE20] user [bforsse] process ID [20472]
+[2016.11.22 17:19:27] [0000m.05s.956ms] [1] SC[3172]: Registered sub-client [SAE] with ID [14] for session ID [3172] host [XSJBFORSSE20] user [bforsse] process ID [20472]
+[2016.11.22 17:19:27] [0000m.05s.986ms] [1] SC[3172]: Registered sub-client [DxConstraints] with ID [15] for session ID [3172] host [XSJBFORSSE20] user [bforsse] process ID [20472]
+[2016.11.22 17:19:27] [0000m.05s.990ms] [1] SC[3172]: Registered sub-client [CCZAddin] with ID [16] for session ID [3172] host [XSJBFORSSE20] user [bforsse] process ID [20472]
+[2016.11.22 17:19:27] [0000m.05s.995ms] [1] SC[3172]: Registered sub-client [DxThumbnails] with ID [17] for session ID [3172] host [XSJBFORSSE20] user [bforsse] process ID [20472]
+[2016.11.22 17:19:27] [0000m.06s.039ms] [1] SC[3172]: Registered sub-client [SheetConnectorsCacheDxD:1479863967] with ID [18] for session ID [3172] host [XSJBFORSSE20] user [bforsse] process ID [20472]
+[2016.11.22 17:19:27] [0000m.06s.227ms] [1] SC[3172]: Registered sub-client [NetsNamesCollectorDxD:1479863967] with ID [19] for session ID [3172] host [XSJBFORSSE20] user [bforsse] process ID [20472]
+[2016.11.22 17:19:28] [0000m.06s.620ms] [1] SC[3172]: Registered sub-client [DxDbSearch] with ID [20] for session ID [3172] host [XSJBFORSSE20] user [bforsse] process ID [20472]
+[2016.11.22 17:19:29] [0000m.07s.835ms] [1] PrjBackupMgr: Successfully created Project Backup [Z:\afx\Board_Projects\1_ULTRA_SCALE\EVAL\HW-U1-VCU118\REV1_0\SCHEMATIC\CURRENT\ProjectBackup\backups\2016-11-22 17.19.24 - auto.zip] with GUID [afe8-95bf-2edf-4b73-c9ee-4381-aee4-3850-a2b7-7120-ad6b-0b7b]
+[2016.11.22 17:19:29] [0000m.07s.837ms] [0] PrjBackupEngine: Successfully created backup:  BackupGUID[afe8-95bf-2edf-4b73-c9ee-4381-aee4-3850-a2b7-7120-ad6b-0b7b] CreationTime[Wednesday, November 23, 2016 01:19:24] Type[Autosave] Creator[iCDB Server (2016-11-22 17.19.21-20808)] ApplicationName[iCDB Server (2016-11-22 17.19.21-20808)] UserName[bforsse] MachineName[XSJBFORSSE20] Description[Autosave] FullFlowName[Vendor-Independent Flow] FlowId[IND7.9.5_SW] GBSInstallId[30043] GBSBuildId[535943] IcdbVersion[2709] ReferenceLogFilePath[] BackupFilePath[Z:\afx\Board_Projects\1_ULTRA_SCALE\EVAL\HW-U1-VCU118\REV1_0\SCHEMATIC\CURRENT\ProjectBackup\backups\2016-11-22 17.19.24 - auto.zip] BackupFileSize[20474568] Persistent[FALSE]
+[2016.11.22 17:19:43] [0000m.21s.622ms] [0] DFAMT: File server access time: 484 us
+[2016.11.22 17:20:04] [0000m.42s.739ms] [1] SC[3172]: Registered sub-client [ObjectHolder_475721016] with ID [21] for session ID [3172] host [XSJBFORSSE20] user [bforsse] process ID [20472]
+[2016.11.22 17:20:04] [0000m.42s.743ms] [1] SC[3172]: Registered sub-client [BlockCacheDxD:461886776] with ID [22] for session ID [3172] host [XSJBFORSSE20] user [bforsse] process ID [20472]
+[2016.11.22 17:20:04] [0000m.42s.748ms] [1] SC[3172]: Registered sub-client [GlobalNetAliasUpdater_475723656] with ID [23] for session ID [3172] host [XSJBFORSSE20] user [bforsse] process ID [20472]
+[2016.11.22 17:20:04] [0000m.42s.752ms] [1] SC[3172]: Registered sub-client [IcdbNetProcessorSubClientDxD:831393168] with ID [24] for session ID [3172] host [XSJBFORSSE20] user [bforsse] process ID [20472]
+[2016.11.22 17:22:46] [0003m.24s.721ms] [1] SC[3172]: UnRegistered sub-client [GlobalNetAliasUpdater_475723656] with ID [23] for session ID [3172] host [XSJBFORSSE20] user [bforsse] process ID [20472]
+[2016.11.22 17:22:46] [0003m.24s.721ms] [1] SC[3172]: UnRegistered sub-client [BlockCacheDxD:461886776] with ID [22] for session ID [3172] host [XSJBFORSSE20] user [bforsse] process ID [20472]
+[2016.11.22 17:22:46] [0003m.24s.722ms] [1] SC[3172]: UnRegistered sub-client [ObjectHolder_475721016] with ID [21] for session ID [3172] host [XSJBFORSSE20] user [bforsse] process ID [20472]
+[2016.11.22 17:22:46] [0003m.24s.722ms] [1] SC[3172]: UnRegistered sub-client [IcdbNetProcessorSubClientDxD:831393168] with ID [24] for session ID [3172] host [XSJBFORSSE20] user [bforsse] process ID [20472]
+[2016.11.22 17:22:46] [0003m.24s.768ms] [1] SC[3172]: Registered sub-client [ObjectHolder_475721016] with ID [25] for session ID [3172] host [XSJBFORSSE20] user [bforsse] process ID [20472]
+[2016.11.22 17:22:46] [0003m.24s.772ms] [1] SC[3172]: Registered sub-client [BlockCacheDxD:461886272] with ID [26] for session ID [3172] host [XSJBFORSSE20] user [bforsse] process ID [20472]
+[2016.11.22 17:22:46] [0003m.24s.776ms] [1] SC[3172]: Registered sub-client [GlobalNetAliasUpdater_475723656] with ID [27] for session ID [3172] host [XSJBFORSSE20] user [bforsse] process ID [20472]
+[2016.11.22 17:22:46] [0003m.24s.780ms] [1] SC[3172]: Registered sub-client [IcdbNetProcessorSubClientDxD:831424752] with ID [28] for session ID [3172] host [XSJBFORSSE20] user [bforsse] process ID [20472]
+[2016.11.22 17:45:40] [0026m.19s.163ms] [1] SC[3172]: Registered sub-client [Find/Replace] with ID [29] for session ID [3172] host [XSJBFORSSE20] user [bforsse] process ID [20472]
+[2016.11.22 17:45:41] [0026m.19s.788ms] [1] SC[3172]: UnRegistered sub-client [Find/Replace] with ID [29] for session ID [3172] host [XSJBFORSSE20] user [bforsse] process ID [20472]
+[2016.11.22 17:46:51] [0027m.29s.407ms] [1] SC[3172]: Registered sub-client [Find/Replace] with ID [30] for session ID [3172] host [XSJBFORSSE20] user [bforsse] process ID [20472]
+[2016.11.22 17:46:51] [0027m.29s.482ms] [1] SC[3172]: UnRegistered sub-client [Find/Replace] with ID [30] for session ID [3172] host [XSJBFORSSE20] user [bforsse] process ID [20472]
+[2016.11.22 17:46:51] [0027m.30s.111ms] [1] SC[3172]: Registered sub-client [Find/Replace] with ID [31] for session ID [3172] host [XSJBFORSSE20] user [bforsse] process ID [20472]
+[2016.11.22 17:46:52] [0027m.30s.674ms] [1] SC[3172]: UnRegistered sub-client [Find/Replace] with ID [31] for session ID [3172] host [XSJBFORSSE20] user [bforsse] process ID [20472]
+[2016.11.22 17:57:28] [0038m.06s.591ms] [1] SC[3172]: Registered sub-client [Find/Replace] with ID [32] for session ID [3172] host [XSJBFORSSE20] user [bforsse] process ID [20472]
+[2016.11.22 17:57:28] [0038m.06s.984ms] [1] SC[3172]: UnRegistered sub-client [Find/Replace] with ID [32] for session ID [3172] host [XSJBFORSSE20] user [bforsse] process ID [20472]
+[2016.11.22 17:59:12] [0039m.50s.740ms] [1] SC[3172]: UnRegistered sub-client [DxConstraints] with ID [15] for session ID [3172] host [XSJBFORSSE20] user [bforsse] process ID [20472]
+[2016.11.22 17:59:12] [0039m.50s.747ms] [1] SC[3172]: Registered sub-client [DxConstraints] with ID [33] for session ID [3172] host [XSJBFORSSE20] user [bforsse] process ID [20472]
+[2016.11.22 17:59:13] [0039m.51s.824ms] [1] SC[3172]: UnRegistered sub-client [DxConstraints] with ID [33] for session ID [3172] host [XSJBFORSSE20] user [bforsse] process ID [20472]
+[2016.11.22 17:59:13] [0039m.51s.829ms] [1] SC[3172]: Registered sub-client [DxConstraints] with ID [34] for session ID [3172] host [XSJBFORSSE20] user [bforsse] process ID [20472]
+[2016.11.22 17:59:54] [0040m.32s.280ms] [1] SC[3172]: UnRegistered sub-client [Navigator] with ID [11] for session ID [3172] host [XSJBFORSSE20] user [bforsse] process ID [20472]
+[2016.11.22 17:59:54] [0040m.32s.280ms] [1] SC[3172]: UnRegistered sub-client [OutputWindow] with ID [12] for session ID [3172] host [XSJBFORSSE20] user [bforsse] process ID [20472]
+[2016.11.22 17:59:54] [0040m.32s.280ms] [1] SC[3172]: UnRegistered sub-client [PlaceDevice] with ID [13] for session ID [3172] host [XSJBFORSSE20] user [bforsse] process ID [20472]
+[2016.11.22 17:59:54] [0040m.32s.282ms] [1] SC[3172]: UnRegistered sub-client [DxDbSearch] with ID [20] for session ID [3172] host [XSJBFORSSE20] user [bforsse] process ID [20472]
+[2016.11.22 17:59:54] [0040m.32s.283ms] [1] SC[3172]: UnRegistered sub-client [SAE] with ID [14] for session ID [3172] host [XSJBFORSSE20] user [bforsse] process ID [20472]
+[2016.11.22 17:59:54] [0040m.32s.284ms] [1] SC[3172]: UnRegistered sub-client [DxConstraints] with ID [34] for session ID [3172] host [XSJBFORSSE20] user [bforsse] process ID [20472]
+[2016.11.22 17:59:54] [0040m.32s.285ms] [1] SC[3172]: UnRegistered sub-client [CCZAddin] with ID [16] for session ID [3172] host [XSJBFORSSE20] user [bforsse] process ID [20472]
+[2016.11.22 17:59:54] [0040m.32s.285ms] [1] SC[3172]: UnRegistered sub-client [DxThumbnails] with ID [17] for session ID [3172] host [XSJBFORSSE20] user [bforsse] process ID [20472]
+[2016.11.22 17:59:54] [0040m.32s.286ms] [1] SC[3172]: UnRegistered sub-client [HdlProject] with ID [10] for session ID [3172] host [XSJBFORSSE20] user [bforsse] process ID [20472]
+[2016.11.22 17:59:54] [0040m.32s.532ms] [1] SC[3172]: UnRegistered sub-client [GlobalNetAliasUpdater_475723656] with ID [27] for session ID [3172] host [XSJBFORSSE20] user [bforsse] process ID [20472]
+[2016.11.22 17:59:54] [0040m.32s.532ms] [1] SC[3172]: UnRegistered sub-client [BlockCacheDxD:461886272] with ID [26] for session ID [3172] host [XSJBFORSSE20] user [bforsse] process ID [20472]
+[2016.11.22 17:59:54] [0040m.32s.533ms] [1] SC[3172]: UnRegistered sub-client [ObjectHolder_475721016] with ID [25] for session ID [3172] host [XSJBFORSSE20] user [bforsse] process ID [20472]
+[2016.11.22 17:59:54] [0040m.32s.533ms] [1] SC[3172]: UnRegistered sub-client [IcdbNetProcessorSubClientDxD:831424752] with ID [28] for session ID [3172] host [XSJBFORSSE20] user [bforsse] process ID [20472]
+[2016.11.22 17:59:54] [0040m.32s.548ms] [1] SC[3172]: UnRegistered sub-client [SelectionHolder] with ID [4] for session ID [3172] host [XSJBFORSSE20] user [bforsse] process ID [20472]
+[2016.11.22 17:59:54] [0040m.32s.553ms] [1] SC[3172]: UnRegistered sub-client [SheetConnectorsCacheDxD:1479863967] with ID [18] for session ID [3172] host [XSJBFORSSE20] user [bforsse] process ID [20472]
+[2016.11.22 17:59:54] [0040m.32s.554ms] [1] SC[3172]: UnRegistered sub-client [NetsNamesCollectorDxD:1479863967] with ID [19] for session ID [3172] host [XSJBFORSSE20] user [bforsse] process ID [20472]
+[2016.11.22 17:59:54] [0040m.32s.590ms] [1] SC[3172]: UnRegistered sub-client [TransactionRollbackSubClient] with ID [2] for session ID [3172] host [XSJBFORSSE20] user [bforsse] process ID [20472]
+[2016.11.22 17:59:54] [0040m.32s.591ms] [1] SC[3172]: UnRegistered sub-client [DxD] with ID [1] for session ID [3172] host [XSJBFORSSE20] user [bforsse] process ID [20472]
+[2016.11.22 17:59:54] [0040m.32s.612ms] [1] SC[3172]: UnRegistered sub-client [xprob] with ID [3] for session ID [3172] host [XSJBFORSSE20] user [bforsse] process ID [20472]
+[2016.11.22 17:59:54] [0040m.32s.664ms] [1] SC[3172]: UnRegistered sub-client [SymbolEditor] with ID [5] for session ID [3172] host [XSJBFORSSE20] user [bforsse] process ID [20472]
+[2016.11.22 17:59:54] [0040m.32s.756ms] [1] CMT: Removed client [3172]
+[2016.11.22 17:59:54] [0040m.32s.757ms] [1] CMT: There are no clients left - waiting [1 seconds]
+[2016.11.22 17:59:56] [0040m.34s.357ms] [0] CMT: Starting server auto-close
+[2016.11.22 17:59:56] [0040m.34s.380ms] [0] S: Closing server
+[2016.11.22 17:59:56] [0040m.34s.470ms] [0] iCDB Server PI: Closing plugins
+[2016.11.22 17:59:56] [0040m.34s.470ms] [0] iCDB Server PI: Plugins closed
+[2016.11.22 17:59:56] [0040m.34s.470ms] [0] iCDB Server PI: Unloading database
+[2016.11.22 17:59:56] [0040m.34s.470ms] [0] iCDB Server PI: Saving storage
+[2016.11.22 17:59:56] [0040m.34s.470ms] [0] iCDB Server PI: Closing database
+[2016.11.22 17:59:56] [0040m.34s.475ms] [1] iCDB Server PI: Stats: Database defragmentation: max[2] avg[1] holes[99%] data[99%]
+[2016.11.22 17:59:56] [0040m.34s.475ms] [1] iCDB Server PI: Stats: Database file size [6601784 (6.3 MB)]
+[2016.11.22 17:59:56] [0040m.34s.479ms] [1] iCDB Server PI: WARNING: Database needs defragmentation!
+[2016.11.22 17:59:56] [0040m.34s.497ms] [0] iCDB Server PI: Database closed
+[2016.11.22 17:59:56] [0040m.34s.497ms] [0] iCDB Server PI: Defragmenting database
+[2016.11.22 17:59:56] [0040m.34s.498ms] [0] iCDB Server PI: Creating database [Z:\afx\Board_Projects\1_ULTRA_SCALE\EVAL\HW-U1-VCU118\REV1_0\SCHEMATIC\CURRENT\database] backup to file [Z:\afx\Board_Projects\1_ULTRA_SCALE\EVAL\HW-U1-VCU118\REV1_0\SCHEMATIC\CURRENT\database\cdbback\2016-11-22 17.59.56-20808-d.zip]
+[2016.11.22 17:59:58] [0040m.36s.645ms] [0] iCDB Server PI: Database backup: DONE
+[2016.11.22 17:59:58] [0040m.36s.654ms] [0] SingleFile: [0000-0000-0000-0000] SFI header version check [1009] [1009]
+[2016.11.22 17:59:58] [0040m.36s.655ms] [0] Database GUARD OK: [6601784]
+[2016.11.22 17:59:58] [0040m.36s.655ms] [0] SingleFile: [803e-74e8-4b82-38da] SFI version check [1009] [1009]
+[2016.11.22 17:59:58] [0040m.36s.659ms] [0] SingleFile: [803e-74e8-4b82-38da] Database SFI header has been read in [4ms 114us]
+[2016.11.22 17:59:58] [0040m.36s.733ms] [1] iCDB Server PI: Stats: Database file sizes: before[6601784 (6.3 MB)], after[3311344 (3.2 MB)], gain[3290440 (3.1 MB)]
+[2016.11.22 17:59:58] [0040m.36s.743ms] [0] Single file [Z:\afx\Board_Projects\1_ULTRA_SCALE\EVAL\HW-U1-VCU118\REV1_0\SCHEMATIC\CURRENT\database\icdb.dat] closed with size [3311344 (3.2 MB)]
+[2016.11.22 17:59:58] [0040m.36s.744ms] [0] iCDB Server PI: Database defragmentation completed successfully
+[2016.11.22 17:59:58] [0040m.36s.744ms] [1] BackupTransaction: Removing database backup [Z:\afx\Board_Projects\1_ULTRA_SCALE\EVAL\HW-U1-VCU118\REV1_0\SCHEMATIC\CURRENT\database\cdbback\2016-11-22 17.59.56-20808-d.zip]
+[2016.11.22 17:59:58] [0040m.36s.752ms] [1] iCDB Server PI: Stats: Total iCDB execution time: [655698] ticks
+[2016.11.22 17:59:58] [0040m.36s.752ms] [1] iCDB Server PI: Stats: Total iCDB execution time: [186958] microseconds
+[2016.11.22 17:59:58] [0040m.36s.752ms] [1] iCDB Server PI: Stats: Total iCDB commands count: [2869]
+[2016.11.22 17:59:58] [0040m.36s.752ms] [1] iCDB Server PI: Stats: Average iCDB speed:        [15345] commands per second
+[2016.11.22 17:59:58] [0040m.36s.881ms] [0] S: STOP

@@ -1,0 +1,29 @@
+[2014.07.17 10:08:50] [0001m.33s.757ms] [0] WELCOME
+[2014.07.17 10:08:50] [0001m.33s.757ms] [1] iCDB Database ver.1.094, vt40T8RtWJOG2cE2Nlvc5A, build:535943 created 2013-01-08 09:09:26, sources stamp:vt40T8RtWJOG2cE2Nlvc5A
+[2014.07.17 10:08:50] [0001m.33s.757ms] [1] Copyright 2013 Mentor Graphics Corporation. All Rights Reserved.
+[2014.07.17 10:08:50] [0001m.33s.757ms] [1] Base flow version [7.9.4]
+[2014.07.17 10:08:50] [0001m.33s.757ms] [1] GBS Install Id [30043], Flow Id [IND7.9.5_SW], Full Flow Name [Vendor-Independent Flow], Exact Access Date [Jun 1 2012]
+[2014.07.17 10:08:50] [0001m.33s.757ms] [1] Machine [XSJBFORSSE20]  User [bforsse]  PID [3468]
+[2014.07.17 10:08:50] [0001m.33s.757ms] [1] Operating system [Microsoft Windows 7 Enterprise Edition, 64-bit Service Pack 1 (build 7601)]
+[2014.07.17 10:08:50] [0001m.33s.757ms] [1] Current working dir [Z:\afx\afx\Board_Projects\1_ULTRA_SCALE\EVAL\HW-U1-VCU107\REV_C\SCHEMATIC\CURRENT]
+[2014.07.17 10:08:50] [0001m.33s.757ms] [1] PATH [C:\MentorGraphics\7.9.5IND\SDD_HOME\wv\win32\bin;C:\MentorGraphics\7.9.5IND\SDD_HOME\common\win32\bin;C:\MentorGraphics\7.9.5IND\SDD_HOME\common\win32\lib;C:\MentorGraphics\7.9.5IND\MGC_HOME.ixn\bin;C:\MentorGraphics\7.9.5IND\MGC_HOME.ixn\lib;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Enterprise Vault\EVClient\;;C:\Program Files (x86)\Texas Instruments Fusion Digital Power Designer\bin;C:\Cadence\SPB_16.6\tools\pspice\library;C:\Cadence\SPB_16.6\openaccess\bin\win32\opt;C:\Cadence\SPB_16.6\tools\capture;C:\Cadence\SPB_16.6\tools\pspice;C:\Cadence\SPB_16.6\tools\specctra\bin;C:\Cadence\SPB_16.6\tools\fet\bin;C:\Cadence\SPB_16.6\tools\libutil\bin;C:\Cadence\SPB_16.6\tools\bin;C:\Cadence\SPB_16.6\tools\pcb\bin;]
+[2014.07.17 10:08:50] [0001m.33s.757ms] [1] SDD_HOME [C:\MentorGraphics\7.9.5IND\SDD_HOME] on file system [NTFS]
+[2014.07.17 10:08:50] [0001m.33s.757ms] [1] SDD_PLATFORM [win32]
+[2014.07.17 10:08:50] [0001m.33s.757ms] [1] WDIR [C:\WDIR;C:\MentorGraphics\7.9.5IND\SDD_HOME\standard]
+[2014.07.17 10:08:50] [0001m.33s.757ms] [1] Local iCDB working dir [C:\WDIR\iCDB] on file system [NTFS]
+[2014.07.17 10:08:50] [0001m.33s.757ms] [3] WARNING: Database [Z:\afx\afx\Board_Projects\1_ULTRA_SCALE\EVAL\HW-U1-VCU107\REV_C\SCHEMATIC\CURRENT\database\icdb.dat] was manually copied
+[2014.07.17 10:08:50] [0001m.33s.757ms] [3] File change time:        [2014-07-17 09.04.47]
+[2014.07.17 10:08:50] [0001m.33s.757ms] [3] File modification time:  [2014-07-16 17.03.27]
+[2014.07.17 10:08:50] [0001m.33s.757ms] [3] Last change time:        [2014-07-16 17.03.27]
+[2014.07.17 10:08:50] [0001m.33s.757ms] [3] Last database open information:
+[2014.07.17 10:08:50] [0001m.33s.757ms] [3] Time:             [2014-07-16 16.58.54]
+[2014.07.17 10:08:50] [0001m.33s.757ms] [3] Location:         [Z:\afx\afx\Board_Projects\1_ULTRA_SCALE\EVAL\HW-U1-VCU107\REV_C\SCHEMATIC\CURRENT\database\icdb.dat]
+[2014.07.17 10:08:50] [0001m.33s.757ms] [3] Machine:          [XSJBFORSSE20]
+[2014.07.17 10:08:50] [0001m.33s.757ms] [3] User:             [bforsse]
+[2014.07.17 10:08:50] [0001m.33s.757ms] [3] PID:              [9828]
+[2014.07.17 10:08:50] [0001m.33s.757ms] [3] Application:      [iCDB Server]
+[2014.07.17 10:08:50] [0001m.33s.757ms] [3] Operating system: [Microsoft Windows 7 Enterprise Edition, 64-bit Service Pack 1 (build 7601)]
+[2014.07.17 10:08:50] [0001m.33s.757ms] [3] WARNING: Regenerating database GUID
+[2014.07.17 10:08:50] [0001m.33s.757ms] [3] Previous database GUID [f07e-eaf4-6736-174d-2896-cb37-896c-b350-24c7-7120-ad6b-0b7b]
+[2014.07.17 10:08:50] [0001m.33s.757ms] [3] Current database GUID  [e19e-0b85-3063-aa19-2230-8c37-2308-c350-63a5-7120-ad6b-0b7b]
+[2014.07.17 10:08:50] [0001m.33s.757ms] [0] .

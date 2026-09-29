@@ -1,0 +1,25 @@
+[2013.06.10 14:02:46] [0000m.01s.968ms] [0] WELCOME
+[2013.06.10 14:02:46] [0000m.02s.015ms] [1] iCDB Server ver.1.094, vt40T8RtWJOG2cE2Nlvc5A, build:535943 created 2013-01-08 09:09:26, sources stamp:vt40T8RtWJOG2cE2Nlvc5A
+[2013.06.10 14:02:46] [0000m.02s.015ms] [1] Copyright 2013 Mentor Graphics Corporation. All Rights Reserved.
+[2013.06.10 14:02:46] [0000m.02s.015ms] [1] Base flow version [7.9.4]
+[2013.06.10 14:02:46] [0000m.02s.015ms] [1] GBS Install Id [30043], Flow Id [IND7.9.5_SW], Full Flow Name [Vendor-Independent Flow], Exact Access Date [Jun 1 2012]
+[2013.06.10 14:02:46] [0000m.02s.015ms] [1] Machine [XSJ-PVAPWA7005]  User [bforsse]  PID [2684]
+[2013.06.10 14:02:46] [0000m.02s.015ms] [1] Operating system [Microsoft Windows 7 Business Edition, 64-bit (build 7600)]
+[2013.06.10 14:02:46] [0000m.02s.015ms] [1] Current working dir [Z:\afx\afx\Board_Projects\1_ULTRA_SCALE\EVAL\HW-U1-UC1050\REV_A\SCHEMATIC\CURRENT\HW-U1-UC1050_REVA]
+[2013.06.10 14:02:46] [0000m.02s.015ms] [1] PATH [C:\mentorgraphics\7.9.5IND\SDD_HOME\wv\win32\bin;C:\mentorgraphics\7.9.5IND\SDD_HOME\common\win32\bin;C:\mentorgraphics\7.9.5IND\SDD_HOME\common\win32\lib;C:\mentorgraphics\7.9.5IND\MGC_HOME.ixn\bin;C:\mentorgraphics\7.9.5IND\MGC_HOME.ixn\lib;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Citrix\System32\;C:\Program Files\Citrix\ICAService\;C:\Program Files (x86)\Citrix\Offline Plugin\system32\;]
+[2013.06.10 14:02:46] [0000m.02s.015ms] [1] SDD_HOME [C:\mentorgraphics\7.9.5IND\SDD_HOME] on file system [NTFS]
+[2013.06.10 14:02:46] [0000m.02s.015ms] [1] SDD_PLATFORM [win32]
+[2013.06.10 14:02:46] [0000m.02s.015ms] [1] WDIR [C:\mentorprojects;C:\mentorgraphics\7.9.5IND\SDD_HOME\standard]
+[2013.06.10 14:02:46] [0000m.02s.015ms] [1] Local iCDB working dir [C:\mentorprojects\iCDB] on file system [NTFS]
+[2013.06.10 14:02:46] [0000m.02s.015ms] [0] Creating database content backup before upgrade
+[2013.06.10 14:02:47] [0000m.02s.155ms] [0] Database content backed up to [Z:\afx\afx\Board_Projects\1_ULTRA_SCALE\EVAL\HW-U1-UC1050\REV_A\SCHEMATIC\CURRENT\HW-U1-UC1050_REVA\database\cdbback\2013-06-10 14.02.46-2684.zip] of size [13 382 bytes (13.1 kB)] in [137ms 918us]
+[2013.06.10 14:02:47] [0000m.02s.202ms] [0] Upgrading constraint definitions from version [ce_ee.cns=7.10.24;user.cns=5243-5a8a-c2b1-26bb-9aa1-6b1e-aa16-b150-4954-c16d-7a6b-0b9b,6b8c-7678-f225-2f9c-9aa1-6b1e-aa16-b150-4954-c16d-7a6b-0b9b,da48-b4b0-f1e4-978e-9aa1-6b1e-aa16-b150-4954-c16d-7a6b-0b9b]
+[2013.06.10 14:02:47] [0000m.02s.233ms] [0] Loading snapshot [1:DxD] version [2709]
+[2013.06.10 14:02:47] [0000m.02s.390ms] [0] Snapshot [1:DxD] loaded in [156ms 403us]
+[2013.06.10 14:02:47] [0000m.02s.390ms] [0] Upgrading constraint definitions for snapshot [1:DxD]
+[2013.06.10 14:02:47] [0000m.02s.390ms] [0] Constraint definitions for snapshot [1:DxD] upgraded in [2ms 254us]
+[2013.06.10 14:02:47] [0000m.02s.390ms] [0] Saving snapshot [1:DxD]
+[2013.06.10 14:02:47] [0000m.02s.390ms] [0] Snapshot [1:DxD] saved in [184us]
+[2013.06.10 14:02:47] [0000m.02s.468ms] [0] Constraint definitions upgraded to version [ce_ee.cns=7.10.24;user.cns=d6c9-e7c0-1565-732e-6fe3-6b1b-fe36-b150-f4b7-93de-9331-0cfc]
+[2013.06.10 14:02:47] [0000m.02s.499ms] [0] DONE
+[2013.06.10 14:02:47] [0000m.02s.499ms] [0] .

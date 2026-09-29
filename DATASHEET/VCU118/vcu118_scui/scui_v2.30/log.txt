@@ -1,0 +1,342 @@
+Pressed: 	'Get VCCINT Voltage'
+COM6 - Silicon Labs Dual CP210x USB to UART Bridge: Enhanced COM Port (COM6)
+[('<setmux:0:75:01>', '', '', ''), ('<getvoltage:0:70>', '', '', ''), ('<setmux:0:75:ff>', '', '', ''), ('<calcvoltage70>', '', '', '')]
+Writing:	'IW0\r75\r01\r\t'
+Writing:	'IS0\r70\r8B\r2\r\t'
+Writing:	'IW0\r75\rff\r\t'
+Success:	'IW0\r75\r01\r\tIS0\r70\r8B\r2\r\tIW0\r75\rff\r\t'
+Output: 	'IW0\r75\r01\r:P\r~~~\r:P\rIS0\r70\r8B\r2\r:P\r7900\r~~~\r:P\rIW0\r75\rff\r:P\r~~~\r:P\rVOLTAGE[0.85 Volts]~~~\r:P\r~~~\r:P\r'
+
+Pressed: 	'Get VCC1V8 Voltage'
+COM6 - Silicon Labs Dual CP210x USB to UART Bridge: Enhanced COM Port (COM6)
+[('<setmux:0:75:01>', '', '', ''), ('<getvoltage:0:11>', '', '', ''), ('<setmux:0:75:ff>', '', '', ''), ('<calcvoltage>', '', '', '')]
+Writing:	'IW0\r75\r01\r\t'
+Writing:	'IS0\r11\r8B\r2\r\t'
+Writing:	'IW0\r75\rff\r\t'
+Success:	'IW0\r75\r01\r\tIS0\r11\r8B\r2\r\tIW0\r75\rff\r\t'
+Output: 	'IW0\r75\r01\r:P\r~~~\r:P\rIS0\r11\r8B\r2\r:P\rCC1C\r~~~\r:P\rIW0\r75\rff\r:P\r~~~\r:P\rVOLTAGE[1.8 Volts]~~~\r:P\r~~~\r:P\r'
+
+Pressed: 	'Get VADJ_1V8 Voltage'
+COM6 - Silicon Labs Dual CP210x USB to UART Bridge: Enhanced COM Port (COM6)
+[('<setmux:0:75:01>', '', '', ''), ('<getvoltage:0:12>', '', '', ''), ('<setmux:0:75:ff>', '', '', ''), ('<calcvoltage>', '', '', '')]
+Writing:	'IW0\r75\r01\r\t'
+Writing:	'IS0\r12\r8B\r2\r\t'
+Writing:	'IW0\r75\rff\r\t'
+Success:	'IW0\r75\r01\r\tIS0\r12\r8B\r2\r\tIW0\r75\rff\r\t'
+Output: 	'IW0\r75\r01\r:P\r~~~\r:P\rIS0\r12\r8B\r2\r:P\rCC1C\r~~~\r:P\rIW0\r75\rff\r:P\r~~~\r:P\rVOLTAGE[1.8 Volts]~~~\r:P\r~~~\r:P\r'
+
+Pressed: 	'Get VCCINTIO_BRAM Voltage'
+COM6 - Silicon Labs Dual CP210x USB to UART Bridge: Enhanced COM Port (COM6)
+[('<setmux:0:75:01>', '', '', ''), ('<getvoltage:0:15>', '', '', ''), ('<setmux:0:75:ff>', '', '', ''), ('<calcvoltage>', '', '', '')]
+Writing:	'IW0\r75\r01\r\t'
+Writing:	'IS0\r15\r8B\r2\r\t'
+Writing:	'IW0\r75\rff\r\t'
+Success:	'IW0\r75\r01\r\tIS0\r15\r8B\r2\r\tIW0\r75\rff\r\t'
+Output: 	'IW0\r75\r01\r:P\r~~~\r:P\rIS0\r15\r8B\r2\r:P\r9B0D\r~~~\r:P\rIW0\r75\rff\r:P\r~~~\r:P\rVOLTAGE[0.85 Volts]~~~\r:P\r~~~\r:P\r'
+
+Pressed: 	'Get VCC1V2 Voltage'
+COM6 - Silicon Labs Dual CP210x USB to UART Bridge: Enhanced COM Port (COM6)
+[('<setmux:0:75:01>', '', '', ''), ('<getvoltage:0:14>', '', '', ''), ('<setmux:0:75:ff>', '', '', ''), ('<calcvoltage>', '', '', '')]
+Writing:	'IW0\r75\r01\r\t'
+Writing:	'IS0\r14\r8B\r2\r\t'
+Writing:	'IW0\r75\rff\r\t'
+Success:	'IW0\r75\r01\r\tIS0\r14\r8B\r2\r\tIW0\r75\rff\r\t'
+Output: 	'IW0\r75\r01\r:P\r~~~\r:P\rIS0\r14\r8B\r2\r:P\r3313\r~~~\r:P\rIW0\r75\rff\r:P\r~~~\r:P\rVOLTAGE[1.2 Volts]~~~\r:P\r~~~\r:P\r'
+
+Pressed: 	'Get MGTAVCC Voltage'
+COM6 - Silicon Labs Dual CP210x USB to UART Bridge: Enhanced COM Port (COM6)
+[('<setmux:0:75:01>', '', '', ''), ('<getvoltage:0:72>', '', '', ''), ('<setmux:0:75:ff>', '', '', ''), ('<calcvoltage70>', '', '', '')]
+Writing:	'IW0\r75\r01\r\t'
+Writing:	'IS0\r72\r8B\r2\r\t'
+Writing:	'IW0\r75\rff\r\t'
+Success:	'IW0\r75\r01\r\tIS0\r72\r8B\r2\r\tIW0\r75\rff\r\t'
+Output: 	'IW0\r75\r01\r:P\r~~~\r:P\rIS0\r72\r8B\r2\r:P\r8300\r~~~\r:P\rIW0\r75\rff\r:P\r~~~\r:P\rVOLTAGE[0.9 Volts]~~~\r:P\r~~~\r:P\r'
+
+Pressed: 	'Get MGTAVTT Voltage'
+COM6 - Silicon Labs Dual CP210x USB to UART Bridge: Enhanced COM Port (COM6)
+[('<setmux:0:75:01>', '', '', ''), ('<getvoltage:0:73>', '', '', ''), ('<setmux:0:75:ff>', '', '', ''), ('<calcvoltage70>', '', '', '')]
+Writing:	'IW0\r75\r01\r\t'
+Writing:	'IS0\r73\r8B\r2\r\t'
+Writing:	'IW0\r75\rff\r\t'
+Success:	'IW0\r75\r01\r\tIS0\r73\r8B\r2\r\tIW0\r75\rff\r\t'
+Output: 	'IW0\r75\r01\r:P\r~~~\r:P\rIS0\r73\r8B\r2\r:P\rBF00\r~~~\r:P\rIW0\r75\rff\r:P\r~~~\r:P\rVOLTAGE[1.2 Volts]~~~\r:P\r~~~\r:P\r'
+
+Pressed: 	'Get UTIL_1V35 Voltage'
+COM6 - Silicon Labs Dual CP210x USB to UART Bridge: Enhanced COM Port (COM6)
+[('<setmux:0:75:01>', '', '', ''), ('<getvoltage:0:1A>', '', '', ''), ('<setmux:0:75:ff>', '', '', ''), ('<calcvoltage>', '', '', '')]
+Writing:	'IW0\r75\r01\r\t'
+Writing:	'IS0\r1A\r8B\r2\r\t'
+Writing:	'IW0\r75\rff\r\t'
+Success:	'IW0\r75\r01\r\tIS0\r1A\r8B\r2\r\tIW0\r75\rff\r\t'
+Output: 	'IW0\r75\r01\r:P\r~~~\r:P\rIS0\r1A\r8B\r2\r:P\r9B15\r~~~\r:P\rIW0\r75\rff\r:P\r~~~\r:P\rVOLTAGE[1.35 Volts]~~~\r:P\r~~~\r:P\r'
+
+Pressed: 	'Get UTIL_3V3 Voltage'
+COM6 - Silicon Labs Dual CP210x USB to UART Bridge: Enhanced COM Port (COM6)
+[('<setmux:0:75:01>', '', '', ''), ('<getvoltage:0:1B>', '', '', ''), ('<setmux:0:75:ff>', '', '', ''), ('<calcvoltage>', '', '', '')]
+Writing:	'IW0\r75\r01\r\t'
+Writing:	'IS0\r1B\r8B\r2\r\t'
+Writing:	'IW0\r75\rff\r\t'
+Success:	'IW0\r75\r01\r\tIS0\r1B\r8B\r2\r\tIW0\r75\rff\r\t'
+Output: 	'IW0\r75\r01\r:P\r~~~\r:P\rIS0\r1B\r8B\r2\r:P\rCA34\r~~~\r:P\rIW0\r75\rff\r:P\r~~~\r:P\rVOLTAGE[3.3 Volts]~~~\r:P\r~~~\r:P\r'
+
+Pressed: 	'Set VADJ to 1.5 V'
+COM6 - Silicon Labs Dual CP210x USB to UART Bridge: Enhanced COM Port (COM6)
+[('<setmux:0:75:01>', '', '', ''), ('<setMAX15303voltage:0:12:1.5>', '', '', ''), ('<setmux:0:75:00>', '', '', '')]
+Writing:	'IW0\r75\r01\r\t'
+Writing:	'IW0\r12\r0140\r\tDLY\rC350\r\tIW0\r12\r210018\r\tDLY\rC350\r\tIW0\r12\r0180\r\tDLY\rC350\r\t'
+Writing:	'IW0\r75\r00\r\t'
+Success:	'IW0\r75\r01\r\tIW0\r12\r0140\r\tDLY\rC350\r\tIW0\r12\r210018\r\tDLY\rC350\r\tIW0\r12\r0180\r\tDLY\rC350\r\tIW0\r75\r00\r\t'
+Output: 	'IW0\r75\r01\r:P\r~~~\r:P\rIW0\r12\r0140\r:P\rDLY\rC350\r:P\rIW0\r12\r210018\r:P\rDLY\rC350\r:P\rIW0\r12\r0180\r:P\rDLY\rC350\r:P\r~~~\r:P\rIW0\r75\r00\r:P\r~~~\r:P\r~~~\r:P\r'
+
+Pressed: 	'Get VCCINT Voltage'
+COM6 - Silicon Labs Dual CP210x USB to UART Bridge: Enhanced COM Port (COM6)
+[('<setmux:0:75:01>', '', '', ''), ('<getvoltage:0:70>', '', '', ''), ('<setmux:0:75:ff>', '', '', ''), ('<calcvoltage70>', '', '', '')]
+Writing:	'IW0\r75\r01\r\t'
+Writing:	'IS0\r70\r8B\r2\r\t'
+Writing:	'IW0\r75\rff\r\t'
+Success:	'IW0\r75\r01\r\tIS0\r70\r8B\r2\r\tIW0\r75\rff\r\t'
+Output: 	'IW0\r75\r01\r:P\r~~~\r:P\rIS0\r70\r8B\r2\r:P\r7900\r~~~\r:P\rIW0\r75\rff\r:P\r~~~\r:P\rVOLTAGE[0.85 Volts]~~~\r:P\r~~~\r:P\r'
+
+Pressed: 	'Get VCC1V8 Voltage'
+COM6 - Silicon Labs Dual CP210x USB to UART Bridge: Enhanced COM Port (COM6)
+[('<setmux:0:75:01>', '', '', ''), ('<getvoltage:0:11>', '', '', ''), ('<setmux:0:75:ff>', '', '', ''), ('<calcvoltage>', '', '', '')]
+Writing:	'IW0\r75\r01\r\t'
+Writing:	'IS0\r11\r8B\r2\r\t'
+Writing:	'IW0\r75\rff\r\t'
+Success:	'IW0\r75\r01\r\tIS0\r11\r8B\r2\r\tIW0\r75\rff\r\t'
+Output: 	'IW0\r75\r01\r:P\r~~~\r:P\rIS0\r11\r8B\r2\r:P\rCE1C\r~~~\r:P\rIW0\r75\rff\r:P\r~~~\r:P\rVOLTAGE[1.8 Volts]~~~\r:P\r~~~\r:P\r'
+
+Pressed: 	'Get VADJ_1V8 Voltage'
+COM6 - Silicon Labs Dual CP210x USB to UART Bridge: Enhanced COM Port (COM6)
+[('<setmux:0:75:01>', '', '', ''), ('<getvoltage:0:12>', '', '', ''), ('<setmux:0:75:ff>', '', '', ''), ('<calcvoltage>', '', '', '')]
+Writing:	'IW0\r75\r01\r\t'
+Writing:	'IS0\r12\r8B\r2\r\t'
+Writing:	'IW0\r75\rff\r\t'
+Success:	'IW0\r75\r01\r\tIS0\r12\r8B\r2\r\tIW0\r75\rff\r\t'
+Output: 	'IW0\r75\r01\r:P\r~~~\r:P\rIS0\r12\r8B\r2\r:P\rFE17\r~~~\r:P\rIW0\r75\rff\r:P\r~~~\r:P\rVOLTAGE[1.5 Volts]~~~\r:P\r~~~\r:P\r'
+
+Pressed: 	'Get VCCINTIO_BRAM Voltage'
+COM6 - Silicon Labs Dual CP210x USB to UART Bridge: Enhanced COM Port (COM6)
+[('<setmux:0:75:01>', '', '', ''), ('<getvoltage:0:15>', '', '', ''), ('<setmux:0:75:ff>', '', '', ''), ('<calcvoltage>', '', '', '')]
+Writing:	'IW0\r75\r01\r\t'
+Writing:	'IS0\r15\r8B\r2\r\t'
+Writing:	'IW0\r75\rff\r\t'
+Success:	'IW0\r75\r01\r\tIS0\r15\r8B\r2\r\tIW0\r75\rff\r\t'
+Output: 	'IW0\r75\r01\r:P\r~~~\r:P\rIS0\r15\r8B\r2\r:P\r9B0D\r~~~\r:P\rIW0\r75\rff\r:P\r~~~\r:P\rVOLTAGE[0.85 Volts]~~~\r:P\r~~~\r:P\r'
+
+Pressed: 	'Get VCC1V2 Voltage'
+COM6 - Silicon Labs Dual CP210x USB to UART Bridge: Enhanced COM Port (COM6)
+[('<setmux:0:75:01>', '', '', ''), ('<getvoltage:0:14>', '', '', ''), ('<setmux:0:75:ff>', '', '', ''), ('<calcvoltage>', '', '', '')]
+Writing:	'IW0\r75\r01\r\t'
+Writing:	'IS0\r14\r8B\r2\r\t'
+Writing:	'IW0\r75\rff\r\t'
+Success:	'IW0\r75\r01\r\tIS0\r14\r8B\r2\r\tIW0\r75\rff\r\t'
+Output: 	'IW0\r75\r01\r:P\r~~~\r:P\rIS0\r14\r8B\r2\r:P\r3313\r~~~\r:P\rIW0\r75\rff\r:P\r~~~\r:P\rVOLTAGE[1.2 Volts]~~~\r:P\r~~~\r:P\r'
+
+Pressed: 	'Get MGTAVCC Voltage'
+COM6 - Silicon Labs Dual CP210x USB to UART Bridge: Enhanced COM Port (COM6)
+[('<setmux:0:75:01>', '', '', ''), ('<getvoltage:0:72>', '', '', ''), ('<setmux:0:75:ff>', '', '', ''), ('<calcvoltage70>', '', '', '')]
+Writing:	'IW0\r75\r01\r\t'
+Writing:	'IS0\r72\r8B\r2\r\t'
+Writing:	'IW0\r75\rff\r\t'
+Success:	'IW0\r75\r01\r\tIS0\r72\r8B\r2\r\tIW0\r75\rff\r\t'
+Output: 	'IW0\r75\r01\r:P\r~~~\r:P\rIS0\r72\r8B\r2\r:P\r8300\r~~~\r:P\rIW0\r75\rff\r:P\r~~~\r:P\rVOLTAGE[0.9 Volts]~~~\r:P\r~~~\r:P\r'
+
+Pressed: 	'Get MGTAVTT Voltage'
+COM6 - Silicon Labs Dual CP210x USB to UART Bridge: Enhanced COM Port (COM6)
+[('<setmux:0:75:01>', '', '', ''), ('<getvoltage:0:73>', '', '', ''), ('<setmux:0:75:ff>', '', '', ''), ('<calcvoltage70>', '', '', '')]
+Writing:	'IW0\r75\r01\r\t'
+Writing:	'IS0\r73\r8B\r2\r\t'
+Writing:	'IW0\r75\rff\r\t'
+Success:	'IW0\r75\r01\r\tIS0\r73\r8B\r2\r\tIW0\r75\rff\r\t'
+Output: 	'IW0\r75\r01\r:P\r~~~\r:P\rIS0\r73\r8B\r2\r:P\rBF00\r~~~\r:P\rIW0\r75\rff\r:P\r~~~\r:P\rVOLTAGE[1.2 Volts]~~~\r:P\r~~~\r:P\r'
+
+Pressed: 	'Get UTIL_1V35 Voltage'
+COM6 - Silicon Labs Dual CP210x USB to UART Bridge: Enhanced COM Port (COM6)
+[('<setmux:0:75:01>', '', '', ''), ('<getvoltage:0:1A>', '', '', ''), ('<setmux:0:75:ff>', '', '', ''), ('<calcvoltage>', '', '', '')]
+Writing:	'IW0\r75\r01\r\t'
+Writing:	'IS0\r1A\r8B\r2\r\t'
+Writing:	'IW0\r75\rff\r\t'
+Success:	'IW0\r75\r01\r\tIS0\r1A\r8B\r2\r\tIW0\r75\rff\r\t'
+Output: 	'IW0\r75\r01\r:P\r~~~\r:P\rIS0\r1A\r8B\r2\r:P\r9D15\r~~~\r:P\rIW0\r75\rff\r:P\r~~~\r:P\rVOLTAGE[1.35 Volts]~~~\r:P\r~~~\r:P\r'
+
+Pressed: 	'Get UTIL_3V3 Voltage'
+COM6 - Silicon Labs Dual CP210x USB to UART Bridge: Enhanced COM Port (COM6)
+[('<setmux:0:75:01>', '', '', ''), ('<getvoltage:0:1B>', '', '', ''), ('<setmux:0:75:ff>', '', '', ''), ('<calcvoltage>', '', '', '')]
+Writing:	'IW0\r75\r01\r\t'
+Writing:	'IS0\r1B\r8B\r2\r\t'
+Writing:	'IW0\r75\rff\r\t'
+Success:	'IW0\r75\r01\r\tIS0\r1B\r8B\r2\r\tIW0\r75\rff\r\t'
+Output: 	'IW0\r75\r01\r:P\r~~~\r:P\rIS0\r1B\r8B\r2\r:P\rD034\r~~~\r:P\rIW0\r75\rff\r:P\r~~~\r:P\rVOLTAGE[3.3 Volts]~~~\r:P\r~~~\r:P\r'
+
+Pressed: 	'Get VCCINT Voltage'
+COM6 - Silicon Labs Dual CP210x USB to UART Bridge: Enhanced COM Port (COM6)
+[('<setmux:0:75:01>', '', '', ''), ('<getvoltage:0:70>', '', '', ''), ('<setmux:0:75:ff>', '', '', ''), ('<calcvoltage70>', '', '', '')]
+Writing:	'IW0\r75\r01\r\t'
+Writing:	'IS0\r70\r8B\r2\r\t'
+Writing:	'IW0\r75\rff\r\t'
+Success:	'IW0\r75\r01\r\tIS0\r70\r8B\r2\r\tIW0\r75\rff\r\t'
+Output: 	'IW0\r75\r01\r:P\r~~~\r:P\rIS0\r70\r8B\r2\r:P\r7900\r~~~\r:P\rIW0\r75\rff\r:P\r~~~\r:P\rVOLTAGE[0.85 Volts]~~~\r:P\r~~~\r:P\r'
+
+Pressed: 	'Get VCC1V8 Voltage'
+COM6 - Silicon Labs Dual CP210x USB to UART Bridge: Enhanced COM Port (COM6)
+[('<setmux:0:75:01>', '', '', ''), ('<getvoltage:0:11>', '', '', ''), ('<setmux:0:75:ff>', '', '', ''), ('<calcvoltage>', '', '', '')]
+Writing:	'IW0\r75\r01\r\t'
+Writing:	'IS0\r11\r8B\r2\r\t'
+Writing:	'IW0\r75\rff\r\t'
+Success:	'IW0\r75\r01\r\tIS0\r11\r8B\r2\r\tIW0\r75\rff\r\t'
+Output: 	'IW0\r75\r01\r:P\r~~~\r:P\rIS0\r11\r8B\r2\r:P\rCE1C\r~~~\r:P\rIW0\r75\rff\r:P\r~~~\r:P\rVOLTAGE[1.8 Volts]~~~\r:P\r~~~\r:P\r'
+
+Pressed: 	'Get VADJ_1V8 Voltage'
+COM6 - Silicon Labs Dual CP210x USB to UART Bridge: Enhanced COM Port (COM6)
+[('<setmux:0:75:01>', '', '', ''), ('<getvoltage:0:12>', '', '', ''), ('<setmux:0:75:ff>', '', '', ''), ('<calcvoltage>', '', '', '')]
+Writing:	'IW0\r75\r01\r\t'
+Writing:	'IS0\r12\r8B\r2\r\t'
+Writing:	'IW0\r75\rff\r\t'
+Success:	'IW0\r75\r01\r\tIS0\r12\r8B\r2\r\tIW0\r75\rff\r\t'
+Output: 	'IW0\r75\r01\r:P\r~~~\r:P\rIS0\r12\r8B\r2\r:P\rCC1C\r~~~\r:P\rIW0\r75\rff\r:P\r~~~\r:P\rVOLTAGE[1.8 Volts]~~~\r:P\r~~~\r:P\r'
+
+Pressed: 	'Get VCCINTIO_BRAM Voltage'
+COM6 - Silicon Labs Dual CP210x USB to UART Bridge: Enhanced COM Port (COM6)
+[('<setmux:0:75:01>', '', '', ''), ('<getvoltage:0:15>', '', '', ''), ('<setmux:0:75:ff>', '', '', ''), ('<calcvoltage>', '', '', '')]
+Writing:	'IW0\r75\r01\r\t'
+Writing:	'IS0\r15\r8B\r2\r\t'
+Writing:	'IW0\r75\rff\r\t'
+Success:	'IW0\r75\r01\r\tIS0\r15\r8B\r2\r\tIW0\r75\rff\r\t'
+Output: 	'IW0\r75\r01\r:P\r~~~\r:P\rIS0\r15\r8B\r2\r:P\r990D\r~~~\r:P\rIW0\r75\rff\r:P\r~~~\r:P\rVOLTAGE[0.85 Volts]~~~\r:P\r~~~\r:P\r'
+
+Pressed: 	'Get VCC1V2 Voltage'
+COM6 - Silicon Labs Dual CP210x USB to UART Bridge: Enhanced COM Port (COM6)
+[('<setmux:0:75:01>', '', '', ''), ('<getvoltage:0:14>', '', '', ''), ('<setmux:0:75:ff>', '', '', ''), ('<calcvoltage>', '', '', '')]
+Writing:	'IW0\r75\r01\r\t'
+Writing:	'IS0\r14\r8B\r2\r\t'
+Writing:	'IW0\r75\rff\r\t'
+Success:	'IW0\r75\r01\r\tIS0\r14\r8B\r2\r\tIW0\r75\rff\r\t'
+Output: 	'IW0\r75\r01\r:P\r~~~\r:P\rIS0\r14\r8B\r2\r:P\r3313\r~~~\r:P\rIW0\r75\rff\r:P\r~~~\r:P\rVOLTAGE[1.2 Volts]~~~\r:P\r~~~\r:P\r'
+
+Pressed: 	'Get MGTAVCC Voltage'
+COM6 - Silicon Labs Dual CP210x USB to UART Bridge: Enhanced COM Port (COM6)
+[('<setmux:0:75:01>', '', '', ''), ('<getvoltage:0:72>', '', '', ''), ('<setmux:0:75:ff>', '', '', ''), ('<calcvoltage70>', '', '', '')]
+Writing:	'IW0\r75\r01\r\t'
+Writing:	'IS0\r72\r8B\r2\r\t'
+Writing:	'IW0\r75\rff\r\t'
+Success:	'IW0\r75\r01\r\tIS0\r72\r8B\r2\r\tIW0\r75\rff\r\t'
+Output: 	'IW0\r75\r01\r:P\r~~~\r:P\rIS0\r72\r8B\r2\r:P\r8300\r~~~\r:P\rIW0\r75\rff\r:P\r~~~\r:P\rVOLTAGE[0.9 Volts]~~~\r:P\r~~~\r:P\r'
+
+Pressed: 	'Get MGTAVTT Voltage'
+COM6 - Silicon Labs Dual CP210x USB to UART Bridge: Enhanced COM Port (COM6)
+[('<setmux:0:75:01>', '', '', ''), ('<getvoltage:0:73>', '', '', ''), ('<setmux:0:75:ff>', '', '', ''), ('<calcvoltage70>', '', '', '')]
+Writing:	'IW0\r75\r01\r\t'
+Writing:	'IS0\r73\r8B\r2\r\t'
+Writing:	'IW0\r75\rff\r\t'
+Success:	'IW0\r75\r01\r\tIS0\r73\r8B\r2\r\tIW0\r75\rff\r\t'
+Output: 	'IW0\r75\r01\r:P\r~~~\r:P\rIS0\r73\r8B\r2\r:P\rBF00\r~~~\r:P\rIW0\r75\rff\r:P\r~~~\r:P\rVOLTAGE[1.2 Volts]~~~\r:P\r~~~\r:P\r'
+
+Pressed: 	'Get UTIL_1V35 Voltage'
+COM6 - Silicon Labs Dual CP210x USB to UART Bridge: Enhanced COM Port (COM6)
+[('<setmux:0:75:01>', '', '', ''), ('<getvoltage:0:1A>', '', '', ''), ('<setmux:0:75:ff>', '', '', ''), ('<calcvoltage>', '', '', '')]
+Writing:	'IW0\r75\r01\r\t'
+Writing:	'IS0\r1A\r8B\r2\r\t'
+Writing:	'IW0\r75\rff\r\t'
+Success:	'IW0\r75\r01\r\tIS0\r1A\r8B\r2\r\tIW0\r75\rff\r\t'
+Output: 	'IW0\r75\r01\r:P\r~~~\r:P\rIS0\r1A\r8B\r2\r:P\r9D15\r~~~\r:P\rIW0\r75\rff\r:P\r~~~\r:P\rVOLTAGE[1.35 Volts]~~~\r:P\r~~~\r:P\r'
+
+Pressed: 	'Get UTIL_3V3 Voltage'
+COM6 - Silicon Labs Dual CP210x USB to UART Bridge: Enhanced COM Port (COM6)
+[('<setmux:0:75:01>', '', '', ''), ('<getvoltage:0:1B>', '', '', ''), ('<setmux:0:75:ff>', '', '', ''), ('<calcvoltage>', '', '', '')]
+Writing:	'IW0\r75\r01\r\t'
+Writing:	'IS0\r1B\r8B\r2\r\t'
+Writing:	'IW0\r75\rff\r\t'
+Success:	'IW0\r75\r01\r\tIS0\r1B\r8B\r2\r\tIW0\r75\rff\r\t'
+Output: 	'IW0\r75\r01\r:P\r~~~\r:P\rIS0\r1B\r8B\r2\r:P\rCA34\r~~~\r:P\rIW0\r75\rff\r:P\r~~~\r:P\rVOLTAGE[3.3 Volts]~~~\r:P\r~~~\r:P\r'
+
+Pressed: 	'Set VADJ to 1.5 V'
+COM6 - Silicon Labs Dual CP210x USB to UART Bridge: Enhanced COM Port (COM6)
+[('<setmux:0:75:01>', '', '', ''), ('<setMAX15303voltage:0:12:1.5>', '', '', ''), ('<setmux:0:75:00>', '', '', '')]
+Writing:	'IW0\r75\r01\r\t'
+Writing:	'IW0\r12\r0140\r\tDLY\rC350\r\tIW0\r12\r210018\r\tDLY\rC350\r\tIW0\r12\r0180\r\tDLY\rC350\r\t'
+Writing:	'IW0\r75\r00\r\t'
+Success:	'IW0\r75\r01\r\tIW0\r12\r0140\r\tDLY\rC350\r\tIW0\r12\r210018\r\tDLY\rC350\r\tIW0\r12\r0180\r\tDLY\rC350\r\tIW0\r75\r00\r\t'
+Output: 	'IW0\r75\r01\r:P\r~~~\r:P\rIW0\r12\r0140\r:P\rDLY\rC350\r:P\rIW0\r12\r210018\r:P\rDLY\rC350\r:P\rIW0\r12\r0180\r:P\rDLY\rC350\r:P\r~~~\r:P\rIW0\r75\r00\r:P\r~~~\r:P\r~~~\r:P\r'
+
+Pressed: 	'Get VCCINT Voltage'
+COM6 - Silicon Labs Dual CP210x USB to UART Bridge: Enhanced COM Port (COM6)
+[('<setmux:0:75:01>', '', '', ''), ('<getvoltage:0:70>', '', '', ''), ('<setmux:0:75:ff>', '', '', ''), ('<calcvoltage70>', '', '', '')]
+Writing:	'IW0\r75\r01\r\t'
+Writing:	'IS0\r70\r8B\r2\r\t'
+Writing:	'IW0\r75\rff\r\t'
+Success:	'IW0\r75\r01\r\tIS0\r70\r8B\r2\r\tIW0\r75\rff\r\t'
+Output: 	'IW0\r75\r01\r:P\r~~~\r:P\rIS0\r70\r8B\r2\r:P\r7900\r~~~\r:P\rIW0\r75\rff\r:P\r~~~\r:P\rVOLTAGE[0.85 Volts]~~~\r:P\r~~~\r:P\r'
+
+Pressed: 	'Get VCC1V8 Voltage'
+COM6 - Silicon Labs Dual CP210x USB to UART Bridge: Enhanced COM Port (COM6)
+[('<setmux:0:75:01>', '', '', ''), ('<getvoltage:0:11>', '', '', ''), ('<setmux:0:75:ff>', '', '', ''), ('<calcvoltage>', '', '', '')]
+Writing:	'IW0\r75\r01\r\t'
+Writing:	'IS0\r11\r8B\r2\r\t'
+Writing:	'IW0\r75\rff\r\t'
+Success:	'IW0\r75\r01\r\tIS0\r11\r8B\r2\r\tIW0\r75\rff\r\t'
+Output: 	'IW0\r75\r01\r:P\r~~~\r:P\rIS0\r11\r8B\r2\r:P\rCE1C\r~~~\r:P\rIW0\r75\rff\r:P\r~~~\r:P\rVOLTAGE[1.8 Volts]~~~\r:P\r~~~\r:P\r'
+
+Pressed: 	'Get VADJ_1V8 Voltage'
+COM6 - Silicon Labs Dual CP210x USB to UART Bridge: Enhanced COM Port (COM6)
+[('<setmux:0:75:01>', '', '', ''), ('<getvoltage:0:12>', '', '', ''), ('<setmux:0:75:ff>', '', '', ''), ('<calcvoltage>', '', '', '')]
+Writing:	'IW0\r75\r01\r\t'
+Writing:	'IS0\r12\r8B\r2\r\t'
+Writing:	'IW0\r75\rff\r\t'
+Success:	'IW0\r75\r01\r\tIS0\r12\r8B\r2\r\tIW0\r75\rff\r\t'
+Output: 	'IW0\r75\r01\r:P\r~~~\r:P\rIS0\r12\r8B\r2\r:P\rFE17\r~~~\r:P\rIW0\r75\rff\r:P\r~~~\r:P\rVOLTAGE[1.5 Volts]~~~\r:P\r~~~\r:P\r'
+
+Pressed: 	'Get VCCINTIO_BRAM Voltage'
+COM6 - Silicon Labs Dual CP210x USB to UART Bridge: Enhanced COM Port (COM6)
+[('<setmux:0:75:01>', '', '', ''), ('<getvoltage:0:15>', '', '', ''), ('<setmux:0:75:ff>', '', '', ''), ('<calcvoltage>', '', '', '')]
+Writing:	'IW0\r75\r01\r\t'
+Writing:	'IS0\r15\r8B\r2\r\t'
+Writing:	'IW0\r75\rff\r\t'
+Success:	'IW0\r75\r01\r\tIS0\r15\r8B\r2\r\tIW0\r75\rff\r\t'
+Output: 	'IW0\r75\r01\r:P\r~~~\r:P\rIS0\r15\r8B\r2\r:P\r9B0D\r~~~\r:P\rIW0\r75\rff\r:P\r~~~\r:P\rVOLTAGE[0.85 Volts]~~~\r:P\r~~~\r:P\r'
+
+Pressed: 	'Get VCC1V2 Voltage'
+COM6 - Silicon Labs Dual CP210x USB to UART Bridge: Enhanced COM Port (COM6)
+[('<setmux:0:75:01>', '', '', ''), ('<getvoltage:0:14>', '', '', ''), ('<setmux:0:75:ff>', '', '', ''), ('<calcvoltage>', '', '', '')]
+Writing:	'IW0\r75\r01\r\t'
+Writing:	'IS0\r14\r8B\r2\r\t'
+Writing:	'IW0\r75\rff\r\t'
+Success:	'IW0\r75\r01\r\tIS0\r14\r8B\r2\r\tIW0\r75\rff\r\t'
+Output: 	'IW0\r75\r01\r:P\r~~~\r:P\rIS0\r14\r8B\r2\r:P\r3313\r~~~\r:P\rIW0\r75\rff\r:P\r~~~\r:P\rVOLTAGE[1.2 Volts]~~~\r:P\r~~~\r:P\r'
+
+Pressed: 	'Get MGTAVCC Voltage'
+COM6 - Silicon Labs Dual CP210x USB to UART Bridge: Enhanced COM Port (COM6)
+[('<setmux:0:75:01>', '', '', ''), ('<getvoltage:0:72>', '', '', ''), ('<setmux:0:75:ff>', '', '', ''), ('<calcvoltage70>', '', '', '')]
+Writing:	'IW0\r75\r01\r\t'
+Writing:	'IS0\r72\r8B\r2\r\t'
+Writing:	'IW0\r75\rff\r\t'
+Success:	'IW0\r75\r01\r\tIS0\r72\r8B\r2\r\tIW0\r75\rff\r\t'
+Output: 	'IW0\r75\r01\r:P\r~~~\r:P\rIS0\r72\r8B\r2\r:P\r8300\r~~~\r:P\rIW0\r75\rff\r:P\r~~~\r:P\rVOLTAGE[0.9 Volts]~~~\r:P\r~~~\r:P\r'
+
+Pressed: 	'Get MGTAVTT Voltage'
+COM6 - Silicon Labs Dual CP210x USB to UART Bridge: Enhanced COM Port (COM6)
+[('<setmux:0:75:01>', '', '', ''), ('<getvoltage:0:73>', '', '', ''), ('<setmux:0:75:ff>', '', '', ''), ('<calcvoltage70>', '', '', '')]
+Writing:	'IW0\r75\r01\r\t'
+Writing:	'IS0\r73\r8B\r2\r\t'
+Writing:	'IW0\r75\rff\r\t'
+Success:	'IW0\r75\r01\r\tIS0\r73\r8B\r2\r\tIW0\r75\rff\r\t'
+Output: 	'IW0\r75\r01\r:P\r~~~\r:P\rIS0\r73\r8B\r2\r:P\rBF00\r~~~\r:P\rIW0\r75\rff\r:P\r~~~\r:P\rVOLTAGE[1.2 Volts]~~~\r:P\r~~~\r:P\r'
+
+Pressed: 	'Get UTIL_1V35 Voltage'
+COM6 - Silicon Labs Dual CP210x USB to UART Bridge: Enhanced COM Port (COM6)
+[('<setmux:0:75:01>', '', '', ''), ('<getvoltage:0:1A>', '', '', ''), ('<setmux:0:75:ff>', '', '', ''), ('<calcvoltage>', '', '', '')]
+Writing:	'IW0\r75\r01\r\t'
+Writing:	'IS0\r1A\r8B\r2\r\t'
+Writing:	'IW0\r75\rff\r\t'
+Success:	'IW0\r75\r01\r\tIS0\r1A\r8B\r2\r\tIW0\r75\rff\r\t'
+Output: 	'IW0\r75\r01\r:P\r~~~\r:P\rIS0\r1A\r8B\r2\r:P\r9D15\r~~~\r:P\rIW0\r75\rff\r:P\r~~~\r:P\rVOLTAGE[1.35 Volts]~~~\r:P\r~~~\r:P\r'
+
+Pressed: 	'Get UTIL_3V3 Voltage'
+COM6 - Silicon Labs Dual CP210x USB to UART Bridge: Enhanced COM Port (COM6)
+[('<setmux:0:75:01>', '', '', ''), ('<getvoltage:0:1B>', '', '', ''), ('<setmux:0:75:ff>', '', '', ''), ('<calcvoltage>', '', '', '')]
+Writing:	'IW0\r75\r01\r\t'
+Writing:	'IS0\r1B\r8B\r2\r\t'
+Writing:	'IW0\r75\rff\r\t'
+Success:	'IW0\r75\r01\r\tIS0\r1B\r8B\r2\r\tIW0\r75\rff\r\t'
+Output: 	'IW0\r75\r01\r:P\r~~~\r:P\rIS0\r1B\r8B\r2\r:P\rD034\r~~~\r:P\rIW0\r75\rff\r:P\r~~~\r:P\rVOLTAGE[3.3 Volts]~~~\r:P\r~~~\r:P\r'
+

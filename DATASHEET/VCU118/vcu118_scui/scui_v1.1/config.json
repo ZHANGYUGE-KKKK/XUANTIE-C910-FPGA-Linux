@@ -1,0 +1,1133 @@
+{
+  "Clocks": [
+    {
+      "Set": [
+        {
+          "name": "Set Si570_0 Frequency",
+          "command": "<setmux:0:74:20><readsi570:0:5d><calcsi570:0:5d:156.25:<3>:00><setmux:0:74:00>",
+          "timeout": 10,
+          "UI": {
+            "spacer": 20,
+            "label": "Frequency (10-800MHz):",
+            "spacer": 20,
+            "input": "^((10)|(810)|((([1-7][0-9][0-9])|([1-9][0-9])|(80[0-9]))(\\.[0-9]*)?))$"
+          }
+        },
+        {
+          "name": "Set Si570_1 Frequency",
+          "command": "<setmux:0:74:01><readsi570:0:5d><calcsi570:0:5d:156.25:<3>:01><setmux:0:74:00>",
+          "timeout": 10,
+          "UI": {
+            "spacer": 20,
+            "label": "Frequency (10-800MHz):",
+            "spacer": 20,
+            "input": "^((10)|(810)|((([1-7][0-9][0-9])|([1-9][0-9])|(80[0-9]))(\\.[0-9]*)?))$"
+          }
+        },
+        {
+          "name": "Set Si570_2 Frequency",
+          "command": "<setmux:0:75:20><readsi570:0:5d><calcsi570:0:5d:156.25:<3>:02><setmux:0:75:00>",
+          "timeout": 10,
+          "UI": {
+            "spacer": 20,
+            "label": "Frequency (10-800MHz):",
+            "spacer": 20,
+            "input": "^((10)|(810)|((([1-7][0-9][0-9])|([1-9][0-9])|(80[0-9]))(\\.[0-9]*)?))$"
+          }
+        },
+        {
+          "name": "Set Si5328 Frequency",
+          "command": "<setmux:0:74:10><calcsi5328:0:68:<3>><savefreq:03:<3>><setmux:0:74:00>",
+          "timeout": 10,
+          "UI": {
+            "spacer": 20,
+            "label": "Frequency (0.008-808MHz):",
+            "spacer": 20,
+            "input": "(^0*\\.00[8-9]$)|(^0*\\.0[1-9][0-9]*$)|(^0*\\.[1-9][0-9]*$)|(^[1-9](\\.[0-9]*)?$)|(^[1-9][0-9](\\.[0-9]*)?$)|(^[1-7][0-9][0-9](\\.[0-9]*)?$)|(^80[0-7](\\.[0-9]*)?$)|(^808(\\.0*)?$)"
+          }
+        }
+      ],
+      "Read": [
+        {
+          "name": "Read Si570_0 Frequency",
+          "command": "<setmux:0:74:20><recallsi570:0:5d:00><interpsi570:156.25><setmux:0:74:00>",
+          "UI": {
+            "spacer": 20,
+            "label": "Frequency: ",
+            "output": ".*FREQUENCY\\[(.*)\\]"
+          }
+        },
+        {
+          "name": "Read Si570_1 Frequency",
+          "command": "<setmux:0:74:01><recallsi570:0:5d:01><interpsi570:156.25><setmux:0:74:00>",
+          "UI": {
+            "spacer": 20,
+            "label": "Frequency: ",
+            "output": ".*FREQUENCY\\[(.*)\\]"
+          }
+        },
+        {
+          "name": "Read Si570_2 Frequency",
+          "command": "<setmux:0:75:20><recallsi570:0:5d:02><interpsi570:156.25><setmux:0:75:00>",
+          "UI": {
+            "spacer": 20,
+            "label": "Frequency: ",
+            "output": ".*FREQUENCY\\[(.*)\\]"
+          }
+        },
+        {
+          "name": "Read Si5328 Frequency",
+          "command": "<getcalib:03><interpcalib>",
+          "UI": {
+            "spacer": 20,
+            "label": "Frequency: ",
+            "output": ".*FREQUENCY\\[(.*)\\]"
+          }
+        }
+      ],
+      "Set Boot Frequency": [
+        {
+          "name": "Set Si570_0 Frequency",
+          "command": "<setmux:0:74:20><readsi570:0:5d><recordrunonboot:10><setmux:0:74:20><calcsi570:0:5d:156.25:<3>><setmux:0:74:00><stoprecord><calcsi570:0:5d:156.25:<3>:00>",
+          "timeout": 10,
+          "UI": {
+            "spacer": 20,
+            "label": "Frequency (10-800MHz):",
+            "spacer": 20,
+            "input": "^((10)|(810)|((([1-7][0-9][0-9])|([1-9][0-9])|(80[0-9]))(\\.[0-9]*)?))$"
+          }
+        },
+        {
+          "name": "Set Si570_1 Frequency",
+          "command": "<setmux:0:74:01><readsi570:0:5d><recordrunonboot:11><setmux:0:74:01><calcsi570:0:5d:156.25:<3>><setmux:0:74:00><stoprecord><calcsi570:0:5d:156.25:<3>:01>",
+          "timeout": 10,
+          "UI": {
+            "spacer": 20,
+            "label": "Frequency (10-800MHz):",
+            "spacer": 20,
+            "input": "^((10)|(810)|((([1-7][0-9][0-9])|([1-9][0-9])|(80[0-9]))(\\.[0-9]*)?))$"
+          }
+        },
+        {
+          "name": "Set Si570_2 Frequency",
+          "command": "<setmux:0:75:20><readsi570:0:5d><recordrunonboot:12><setmux:0:75:20><calcsi570:0:5d:156.25:<3>><setmux:0:75:00><stoprecord><calcsi570:0:5d:156.25:<3>:02>",
+          "timeout": 10,
+          "UI": {
+            "spacer": 20,
+            "label": "Frequency (10-800MHz):",
+            "spacer": 20,
+            "input": "^((10)|(810)|((([1-7][0-9][0-9])|([1-9][0-9])|(80[0-9]))(\\.[0-9]*)?))$"
+          }
+        },
+        {
+          "name": "Set Si5328 Frequency",
+          "command": "<recordrunonboot:00><setmux:0:74:10><calcsi5328:0:68:<3>><setmux:0:74:00><stoprecord><savefreq:03:<3>>",
+          "timeout": 10,
+          "UI": {
+            "spacer": 20,
+            "label": "Frequency (0.008-808MHz):",
+            "spacer": 20,
+            "input": "(^0*\\.00[8-9]$)|(^0*\\.0[1-9][0-9]*$)|(^0*\\.[1-9][0-9]*$)|(^[1-9](\\.[0-9]*)?$)|(^[1-9][0-9](\\.[0-9]*)?$)|(^[1-7][0-9][0-9](\\.[0-9]*)?$)|(^80[0-7](\\.[0-9]*)?$)|(^808(\\.0*)?$)"
+          }
+        }
+      ],
+      "Restore Device Defaults": [
+        {
+          "name": "Si570_0",
+          "command": "<setmux:0:74:20><readsi570:0:5d><calcsi570:0:5d:156.25:156.25:00><setmux:0:74:20>",
+          "timeout": 10,
+          "UI": {
+          }
+        },
+        {
+          "name": "Si570_1",
+          "command": "<setmux:0:74:01><readsi570:0:5d><calcsi570:0:5d:156.25:156.25:01><setmux:0:74:20>",
+          "timeout": 10,
+          "UI": {
+          }
+        },
+        {
+          "name": "Si570_2",
+          "command": "<setmux:0:75:20><readsi570:0:5d><calcsi570:0:5d:156.25:156.25:02><setmux:0:75:20>",
+          "timeout": 10,
+          "UI": {
+          }
+        },
+        {
+          "name": "Si5328",
+          "command": "MDB\r00\r\t<savefreq:03:0.00000001>",
+          "timeout": 10,
+          "UI": {
+          }
+        }
+      ]
+    }
+  ],
+  "Voltages": [
+    {
+      "name": "Get All Voltages",
+      "command": "9",
+      "multi": "True",
+      "UI": {}
+    },
+    {
+      "name": "Get VCCINT Voltage",
+      "command": "<setmux:0:75:01><getvoltage:0:70><setmux:0:75:ff><calcvoltage70>",
+      "UI": {
+        "spacer": 20,
+        "label": "Voltage: ",
+        "output": ".*VOLTAGE\\[(.*)\\]"
+      }
+    },
+    {
+      "name": "Get VCC1V8 Voltage",
+      "command": "<setmux:0:75:01><getvoltage:0:11><setmux:0:75:ff><calcvoltage>",
+      "UI": {
+        "spacer": 20,
+        "label": "Voltage: ",
+        "output": ".*VOLTAGE\\[(.*)\\]"
+      }
+    },
+    {
+      "name": "Get VADJ_1V8 Voltage",
+      "command": "<setmux:0:75:01><getvoltage:0:12><setmux:0:75:ff><calcvoltage>",
+      "UI": {
+        "spacer": 20,
+        "label": "Voltage: ",
+        "output": ".*VOLTAGE\\[(.*)\\]"
+      }
+    },
+    {
+      "name": "Get VCCINTIO_BRAM Voltage",
+      "command": "<setmux:0:75:01><getvoltage:0:15><setmux:0:75:ff><calcvoltage>",
+      "UI": {
+        "spacer": 20,
+        "label": "Voltage: ",
+        "output": ".*VOLTAGE\\[(.*)\\]"
+      }
+    },
+    {
+      "name": "Get VCC1V2 Voltage",
+      "command": "<setmux:0:75:01><getvoltage:0:14><setmux:0:75:ff><calcvoltage>",
+      "UI": {
+        "spacer": 20,
+        "label": "Voltage: ",
+        "output": ".*VOLTAGE\\[(.*)\\]"
+      }
+    },
+    {
+      "name": "Get MGTAVCC Voltage",
+      "command": "<setmux:0:75:01><getvoltage:0:72><setmux:0:75:ff><calcvoltage70>",
+      "UI": {
+        "spacer": 20,
+        "label": "Voltage: ",
+        "output": ".*VOLTAGE\\[(.*)\\]"
+      }
+    },
+    {
+      "name": "Get MGTAVTT Voltage",
+      "command": "<setmux:0:75:01><getvoltage:0:73><setmux:0:75:ff><calcvoltage70>",
+      "UI": {
+        "spacer": 20,
+        "label": "Voltage: ",
+        "output": ".*VOLTAGE\\[(.*)\\]"
+      }
+    },
+    {
+      "name": "Get UTIL_1V35 Voltage",
+      "command": "<setmux:0:75:01><getvoltage:0:1A><setmux:0:75:ff><calcvoltage>",
+      "UI": {
+        "spacer": 20,
+        "label": "Voltage: ",
+        "output": ".*VOLTAGE\\[(.*)\\]"
+      }
+    },
+    {
+      "name": "Get UTIL_3V3 Voltage",
+      "command": "<setmux:0:75:01><getvoltage:0:1B><setmux:0:75:ff><calcvoltage>",
+      "UI": {
+        "spacer": 20,
+        "label": "Voltage: ",
+        "output": ".*VOLTAGE\\[(.*)\\]"
+      }
+    }
+  ],
+  "Power": [
+    {
+      "Use Default Calibration": [
+        {
+          "name": "Get All Power",
+          "command": "7",
+          "multi": "True",
+          "UI": {}
+        },
+        {
+          "name": "VCCINT",
+          "command": "<setmux:0:75:10><calINA226:0:40:80:0.0005><getINA226:0:40><interpINA226:0><setmux:0:75:ff>",
+          "UI": {
+            "spacer": 20,
+            "label": "Power: ",
+            "output": ".*\\[power:([0-9]*(\\.[0-9]*)?\\sWatts\\s)volts:.*amps:.*\\].*",
+            "label": "  Voltage: ",
+            "output": ".*\\[power:.*volts:([0-9]*(\\.[0-9]*)?\\sVolts\\s)amps:.*\\].*",
+            "label": "  Current: ",
+            "output": ".*\\[power:.*volts:.*amps:(?:-)?([0-9]*(\\.[0-9]*)?\\sAmps\\s)\\].*"
+          }
+        },
+        {
+          "name": "VCC1V8",
+          "command": "<setmux:0:75:10><calINA226:0:41:80:0.0005><getINA226:0:41><interpINA226:0><setmux:0:75:ff>",
+          "UI": {
+            "spacer": 20,
+            "label": "Power: ",
+            "output": ".*\\[power:([0-9]*(\\.[0-9]*)?\\sWatts\\s)volts:.*amps:.*\\].*",
+            "label": "  Voltage: ",
+            "output": ".*\\[power:.*volts:([0-9]*(\\.[0-9]*)?\\sVolts\\s)amps:.*\\].*",
+            "label": "  Current: ",
+            "output": ".*\\[power:.*volts:.*amps:(?:-)?([0-9]*(\\.[0-9]*)?\\sAmps\\s)\\].*"
+          }
+        },
+        {
+          "name": "VADJ_1V8",
+          "command": "<setmux:0:75:10><calINA226:0:42:80:0.0005><getINA226:0:42><interpINA226:0><setmux:0:75:ff>",
+          "UI": {
+            "spacer": 20,
+            "label": "Power: ",
+            "output": ".*\\[power:([0-9]*(\\.[0-9]*)?\\sWatts\\s)volts:.*amps:.*\\].*",
+            "label": "  Voltage: ",
+            "output": ".*\\[power:.*volts:([0-9]*(\\.[0-9]*)?\\sVolts\\s)amps:.*\\].*",
+            "label": "  Current: ",
+            "output": ".*\\[power:.*volts:.*amps:(?:-)?([0-9]*(\\.[0-9]*)?\\sAmps\\s)\\].*"
+          }
+        },
+        {
+          "name": "VCCINTIO_BRAM",
+          "command": "<setmux:0:75:10><calINA226:0:48:80:0.0005><getINA226:0:48><interpINA226:0><setmux:0:75:ff>",
+          "UI": {
+            "spacer": 20,
+            "label": "Power: ",
+            "output": ".*\\[power:([0-9]*(\\.[0-9]*)?\\sWatts\\s)volts:.*amps:.*\\].*",
+            "label": "  Voltage: ",
+            "output": ".*\\[power:.*volts:([0-9]*(\\.[0-9]*)?\\sVolts\\s)amps:.*\\].*",
+            "label": "  Current: ",
+            "output": ".*\\[power:.*volts:.*amps:(?:-)?([0-9]*(\\.[0-9]*)?\\sAmps\\s)\\].*"
+          }
+        },
+        {
+          "name": "VCC1V2",
+          "command": "<setmux:0:75:10><calINA226:0:43:80:0.0005><getINA226:0:43><interpINA226:0><setmux:0:75:ff>",
+          "UI": {
+            "spacer": 20,
+            "label": "Power: ",
+            "output": ".*\\[power:([0-9]*(\\.[0-9]*)?\\sWatts\\s)volts:.*amps:.*\\].*",
+            "label": "  Voltage: ",
+            "output": ".*\\[power:.*volts:([0-9]*(\\.[0-9]*)?\\sVolts\\s)amps:.*\\].*",
+            "label": "  Current: ",
+            "output": ".*\\[power:.*volts:.*amps:(?:-)?([0-9]*(\\.[0-9]*)?\\sAmps\\s)\\].*"
+          }
+        },
+        {
+          "name": "MGTAVCC",
+          "command": "<setmux:0:75:10><calINA226:0:44:80:0.0005><getINA226:0:44><interpINA226:0><setmux:0:75:ff>",
+          "UI": {
+            "spacer": 20,
+            "label": "Power: ",
+            "output": ".*\\[power:([0-9]*(\\.[0-9]*)?\\sWatts\\s)volts:.*amps:.*\\].*",
+            "label": "  Voltage: ",
+            "output": ".*\\[power:.*volts:([0-9]*(\\.[0-9]*)?\\sVolts\\s)amps:.*\\].*",
+            "label": "  Current: ",
+            "output": ".*\\[power:.*volts:.*amps:(?:-)?([0-9]*(\\.[0-9]*)?\\sAmps\\s)\\].*"
+          }
+        },
+        {
+          "name": "MGTAVTT",
+          "command": "<setmux:0:75:10><calINA226:0:45:80:0.0005><getINA226:0:45><interpINA226:0><setmux:0:75:ff>",
+          "UI": {
+            "spacer": 20,
+            "label": "Power: ",
+            "output": ".*\\[power:([0-9]*(\\.[0-9]*)?\\sWatts\\s)volts:.*amps:.*\\].*",
+            "label": "  Voltage: ",
+            "output": ".*\\[power:.*volts:([0-9]*(\\.[0-9]*)?\\sVolts\\s)amps:.*\\].*",
+            "label": "  Current: ",
+            "output": ".*\\[power:.*volts:.*amps:(?:-)?([0-9]*(\\.[0-9]*)?\\sAmps\\s)\\].*"
+          }
+        }
+      ],
+      "Use Custom Calibration":[
+        {
+          "name": "Get All Power",
+          "command": "7",
+          "multi": "True",
+          "UI": {}
+        },
+        {
+          "name": "VCCINT",
+          "command": "<setmux:0:75:10><getINA226:0:40><interpINA226:0><setmux:0:75:ff>",
+          "UI": {
+            "spacer": 20,
+            "label": "Power: ",
+            "output": ".*\\[power:([0-9]*(\\.[0-9]*)?\\sWatts\\s)volts:.*amps:.*\\].*",
+            "label": "  Voltage: ",
+            "output": ".*\\[power:.*volts:([0-9]*(\\.[0-9]*)?\\sVolts\\s)amps:.*\\].*",
+            "label": "  Current: ",
+            "output": ".*\\[power:.*volts:.*amps:(?:-)?([0-9]*(\\.[0-9]*)?\\sAmps\\s)\\].*"
+          }
+        },
+        {
+          "name": "VCC1V8",
+          "command": "<setmux:0:75:10><getINA226:0:41><interpINA226:0><setmux:0:75:ff>",
+          "UI": {
+            "spacer": 20,
+            "label": "Power: ",
+            "output": ".*\\[power:([0-9]*(\\.[0-9]*)?\\sWatts\\s)volts:.*amps:.*\\].*",
+            "label": "  Voltage: ",
+            "output": ".*\\[power:.*volts:([0-9]*(\\.[0-9]*)?\\sVolts\\s)amps:.*\\].*",
+            "label": "  Current: ",
+            "output": ".*\\[power:.*volts:.*amps:(?:-)?([0-9]*(\\.[0-9]*)?\\sAmps\\s)\\].*"
+          }
+        },
+        {
+          "name": "VADJ_1V8",
+          "command": "<setmux:0:75:10><getINA226:0:42><interpINA226:0><setmux:0:75:ff>",
+          "UI": {
+            "spacer": 20,
+            "label": "Power: ",
+            "output": ".*\\[power:([0-9]*(\\.[0-9]*)?\\sWatts\\s)volts:.*amps:.*\\].*",
+            "label": "  Voltage: ",
+            "output": ".*\\[power:.*volts:([0-9]*(\\.[0-9]*)?\\sVolts\\s)amps:.*\\].*",
+            "label": "  Current: ",
+            "output": ".*\\[power:.*volts:.*amps:(?:-)?([0-9]*(\\.[0-9]*)?\\sAmps\\s)\\].*"
+          }
+        },
+        {
+          "name": "VCCINTIO_BRAM",
+          "command": "<setmux:0:75:10><getINA226:0:48><interpINA226:0><setmux:0:75:ff>",
+          "UI": {
+            "spacer": 20,
+            "label": "Power: ",
+            "output": ".*\\[power:([0-9]*(\\.[0-9]*)?\\sWatts\\s)volts:.*amps:.*\\].*",
+            "label": "  Voltage: ",
+            "output": ".*\\[power:.*volts:([0-9]*(\\.[0-9]*)?\\sVolts\\s)amps:.*\\].*",
+            "label": "  Current: ",
+            "output": ".*\\[power:.*volts:.*amps:(?:-)?([0-9]*(\\.[0-9]*)?\\sAmps\\s)\\].*"
+          }
+        },
+        {
+          "name": "VCC1V2",
+          "command": "<setmux:0:75:10><getINA226:0:43><interpINA226:0><setmux:0:75:ff>",
+          "UI": {
+            "spacer": 20,
+            "label": "Power: ",
+            "output": ".*\\[power:([0-9]*(\\.[0-9]*)?\\sWatts\\s)volts:.*amps:.*\\].*",
+            "label": "  Voltage: ",
+            "output": ".*\\[power:.*volts:([0-9]*(\\.[0-9]*)?\\sVolts\\s)amps:.*\\].*",
+            "label": "  Current: ",
+            "output": ".*\\[power:.*volts:.*amps:(?:-)?([0-9]*(\\.[0-9]*)?\\sAmps\\s)\\].*"
+          }
+        },
+        {
+          "name": "MGTAVCC",
+          "command": "<setmux:0:75:10><getINA226:0:44><interpINA226:0><setmux:0:75:ff>",
+          "UI": {
+            "spacer": 20,
+            "label": "Power: ",
+            "output": ".*\\[power:([0-9]*(\\.[0-9]*)?\\sWatts\\s)volts:.*amps:.*\\].*",
+            "label": "  Voltage: ",
+            "output": ".*\\[power:.*volts:([0-9]*(\\.[0-9]*)?\\sVolts\\s)amps:.*\\].*",
+            "label": "  Current: ",
+            "output": ".*\\[power:.*volts:.*amps:(?:-)?([0-9]*(\\.[0-9]*)?\\sAmps\\s)\\].*"
+          }
+        },
+        {
+          "name": "MGTAVTT",
+          "command": "<setmux:0:75:10><getINA226:0:45><interpINA226:0><setmux:0:75:ff>",
+          "UI": {
+            "spacer": 20,
+            "label": "Power: ",
+            "output": ".*\\[power:([0-9]*(\\.[0-9]*)?\\sWatts\\s)volts:.*amps:.*\\].*",
+            "label": "  Voltage: ",
+            "output": ".*\\[power:.*volts:([0-9]*(\\.[0-9]*)?\\sVolts\\s)amps:.*\\].*",
+            "label": "  Current: ",
+            "output": ".*\\[power:.*volts:.*amps:(?:-)?([0-9]*(\\.[0-9]*)?\\sAmps\\s)\\].*"
+          }
+        }
+      ],
+      "Get INA226 Registers":[
+        {
+          "name": "Get All Registers",
+          "command": "7",
+          "multi": "True",
+          "UI": {}
+        },
+        {
+          "name": "VCCINT",
+          "command": "<setmux:0:75:10><getINA226:0:40><interpINA226:0><setmux:0:75:ff>",
+          "UI": {
+            "spacer": 20,
+            "label": "Configuration: ",
+            "output": ".*\\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4})\\].*",
+            "label": "      Shunt Voltage: ",
+            "output": ".*\\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4}\\].*",
+            "label": "      Bus Voltage: ",
+            "output": ".*\\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4}\\].*",
+            "break":"",
+            "spacer": 20,
+            "label": "Power: ",
+            "spacer": 50,
+            "output": ".*\\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\\].*",
+            "label": "      Current: ",
+            "spacer": 45,
+            "output": ".*\\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\\].*",
+            "label": "      Calibration: ",
+            "spacer": 5,
+            "output": ".*\\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\\].*",
+            "break":"",
+            "spacer": 20,
+            "label": "Mask/Enable: ",
+            "spacer": 6,
+            "output": ".*\\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\\].*",
+            "label": "      Alert Limit: ",
+            "spacer": 24,
+            "output": ".*\\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\\].*",
+            "label": "      Die ID: ",
+            "spacer": 36,
+            "output": ".*\\[REGISTERS:([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\\].*"
+          }
+        },
+        {
+          "name": "VCC1V8",
+          "command": "<setmux:0:75:10><getINA226:0:41><interpINA226:0><setmux:0:75:ff>",
+          "UI": {
+            "spacer": 20,
+            "label": "Configuration: ",
+            "output": ".*\\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4})\\].*",
+            "label": "      Shunt Voltage: ",
+            "output": ".*\\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4}\\].*",
+            "label": "      Bus Voltage: ",
+            "output": ".*\\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4}\\].*",
+            "break":"",
+            "spacer": 20,
+            "label": "Power: ",
+            "spacer": 50,
+            "output": ".*\\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\\].*",
+            "label": "      Current: ",
+            "spacer": 45,
+            "output": ".*\\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\\].*",
+            "label": "      Calibration: ",
+            "spacer": 5,
+            "output": ".*\\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\\].*",
+            "break":"",
+            "spacer": 20,
+            "label": "Mask/Enable: ",
+            "spacer": 6,
+            "output": ".*\\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\\].*",
+            "label": "      Alert Limit: ",
+            "spacer": 24,
+            "output": ".*\\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\\].*",
+            "label": "      Die ID: ",
+            "spacer": 36,
+            "output": ".*\\[REGISTERS:([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\\].*"
+          }
+        },
+        {
+          "name": "VADJ_1V8",
+          "command": "<setmux:0:75:10><getINA226:0:42><interpINA226:0><setmux:0:75:ff>",
+          "UI": {
+            "spacer": 20,
+            "label": "Configuration: ",
+            "output": ".*\\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4})\\].*",
+            "label": "      Shunt Voltage: ",
+            "output": ".*\\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4}\\].*",
+            "label": "      Bus Voltage: ",
+            "output": ".*\\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4}\\].*",
+            "break":"",
+            "spacer": 20,
+            "label": "Power: ",
+            "spacer": 50,
+            "output": ".*\\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\\].*",
+            "label": "      Current: ",
+            "spacer": 45,
+            "output": ".*\\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\\].*",
+            "label": "      Calibration: ",
+            "spacer": 5,
+            "output": ".*\\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\\].*",
+            "break":"",
+            "spacer": 20,
+            "label": "Mask/Enable: ",
+            "spacer": 6,
+            "output": ".*\\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\\].*",
+            "label": "      Alert Limit: ",
+            "spacer": 24,
+            "output": ".*\\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\\].*",
+            "label": "      Die ID: ",
+            "spacer": 36,
+            "output": ".*\\[REGISTERS:([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\\].*"
+          }
+        },
+        {
+          "name": "VCCINTIO_BRAM",
+          "command": "<setmux:0:75:10><getINA226:0:48><interpINA226:0><setmux:0:75:ff>",
+          "UI": {
+            "spacer": 20,
+            "label": "Configuration: ",
+            "output": ".*\\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4})\\].*",
+            "label": "      Shunt Voltage: ",
+            "output": ".*\\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4}\\].*",
+            "label": "      Bus Voltage: ",
+            "output": ".*\\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4}\\].*",
+            "break":"",
+            "spacer": 20,
+            "label": "Power: ",
+            "spacer": 50,
+            "output": ".*\\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\\].*",
+            "label": "      Current: ",
+            "spacer": 45,
+            "output": ".*\\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\\].*",
+            "label": "      Calibration: ",
+            "spacer": 5,
+            "output": ".*\\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\\].*",
+            "break":"",
+            "spacer": 20,
+            "label": "Mask/Enable: ",
+            "spacer": 6,
+            "output": ".*\\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\\].*",
+            "label": "      Alert Limit: ",
+            "spacer": 24,
+            "output": ".*\\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\\].*",
+            "label": "      Die ID: ",
+            "spacer": 36,
+            "output": ".*\\[REGISTERS:([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\\].*"
+          }
+        },
+        {
+          "name": "VCC1V2",
+          "command": "<setmux:0:75:10><getINA226:0:43><interpINA226:0><setmux:0:75:ff>",
+          "UI": {
+            "spacer": 20,
+            "label": "Configuration: ",
+            "output": ".*\\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4})\\].*",
+            "label": "      Shunt Voltage: ",
+            "output": ".*\\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4}\\].*",
+            "label": "      Bus Voltage: ",
+            "output": ".*\\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4}\\].*",
+            "break":"",
+            "spacer": 20,
+            "label": "Power: ",
+            "spacer": 50,
+            "output": ".*\\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\\].*",
+            "label": "      Current: ",
+            "spacer": 45,
+            "output": ".*\\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\\].*",
+            "label": "      Calibration: ",
+            "spacer": 5,
+            "output": ".*\\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\\].*",
+            "break":"",
+            "spacer": 20,
+            "label": "Mask/Enable: ",
+            "spacer": 6,
+            "output": ".*\\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\\].*",
+            "label": "      Alert Limit: ",
+            "spacer": 24,
+            "output": ".*\\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\\].*",
+            "label": "      Die ID: ",
+            "spacer": 36,
+            "output": ".*\\[REGISTERS:([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\\].*"
+          }
+        },
+        {
+          "name": "MGTAVCC",
+          "command": "<setmux:0:75:10><getINA226:0:44><interpINA226:0><setmux:0:75:ff>",
+          "UI": {
+            "spacer": 20,
+            "label": "Configuration: ",
+            "output": ".*\\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4})\\].*",
+            "label": "      Shunt Voltage: ",
+            "output": ".*\\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4}\\].*",
+            "label": "      Bus Voltage: ",
+            "output": ".*\\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4}\\].*",
+            "break":"",
+            "spacer": 20,
+            "label": "Power: ",
+            "spacer": 50,
+            "output": ".*\\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\\].*",
+            "label": "      Current: ",
+            "spacer": 45,
+            "output": ".*\\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\\].*",
+            "label": "      Calibration: ",
+            "spacer": 5,
+            "output": ".*\\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\\].*",
+            "break":"",
+            "spacer": 20,
+            "label": "Mask/Enable: ",
+            "spacer": 6,
+            "output": ".*\\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\\].*",
+            "label": "      Alert Limit: ",
+            "spacer": 24,
+            "output": ".*\\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\\].*",
+            "label": "      Die ID: ",
+            "spacer": 36,
+            "output": ".*\\[REGISTERS:([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\\].*"
+          }
+        },
+        {
+          "name": "MGTAVTT",
+          "command": "<setmux:0:75:10><getINA226:0:45><interpINA226:0><setmux:0:75:ff>",
+          "UI": {
+            "spacer": 20,
+            "label": "Configuration: ",
+            "output": ".*\\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4})\\].*",
+            "label": "      Shunt Voltage: ",
+            "output": ".*\\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4}\\].*",
+            "label": "      Bus Voltage: ",
+            "output": ".*\\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4}\\].*",
+            "break":"",
+            "spacer": 20,
+            "label": "Power: ",
+            "spacer": 50,
+            "output": ".*\\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\\].*",
+            "label": "      Current: ",
+            "spacer": 45,
+            "output": ".*\\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\\].*",
+            "label": "      Calibration: ",
+            "spacer": 5,
+            "output": ".*\\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\\].*",
+            "break":"",
+            "spacer": 20,
+            "label": "Mask/Enable: ",
+            "spacer": 6,
+            "output": ".*\\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\\].*",
+            "label": "      Alert Limit: ",
+            "spacer": 24,
+            "output": ".*\\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\\].*",
+            "label": "      Die ID: ",
+            "spacer": 36,
+            "output": ".*\\[REGISTERS:([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\\].*"
+          }
+        }
+      ],
+      "Set INA226 Registers":[
+        {
+          "name": "VCCINT",
+          "command": "<setmux:0:75:10><setINA226:0:40:<2>:<4>:<9>:<12>><setmux:0:75:ff>",
+          "UI": {
+            "spacer": 20,
+            "label": "Configuration: ",
+            "input": "(^[0-9a-fA-F]{4}$)|(^$)",
+            "label": "  Calibration: ",
+            "input": "(^[0-9a-fA-F]{4}$)|(^$)",
+            "break":"",
+            "spacer": 20,
+            "label": "Mask/Enable: ",
+            "spacer": 5,
+            "input": "(^[0-9a-fA-F]{4}$)|(^$)",
+            "label": "  Alert Limit: ",
+            "spacer": 5,
+            "input": "(^[0-9a-fA-F]{4}$)|(^$)"
+          }
+        },
+        {
+          "name": "VCC1V8",
+          "command": "<setmux:0:75:10><setINA226:0:41:<2>:<4>:<9>:<12>><setmux:0:75:ff>",
+          "UI": {
+            "spacer": 20,
+            "label": "Configuration: ",
+            "input": "(^[0-9a-fA-F]{4}$)|(^$)",
+            "label": "  Calibration: ",
+            "input": "(^[0-9a-fA-F]{4}$)|(^$)",
+            "break":"",
+            "spacer": 20,
+            "label": "Mask/Enable: ",
+            "spacer": 5,
+            "input": "(^[0-9a-fA-F]{4}$)|(^$)",
+            "label": "  Alert Limit: ",
+            "spacer": 5,
+            "input": "(^[0-9a-fA-F]{4}$)|(^$)"
+          }
+        },
+        {
+          "name": "VADJ_1V8",
+          "command": "<setmux:0:75:10><setINA226:0:42:<2>:<4>:<9>:<12>><setmux:0:75:ff>",
+          "UI": {
+            "spacer": 20,
+            "label": "Configuration: ",
+            "input": "(^[0-9a-fA-F]{4}$)|(^$)",
+            "label": "  Calibration: ",
+            "input": "(^[0-9a-fA-F]{4}$)|(^$)",
+            "break":"",
+            "spacer": 20,
+            "label": "Mask/Enable: ",
+            "spacer": 5,
+            "input": "(^[0-9a-fA-F]{4}$)|(^$)",
+            "label": "  Alert Limit: ",
+            "spacer": 5,
+            "input": "(^[0-9a-fA-F]{4}$)|(^$)"
+          }
+        },
+        {
+          "name": "VCCINTIO_BRAM",
+          "command": "<setmux:0:75:10><setINA226:0:48:<2>:<4>:<9>:<12>><setmux:0:75:ff>",
+          "UI": {
+            "spacer": 20,
+            "label": "Configuration: ",
+            "input": "(^[0-9a-fA-F]{4}$)|(^$)",
+            "label": "  Calibration: ",
+            "input": "(^[0-9a-fA-F]{4}$)|(^$)",
+            "break":"",
+            "spacer": 20,
+            "label": "Mask/Enable: ",
+            "spacer": 5,
+            "input": "(^[0-9a-fA-F]{4}$)|(^$)",
+            "label": "  Alert Limit: ",
+            "spacer": 5,
+            "input": "(^[0-9a-fA-F]{4}$)|(^$)"
+          }
+        },
+        {
+          "name": "VCC1V2",
+          "command": "<setmux:0:75:10><setINA226:0:43:<2>:<4>:<9>:<12>><setmux:0:75:ff>",
+          "UI": {
+            "spacer": 20,
+            "label": "Configuration: ",
+            "input": "(^[0-9a-fA-F]{4}$)|(^$)",
+            "label": "  Calibration: ",
+            "input": "(^[0-9a-fA-F]{4}$)|(^$)",
+            "break":"",
+            "spacer": 20,
+            "label": "Mask/Enable: ",
+            "spacer": 5,
+            "input": "(^[0-9a-fA-F]{4}$)|(^$)",
+            "label": "  Alert Limit: ",
+            "spacer": 5,
+            "input": "(^[0-9a-fA-F]{4}$)|(^$)"
+          }
+        },
+        {
+          "name": "MGTAVCC",
+          "command": "<setmux:0:75:10><setINA226:0:44:<2>:<4>:<9>:<12>><setmux:0:75:ff>",
+          "UI": {
+            "spacer": 20,
+            "label": "Configuration: ",
+            "input": "(^[0-9a-fA-F]{4}$)|(^$)",
+            "label": "  Calibration: ",
+            "input": "(^[0-9a-fA-F]{4}$)|(^$)",
+            "break":"",
+            "spacer": 20,
+            "label": "Mask/Enable: ",
+            "spacer": 5,
+            "input": "(^[0-9a-fA-F]{4}$)|(^$)",
+            "label": "  Alert Limit: ",
+            "spacer": 5,
+            "input": "(^[0-9a-fA-F]{4}$)|(^$)"
+          }
+        },
+        {
+          "name": "MGTAVTT",
+          "command": "<setmux:0:75:10><setINA226:0:45:<2>:<4>:<9>:<12>><setmux:0:75:ff>",
+          "UI": {
+            "spacer": 20,
+            "label": "Configuration: ",
+            "input": "(^[0-9a-fA-F]{4}$)|(^$)",
+            "label": "  Calibration: ",
+            "input": "(^[0-9a-fA-F]{4}$)|(^$)",
+            "break":"",
+            "spacer": 20,
+            "label": "Mask/Enable: ",
+            "spacer": 5,
+            "input": "(^[0-9a-fA-F]{4}$)|(^$)",
+            "label": "  Alert Limit: ",
+            "spacer": 5,
+            "input": "(^[0-9a-fA-F]{4}$)|(^$)"
+          }
+        }
+      ]
+    }
+  ],
+  "FMC": [
+    {
+      "Set VADJ": [
+        {
+          "Current": [
+            {
+              "name": "Set VADJ to 0.0 V",
+              "command": "<setmux:0:75:01><setvadj:0:12:0><setmux:0:75:00>",
+              "UI": {
+              }
+            },
+            {
+              "name": "Set VADJ to 1.2 V",
+              "command": "<setmux:0:75:01><setvadj:0:12:1.2><setmux:0:75:00>",
+              "UI": {
+              }
+            },
+            {
+              "name": "Set VADJ to 1.5 V",
+              "command": "<setmux:0:75:01><setvadj:0:12:1.5><setmux:0:75:00>",
+              "UI": {
+              }
+            },
+            {
+              "name": "Set VADJ to 1.8 V",
+              "command": "<setmux:0:75:01><setvadj:0:12:1.8><setmux:0:75:00>",
+              "UI": {
+              }
+            }
+          ],
+          "Boot-up": [
+            {
+              "name": "Set VADJ to 0.0 V",
+              "command": "<recordrunonboot:13><setmux:0:75:01><setvadj:0:12:0><setmux:0:75:00><stoprecord>",
+              "UI": {
+              }
+            },
+            {
+              "name": "Set VADJ to 1.2 V",
+              "command": "<recordrunonboot:13><setmux:0:75:01><setvadj:0:12:1.2><setmux:0:75:00><stoprecord>",
+              "UI": {
+              }
+            },
+            {
+              "name": "Set VADJ to 1.5 V",
+              "command": "<recordrunonboot:13><setmux:0:75:01><setvadj:0:12:1.5><setmux:0:75:00><stoprecord>",
+              "UI": {
+              }
+            },
+            {
+              "name": "Set VADJ to 1.8 V",
+              "command": "<recordrunonboot:13><setmux:0:75:01><setvadj:0:12:1.8><setmux:0:75:00><stoprecord>",
+              "UI": {
+              }
+            },
+            {
+              "name": "Use FMC EEPROM Voltage",
+              "command": "MDB\r13\r\tMWB\rF2\r\tIW0\r75\r01\r\tIR0\r12\r01\r\t\bMWB\rF1\r\tIW0\r75\r04\r\tIR0\r50\r01\r\t\bMWB\rF0\r\tIW0\r75\r02\r\tIR0\r50\r01\r\t\bVRN\r0.5\t",
+              "UI": {
+              }
+            }
+          ]
+        }
+      ],
+      "HPC0": [
+        {
+          "EEPROM": [
+            {
+              "name": "Get EEPROM Data",
+              "command": "<setmux:0:75:02><readeeprom:0:50:00:FF><wait:0.3><literaleeprom:T><interpeeprom><setmux:0:75:00>",
+              "UI":{
+                "spacer": 20
+              }
+            }
+          ],
+          "XM101":[
+            {
+              "name": "Set SI570_0",
+              "command": "<setmux:0:75:02><setmux:0:70:01><readsi570:0:5d><calcsi570:0:5d:156.25:<3>><setmux:0:70:00><setmux:0:75:00>",
+              "UI": {
+                "spacer": 20,
+                "label": "Frequency (10-800MHz):",
+                "spacer": 20,
+                "input": "^((10)|(810)|((([1-7][0-9][0-9])|([1-9][0-9])|(80[0-9]))(\\.[0-9]*)?))$"
+              }
+            },
+            {
+              "name": "Set SI570_1",
+              "command": "<setmux:0:75:02><setmux:0:70:02><readsi570:0:5d><calcsi570:0:5d:156.25:<3>><setmux:0:70:00><setmux:0:75:00>",
+              "UI": {
+                "spacer": 20,
+                "label": "Frequency (10-800MHz):",
+                "spacer": 20,
+                "input": "^((10)|(810)|((([1-7][0-9][0-9])|([1-9][0-9])|(80[0-9]))(\\.[0-9]*)?))$"
+              }
+            }
+          ],
+          "XM104":[
+            {
+              "name": "Set SI570",
+              "command": "<setmux:0:75:02><setmux:0:70:01><readsi570:0:5d><calcsi570:0:5d:156.25:<3>><setmux:0:70:00><setmux:0:75:00>",
+              "UI": {
+                "spacer": 20,
+                "label": "Frequency (10-800MHz):",
+                "spacer": 20,
+                "input": "^((10)|(810)|((([1-7][0-9][0-9])|([1-9][0-9])|(80[0-9]))(\\.[0-9]*)?))$"
+              }
+            },
+            {
+              "name": "Set SI5368",
+              "command": "<setmux:0:75:02><setmux:0:70:01><calcsi5368:0:68:<3>><setmux:0:70:00><setmux:0:75:00>",
+              "UI": {
+                "spacer": 20,
+                "label": "Frequency (0.008-808MHz):",
+                "spacer": 20,
+                "input": "(^0*\\.00[8-9]$)|(^0*\\.0[1-9][0-9]*$)|(^0*\\.[1-9][0-9]*$)|(^[1-9](\\.[0-9]*)?$)|(^[1-9][0-9](\\.[0-9]*)?$)|(^[1-7][0-9][0-9](\\.[0-9]*)?$)|(^80[0-7](\\.[0-9]*)?$)|(^808(\\.0*)?$)"
+              }
+            }
+          ],
+          "XM105":[
+            {
+              "name": "Set SI570",
+              "command": "<setmux:0:75:02><readsi570:0:5d><calcsi570:0:5d:156.25:<3>><setmux:0:75:00>",
+              "UI": {
+                "spacer": 20,
+                "label": "Frequency (10-800MHz):",
+                "spacer": 20,
+                "input": "^((10)|(810)|((([1-7][0-9][0-9])|([1-9][0-9])|(80[0-9]))(\\.[0-9]*)?))$"
+              }
+            }
+          ],
+          "XM107":[
+            {
+              "name": "Set SI570",
+              "command": "<setmux:0:75:02><setmux:0:70:01><readsi570:0:5d><calcsi570:0:5d:156.25:<3>><setmux:0:70:00><setmux:0:75:00>",
+              "UI": {
+                "spacer": 20,
+                "label": "Frequency (10-800MHz):",
+                "spacer": 20,
+                "input": "^((10)|(810)|((([1-7][0-9][0-9])|([1-9][0-9])|(80[0-9]))(\\.[0-9]*)?))$"
+              }
+            }
+          ]
+        }
+      ],
+      "HPC1": [
+        {
+          "EEPROM": [
+            {
+              "name": "Get EEPROM Data",
+              "command": "<setmux:0:75:04><readeeprom:0:50:00:FF><wait:0.3><literaleeprom:T><interpeeprom><setmux:0:75:00>",
+              "UI":{
+                "spacer": 20
+              }
+            }
+          ],
+          "XM101":[
+            {
+              "name": "Set SI570_0",
+              "command": "<setmux:0:75:04><setmux:0:70:01><readsi570:0:5d><calcsi570:0:5d:156.25:<3>><setmux:0:70:00><setmux:0:75:00>",
+              "UI": {
+                "spacer": 20,
+                "label": "Frequency (10-800MHz):",
+                "spacer": 20,
+                "input": "^((10)|(810)|((([1-7][0-9][0-9])|([1-9][0-9])|(80[0-9]))(\\.[0-9]*)?))$"
+              }
+            },
+            {
+              "name": "Set SI570_1",
+              "command": "<setmux:0:75:04><setmux:0:70:02><readsi570:0:5d><calcsi570:0:5d:156.25:<3>><setmux:0:70:00><setmux:0:75:00>",
+              "UI": {
+                "spacer": 20,
+                "label": "Frequency (10-800MHz):",
+                "spacer": 20,
+                "input": "^((10)|(810)|((([1-7][0-9][0-9])|([1-9][0-9])|(80[0-9]))(\\.[0-9]*)?))$"
+              }
+            }
+          ],
+          "XM104":[
+            {
+              "name": "Set SI570",
+              "command": "<setmux:0:75:04><setmux:0:70:01><readsi570:0:5d><calcsi570:0:5d:156.25:<3>><setmux:0:70:00><setmux:0:75:00>",
+              "UI": {
+                "spacer": 20,
+                "label": "Frequency (10-800MHz):",
+                "spacer": 20,
+                "input": "^((10)|(810)|((([1-7][0-9][0-9])|([1-9][0-9])|(80[0-9]))(\\.[0-9]*)?))$"
+              }
+            },
+            {
+              "name": "Set SI5368",
+              "command": "<setmux:0:75:04><setmux:0:70:01><calcsi5368:0:68:<3>><setmux:0:70:00><setmux:0:75:00>",
+              "UI": {
+                "spacer": 20,
+                "label": "Frequency (0.008-808MHz):",
+                "spacer": 20,
+                "input": "(^0*\\.00[8-9]$)|(^0*\\.0[1-9][0-9]*$)|(^0*\\.[1-9][0-9]*$)|(^[1-9](\\.[0-9]*)?$)|(^[1-9][0-9](\\.[0-9]*)?$)|(^[1-7][0-9][0-9](\\.[0-9]*)?$)|(^80[0-7](\\.[0-9]*)?$)|(^808(\\.0*)?$)"
+              }
+            }
+          ],
+          "XM105":[
+            {
+              "name": "Set SI570",
+              "command": "<setmux:0:75:04><readsi570:0:5d><calcsi570:0:5d:156.25:<3>><setmux:0:75:00>",
+              "UI": {
+                "spacer": 20,
+                "label": "Frequency (10-800MHz):",
+                "spacer": 20,
+                "input": "^((10)|(810)|((([1-7][0-9][0-9])|([1-9][0-9])|(80[0-9]))(\\.[0-9]*)?))$"
+              }
+            }
+          ],
+          "XM107":[
+            {
+              "name": "Set SI570",
+              "command": "<setmux:0:75:04><setmux:0:70:01><readsi570:0:5d><calcsi570:0:5d:156.25:<3>><setmux:0:70:00><setmux:0:75:00>",
+              "UI": {
+                "spacer": 20,
+                "label": "Frequency (10-800MHz):",
+                "spacer": 20,
+                "input": "^((10)|(810)|((([1-7][0-9][0-9])|([1-9][0-9])|(80[0-9]))(\\.[0-9]*)?))$"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "Get EEPROM Data": [
+    {
+      "name": "Get All EEPROM Data",
+      "command": "4",
+      "multi": "True",
+      "UI": {}
+    },
+    {
+      "name": "Get Board Name",
+      "command": "<setmux:0:75:08><readeeprom:0:54:D0:10><wait:2><interpeeprom><setmux:0:75:00>",
+      "UI": {
+          "spacer": 20,
+          "label": "Board Name: ",
+          "output": ".*INTERP\\[(.*)\\]"
+      }
+    },
+    {
+      "name": "Get Board Revision",
+      "command": "<setmux:0:75:08><readeeprom:0:54:E0:03><wait:2><interpeeprom><setmux:0:75:00>",
+      "UI": {
+          "spacer": 20,
+          "label": "Board Revision: ",
+          "output": ".*INTERP\\[(.*)\\]"
+      }
+    },
+    {
+      "name": "Get Serial Number",
+      "command": "<setmux:0:75:08><readeeprom:0:54:00:20><wait:2><interpeeprom><setmux:0:75:00>",
+      "UI": {
+          "spacer": 20,
+          "label": "Board Serial Number: ",
+          "output": ".*INTERP\\[(.*)\\]"
+      }
+    },
+    {
+      "name": "Get MAC Address",
+      "command": "<setmux:0:75:08><readeeprom:0:54:20:06><wait:2><literaleeprom:F><setmux:0:75:00>",
+      "UI": {
+          "spacer": 20,
+          "label": "Board MAC Address: ",
+          "output": ".*LITERAL\\[(.*)\\]"
+      }
+    }
+  ],
+  "About": [
+    {
+      "name": "Get Version",
+      "command": "VRN\r\t",
+      "UI": {
+          "spacer": 20,
+          "label": "On board version: ",
+          "output": ".*VRN\r:P\r(.*)\r",
+          "break": "",
+          "spacer": 20,
+          "label": "UI Version: SCUI v1.1"
+      }
+    }
+  ],
+  "Port": "Silicon Labs Dual CP210x USB to UART Bridge: Enhanced COM Port",
+  "Board": "VCU118"
+}

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DxArchiverProject version="1">
+	<DxProject Path="C:\Mentor_Projects\HW-U1-VCU118_IND795\REV2_0\HW-U1-VCU118.prj"/>
+	<TargetDirectory Path="C:\Mentor_Projects\HW-U1-VCU118_IND795\REV2_0\archive"/>
+	<Compression Type="Zip"/>
+	<PDF Type="0"/>
+	<AdditionalFiles>
+	</AdditionalFiles>
+</DxArchiverProject>
