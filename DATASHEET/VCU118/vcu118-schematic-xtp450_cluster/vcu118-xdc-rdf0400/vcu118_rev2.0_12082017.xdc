@@ -828,9 +828,9 @@ set_property PACKAGE_PIN AY22     [get_ports "QSFP2_RESETL_LS"] ;# Bank  64 VCCO
 set_property IOSTANDARD  LVCMOS18 [get_ports "QSFP2_RESETL_LS"] ;# Bank  64 VCCO - VCC1V8_FPGA - IO_L10P_T1U_N6_QBC_AD4P_64
 set_property PACKAGE_PIN AY25     [get_ports "USB_UART_RTS"] ;# Bank  64 VCCO - VCC1V8_FPGA - IO_L9N_T1L_N5_AD12N_64
 set_property IOSTANDARD  LVCMOS18 [get_ports "USB_UART_RTS"] ;# Bank  64 VCCO - VCC1V8_FPGA - IO_L9N_T1L_N5_AD12N_64
-set_property PACKAGE_PIN AW25     [get_ports "rx"] ;# CP2105 TXD -> FPGA rx; Bank 64 VCCO - VCC1V8_FPGA - IO_L9P_T1L_N4_AD12P_64
+set_property PACKAGE_PIN AW25     [get_ports "rx"] ;# CP2105 TXD_SCI_O -> FPGA rx; Bank 64 VCCO - VCC1V8_FPGA - IO_L9P_T1L_N4_AD12P_64
 set_property IOSTANDARD  LVCMOS18 [get_ports "rx"] ;# Bank 64 VCCO - VCC1V8_FPGA - IO_L9P_T1L_N4_AD12P_64
-set_property PACKAGE_PIN BB21     [get_ports "tx"] ;# FPGA tx -> CP2105 RXD; Bank 64 VCCO - VCC1V8_FPGA - IO_L8N_T1L_N3_AD5N_64
+set_property PACKAGE_PIN BB21     [get_ports "tx"] ;# FPGA tx -> CP2105 RXD_SCI_I; Bank 64 VCCO - VCC1V8_FPGA - IO_L8N_T1L_N3_AD5N_64
 set_property IOSTANDARD  LVCMOS18 [get_ports "tx"] ;# Bank 64 VCCO - VCC1V8_FPGA - IO_L8N_T1L_N3_AD5N_64
 set_property PACKAGE_PIN BB22     [get_ports "USB_UART_CTS"] ;# Bank  64 VCCO - VCC1V8_FPGA - IO_L8P_T1L_N2_AD5P_64
 set_property IOSTANDARD  LVCMOS18 [get_ports "USB_UART_CTS"] ;# Bank  64 VCCO - VCC1V8_FPGA - IO_L8P_T1L_N2_AD5P_64

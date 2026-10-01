@@ -83,7 +83,7 @@ set_false_path -from [get_ports sys_rstn]
 set_property PACKAGE_PIN BD15 [get_ports fpga_alive_led]
 set_property IOSTANDARD LVCMOS18 [get_ports fpga_alive_led]
 
-## VCU118 板载 CP2105 USB-UART：CP2105 TXD -> FPGA rx，FPGA tx -> CP2105 RXD
+## VCU118 板载 CP2105 USB-UART（UART1）：CP2105 TXD_SCI_O -> FPGA rx(AW25)，FPGA tx(BB21) -> CP2105 RXD_SCI_I
 set_property PACKAGE_PIN AW25 [get_ports rx]
 set_property PACKAGE_PIN BB21 [get_ports tx]
 set_property IOSTANDARD LVCMOS18 [get_ports {rx tx}]

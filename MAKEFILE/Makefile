@@ -73,7 +73,7 @@ Makefile GNUmakefile MAKEFILE/Makefile: ;
 all: bootrom bram copy-builds
 
 $(PROGRAM_GOALS):
-	@if exist "$(MAKEFILE_DIR)/$@" ($(MAKE) -f "$(MAKEFILE_PATH)" PROGRAM=$@ all) else (echo "Unknown program folder: $(MAKEFILE_DIR)/$@" & exit /B 1)
+	@if exist "$(MAKEFILE_DIR)/$@" ("$(MAKE)" -f "$(MAKEFILE_PATH)" PROGRAM=$@ all) else (echo "Unknown program folder: $(MAKEFILE_DIR)/$@" & exit /B 1)
 
 # BootROM 完整构建流程：ELF、BIN、反汇编、COE 和一致性检查。
 bootrom: $(BOOTROM_ELF) $(BOOTROM_BIN) $(BOOTROM_DUMP) $(BOOTROM_COE) $(BOOTROM_MIF_TARGETS) bootrom-check
@@ -85,7 +85,7 @@ bram: $(BRAM_ELF) $(BRAM_BIN) $(BRAM_DUMP) $(BRAM_COE) $(BRAM_MIF_TARGETS) bram-
 
 # 若当前实验目录提供 JTAG/Makefile，可通过显式目标构建 JTAG 载荷。
 jtag:
-	@if "$(JTAG_MAKEFILE)"=="" (echo "No JTAG/OpenSBI build for $(PROGRAM), skip.") else (if exist "$(JTAG_MAKEFILE)" ($(MAKE) -f "$(JTAG_MAKEFILE)") else (echo "No JTAG payload Makefile for $(PROGRAM), skip."))
+	@if "$(JTAG_MAKEFILE)"=="" (echo "No JTAG/OpenSBI build for $(PROGRAM), skip.") else (if exist "$(JTAG_MAKEFILE)" ("$(MAKE)" -f "$(JTAG_MAKEFILE)") else (echo "No JTAG payload Makefile for $(PROGRAM), skip."))
 
 # 将本次构建结果复制到统一输出目录。
 copy-builds: bootrom bram
@@ -170,4 +170,4 @@ bram-check: $(BRAM_ELF) $(BRAM_BIN) $(BRAM_DUMP)
 clean:
 	@if exist "$(BOOTROM_BUILD_DIR)" rmdir /S /Q "$(BOOTROM_BUILD_DIR)"
 	@if exist "$(BRAM_BUILD_DIR)" rmdir /S /Q "$(BRAM_BUILD_DIR)"
-	@if not "$(JTAG_MAKEFILE)"=="" if exist "$(JTAG_MAKEFILE)" $(MAKE) -f "$(JTAG_MAKEFILE)" clean
+	@if not "$(JTAG_MAKEFILE)"=="" if exist "$(JTAG_MAKEFILE)" "$(MAKE)" -f "$(JTAG_MAKEFILE)" clean

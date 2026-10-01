@@ -1,5 +1,5 @@
 
-./program/BRAM/build/bram.elf:     file format elf64-littleriscv
+./UART/BRAM/build/bram.elf:     file format elf64-littleriscv
 
 
 Disassembly of section .text:
