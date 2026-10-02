@@ -1,5 +1,5 @@
 
-MAKEFILE\DDR_JTAG\BRAM\build\bram.elf:     file format elf64-littleriscv
+./DDR_JTAG/BRAM/build/bram.elf:     file format elf64-littleriscv
 
 
 Disassembly of section .text:

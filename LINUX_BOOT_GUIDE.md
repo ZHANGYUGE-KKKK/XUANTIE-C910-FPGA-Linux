@@ -24,7 +24,8 @@ MAKEFILE/LINUX_BOOT/complete-image
 | U-Boot | `u-boot-c910-soc-minimal.bin` | `0x200200000` |
 | Linux Image | `linux-c910-fpga-Image.bin` | `0x200600000` |
 | initramfs | `rootfs-c910-lite.cpio.gz` | `0x204000000` |
-| 系统 DTB | `c910-soc-system.dtb` | `0x210000000` |
+| 系统 DTB（AXVU13P） | `c910-soc-system.dtb` | `0x210000000` |            
+| 系统 DTB (VCU118) | `c910-soc-system-1gb.dtb` | `0x210000000` |
 
 `c910-soc-system.dtb` 已包含 initramfs 的 `linux,initrd-start/end`，U-Boot 启动 Linux 时不需要单独传 ramdisk 地址。
 
@@ -70,7 +71,7 @@ restore opensbi-c910-fpga-fw_jump.bin binary 0x200000000
 restore u-boot-c910-soc-minimal.bin binary 0x200200000
 restore linux-c910-fpga-Image.bin binary 0x200600000
 restore rootfs-c910-lite.cpio.gz binary 0x204000000
-restore c910-soc-system.dtb binary 0x210000000
+restore c910-soc-system-1gb.dtb binary 0x210000000
 set $a0 = 0
 set $a1 = 0x210000000
 set $pc = 0x200000000

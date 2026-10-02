@@ -4,7 +4,7 @@
 	#address-cells = <2>;
 	#size-cells = <2>;
 	compatible = "xuantie,c910-soc-fpga", "thead,c910";
-	model = "C910 minimal FPGA SoC";
+	model = "C910 minimal FPGA SoC (1 GiB DDR)";
 
 	aliases {
 		serial0 = &uart0;
@@ -39,7 +39,7 @@
 
 	memory@200000000 {
 		device_type = "memory";
-		reg = <0x00000002 0x00000000 0x00000002 0x00000000>;
+		reg = <0x00000002 0x00000000 0x00000000 0x40000000>;
 	};
 
 	soc {
