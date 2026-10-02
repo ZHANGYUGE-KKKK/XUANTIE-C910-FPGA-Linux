@@ -1,8 +1,8 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x3D5F18DA3547E7E8",
-      "device": "xcvu9p-flga2104-2-i",
+      "boundary_crc": "0x6C2AB48E0A4D0EF5",
+      "device": "xcvu9p-flga2104-2L-e",
       "gen_directory": "../../../../C910_SOC.gen/sources_1/bd/C910_SOC",
       "name": "C910_SOC",
       "rev_ctrl_bd_flag": "RevCtrlBdOff",
@@ -13,6 +13,7 @@
     "design_tree": {
       "C910_core": "",
       "bootrom_ctrl": "",
+      "axi_clock_converter_1": "",
       "axi_uartlite": "",
       "BOOTROM": "",
       "BRAM": "",
@@ -23,12 +24,11 @@
       "rtsn2rst1": "",
       "smartconnect": "",
       "util_ds_buf_0": "",
-      "rtsn2rst": "",
       "val_0": "",
       "val_1": "",
       "xlslice_bootrom": "",
       "xlslice_bram": "",
-      "axi_clock_converter_1": ""
+      "rts2rstn": ""
     },
     "interface_ports": {
       "C0_DDR4": {
@@ -102,26 +102,12 @@
             "value_src": "default"
           },
           "FREQ_HZ": {
-            "value": "300000000"
+            "value": "250000000"
           }
         }
       }
     },
     "ports": {
-      "sys_rstn": {
-        "type": "rst",
-        "direction": "I",
-        "parameters": {
-          "INSERT_VIP": {
-            "value": "0",
-            "value_src": "default"
-          },
-          "POLARITY": {
-            "value": "ACTIVE_LOW",
-            "value_src": "default"
-          }
-        }
-      },
       "tx": {
         "direction": "O"
       },
@@ -144,6 +130,21 @@
         "direction": "O",
         "left": "0",
         "right": "0"
+      },
+      "sys_rst": {
+        "direction": "I",
+        "left": "0",
+        "right": "0",
+        "parameters": {
+          "PortType": {
+            "value": "undef",
+            "value_src": "ip_prop"
+          },
+          "PortType.PROP_SRC": {
+            "value": "false",
+            "value_src": "ip_prop"
+          }
+        }
       }
     },
     "components": {
@@ -202,6 +203,28 @@
           },
           "SINGLE_PORT_BRAM": {
             "value": "1"
+          }
+        }
+      },
+      "axi_clock_converter_1": {
+        "vlnv": "xilinx.com:ip:axi_clock_converter:2.1",
+        "xci_name": "C910_SOC_axi_clock_converter_1_0",
+        "xci_path": "ip\\C910_SOC_axi_clock_converter_1_0\\C910_SOC_axi_clock_converter_1_0.xci",
+        "inst_hier_path": "axi_clock_converter_1",
+        "parameters": {
+          "ADDR_WIDTH": {
+            "value": "33"
+          },
+          "DATA_WIDTH": {
+            "value": "128"
+          }
+        },
+        "interface_ports": {
+          "S_AXI": {
+            "mode": "Slave",
+            "bridges": [
+              "M_AXI"
+            ]
           }
         }
       },
@@ -322,22 +345,22 @@
         "inst_hier_path": "clk_wiz",
         "parameters": {
           "CLKIN1_JITTER_PS": {
-            "value": "33.330000000000005"
+            "value": "40.0"
           },
           "CLKOUT1_JITTER": {
-            "value": "116.415"
+            "value": "153.164"
           },
           "CLKOUT1_PHASE_ERROR": {
-            "value": "77.836"
+            "value": "154.678"
           },
           "CLKOUT1_REQUESTED_OUT_FREQ": {
             "value": "50"
           },
           "MMCM_CLKFBOUT_MULT_F": {
-            "value": "4.000"
+            "value": "24.000"
           },
           "MMCM_CLKIN1_PERIOD": {
-            "value": "3.333"
+            "value": "4.000"
           },
           "MMCM_CLKIN2_PERIOD": {
             "value": "10.0"
@@ -345,8 +368,14 @@
           "MMCM_CLKOUT0_DIVIDE_F": {
             "value": "24.000"
           },
+          "MMCM_DIVCLK_DIVIDE": {
+            "value": "5"
+          },
           "PRIM_IN_FREQ": {
-            "value": "300"
+            "value": "250"
+          },
+          "PRIM_SOURCE": {
+            "value": "No_buffer"
           }
         }
       },
@@ -378,7 +407,7 @@
             "value": "64"
           },
           "C0.DDR4_InputClockPeriod": {
-            "value": "3332"
+            "value": "3998"
           },
           "C0.DDR4_MemoryPart": {
             "value": "MT40A256M16GE-083E"
@@ -586,20 +615,6 @@
           }
         }
       },
-      "rtsn2rst": {
-        "vlnv": "xilinx.com:ip:util_vector_logic:2.0",
-        "xci_name": "C910_SOC_util_vector_logic_0_0",
-        "xci_path": "ip\\C910_SOC_util_vector_logic_0_0\\C910_SOC_util_vector_logic_0_0.xci",
-        "inst_hier_path": "rtsn2rst",
-        "parameters": {
-          "C_OPERATION": {
-            "value": "not"
-          },
-          "C_SIZE": {
-            "value": "1"
-          }
-        }
-      },
       "val_0": {
         "vlnv": "xilinx.com:ip:xlconstant:1.1",
         "xci_name": "C910_SOC_val_1_0",
@@ -657,34 +672,44 @@
           }
         }
       },
-      "axi_clock_converter_1": {
-        "vlnv": "xilinx.com:ip:axi_clock_converter:2.1",
-        "xci_name": "C910_SOC_axi_clock_converter_1_0",
-        "xci_path": "ip\\C910_SOC_axi_clock_converter_1_0\\C910_SOC_axi_clock_converter_1_0.xci",
-        "inst_hier_path": "axi_clock_converter_1",
+      "rts2rstn": {
+        "vlnv": "xilinx.com:ip:util_vector_logic:2.0",
+        "xci_name": "C910_SOC_rtsn2rst_1",
+        "xci_path": "ip\\C910_SOC_rtsn2rst_1\\C910_SOC_rtsn2rst_1.xci",
+        "inst_hier_path": "rts2rstn",
         "parameters": {
-          "ADDR_WIDTH": {
-            "value": "33"
+          "C_OPERATION": {
+            "value": "not"
           },
-          "DATA_WIDTH": {
-            "value": "128"
-          }
-        },
-        "interface_ports": {
-          "S_AXI": {
-            "mode": "Slave",
-            "bridges": [
-              "M_AXI"
-            ]
+          "C_SIZE": {
+            "value": "1"
           }
         }
       }
     },
     "interface_nets": {
+      "smartconnect_0_M01_AXI": {
+        "interface_ports": [
+          "bram_ctrl/S_AXI",
+          "smartconnect/M01_AXI"
+        ]
+      },
       "smartconnect_M03_AXI1": {
         "interface_ports": [
           "axi_uartlite/S_AXI",
           "smartconnect/M03_AXI"
+        ]
+      },
+      "ddr4_0_C0_DDR4": {
+        "interface_ports": [
+          "C0_DDR4",
+          "ddr4/C0_DDR4"
+        ]
+      },
+      "smartconnect_0_M00_AXI": {
+        "interface_ports": [
+          "bootrom_ctrl/S_AXI",
+          "smartconnect/M00_AXI"
         ]
       },
       "CLK_IN_D_0_1": {
@@ -693,10 +718,10 @@
           "util_ds_buf_0/CLK_IN_D"
         ]
       },
-      "smartconnect_0_M01_AXI": {
+      "axi_clock_converter_1_M_AXI": {
         "interface_ports": [
-          "bram_ctrl/S_AXI",
-          "smartconnect/M01_AXI"
+          "axi_clock_converter_1/M_AXI",
+          "ddr4/C0_DDR4_S_AXI"
         ]
       },
       "smartconnect_M02_AXI": {
@@ -710,24 +735,6 @@
           "C910_core/m_axi",
           "smartconnect/S00_AXI"
         ]
-      },
-      "ddr4_0_C0_DDR4": {
-        "interface_ports": [
-          "C0_DDR4",
-          "ddr4/C0_DDR4"
-        ]
-      },
-      "axi_clock_converter_1_M_AXI": {
-        "interface_ports": [
-          "axi_clock_converter_1/M_AXI",
-          "ddr4/C0_DDR4_S_AXI"
-        ]
-      },
-      "smartconnect_0_M00_AXI": {
-        "interface_ports": [
-          "bootrom_ctrl/S_AXI",
-          "smartconnect/M00_AXI"
-        ]
       }
     },
     "nets": {
@@ -736,10 +743,10 @@
           "rst_sys_clk/peripheral_aresetn",
           "C910_core/aresetn",
           "bootrom_ctrl/s_axi_aresetn",
+          "axi_clock_converter_1/s_axi_aresetn",
           "axi_uartlite/s_axi_aresetn",
           "bram_ctrl/s_axi_aresetn",
-          "smartconnect/aresetn",
-          "axi_clock_converter_1/s_axi_aresetn"
+          "smartconnect/aresetn"
         ]
       },
       "val_0_dout": {
@@ -874,11 +881,11 @@
           "BRAM/wea"
         ]
       },
-      "sys_clk_300m": {
+      "sys_clk_250m": {
         "ports": [
           "util_ds_buf_0/IBUF_OUT",
-          "ddr4/c0_sys_clk_i",
-          "clk_wiz/clk_in1"
+          "clk_wiz/clk_in1",
+          "ddr4/c0_sys_clk_i"
         ]
       },
       "ddr4_0_c0_ddr4_ui_clk": {
@@ -891,20 +898,6 @@
         "ports": [
           "ddr4/c0_ddr4_ui_clk_sync_rst",
           "rtsn2rst1/Op1"
-        ]
-      },
-      "sys_rstn_1": {
-        "ports": [
-          "sys_rstn",
-          "rst_sys_clk/ext_reset_in",
-          "rtsn2rst/Op1"
-        ]
-      },
-      "rtsn2rst_Res": {
-        "ports": [
-          "rtsn2rst/Res",
-          "clk_wiz/reset",
-          "ddr4/sys_rst"
         ]
       },
       "val_1_dout": {
@@ -922,20 +915,34 @@
       "rtsn2rst1_Res": {
         "ports": [
           "rtsn2rst1/Res",
-          "ddr4/c0_ddr4_aresetn",
-          "axi_clock_converter_1/m_axi_aresetn"
+          "axi_clock_converter_1/m_axi_aresetn",
+          "ddr4/c0_ddr4_aresetn"
         ]
       },
       "clk_wiz_clk_out1": {
         "ports": [
           "clk_wiz/clk_out1",
-          "smartconnect/aclk",
           "C910_core/aclk",
           "bootrom_ctrl/s_axi_aclk",
+          "axi_clock_converter_1/s_axi_aclk",
           "axi_uartlite/s_axi_aclk",
           "bram_ctrl/s_axi_aclk",
           "rst_sys_clk/slowest_sync_clk",
-          "axi_clock_converter_1/s_axi_aclk"
+          "smartconnect/aclk"
+        ]
+      },
+      "Op1_0_1": {
+        "ports": [
+          "sys_rst",
+          "rts2rstn/Op1",
+          "clk_wiz/reset",
+          "ddr4/sys_rst"
+        ]
+      },
+      "rts2rstn_Res": {
+        "ports": [
+          "rts2rstn/Res",
+          "rst_sys_clk/ext_reset_in"
         ]
       }
     },

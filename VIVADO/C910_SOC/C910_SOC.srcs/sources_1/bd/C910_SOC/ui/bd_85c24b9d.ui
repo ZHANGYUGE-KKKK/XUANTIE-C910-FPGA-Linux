@@ -1,80 +1,80 @@
 {
    "ActiveEmotionalView":"Default View",
-   "Default View_ScaleFactor":"0.628319",
-   "Default View_TopLeft":"834,0",
+   "Default View_ScaleFactor":"0.596774",
+   "Default View_TopLeft":"-122,-92",
    "ExpandedHierarchyInLayout":"",
    "guistr":"# # String gsaved with Nlview 7.0r6  2020-01-29 bk=1.5227 VDI=41 GEI=36 GUI=JA:10.0 non-TLS
 #  -string -flagsOSRD
-preplace port C0_DDR4 -pg 1 -lvl 8 -x 2230 -y 540 -defaultsOSRD
-preplace port BADJ_CLK -pg 1 -lvl 0 -x 0 -y 610 -defaultsOSRD
-preplace port sys_rstn -pg 1 -lvl 0 -x 0 -y 690 -defaultsOSRD
-preplace port tx -pg 1 -lvl 8 -x 2230 -y 820 -defaultsOSRD
-preplace port rx -pg 1 -lvl 0 -x 0 -y 670 -defaultsOSRD
-preplace port jtag_tclk -pg 1 -lvl 0 -x 0 -y 1000 -defaultsOSRD
-preplace port jtag_tdi -pg 1 -lvl 0 -x 0 -y 1020 -defaultsOSRD
-preplace port jtag_tms -pg 1 -lvl 0 -x 0 -y 1040 -defaultsOSRD
-preplace port jtag_trstn -pg 1 -lvl 0 -x 0 -y 1060 -defaultsOSRD
-preplace portBus jtag_tdo -pg 1 -lvl 8 -x 2230 -y 1010 -defaultsOSRD
-preplace inst C910_core -pg 1 -lvl 6 -x 1820 -y 1010 -defaultsOSRD
-preplace inst bootrom_ctrl -pg 1 -lvl 5 -x 1470 -y 140 -defaultsOSRD
-preplace inst axi_uartlite -pg 1 -lvl 6 -x 1820 -y 810 -defaultsOSRD
-preplace inst BOOTROM -pg 1 -lvl 7 -x 2110 -y 140 -defaultsOSRD
-preplace inst BRAM -pg 1 -lvl 7 -x 2110 -y 360 -defaultsOSRD
-preplace inst bram_ctrl -pg 1 -lvl 5 -x 1470 -y 360 -defaultsOSRD
-preplace inst clk_wiz -pg 1 -lvl 2 -x 440 -y 600 -defaultsOSRD
-preplace inst ddr4 -pg 1 -lvl 6 -x 1820 -y 590 -defaultsOSRD
-preplace inst rst_sys_clk -pg 1 -lvl 3 -x 750 -y 770 -defaultsOSRD
-preplace inst rtsn2rst1 -pg 1 -lvl 4 -x 1080 -y 450 -defaultsOSRD -resize 120 88
-preplace inst smartconnect -pg 1 -lvl 4 -x 1080 -y 760 -defaultsOSRD
-preplace inst util_ds_buf_0 -pg 1 -lvl 1 -x 170 -y 610 -defaultsOSRD
-preplace inst rtsn2rst -pg 1 -lvl 1 -x 170 -y 510 -defaultsOSRD
-preplace inst val_0 -pg 1 -lvl 2 -x 440 -y 870 -defaultsOSRD
-preplace inst val_1 -pg 1 -lvl 2 -x 440 -y 770 -defaultsOSRD
-preplace inst xlslice_bootrom -pg 1 -lvl 6 -x 1820 -y 60 -defaultsOSRD
-preplace inst xlslice_bram -pg 1 -lvl 6 -x 1820 -y 280 -defaultsOSRD
-preplace inst axi_clock_converter_1 -pg 1 -lvl 5 -x 1470 -y 560 -defaultsOSRD
-preplace netloc rst_sys_clk_peripheral_aresetn 1 3 3 930 650 1300 690 1650
-preplace netloc val_0_dout 1 2 1 570J 790n
-preplace netloc axi_uartlite_0_tx 1 6 2 NJ 820 NJ
-preplace netloc rx_1 1 0 7 NJ 670 320J 690 560J 670 NJ 670 1220J 710 NJ 710 1990
-preplace netloc jtag_tclk_1 1 0 6 NJ 1000 NJ 1000 NJ 1000 NJ 1000 NJ 1000 NJ
-preplace netloc jtag_tdi_1 1 0 6 NJ 1020 NJ 1020 NJ 1020 NJ 1020 NJ 1020 NJ
-preplace netloc jtag_tms_1 1 0 6 NJ 1040 NJ 1040 NJ 1040 NJ 1040 NJ 1040 NJ
-preplace netloc jtag_trstn_1 1 0 6 NJ 1060 NJ 1060 NJ 1060 NJ 1060 NJ 1060 NJ
-preplace netloc C910_core_jtag_tdo 1 6 2 NJ 1010 NJ
+preplace port C0_DDR4 -pg 1 -lvl 8 -x 2250 -y 550 -defaultsOSRD
+preplace port BADJ_CLK -pg 1 -lvl 0 -x 0 -y 300 -defaultsOSRD
+preplace port tx -pg 1 -lvl 8 -x 2250 -y 1040 -defaultsOSRD
+preplace port rx -pg 1 -lvl 0 -x 0 -y 940 -defaultsOSRD
+preplace port jtag_tclk -pg 1 -lvl 0 -x 0 -y 820 -defaultsOSRD
+preplace port jtag_tdi -pg 1 -lvl 0 -x 0 -y 840 -defaultsOSRD
+preplace port jtag_tms -pg 1 -lvl 0 -x 0 -y 860 -defaultsOSRD
+preplace port jtag_trstn -pg 1 -lvl 0 -x 0 -y 880 -defaultsOSRD
+preplace portBus jtag_tdo -pg 1 -lvl 8 -x 2250 -y 830 -defaultsOSRD
+preplace portBus sys_rst -pg 1 -lvl 0 -x 0 -y 240 -defaultsOSRD
+preplace inst C910_core -pg 1 -lvl 6 -x 1840 -y 830 -defaultsOSRD
+preplace inst bootrom_ctrl -pg 1 -lvl 5 -x 1480 -y 140 -defaultsOSRD
+preplace inst axi_clock_converter_1 -pg 1 -lvl 5 -x 1480 -y 590 -defaultsOSRD
+preplace inst axi_uartlite -pg 1 -lvl 6 -x 1840 -y 1030 -defaultsOSRD
+preplace inst BOOTROM -pg 1 -lvl 7 -x 2130 -y 140 -defaultsOSRD
+preplace inst BRAM -pg 1 -lvl 7 -x 2130 -y 360 -defaultsOSRD
+preplace inst bram_ctrl -pg 1 -lvl 5 -x 1480 -y 360 -defaultsOSRD
+preplace inst clk_wiz -pg 1 -lvl 2 -x 440 -y 250 -defaultsOSRD
+preplace inst ddr4 -pg 1 -lvl 6 -x 1840 -y 600 -defaultsOSRD
+preplace inst rst_sys_clk -pg 1 -lvl 3 -x 780 -y 480 -defaultsOSRD
+preplace inst rtsn2rst1 -pg 1 -lvl 4 -x 1120 -y 400 -defaultsOSRD -resize 120 88
+preplace inst smartconnect -pg 1 -lvl 4 -x 1120 -y 540 -defaultsOSRD
+preplace inst util_ds_buf_0 -pg 1 -lvl 1 -x 150 -y 300 -defaultsOSRD
+preplace inst val_0 -pg 1 -lvl 2 -x 440 -y 580 -defaultsOSRD
+preplace inst val_1 -pg 1 -lvl 2 -x 440 -y 480 -defaultsOSRD
+preplace inst xlslice_bootrom -pg 1 -lvl 6 -x 1840 -y 60 -defaultsOSRD
+preplace inst xlslice_bram -pg 1 -lvl 6 -x 1840 -y 280 -defaultsOSRD
+preplace inst rts2rstn -pg 1 -lvl 2 -x 440 -y 380 -defaultsOSRD
+preplace netloc rst_sys_clk_peripheral_aresetn 1 3 3 960 300 1290 810 1670
+preplace netloc val_0_dout 1 2 1 610J 500n
+preplace netloc axi_uartlite_0_tx 1 6 2 NJ 1040 NJ
+preplace netloc rx_1 1 0 7 NJ 940 NJ 940 NJ 940 NJ 940 NJ 940 NJ 940 2010
+preplace netloc jtag_tclk_1 1 0 6 NJ 820 NJ 820 NJ 820 NJ 820 NJ 820 NJ
+preplace netloc jtag_tdi_1 1 0 6 NJ 840 NJ 840 NJ 840 NJ 840 NJ 840 NJ
+preplace netloc jtag_tms_1 1 0 6 NJ 860 NJ 860 NJ 860 NJ 860 NJ 860 NJ
+preplace netloc jtag_trstn_1 1 0 6 NJ 880 NJ 880 NJ 880 NJ 880 NJ 880 NJ
+preplace netloc C910_core_jtag_tdo 1 6 2 NJ 830 NJ
 preplace netloc bootrom_ctrl_bram_clk_a 1 5 2 NJ 120 N
 preplace netloc bootrom_ctrl_bram_wrdata_a 1 5 2 NJ 140 N
 preplace netloc BOOTROM_douta 1 5 2 NJ 160 N
 preplace netloc bootrom_ctrl_bram_en_a 1 5 2 NJ 180 N
 preplace netloc bootrom_ctrl_bram_we_a 1 5 2 NJ 200 N
-preplace netloc bootrom_ctrl_bram_addr_a 1 5 1 1630J 60n
-preplace netloc xlslice_0_Dout 1 6 1 2010 60n
+preplace netloc bootrom_ctrl_bram_addr_a 1 5 1 1670J 60n
+preplace netloc xlslice_0_Dout 1 6 1 2030 60n
 preplace netloc bram_ctrl_bram_clk_a 1 5 2 NJ 340 N
-preplace netloc xlslice_bram_Dout 1 6 1 2010 280n
-preplace netloc bram_ctrl_bram_addr_a 1 5 1 1630J 280n
+preplace netloc xlslice_bram_Dout 1 6 1 2030 280n
+preplace netloc bram_ctrl_bram_addr_a 1 5 1 1670J 280n
 preplace netloc bram_ctrl_bram_wrdata_a 1 5 2 NJ 360 N
 preplace netloc BRAM_douta 1 5 2 NJ 380 N
 preplace netloc bram_ctrl_bram_en_a 1 5 2 NJ 400 N
 preplace netloc bram_ctrl_bram_we_a 1 5 2 NJ 420 N
-preplace netloc sys_clk_300m 1 1 5 340 680 530J 640 NJ 640 1280J 660 1630J
-preplace netloc ddr4_0_c0_ddr4_ui_clk 1 4 3 1310 700 NJ 700 1990
-preplace netloc ddr4_0_c0_ddr4_ui_clk_sync_rst 1 3 4 920 20 NJ 20 1650J 130 2000
-preplace netloc sys_rstn_1 1 0 3 20 710 NJ 710 530J
-preplace netloc rtsn2rst_Res 1 1 5 330 670 540J 660 NJ 660 1240J 670 1650J
-preplace netloc val_1_dout 1 2 1 NJ 770
-preplace netloc clk_wiz_locked 1 2 1 550 610n
-preplace netloc rtsn2rst1_Res 1 4 2 1270 680 1640J
-preplace netloc clk_wiz_clk_out1 1 2 4 570 630 920 630 1250 800 1630
-preplace netloc smartconnect_M02_AXI 1 4 1 1290 520n
-preplace netloc C910_core_0_m_axi 1 3 4 940 900 NJ 900 NJ 900 1990
-preplace netloc smartconnect_0_M00_AXI 1 4 1 1230 120n
-preplace netloc smartconnect_0_M01_AXI 1 4 1 1260 340n
-preplace netloc smartconnect_M03_AXI1 1 4 2 N 790 NJ
-preplace netloc CLK_IN_D_0_1 1 0 1 NJ 610
-preplace netloc axi_clock_converter_1_M_AXI 1 5 1 N 560
-preplace netloc ddr4_0_C0_DDR4 1 6 2 NJ 540 NJ
-levelinfo -pg 1 0 170 440 750 1080 1470 1820 2110 2230
-pagesize -pg 1 -db -bbox -sgen -130 0 2360 1120
+preplace netloc sys_clk_250m 1 1 5 290 710 NJ 710 NJ 710 NJ 710 1650
+preplace netloc ddr4_0_c0_ddr4_ui_clk 1 4 3 1310 720 NJ 720 2020
+preplace netloc ddr4_0_c0_ddr4_ui_clk_sync_rst 1 3 4 980 700 NJ 700 1670J 710 2010
+preplace netloc val_1_dout 1 2 1 NJ 480
+preplace netloc clk_wiz_locked 1 2 1 600 260n
+preplace netloc rtsn2rst1_Res 1 4 2 1270 690 1660
+preplace netloc clk_wiz_clk_out1 1 2 4 610 310 950 310 1280 800 1660
+preplace netloc Op1_0_1 1 0 6 NJ 240 280 320 NJ 320 NJ 320 1320J 490 1670J
+preplace netloc rts2rstn_Res 1 2 1 590J 380n
+preplace netloc axi_clock_converter_1_M_AXI 1 5 1 1640 570n
+preplace netloc CLK_IN_D_0_1 1 0 1 NJ 300
+preplace netloc smartconnect_0_M01_AXI 1 4 1 1300 340n
+preplace netloc smartconnect_M03_AXI1 1 4 2 1260 790 1640J
+preplace netloc ddr4_0_C0_DDR4 1 6 2 NJ 550 NJ
+preplace netloc smartconnect_M02_AXI 1 4 1 N 550
+preplace netloc smartconnect_0_M00_AXI 1 4 1 1260 120n
+preplace netloc C910_core_0_m_axi 1 3 4 970 330 1310J 480 NJ 480 2030
+levelinfo -pg 1 0 150 440 780 1120 1480 1840 2130 2250
+pagesize -pg 1 -db -bbox -sgen -130 0 2380 1120
 "
 }
 0

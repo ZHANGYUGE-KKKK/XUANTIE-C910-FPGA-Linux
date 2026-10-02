@@ -1,5 +1,5 @@
 
-./UART/BOOTROM/build/bootrom.elf:     file format elf64-littleriscv
+./DDR/BOOTROM/build/bootrom.elf:     file format elf64-littleriscv
 
 
 Disassembly of section .text:
