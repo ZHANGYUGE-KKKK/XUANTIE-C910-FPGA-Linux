@@ -1,7 +1,7 @@
 {
    "ActiveEmotionalView":"Default View",
-   "Default View_ScaleFactor":"0.596774",
-   "Default View_TopLeft":"-122,-92",
+   "Default View_ScaleFactor":"0.35625",
+   "Default View_TopLeft":"-253,6",
    "ExpandedHierarchyInLayout":"",
    "guistr":"# # String gsaved with Nlview 7.0r6  2020-01-29 bk=1.5227 VDI=41 GEI=36 GUI=JA:10.0 non-TLS
 #  -string -flagsOSRD
@@ -65,14 +65,14 @@ preplace netloc rtsn2rst1_Res 1 4 2 1270 690 1660
 preplace netloc clk_wiz_clk_out1 1 2 4 610 310 950 310 1280 800 1660
 preplace netloc Op1_0_1 1 0 6 NJ 240 280 320 NJ 320 NJ 320 1320J 490 1670J
 preplace netloc rts2rstn_Res 1 2 1 590J 380n
-preplace netloc axi_clock_converter_1_M_AXI 1 5 1 1640 570n
-preplace netloc CLK_IN_D_0_1 1 0 1 NJ 300
-preplace netloc smartconnect_0_M01_AXI 1 4 1 1300 340n
-preplace netloc smartconnect_M03_AXI1 1 4 2 1260 790 1640J
 preplace netloc ddr4_0_C0_DDR4 1 6 2 NJ 550 NJ
-preplace netloc smartconnect_M02_AXI 1 4 1 N 550
-preplace netloc smartconnect_0_M00_AXI 1 4 1 1260 120n
+preplace netloc smartconnect_0_M01_AXI 1 4 1 1300 340n
+preplace netloc CLK_IN_D_0_1 1 0 1 NJ 300
+preplace netloc axi_clock_converter_1_M_AXI 1 5 1 1640 570n
 preplace netloc C910_core_0_m_axi 1 3 4 970 330 1310J 480 NJ 480 2030
+preplace netloc smartconnect_0_M00_AXI 1 4 1 1260 120n
+preplace netloc smartconnect_M02_AXI 1 4 1 N 550
+preplace netloc smartconnect_M03_AXI1 1 4 2 1260 790 1640J
 levelinfo -pg 1 0 150 440 780 1120 1480 1840 2130 2250
 pagesize -pg 1 -db -bbox -sgen -130 0 2380 1120
 "

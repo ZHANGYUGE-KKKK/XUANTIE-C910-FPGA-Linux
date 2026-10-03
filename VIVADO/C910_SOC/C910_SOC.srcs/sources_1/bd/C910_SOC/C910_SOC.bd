@@ -238,7 +238,7 @@
             "value": "115200"
           },
           "C_S_AXI_ACLK_FREQ_HZ": {
-            "value": "50000000"
+            "value": "100000000"
           }
         }
       },
@@ -348,13 +348,13 @@
             "value": "40.0"
           },
           "CLKOUT1_JITTER": {
-            "value": "153.164"
+            "value": "134.506"
           },
           "CLKOUT1_PHASE_ERROR": {
             "value": "154.678"
           },
           "CLKOUT1_REQUESTED_OUT_FREQ": {
-            "value": "50"
+            "value": "100"
           },
           "MMCM_CLKFBOUT_MULT_F": {
             "value": "24.000"
@@ -366,7 +366,7 @@
             "value": "10.0"
           },
           "MMCM_CLKOUT0_DIVIDE_F": {
-            "value": "24.000"
+            "value": "12.000"
           },
           "MMCM_DIVCLK_DIVIDE": {
             "value": "5"
@@ -688,16 +688,10 @@
       }
     },
     "interface_nets": {
-      "smartconnect_0_M01_AXI": {
+      "smartconnect_M02_AXI": {
         "interface_ports": [
-          "bram_ctrl/S_AXI",
-          "smartconnect/M01_AXI"
-        ]
-      },
-      "smartconnect_M03_AXI1": {
-        "interface_ports": [
-          "axi_uartlite/S_AXI",
-          "smartconnect/M03_AXI"
+          "axi_clock_converter_1/S_AXI",
+          "smartconnect/M02_AXI"
         ]
       },
       "ddr4_0_C0_DDR4": {
@@ -706,10 +700,10 @@
           "ddr4/C0_DDR4"
         ]
       },
-      "smartconnect_0_M00_AXI": {
+      "smartconnect_0_M01_AXI": {
         "interface_ports": [
-          "bootrom_ctrl/S_AXI",
-          "smartconnect/M00_AXI"
+          "bram_ctrl/S_AXI",
+          "smartconnect/M01_AXI"
         ]
       },
       "CLK_IN_D_0_1": {
@@ -724,16 +718,22 @@
           "ddr4/C0_DDR4_S_AXI"
         ]
       },
-      "smartconnect_M02_AXI": {
-        "interface_ports": [
-          "axi_clock_converter_1/S_AXI",
-          "smartconnect/M02_AXI"
-        ]
-      },
       "C910_core_0_m_axi": {
         "interface_ports": [
           "C910_core/m_axi",
           "smartconnect/S00_AXI"
+        ]
+      },
+      "smartconnect_M03_AXI1": {
+        "interface_ports": [
+          "axi_uartlite/S_AXI",
+          "smartconnect/M03_AXI"
+        ]
+      },
+      "smartconnect_0_M00_AXI": {
+        "interface_ports": [
+          "bootrom_ctrl/S_AXI",
+          "smartconnect/M00_AXI"
         ]
       }
     },
