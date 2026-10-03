@@ -1,0 +1,5 @@
+upstream.zip
+upstream-commit.json
+**/build/
+results/
+!vendor/coremark-pro-main/benchmarks/darkmark/zip/zlib-1.2.8/configure.log

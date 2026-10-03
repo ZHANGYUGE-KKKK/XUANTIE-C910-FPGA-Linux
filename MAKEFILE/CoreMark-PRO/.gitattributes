@@ -1,0 +1,2 @@
+# Preserve upstream archive bytes so SHA-256 checks survive Git checkout.
+vendor/** -text
