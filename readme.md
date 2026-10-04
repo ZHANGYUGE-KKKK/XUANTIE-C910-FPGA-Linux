@@ -2,10 +2,12 @@
 
 ## 项目简介
 
-本工程围绕开源 RISC-V C910 处理器核心开展 FPGA 验证与上板工作，目标是在 FPGA 上实现完整的 SoC 系统，并最终运行 Linux 系统。
-当前项目子目标为迁移到VCU118开发板上，并且完成原有Linux链路的验证
+本工程围绕开源 RISC-V C910 处理器核心开展 FPGA 验证与上板工作
+目标是运行Coremark_Pro裸机测试程序用于测试不同L2CACHE大小的性能表现
+
 本工程的开发板平台有两块，二选其一：AXVU13P & VCU118,可以根据git的分支名确定,当前使用的开发板应该是VCU118。
 Z注意，VCU118的复位按键为松开为低、按下为高，与AXVU13P相反
+
 FPGA PL端包含以下部分：
 1.C910 RTL核心，包含JTAG接口，它只是PL部分一组普通IO口模拟的，名为JTAG的接口，注意区分FPGA开发板上的JTAG接口。
 2.uart控制器（连接到了开发板上的uart2usb模块上）
@@ -21,16 +23,7 @@ FPGA PL端包含以下部分：
 | `MAKEFILE` | 裸机程序构建与镜像生成流程，包含 RISC-V GCC 工具链管理，以及生成 Vivado BRAM 初始化文件的自动化脚本。 |
 | `JTAG` | C910 FPGA部分JTAG的用户手册及debugserver，不是开发板的JTAG！ |
 
-## TODOLIST
 
-| 状态 | 说明 |
-| --- | --- |
-| `已完成` | 将C910 RTL顶层裁剪为单核设计。 |
-| `已完成` | 搭建最小系统，裸机下验证uart控制器正确性，通过串口打印helloworld。 |
-| `待完成` | 添加DDR4控制器，验证DDR读写回环测试。 |
-| `待完成` | 验证C910 JTAG接口，使用debugserver修改bram程序，复位运行查看结果。 |
-| `待完成` | 使用ebreak停止核心并使用debugserver修改DDR数据，设置PC地址跳转串口打印修改内容。 |
-| `待完成` | 搭建linux系统,完成OpenSBI、U-Boot、Linux Kernel、设备树的启动链路适配，最终实现 Linux 串口启动日志输出|
 
 ## 维护约束
 
