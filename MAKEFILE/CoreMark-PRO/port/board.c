@@ -1,4 +1,7 @@
 #include "board.h"
+#ifdef BENCH_SUITE_PAYLOAD
+#include "suite.h"
+#endif
 #define UART_BASE 0x40000000UL
 #define UART_TX (*(volatile unsigned *)(UART_BASE + 4))
 #define UART_STATUS (*(volatile unsigned *)(UART_BASE + 8))
@@ -25,6 +28,7 @@ uint64_t board_instret(void) {
     return v;
 }
 void board_init(void) {
+#ifndef BENCH_SUITE_PAYLOAD
     /* Fresh-reset entry: invalidate I/D tags before enabling the L1 caches.
        MCOR[1:0]=3 selects both caches; MCOR[4]=1 requests invalidate. */
     unsigned long mcor = 0x13;
@@ -34,6 +38,7 @@ void board_init(void) {
     unsigned long mhcr = 0x11ff, pmdm = 1UL << 13;
     __asm__ volatile ("csrc 0x7f0,%0\ncsrw 0x7c1,%1\nfence.i"
                       :: "r"(pmdm), "r"(mhcr) : "memory");
+#endif
     uint64_t before = board_cycles();
     for (volatile unsigned i = 0; i < 1000; ++i) __asm__ volatile ("nop");
     if (board_cycles() <= before) {
@@ -45,7 +50,11 @@ void board_exit(int code) {
     board_puts(code ? "COREMARK_PRO_FAILED code=" : "COREMARK_PRO_DONE code=");
     board_hex((unsigned)code);
     board_puts("\n");
+#ifdef BENCH_SUITE_PAYLOAD
+    coremark_suite_finish(code);
+#else
     for (;;) __asm__ volatile ("wfi");
+#endif
 }
 void board_trap(uint64_t cause, uint64_t epc, uint64_t value) {
     board_puts("COREMARK_PRO_TRAP mcause="); board_hex(cause);

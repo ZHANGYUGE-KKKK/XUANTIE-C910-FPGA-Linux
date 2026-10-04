@@ -17,6 +17,7 @@ $objcopy = "$toolsRoot/riscv64-unknown-elf-objcopy.exe"
 $objdump = "$toolsRoot/riscv64-unknown-elf-objdump.exe"
 $readelf = "$toolsRoot/riscv64-unknown-elf-readelf.exe"
 $sizeTool = "$toolsRoot/riscv64-unknown-elf-size.exe"
+$nm = "$toolsRoot/riscv64-unknown-elf-nm.exe"
 if ($Clean) {
     $resolvedBuild = [IO.Path]::GetFullPath($build)
     $expectedRoot = [IO.Path]::GetFullPath($caseRoot) + [IO.Path]::DirectorySeparatorChar
@@ -40,7 +41,8 @@ $configs = @(
     @{ Name='zip-test'; Kernel='darkmark/zip'; Defines=@('MITH_MEMORY_ONLY_VERSION=1','ZLIB_COMPAT_ALL','ZLIB_ANSI');
        Files=@('zip_darkmark','zlib-1.2.8/adler32','zlib-1.2.8/crc32','zlib-1.2.8/deflate','zlib-1.2.8/infback','zlib-1.2.8/inffast','zlib-1.2.8/inflate','zlib-1.2.8/inftrees','zlib-1.2.8/trees','zlib-1.2.8/zutil','zlib-1.2.8/compress','zlib-1.2.8/uncompr','zlib-1.2.8/gzclose','zlib-1.2.8/gzlib') }
 )
-if ($Workload -ne 'all') {
+$suiteMode = $Workload -eq 'all'
+if (-not $suiteMode) {
     $configs = @($configs | Where-Object { $_.Name -eq $Workload })
     if ($configs.Count -eq 0) { throw "Unknown workload: $Workload" }
 }
@@ -61,13 +63,20 @@ function Invoke-Tool([string]$exe, [string[]]$toolArgs) {
 }
 function Write-Ascii([string]$path, [string]$content) { [IO.File]::WriteAllText($path,$content,[Text.Encoding]::ASCII) }
 $manifest = @()
+$modules = @()
+$references = @{ 'cjpeg-rose7-preset'=40.3438; 'core'=0.2855; 'linear_alg-mid-100x100-sp'=38.5624;
+    'loops-all-mid-10k-sp'=0.87959; 'nnet_test'=1.45853; 'parser-125k'=4.81116;
+    'radix2-big-64k'=99.6587; 'sha-test'=48.5201; 'zip-test'=21.3618 }
 foreach ($config in $configs) {
     $name = $config.Name
     $out = "$build/$name"
+    if ($suiteMode) { $out = "$build/modules/$name" }
     $elf = "$out/$name.elf"
     if (-not $CheckOnly) {
         New-Item -ItemType Directory -Force "$out/obj" | Out-Null
         $flagString = $compilerFlags -join ' '
+        $suiteDefine = ''
+        if ($suiteMode) { $suiteDefine = '#define BENCH_SUITE_PAYLOAD 1'; $flagString += ' link=--no-relax' }
         Write-Ascii "$out/build_config.h" @"
 #include <stdio.h>
 #define FILE_TYPE_DEFINED
@@ -78,12 +87,14 @@ foreach ($config in $configs) {
 #define BENCH_WORKLOAD "$name"
 #define BENCH_FLAGS "$flagString"
 #define BENCH_UPSTREAM "4832cc67b0926c7a80a4b7ce0ce00f4640ea6bec"
+$suiteDefine
 "@
         $inc = @($includes + @("$vendor/benchmarks/$($config.Kernel)","$vendor/benchmarks/consumer_v2/common",
             "$vendor/benchmarks/consumer_v2/cjpeg/data","$vendor/benchmarks/darkmark/zip/zlib-1.2.8")) | ForEach-Object { "-I$_" }
         $defs = @($defines + $config.Defines) | ForEach-Object { "-D$_" }
         $commonArgs = @($compilerFlags + $defs + $inc + @('-include',"$out/build_config.h"))
         $sources = @($localSources + $harness)
+        if ($suiteMode) { $sources = @($sources | Where-Object { -not $_.EndsWith('/start.S') }) }
         $sources += @($config.Files | ForEach-Object { "$vendor/benchmarks/$($config.Kernel)/$_.c" })
         $workloadSource = "$vendor/workloads/$name/$name.c"
         $sources += $workloadSource
@@ -101,6 +112,35 @@ foreach ($config in $configs) {
             Write-Ascii $rsp (($argsForSource | ForEach-Object { '"' + $_ + '"' }) -join "`n")
             Invoke-Tool $cc @("@$rsp")
             $objects += $obj
+        }
+        if ($suiteMode) {
+            $partial = "$out/partial.o"
+            $module = "$out/module.o"
+            $prefix = 'cm' + $modules.Count + '_'
+            # Resolve private libc/libm/libgcc before naming this module's complete runtime.
+            $linkArgs = @($compilerFlags + @('-nostdlib','-Wl,-r','-Wl,--gc-sections','-Wl,--undefined=main',
+                '-Wl,--wrap=mith_main') + $objects + @('-Wl,--start-group','-lc','-lm','-lgcc','-Wl,--end-group','-o',$partial))
+            Write-Ascii "$out/link.rsp" (($linkArgs | ForEach-Object { '"' + $_ + '"' }) -join "`n")
+            Invoke-Tool $cc @("@$out/link.rsp")
+            $undefined = @(& $nm -g -u --format=posix $partial)
+            if ($LASTEXITCODE -ne 0) { throw 'nm failed' }
+            $allowed = @('__heap_start','__heap_end','coremark_suite_get_config','coremark_suite_record','coremark_suite_finish')
+            foreach ($line in $undefined) {
+                $symbol = ($line -split '\s+')[0]
+                if ($symbol -notin $allowed) { throw "Unresolved private module symbol: $name / $symbol" }
+            }
+            $defined = @(& $nm -g --defined-only --format=posix $partial)
+            if ($LASTEXITCODE -ne 0) { throw 'nm failed' }
+            $symbols = @($defined | ForEach-Object { ($_ -split '\s+')[0] }) + @('__heap_start','__heap_end')
+            $rename = @($symbols | Sort-Object -Unique | ForEach-Object { "$_ $prefix$_" })
+            Write-Ascii "$out/rename.txt" (($rename -join "`n") + "`n")
+            Invoke-Tool $objcopy @("--redefine-syms=$out/rename.txt",$partial,$module)
+            $modules += [pscustomobject]@{name=$name;path=$module;entry="${prefix}main";prefix=$prefix}
+            [ordered]@{workload=$name;compiler_flags=$flagString;defines=$defines+$config.Defines;
+                suite_payload=$true;sources=$sources;private_prefix=$prefix;shared_bridge_symbols=$allowed[2..4]} |
+                ConvertTo-Json -Depth 5 | Set-Content -Encoding UTF8 "$out/build.json"
+            Write-Host "PASS: private runtime and symbols isolated: $name"
+            continue
         }
         $linkArgs = @($compilerFlags + @('-nostartfiles','-Wl,--gc-sections','-Wl,--wrap=mith_main',
             "-Wl,-T,$caseRoot/JTAG/ddr.ld", "-Wl,-Map,$out/$name.map") + $objects + @('-Wl,--start-group','-lc','-lm','-lgcc','-Wl,--end-group','-o',$elf))
@@ -123,6 +163,7 @@ continue
             min_seconds=$MinSeconds; compiler_flags=$flagString; defines=$defines+$config.Defines; sources=$sources }
         $summary | ConvertTo-Json -Depth 5 | Set-Content -Encoding UTF8 "$out/build.json"
     }
+    if ($suiteMode) { continue }
     if (-not (Test-Path -LiteralPath $elf)) { throw "Missing ELF: $elf" }
     $headers = & $readelf -h -l $elf
     if ($LASTEXITCODE -ne 0) { throw 'readelf failed' }
@@ -136,5 +177,113 @@ continue
     finally { $stream.Dispose(); $hasher.Dispose() }
     $manifest += [pscustomobject]@{ workload=$name; elf=$elf; sha256=$digest }
     Write-Host "PASS: $name (entry 0x200000000; linker checked DDR/heap/stack bounds)"
+}
+if ($suiteMode) {
+    $elf = "$build/CoreMark-PRO.elf"
+    if (-not $CheckOnly) {
+        $declarations = @($modules | ForEach-Object { "extern int $($_.entry)(void);" })
+        $rows = @($modules | ForEach-Object {
+            $rate = $references[$_.name].ToString([Globalization.CultureInfo]::InvariantCulture)
+            '{ "' + $_.name + '", ' + $_.entry + ', ' + $rate + ' },'
+        })
+        Write-Ascii "$build/suite_entries.h" (@(
+            'struct suite_entry { const char *name; int (*run)(void); double reference_rate; };'
+            $declarations
+            'static const struct suite_entry suite_entries[9] = {'
+            $rows
+            '};'
+        ) -join "`n")
+        Write-Ascii "$build/suite_config.h" @"
+#define BENCH_CPU_HZ ${CpuHz}UL
+#define BENCH_ITERATIONS ${Iterations}U
+#define BENCH_RUNS ${Runs}U
+#define BENCH_MIN_SECONDS ${MinSeconds}U
+"@
+        New-Item -ItemType Directory -Force "$build/controller" | Out-Null
+        $controllerObjects = @()
+        foreach ($sourceName in @('start.S','board.c','syscalls.c','suite_main.c')) {
+            $obj = "$build/controller/$sourceName.o"
+            $argsForSource = @($compilerFlags + @("-I$caseRoot/port","-I$build",'-include',"$build/suite_config.h",
+                '-c',"$caseRoot/port/$sourceName",'-o',$obj))
+            Write-Ascii "$build/controller/compile.rsp" (($argsForSource | ForEach-Object { '"' + $_ + '"' }) -join "`n")
+            Invoke-Tool $cc @("@$build/controller/compile.rsp")
+            $controllerObjects += $obj
+        }
+        $linkArgs = @($compilerFlags + @('-nostartfiles','-Wl,--gc-sections','-Wl,--no-relax',
+            "-Wl,-T,$caseRoot/JTAG/suite.ld","-Wl,-Map,$build/CoreMark-PRO.map") + $controllerObjects +
+            @($modules | ForEach-Object { $_.path }) + @('-Wl,--start-group','-lc','-lm','-lgcc','-Wl,--end-group','-o',$elf))
+        Write-Ascii "$build/suite-link.rsp" (($linkArgs | ForEach-Object { '"' + $_ + '"' }) -join "`n")
+        Invoke-Tool $cc @("@$build/suite-link.rsp")
+        Invoke-Tool $objcopy @('-O','binary',$elf,"$build/CoreMark-PRO.bin")
+        $dump = & $objdump -d -h $elf
+        if ($LASTEXITCODE -ne 0) { throw 'objdump failed' }
+        [IO.File]::WriteAllLines("$build/CoreMark-PRO.dump",[string[]]$dump,[Text.Encoding]::ASCII)
+        Write-Ascii "$build/load_suite.gdb" @"
+set confirm off
+file "$elf"
+load "$elf"
+set `$pc = _start
+printf "CoreMark-PRO suite loaded once. Starting all nine workloads.\n"
+continue
+"@
+        [ordered]@{workloads=@($configs | ForEach-Object {$_.Name});cpu_hz=$CpuHz;initial_iterations=$Iterations;
+            runs=$Runs;min_seconds=$MinSeconds;compiler_flags=$compilerFlags;linker_flags=@('--no-relax');
+            private_modules=$modules;heap_per_module_bytes=16777216;ddr_reserved_bytes=167772160} |
+            ConvertTo-Json -Depth 6 | Set-Content -Encoding UTF8 "$build/build.json"
+    }
+    if (-not (Test-Path -LiteralPath $elf)) { throw "Missing suite ELF: $elf" }
+    $headers = & $readelf -h -l $elf
+    if ($LASTEXITCODE -ne 0 -or ($headers -join "`n") -notmatch 'Entry point address:\s+0x200000000') {
+        throw 'Wrong suite DDR entry'
+    }
+    $symbols = @(& $nm --defined-only --format=posix $elf)
+    if ($LASTEXITCODE -ne 0) { throw 'nm failed' }
+    foreach ($i in 0..8) {
+        foreach ($suffix in @('main','malloc','_sbrk','__heap_start','__heap_end')) {
+            if (-not ($symbols -match "^cm${i}_${suffix}\s")) { throw "Missing private suite symbol cm${i}_${suffix}" }
+        }
+    }
+    $undefined = @(& $nm -u $elf)
+    if ($LASTEXITCODE -ne 0 -or $undefined.Count) { throw 'Unresolved suite symbols' }
+    $addresses = @{}
+    foreach ($line in $symbols) {
+        if ($line -match '^(\S+)\s+\S\s+([0-9a-fA-F]+)') {
+            $addresses[$Matches[1]] = [Convert]::ToUInt64($Matches[2],16)
+        }
+    }
+    $heapCursor = $addresses['__heap_end']
+    if ($addresses['__heap_start'] -lt $addresses['__bss_end'] -or
+        $heapCursor - $addresses['__heap_start'] -ne 1048576) { throw 'Controller heap bounds are invalid' }
+    foreach ($i in 0..8) {
+        $heapStart = $addresses["cm${i}___heap_start"]; $heapEnd = $addresses["cm${i}___heap_end"]
+        if ($heapStart -ne $heapCursor -or $heapEnd - $heapStart -ne 16777216) {
+            throw "Private heap overlap or incorrect size: module $i"
+        }
+        $heapCursor = $heapEnd
+    }
+    if ($heapCursor -gt $addresses['__stack_bottom'] -or
+        $addresses['__stack_top'] - $addresses['__stack_bottom'] -ne 262144 -or
+        $addresses['__stack_top'] -ne 0x20a000000) { throw 'Suite stack bounds are invalid' }
+    # Check the actual linked dispatch table, including all nine entry pointers and names.
+    $binary = [IO.File]::ReadAllBytes("$build/CoreMark-PRO.bin")
+    $tableOffset = [int]($addresses['suite_entries'] - 0x200000000)
+    for ($i=0; $i -lt 9; ++$i) {
+        $offset = $tableOffset + 24 * $i
+        $nameAddress = [BitConverter]::ToUInt64($binary,$offset)
+        $entryAddress = [BitConverter]::ToUInt64($binary,$offset+8)
+        $referenceRate = [BitConverter]::ToDouble($binary,$offset+16)
+        $nameOffset = [int]($nameAddress - 0x200000000); $endOffset = $nameOffset
+        while ($binary[$endOffset] -ne 0) { ++$endOffset }
+        $linkedName = [Text.Encoding]::ASCII.GetString($binary,$nameOffset,$endOffset-$nameOffset)
+        if ($entryAddress -ne $addresses["cm${i}_main"] -or $linkedName -ne $configs[$i].Name -or
+            [Math]::Abs($referenceRate - $references[$linkedName]) -gt 1e-12) { throw "Wrong linked dispatch entry: $i" }
+    }
+    Write-Host 'PASS: linked dispatch table contains all nine correct workloads; heaps/stack do not overlap'
+    Invoke-Tool $sizeTool @($elf)
+    $stream = [IO.File]::OpenRead($elf); $hasher = [Security.Cryptography.SHA256]::Create()
+    try { $digest = [BitConverter]::ToString($hasher.ComputeHash($stream)).Replace('-','') }
+    finally { $stream.Dispose(); $hasher.Dispose() }
+    $manifest += [pscustomobject]@{workload='all-nine';elf=$elf;sha256=$digest}
+    Write-Host 'PASS: one suite ELF, nine private runtimes/heaps, entry 0x200000000'
 }
 if (-not $CheckOnly) { $manifest | Export-Csv -NoTypeInformation -Encoding UTF8 "$build/images.csv" }

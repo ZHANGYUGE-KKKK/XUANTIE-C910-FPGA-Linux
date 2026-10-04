@@ -72,7 +72,7 @@ Makefile GNUmakefile MAKEFILE/Makefile: ;
 # 默认目标：构建当前项目的 BootROM、BRAM，并复制 BRAM/BootROM 结果到 COEFILES。
 all: bootrom bram copy-builds
 
-# CoreMark-PRO keeps its small loader in BRAM and builds standard DDR workloads.
+# CoreMark-PRO keeps its small loader in BRAM and builds one complete DDR suite.
 ifeq ($(PROGRAM),CoreMark-PRO)
 all: jtag
 endif

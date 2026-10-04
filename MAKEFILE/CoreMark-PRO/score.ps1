@@ -16,6 +16,7 @@ $active = $null
 $commonCpu = $null
 $commonBuild = $null
 $commonConfig = $null
+$suite = $null
 foreach ($pattern in $Logs) {
     $files = @(Get-ChildItem -Path $pattern -File)
     if (-not $files.Count) { throw "No log files match: $pattern" }
@@ -23,7 +24,31 @@ foreach ($pattern in $Logs) {
         $active = $null
         foreach ($raw in Get-Content -LiteralPath $file.FullName) {
             $line = $raw.Trim()
+            if ($line.StartsWith('COREMARK_PRO_SUITE_')) {
+                if ($line -match '^COREMARK_PRO_SUITE_BEGIN workloads=(\d+)$') {
+                    if ($suite -or $sessions.Count) { throw 'Multiple suites or mixed suite/standalone logs' }
+                    if ([int]$Matches[1] -ne $references.Count) { throw "Invalid suite workload count: $line" }
+                    $suite = @{file=$file.FullName;done=$false}
+                } elseif ($line -match '^COREMARK_PRO_SUITE_DONE workloads=(\d+) passed=(\d+) failed=(\d+)$') {
+                    if (-not $suite -or $suite.done -or $suite.file -ne $file.FullName) {
+                        throw 'Suite completion without a matching begin marker'
+                    }
+                    if ([int]$Matches[1] -ne $references.Count -or [int]$Matches[2] -ne $references.Count -or
+                        [int]$Matches[3] -ne 0 -or $sessions.Count -ne $references.Count) {
+                        throw "Incomplete or failed suite: $line"
+                    }
+                    foreach ($session in $sessions.Values) {
+                        if (-not $session.done) { throw "Suite completed before workload: $($session.name)" }
+                    }
+                    $suite.done = $true
+                    $active = $null
+                } else {
+                    throw "Failed or invalid suite marker: $line"
+                }
+                continue
+            }
             if ($line -match '^COREMARK_PRO_BEGIN workload=(\S+) cpu_hz=(\d+) hart=0 contexts=1$') {
+                if ($suite -and $suite.done) { throw 'Workload after completed suite' }
                 if ($active -and -not $active.done) { throw 'Incomplete previous session' }
                 $name = $Matches[1]; $cpu = [double]::Parse($Matches[2],$culture)
                 if (-not $references.Contains($name) -or $cpu -le 0) { throw "Invalid session: $line" }
@@ -71,6 +96,9 @@ foreach ($pattern in $Logs) {
             }
         }
         if ($active -and -not $active.done) { throw "Incomplete log: $($file.FullName)" }
+        if ($suite -and $suite.file -eq $file.FullName -and -not $suite.done) {
+            throw "Missing successful suite completion marker: $($file.FullName)"
+        }
     }
 }
 $logSum = 0.0

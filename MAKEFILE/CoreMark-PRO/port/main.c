@@ -3,6 +3,9 @@
 #include "mith_workload.h"
 #include <stdio.h>
 #include <limits.h>
+#ifdef BENCH_SUITE_PAYLOAD
+#include "suite.h"
+#endif
 extern int coremark_workload_main(int argc, char **argv);
 extern int __real_mith_main(ee_workload *, unsigned, unsigned, Bool, unsigned);
 
@@ -40,6 +43,13 @@ static void invoke(unsigned iters, int validation) {
     }
 }
 int main(void) {
+#ifdef BENCH_SUITE_PAYLOAD
+    const volatile struct suite_settings *settings = coremark_suite_get_config();
+    bench_cpu_hz = settings->cpu_hz;
+    bench_iterations = settings->iterations;
+    bench_runs = settings->runs;
+    bench_min_seconds = settings->min_seconds;
+#endif
     board_init();
     setvbuf(stdout, NULL, _IONBF, 0);
     if (!bench_cpu_hz || !bench_iterations || !bench_runs || bench_runs > 100 ||
@@ -99,5 +109,8 @@ int main(void) {
     double median = rates[bench_runs / 2];
     if (!(bench_runs & 1)) median = (median + rates[bench_runs / 2 - 1]) / 2;
     printf("SUMMARY,%s,%u,%.9f,PASS\n", BENCH_WORKLOAD, bench_runs, median);
+#ifdef BENCH_SUITE_PAYLOAD
+    coremark_suite_record(median);
+#endif
     board_exit(0);
 }
