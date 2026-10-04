@@ -1,174 +1,148 @@
-## AXVU13P �?发板引脚约束
-## 引脚来源：AXVU13P_UG.pdf
+## VCU118 Rev2.0 - C910 wrapper / x16 DDR3 on J2 FMC_HPC1.
+## This pinout REQUIRES a signal-remapping adapter; it is NOT a straight-through cable.
+## Canonical connector mapping: DATASHEET/FMC_DDR3/adapter_fmc_hpc1/pinmap.json
+## Carrier VADJ/VCCO and DRAM VDD/VDDQ MUST be 1.5 V; internal VREF = 0.75 V.
+## VADJ is shared with other FMC banks: review external JTAG voltage before hardware use.
 
-## VCU118 DDR4 C1，当�? C910_SOC_wrapper 接口�? 64bit
-## 引脚来源：vcu118_rev2.0_12082017.xdc；保留工程现�? BADJ_CLK/C0_DDR4 端口命名
-## C1 参�?�时钟：250MHZ_CLK1_P/N，Bank 71；MIG 输入时钟�?配置�? 250 MHz
-set_property -dict {PACKAGE_PIN E12 IOSTANDARD DIFF_SSTL12} [get_ports BADJ_CLK_clk_p]
-set_property -dict {PACKAGE_PIN D12 IOSTANDARD DIFF_SSTL12} [get_ports BADJ_CLK_clk_n]
-create_clock -period 4.000 -name C1_DDR4_SYSCLK1_250M [get_ports BADJ_CLK_clk_p]
+## Adapter MUST supply a 250 MHz differential reference clock on J2 G6/G7.
+## G6/G7 = FMC_HPC1_LA00_CC_P/N = AY9/BA9, Bank 66 / SLR1.
+## E12/D12 is in SLR2 and cannot be used as this MIG's direct system clock.
+## LVDS receiver, no internal differential termination; fit 100 ohms on adapter.
+## MIG reference input must separately be configured for 4000 ps / 250 MHz.
+set_property -dict {PACKAGE_PIN AY9 IOSTANDARD LVDS DIFF_TERM_ADV TERM_NONE} [get_ports BADJ_CLK_clk_p]
+set_property -dict {PACKAGE_PIN BA9 IOSTANDARD LVDS DIFF_TERM_ADV TERM_NONE} [get_ports BADJ_CLK_clk_n]
+create_clock -period 4.000 -name BOARD_SYSCLK_250M [get_ports BADJ_CLK_clk_p]
 
-## VCU118 C1 DQ[0:63]
-set c1_dq_pins {
-  F11 E11 F10 F9 H12 G12 E9 D9 R19 P19
-  M18 M17 N19 N18 N17 M16 L16 K16 L18 K18
-  J17 H17 H19 H18 F19 F18 E19 E18 G20 F20
-  E17 D16 D17 C17 C19 C18 D20 D19 C20 B20
-  N23 M23 R21 P21 R22 P22 T23 R23 K24 J24
-  M21 L21 K21 J21 K22 J22 H23 H22 E23 E22
-  F21 E21 F24 F23
-}
-set_property PACKAGE_PIN F11 [get_ports {C0_DDR4_dq[0]}]
-set_property PACKAGE_PIN E11 [get_ports {C0_DDR4_dq[1]}]
-set_property PACKAGE_PIN F10 [get_ports {C0_DDR4_dq[2]}]
-set_property PACKAGE_PIN F9 [get_ports {C0_DDR4_dq[3]}]
-set_property PACKAGE_PIN H12 [get_ports {C0_DDR4_dq[4]}]
-set_property PACKAGE_PIN G12 [get_ports {C0_DDR4_dq[5]}]
-set_property PACKAGE_PIN E9 [get_ports {C0_DDR4_dq[6]}]
-set_property PACKAGE_PIN D9 [get_ports {C0_DDR4_dq[7]}]
-set_property PACKAGE_PIN R19 [get_ports {C0_DDR4_dq[8]}]
-set_property PACKAGE_PIN P19 [get_ports {C0_DDR4_dq[9]}]
-set_property PACKAGE_PIN M18 [get_ports {C0_DDR4_dq[10]}]
-set_property PACKAGE_PIN M17 [get_ports {C0_DDR4_dq[11]}]
-set_property PACKAGE_PIN N19 [get_ports {C0_DDR4_dq[12]}]
-set_property PACKAGE_PIN N18 [get_ports {C0_DDR4_dq[13]}]
-set_property PACKAGE_PIN N17 [get_ports {C0_DDR4_dq[14]}]
-set_property PACKAGE_PIN M16 [get_ports {C0_DDR4_dq[15]}]
-set_property PACKAGE_PIN L16 [get_ports {C0_DDR4_dq[16]}]
-set_property PACKAGE_PIN K16 [get_ports {C0_DDR4_dq[17]}]
-set_property PACKAGE_PIN L18 [get_ports {C0_DDR4_dq[18]}]
-set_property PACKAGE_PIN K18 [get_ports {C0_DDR4_dq[19]}]
-set_property PACKAGE_PIN J17 [get_ports {C0_DDR4_dq[20]}]
-set_property PACKAGE_PIN H17 [get_ports {C0_DDR4_dq[21]}]
-set_property PACKAGE_PIN H19 [get_ports {C0_DDR4_dq[22]}]
-set_property PACKAGE_PIN H18 [get_ports {C0_DDR4_dq[23]}]
-set_property PACKAGE_PIN F19 [get_ports {C0_DDR4_dq[24]}]
-set_property PACKAGE_PIN F18 [get_ports {C0_DDR4_dq[25]}]
-set_property PACKAGE_PIN E19 [get_ports {C0_DDR4_dq[26]}]
-set_property PACKAGE_PIN E18 [get_ports {C0_DDR4_dq[27]}]
-set_property PACKAGE_PIN G20 [get_ports {C0_DDR4_dq[28]}]
-set_property PACKAGE_PIN F20 [get_ports {C0_DDR4_dq[29]}]
-set_property PACKAGE_PIN E17 [get_ports {C0_DDR4_dq[30]}]
-set_property PACKAGE_PIN D16 [get_ports {C0_DDR4_dq[31]}]
-set_property PACKAGE_PIN D17 [get_ports {C0_DDR4_dq[32]}]
-set_property PACKAGE_PIN C17 [get_ports {C0_DDR4_dq[33]}]
-set_property PACKAGE_PIN C19 [get_ports {C0_DDR4_dq[34]}]
-set_property PACKAGE_PIN C18 [get_ports {C0_DDR4_dq[35]}]
-set_property PACKAGE_PIN D20 [get_ports {C0_DDR4_dq[36]}]
-set_property PACKAGE_PIN D19 [get_ports {C0_DDR4_dq[37]}]
-set_property PACKAGE_PIN C20 [get_ports {C0_DDR4_dq[38]}]
-set_property PACKAGE_PIN B20 [get_ports {C0_DDR4_dq[39]}]
-set_property PACKAGE_PIN N23 [get_ports {C0_DDR4_dq[40]}]
-set_property PACKAGE_PIN M23 [get_ports {C0_DDR4_dq[41]}]
-set_property PACKAGE_PIN R21 [get_ports {C0_DDR4_dq[42]}]
-set_property PACKAGE_PIN P21 [get_ports {C0_DDR4_dq[43]}]
-set_property PACKAGE_PIN R22 [get_ports {C0_DDR4_dq[44]}]
-set_property PACKAGE_PIN P22 [get_ports {C0_DDR4_dq[45]}]
-set_property PACKAGE_PIN T23 [get_ports {C0_DDR4_dq[46]}]
-set_property PACKAGE_PIN R23 [get_ports {C0_DDR4_dq[47]}]
-set_property PACKAGE_PIN K24 [get_ports {C0_DDR4_dq[48]}]
-set_property PACKAGE_PIN J24 [get_ports {C0_DDR4_dq[49]}]
-set_property PACKAGE_PIN M21 [get_ports {C0_DDR4_dq[50]}]
-set_property PACKAGE_PIN L21 [get_ports {C0_DDR4_dq[51]}]
-set_property PACKAGE_PIN K21 [get_ports {C0_DDR4_dq[52]}]
-set_property PACKAGE_PIN J21 [get_ports {C0_DDR4_dq[53]}]
-set_property PACKAGE_PIN K22 [get_ports {C0_DDR4_dq[54]}]
-set_property PACKAGE_PIN J22 [get_ports {C0_DDR4_dq[55]}]
-set_property PACKAGE_PIN H23 [get_ports {C0_DDR4_dq[56]}]
-set_property PACKAGE_PIN H22 [get_ports {C0_DDR4_dq[57]}]
-set_property PACKAGE_PIN E23 [get_ports {C0_DDR4_dq[58]}]
-set_property PACKAGE_PIN E22 [get_ports {C0_DDR4_dq[59]}]
-set_property PACKAGE_PIN F21 [get_ports {C0_DDR4_dq[60]}]
-set_property PACKAGE_PIN E21 [get_ports {C0_DDR4_dq[61]}]
-set_property PACKAGE_PIN F24 [get_ports {C0_DDR4_dq[62]}]
-set_property PACKAGE_PIN F23 [get_ports {C0_DDR4_dq[63]}]
+## Address/control/CK/reset: Bank 66. All DDR address/control stays in one bank.
+## DQ[7:0]/DQS0/DM0: Bank 67 T0; DQ[15:8]/DQS1/DM1: Bank 67 T3.
+## DQS uses N6/N7; DM uses N0; DQ uses N2/N3/N4/N5/N8/N9/N10/N11.
+# FMC_HPC1_LA03_P, J2-G9 -> adapter -> J4-D9; IO_L1P_T0L_N0_DBC_66
+set_property PACKAGE_PIN BD12 [get_ports {C0_DDR3_0_addr[0]}]
+# FMC_HPC1_LA03_N, J2-G10 -> adapter -> J4-D8; IO_L1N_T0L_N1_DBC_66
+set_property PACKAGE_PIN BE12 [get_ports {C0_DDR3_0_addr[1]}]
+# FMC_HPC1_LA04_P, J2-H10 -> adapter -> J4-G9; IO_L2P_T0L_N2_66
+set_property PACKAGE_PIN BF12 [get_ports {C0_DDR3_0_addr[2]}]
+# FMC_HPC1_LA04_N, J2-H11 -> adapter -> J4-G10; IO_L2N_T0L_N3_66
+set_property PACKAGE_PIN BF11 [get_ports {C0_DDR3_0_addr[3]}]
+# FMC_HPC1_LA02_P, J2-H7 -> adapter -> J4-H14; IO_L3P_T0L_N4_AD15P_66
+set_property PACKAGE_PIN BC11 [get_ports {C0_DDR3_0_addr[4]}]
+# FMC_HPC1_LA02_N, J2-H8 -> adapter -> J4-H13; IO_L3N_T0L_N5_AD15N_66
+set_property PACKAGE_PIN BD11 [get_ports {C0_DDR3_0_addr[5]}]
+# FMC_HPC1_LA06_P, J2-C10 -> adapter -> J4-D15; IO_L4P_T0U_N6_DBC_AD7P_66
+set_property PACKAGE_PIN BD13 [get_ports {C0_DDR3_0_addr[6]}]
+# FMC_HPC1_LA06_N, J2-C11 -> adapter -> J4-D14; IO_L4N_T0U_N7_DBC_AD7N_66
+set_property PACKAGE_PIN BE13 [get_ports {C0_DDR3_0_addr[7]}]
+# FMC_HPC1_LA05_P, J2-D11 -> adapter -> J4-H7; IO_L5P_T0U_N8_AD14P_66
+set_property PACKAGE_PIN BE14 [get_ports {C0_DDR3_0_addr[8]}]
+# FMC_HPC1_LA05_N, J2-D12 -> adapter -> J4-H8; IO_L5N_T0U_N9_AD14N_66
+set_property PACKAGE_PIN BF14 [get_ports {C0_DDR3_0_addr[9]}]
+# FMC_HPC1_LA08_P, J2-G12 -> adapter -> J4-H11; IO_L6P_T0U_N10_AD6P_66
+set_property PACKAGE_PIN BE15 [get_ports {C0_DDR3_0_addr[10]}]
+# FMC_HPC1_LA08_N, J2-G13 -> adapter -> J4-H10; IO_L6N_T0U_N11_AD6N_66
+set_property PACKAGE_PIN BF15 [get_ports {C0_DDR3_0_addr[11]}]
+# FMC_HPC1_LA12_P, J2-G15 -> adapter -> J4-C11; IO_L19P_T3L_N0_DBC_AD9P_66
+set_property PACKAGE_PIN BC14 [get_ports {C0_DDR3_0_addr[12]}]
+# FMC_HPC1_LA12_N, J2-G16 -> adapter -> J4-C10; IO_L19N_T3L_N1_DBC_AD9N_66
+set_property PACKAGE_PIN BC13 [get_ports {C0_DDR3_0_addr[13]}]
+# FMC_HPC1_LA15_P, J2-H19 -> adapter -> J4-G13; IO_L20P_T3L_N2_AD1P_66
+set_property PACKAGE_PIN BB16 [get_ports {C0_DDR3_0_addr[14]}]
+# FMC_HPC1_LA15_N, J2-H20 -> adapter -> J4-G12; IO_L20N_T3L_N3_AD1N_66
+set_property PACKAGE_PIN BC16 [get_ports {C0_DDR3_0_addr[15]}]
+# FMC_HPC1_LA07_P, J2-H13 -> adapter -> J4-C14; IO_L21P_T3L_N4_AD8P_66
+set_property PACKAGE_PIN BC15 [get_ports {C0_DDR3_0_ba[0]}]
+# FMC_HPC1_LA07_N, J2-H14 -> adapter -> J4-C15; IO_L21N_T3L_N5_AD8N_66
+set_property PACKAGE_PIN BD15 [get_ports {C0_DDR3_0_ba[1]}]
+# FMC_HPC1_LA11_P, J2-H16 -> adapter -> J4-G16; IO_L22P_T3U_N6_DBC_AD0P_66
+set_property PACKAGE_PIN BA16 [get_ports {C0_DDR3_0_ba[2]}]
+# FMC_HPC1_LA09_P, J2-D14 -> adapter -> J4-C18; IO_L23P_T3U_N8_66
+set_property PACKAGE_PIN BA14 [get_ports {C0_DDR3_0_ras_n}]
+# FMC_HPC1_LA11_N, J2-H17 -> adapter -> J4-C19; IO_L22N_T3U_N7_DBC_AD0N_66
+set_property PACKAGE_PIN BA15 [get_ports {C0_DDR3_0_cas_n}]
+# FMC_HPC1_LA09_N, J2-D15 -> adapter -> J4-G15; IO_L23N_T3U_N9_66
+set_property PACKAGE_PIN BB14 [get_ports {C0_DDR3_0_we_n}]
+# FMC_HPC1_LA10_P, J2-C14 -> adapter -> J4-G19; IO_L24P_T3U_N10_66
+set_property PACKAGE_PIN BB13 [get_ports {C0_DDR3_0_cs_n[0]}]
+# FMC_HPC1_LA10_N, J2-C15 -> adapter -> J4-G18; IO_L24N_T3U_N11_66
+set_property PACKAGE_PIN BB12 [get_ports {C0_DDR3_0_cke[0]}]
+# FMC_HPC1_LA16_P, J2-G18 -> adapter -> J4-G6; IO_L16P_T2U_N6_QBC_AD3P_66
+set_property PACKAGE_PIN AV9 [get_ports {C0_DDR3_0_odt[0]}]
+# FMC_HPC1_LA16_N, J2-G19 -> adapter -> J4-G7; IO_L16N_T2U_N7_QBC_AD3N_66
+set_property PACKAGE_PIN AV8 [get_ports {C0_DDR3_0_reset_n}]
+# FMC_HPC1_CLK0_M2C_P, J2-H4 -> adapter -> J4-D11; IO_L12P_T1U_N10_GC_66
+set_property PACKAGE_PIN BC9 [get_ports {C0_DDR3_0_ck_p[0]}]
+# FMC_HPC1_CLK0_M2C_N, J2-H5 -> adapter -> J4-D12; IO_L12N_T1U_N11_GC_66
+set_property PACKAGE_PIN BC8 [get_ports {C0_DDR3_0_ck_n[0]}]
+# FMC_HPC1_LA19_P, J2-H22 -> adapter -> J4-G30; IO_L2P_T0L_N2_67
+set_property PACKAGE_PIN AW12 [get_ports {C0_DDR3_0_dq[0]}]
+# FMC_HPC1_LA19_N, J2-H23 -> adapter -> J4-G31; IO_L2N_T0L_N3_67
+set_property PACKAGE_PIN AY12 [get_ports {C0_DDR3_0_dq[1]}]
+# FMC_HPC1_LA20_P, J2-G21 -> adapter -> J4-H31; IO_L3P_T0L_N4_AD15P_67
+set_property PACKAGE_PIN AW11 [get_ports {C0_DDR3_0_dq[2]}]
+# FMC_HPC1_LA20_N, J2-G22 -> adapter -> J4-H32; IO_L3N_T0L_N5_AD15N_67
+set_property PACKAGE_PIN AY10 [get_ports {C0_DDR3_0_dq[3]}]
+# FMC_HPC1_LA22_P, J2-G24 -> adapter -> J4-G34; IO_L5P_T0U_N8_AD14P_67
+set_property PACKAGE_PIN AW13 [get_ports {C0_DDR3_0_dq[4]}]
+# FMC_HPC1_LA22_N, J2-G25 -> adapter -> J4-G33; IO_L5N_T0U_N9_AD14N_67
+set_property PACKAGE_PIN AY13 [get_ports {C0_DDR3_0_dq[5]}]
+# FMC_HPC1_LA21_P, J2-H25 -> adapter -> J4-H34; IO_L6P_T0U_N10_AD6P_67
+set_property PACKAGE_PIN AU11 [get_ports {C0_DDR3_0_dq[6]}]
+# FMC_HPC1_LA21_N, J2-H26 -> adapter -> J4-H35; IO_L6N_T0U_N11_AD6N_67
+set_property PACKAGE_PIN AV11 [get_ports {C0_DDR3_0_dq[7]}]
+# FMC_HPC1_LA26_P, J2-D26 -> adapter -> J4-G36; IO_L20P_T3L_N2_AD1P_67
+set_property PACKAGE_PIN AK15 [get_ports {C0_DDR3_0_dq[8]}]
+# FMC_HPC1_LA26_N, J2-D27 -> adapter -> J4-G37; IO_L20N_T3L_N3_AD1N_67
+set_property PACKAGE_PIN AL15 [get_ports {C0_DDR3_0_dq[9]}]
+# FMC_HPC1_LA30_P, J2-H34 -> adapter -> J4-H38; IO_L21P_T3L_N4_AD8P_67
+set_property PACKAGE_PIN AK12 [get_ports {C0_DDR3_0_dq[10]}]
+# FMC_HPC1_LA30_N, J2-H35 -> adapter -> J4-H37; IO_L21N_T3L_N5_AD8N_67
+set_property PACKAGE_PIN AL12 [get_ports {C0_DDR3_0_dq[11]}]
+# FMC_HPC1_LA31_P, J2-G33 -> adapter -> J4-G22; IO_L23P_T3U_N8_67
+set_property PACKAGE_PIN AM13 [get_ports {C0_DDR3_0_dq[12]}]
+# FMC_HPC1_LA31_N, J2-G34 -> adapter -> J4-G24; IO_L23N_T3U_N9_67
+set_property PACKAGE_PIN AM12 [get_ports {C0_DDR3_0_dq[13]}]
+# FMC_HPC1_LA33_P, J2-G36 -> adapter -> J4-G25; IO_L24P_T3U_N10_67
+set_property PACKAGE_PIN AK14 [get_ports {C0_DDR3_0_dq[14]}]
+# FMC_HPC1_LA33_N, J2-G37 -> adapter -> J4-H29; IO_L24N_T3U_N11_67
+set_property PACKAGE_PIN AK13 [get_ports {C0_DDR3_0_dq[15]}]
+# FMC_HPC1_LA25_P, J2-G27 -> adapter -> J4-H28; IO_L1P_T0L_N0_DBC_67
+set_property PACKAGE_PIN AT12 [get_ports {C0_DDR3_0_dm[0]}]
+# FMC_HPC1_LA27_P, J2-C26 -> adapter -> J4-C23; IO_L19P_T3L_N0_DBC_AD9P_67
+set_property PACKAGE_PIN AL14 [get_ports {C0_DDR3_0_dm[1]}]
+# FMC_HPC1_LA28_P, J2-H31 -> adapter -> J4-D26; IO_L4P_T0U_N6_DBC_AD7P_67
+set_property PACKAGE_PIN AV10 [get_ports {C0_DDR3_0_dqs_p[0]}]
+# FMC_HPC1_LA28_N, J2-H32 -> adapter -> J4-D27; IO_L4N_T0U_N7_DBC_AD7N_67
+set_property PACKAGE_PIN AW10 [get_ports {C0_DDR3_0_dqs_n[0]}]
+# FMC_HPC1_LA32_P, J2-H37 -> adapter -> J4-C26; IO_L22P_T3U_N6_DBC_AD0P_67
+set_property PACKAGE_PIN AJ13 [get_ports {C0_DDR3_0_dqs_p[1]}]
+# FMC_HPC1_LA32_N, J2-H38 -> adapter -> J4-C27; IO_L22N_T3U_N7_DBC_AD0N_67
+set_property PACKAGE_PIN AJ12 [get_ports {C0_DDR3_0_dqs_n[1]}]
 
-## VCU118 C1 DM[0:7]
-set c1_dm_pins {G11 R18 K17 G18 B18 P20 L23 G22}
-set_property PACKAGE_PIN G11 [get_ports {C0_DDR4_dm_n[0]}]
-set_property PACKAGE_PIN R18 [get_ports {C0_DDR4_dm_n[1]}]
-set_property PACKAGE_PIN K17 [get_ports {C0_DDR4_dm_n[2]}]
-set_property PACKAGE_PIN G18 [get_ports {C0_DDR4_dm_n[3]}]
-set_property PACKAGE_PIN B18 [get_ports {C0_DDR4_dm_n[4]}]
-set_property PACKAGE_PIN P20 [get_ports {C0_DDR4_dm_n[5]}]
-set_property PACKAGE_PIN L23 [get_ports {C0_DDR4_dm_n[6]}]
-set_property PACKAGE_PIN G22 [get_ports {C0_DDR4_dm_n[7]}]
+## Match the generated 1.5 V MIG electrical standards; DDR3 is not POD12.
+set_property IOSTANDARD SSTL15_DCI [get_ports {C0_DDR3_0_addr[*] C0_DDR3_0_ba[*] C0_DDR3_0_ras_n C0_DDR3_0_cas_n C0_DDR3_0_we_n C0_DDR3_0_cke[*] C0_DDR3_0_cs_n[*] C0_DDR3_0_odt[*] C0_DDR3_0_dm[*] C0_DDR3_0_dq[*]}]
+set_property IOSTANDARD DIFF_SSTL15_DCI [get_ports {C0_DDR3_0_ck_p[*] C0_DDR3_0_ck_n[*] C0_DDR3_0_dqs_p[*] C0_DDR3_0_dqs_n[*]}]
+set_property IOSTANDARD SSTL15 [get_ports C0_DDR3_0_reset_n]
+# Match MIG's recommended output slew; reset_n retains its default slew.
+set_property SLEW FAST [get_ports {C0_DDR3_0_addr[*] C0_DDR3_0_ba[*] C0_DDR3_0_ras_n C0_DDR3_0_cas_n C0_DDR3_0_we_n C0_DDR3_0_cke[*] C0_DDR3_0_cs_n[*] C0_DDR3_0_odt[*] C0_DDR3_0_dm[*] C0_DDR3_0_dq[*] C0_DDR3_0_ck_p[*] C0_DDR3_0_ck_n[*] C0_DDR3_0_dqs_p[*] C0_DDR3_0_dqs_n[*]}]
+set_property INTERNAL_VREF 0.75 [get_iobanks {66 67}]
+## VCU118 schematic sheet 12: VRP66/67 have their own 240-ohm resistors; no DCI cascade.
+## No severity downgrade and no DDR CLOCK_DEDICATED_ROUTE FALSE waiver is used.
 
-## VCU118 C1 DQS[0:7]
-set c1_dqs_c_pins {D10 P16 J19 E16 A18 M22 L20 G23}
-set c1_dqs_t_pins {D11 P17 K19 F16 A19 N22 M20 H24}
-set_property PACKAGE_PIN D10 [get_ports {C0_DDR4_dqs_c[0]}]
-set_property PACKAGE_PIN D11 [get_ports {C0_DDR4_dqs_t[0]}]
-set_property PACKAGE_PIN P16 [get_ports {C0_DDR4_dqs_c[1]}]
-set_property PACKAGE_PIN P17 [get_ports {C0_DDR4_dqs_t[1]}]
-set_property PACKAGE_PIN J19 [get_ports {C0_DDR4_dqs_c[2]}]
-set_property PACKAGE_PIN K19 [get_ports {C0_DDR4_dqs_t[2]}]
-set_property PACKAGE_PIN E16 [get_ports {C0_DDR4_dqs_c[3]}]
-set_property PACKAGE_PIN F16 [get_ports {C0_DDR4_dqs_t[3]}]
-set_property PACKAGE_PIN A18 [get_ports {C0_DDR4_dqs_c[4]}]
-set_property PACKAGE_PIN A19 [get_ports {C0_DDR4_dqs_t[4]}]
-set_property PACKAGE_PIN M22 [get_ports {C0_DDR4_dqs_c[5]}]
-set_property PACKAGE_PIN N22 [get_ports {C0_DDR4_dqs_t[5]}]
-set_property PACKAGE_PIN L20 [get_ports {C0_DDR4_dqs_c[6]}]
-set_property PACKAGE_PIN M20 [get_ports {C0_DDR4_dqs_t[6]}]
-set_property PACKAGE_PIN G23 [get_ports {C0_DDR4_dqs_c[7]}]
-set_property PACKAGE_PIN H24 [get_ports {C0_DDR4_dqs_t[7]}]
-
-## VCU118 C1 address/control
-set_property PACKAGE_PIN D14 [get_ports {C0_DDR4_adr[0]}]
-set_property PACKAGE_PIN B15 [get_ports {C0_DDR4_adr[1]}]
-set_property PACKAGE_PIN B16 [get_ports {C0_DDR4_adr[2]}]
-set_property PACKAGE_PIN C14 [get_ports {C0_DDR4_adr[3]}]
-set_property PACKAGE_PIN C15 [get_ports {C0_DDR4_adr[4]}]
-set_property PACKAGE_PIN A13 [get_ports {C0_DDR4_adr[5]}]
-set_property PACKAGE_PIN A14 [get_ports {C0_DDR4_adr[6]}]
-set_property PACKAGE_PIN A15 [get_ports {C0_DDR4_adr[7]}]
-set_property PACKAGE_PIN A16 [get_ports {C0_DDR4_adr[8]}]
-set_property PACKAGE_PIN B12 [get_ports {C0_DDR4_adr[9]}]
-set_property PACKAGE_PIN C12 [get_ports {C0_DDR4_adr[10]}]
-set_property PACKAGE_PIN B13 [get_ports {C0_DDR4_adr[11]}]
-set_property PACKAGE_PIN C13 [get_ports {C0_DDR4_adr[12]}]
-set_property PACKAGE_PIN D15 [get_ports {C0_DDR4_adr[13]}]
-set_property PACKAGE_PIN H14 [get_ports {C0_DDR4_adr[14]}]
-set_property PACKAGE_PIN H15 [get_ports {C0_DDR4_adr[15]}]
-set_property PACKAGE_PIN F15 [get_ports {C0_DDR4_adr[16]}]
-set_property PACKAGE_PIN G15 [get_ports {C0_DDR4_ba[0]}]
-set_property PACKAGE_PIN G13 [get_ports {C0_DDR4_ba[1]}]
-set_property PACKAGE_PIN H13 [get_ports {C0_DDR4_bg[0]}]
-set_property PACKAGE_PIN E14 [get_ports {C0_DDR4_ck_c[0]}]
-set_property PACKAGE_PIN F14 [get_ports {C0_DDR4_ck_t[0]}]
-set_property PACKAGE_PIN A10 [get_ports {C0_DDR4_cke[0]}]
-set_property PACKAGE_PIN F13 [get_ports {C0_DDR4_cs_n[0]}]
-set_property PACKAGE_PIN C8 [get_ports {C0_DDR4_odt[0]}]
-set_property PACKAGE_PIN E13 [get_ports C0_DDR4_act_n]
-set_property PACKAGE_PIN N20 [get_ports C0_DDR4_reset_n]
-
-## DDR4 MIG 使用 DCI 标准；CK �? SSTL 差分时钟，DQ/DM/DQS �? POD 数据接口
-set_property IOSTANDARD SSTL12_DCI [get_ports {C0_DDR4_act_n C0_DDR4_adr[*] C0_DDR4_ba[*] C0_DDR4_bg[*] C0_DDR4_cke[*] C0_DDR4_cs_n[*] C0_DDR4_odt[*]}]
-set_property IOSTANDARD DIFF_SSTL12_DCI [get_ports {C0_DDR4_ck_c[*] C0_DDR4_ck_t[*]}]
-set_property IOSTANDARD POD12_DCI [get_ports {C0_DDR4_dm_n[*] C0_DDR4_dq[*]}]
-set_property IOSTANDARD DIFF_POD12_DCI [get_ports {C0_DDR4_dqs_c[*] C0_DDR4_dqs_t[*]}]
-set_property IOSTANDARD LVCMOS12 [get_ports C0_DDR4_reset_n]
-
-## VCU118 DDR4 C1 使用 FPGA Bank 71/72/73，板�? VREF 未外�?
-set_property INTERNAL_VREF 0.6 [get_iobanks {71 72 73}]
-
-## VCU118 Rev2 SW5 CPU_RESET 按键，高有效：松开为低、按下为高；L19，Bank 73，VCCO=1.2V
+## VCU118 Rev2 SW5 CPU_RESET: active high; L19, Bank 73, VCCO = 1.2 V.
 set_property PACKAGE_PIN L19 [get_ports sys_rst]
 set_property IOSTANDARD LVCMOS12 [get_ports sys_rst]
 set_false_path -from [get_ports sys_rst]
 
-## VCU118 板载 CP2105 USB-UART（UART1）：CP2105 TXD_SCI_O -> FPGA rx(AW25)，FPGA tx(BB21) -> CP2105 RXD_SCI_I
+## VCU118 CP2105 UART: TXD_SCI_O -> FPGA rx(AW25); FPGA tx(BB21) -> RXD_SCI_I.
 set_property PACKAGE_PIN AW25 [get_ports rx]
 set_property PACKAGE_PIN BB21 [get_ports tx]
 set_property IOSTANDARD LVCMOS18 [get_ports {rx tx}]
 
-## C910 JTAG 调试口，FMC IO 子卡接入 VCU118 J22（FMCP HSPC�?
-## 子卡 J20-17 / K17 = HA_N_17 -> J22 FMCP_HSPC_HA17_CC_N -> VCU118 P11 -> jtag_tclk
-## 子卡 J20-18 / K16 = HA_P_17 -> J22 FMCP_HSPC_HA17_CC_P -> VCU118 R11 -> jtag_tms
-## 子卡 J20-19 / J19 = HA_N_18 -> J22 FMCP_HSPC_HA18_N    -> VCU118 N15 -> jtag_tdi
-## 子卡 J20-20 / J18 = HA_P_18 -> J22 FMCP_HSPC_HA18_P    -> VCU118 P15 -> jtag_tdo
-## 子卡 J20-21 / H20 = LA_N_15 -> J22 FMCP_HSPC_LA15_N    -> VCU118 AG33 -> jtag_trstn
+## C910 PL JTAG on FMC IO daughtercard at VCU118 J22 (FMCP HSPC).
+## FMC IO daughtercard J20-17 / K17 = HA_N_17 -> J22 FMCP_HSPC_HA17_CC_N -> VCU118 P11 -> jtag_tclk
+## FMC IO daughtercard J20-18 / K16 = HA_P_17 -> J22 FMCP_HSPC_HA17_CC_P -> VCU118 R11 -> jtag_tms
+## FMC IO daughtercard J20-19 / J19 = HA_N_18 -> J22 FMCP_HSPC_HA18_N    -> VCU118 N15 -> jtag_tdi
+## FMC IO daughtercard J20-20 / J18 = HA_P_18 -> J22 FMCP_HSPC_HA18_P    -> VCU118 P15 -> jtag_tdo
+## FMC IO daughtercard J20-21 / H20 = LA_N_15 -> J22 FMCP_HSPC_LA15_N    -> VCU118 AG33 -> jtag_trstn
 set_property PACKAGE_PIN P11 [get_ports jtag_tclk]
 set_property PACKAGE_PIN R11 [get_ports jtag_tms]
 set_property PACKAGE_PIN N15 [get_ports jtag_tdi]
@@ -181,5 +155,5 @@ set_property CLOCK_BUFFER_TYPE NONE [get_ports jtag_tclk]
 # Low-speed debug TCK: allow fabric routing only on the IBUF-to-BUFG input net.
 set_property CLOCK_DEDICATED_ROUTE FALSE [get_nets {jtag_tclk_IBUF_inst/O}]
 create_clock -period 100.000 -name C910_JTAG_TCK [get_ports jtag_tclk]
-set_clock_groups -asynchronous -group [get_clocks C910_JTAG_TCK] -group [get_clocks -include_generated_clocks C1_DDR4_SYSCLK1_250M]
+set_clock_groups -asynchronous -group [get_clocks C910_JTAG_TCK] -group [get_clocks -include_generated_clocks BOARD_SYSCLK_250M]
 set_false_path -from [get_ports jtag_trstn]

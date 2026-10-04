@@ -1,0 +1,56 @@
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
+| Date         : Sun Oct  4 01:27:18 2026
+| Host         : DESKTOP-T5210HE running 64-bit major release  (build 9200)
+| Command      : report_drc -ruledeck bitstream_checks -file D:/Xilinx/PROJECT/C910_SOC_VCU118_FMC_DDR3_MIG/tmp/fmc_hpc1_check_20261004/results_4/drc_bitstream.rpt
+| Design       : validate_pinout_top
+| Device       : xcvu9p-flga2104-2L-e
+| Speed File   : -2L
+| Design State : Fully Routed
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Report DRC
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: checkpoint_pincheck
+      Design limits: <entire design considered>
+           Ruledeck: bitstream_checks
+             Max violations: <unlimited>
+             Violations found: 1
++-----------+----------+-------------------+------------+
+| Rule      | Severity | Description       | Violations |
++-----------+----------+-------------------+------------+
+| RTSTAT-10 | Warning  | No routable loads | 1          |
++-----------+----------+-------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+RTSTAT-10#1 Warning
+No routable loads  
+123 net(s) have no routable loads. The problem bus(es) and/or net(s) are DDR3/inst/u_ddr3_mem_intfc/u_ddr_cal_riu/LMB_CE_riu,
+DDR3/inst/u_ddr3_mem_intfc/u_ddr_cal_riu/LMB_UE_riu,
+DDR3/inst/u_ddr3_mem_intfc/u_ddr_cal_top/u_ddr_cal/u_xsdb_arbiter/Q[12],
+DDR3/inst/u_ddr3_mem_intfc/u_ddr_cal_top/u_ddr_cal/u_xsdb_arbiter/Q[13],
+DDR3/inst/u_ddr3_mem_intfc/u_ddr_cal_top/u_ddr_cal/u_xsdb_arbiter/Q[14],
+DDR3/inst/u_ddr3_mem_intfc/u_ddr_cal_top/u_ddr_cal/u_xsdb_arbiter/Q[15],
+DDR3/inst/u_ddr3_mem_intfc/u_phy2clb_fixdly_rdy_low/SYNC[0].sync_reg[1],
+DDR3/inst/u_ddr3_mem_intfc/u_phy2clb_fixdly_rdy_low/SYNC[1].sync_reg[1],
+DDR3/inst/u_ddr3_mem_intfc/u_phy2clb_fixdly_rdy_upp/SYNC[0].sync_reg[1],
+DDR3/inst/u_ddr3_mem_intfc/u_phy2clb_fixdly_rdy_upp/SYNC[1].sync_reg[1],
+DDR3/inst/u_ddr3_mem_intfc/u_phy2clb_phy_rdy_low/SYNC[0].sync_reg[1],
+DDR3/inst/u_ddr3_mem_intfc/u_phy2clb_phy_rdy_low/SYNC[1].sync_reg[1],
+DDR3/inst/u_ddr3_mem_intfc/u_phy2clb_phy_rdy_upp/SYNC[0].sync_reg[1],
+DDR3/inst/u_ddr3_mem_intfc/u_phy2clb_phy_rdy_upp/SYNC[1].sync_reg[1],
+DDR3/inst/u_ddr3_mem_intfc/u_phy2clb_phy_rdy_upp/SYNC[2].sync_reg[1]
+ (the first 15 of 121 listed).
+Related violations: <none>
+
+
