@@ -216,7 +216,7 @@ limitations under the License.
 
 
 
-  `define L2_CACHE_1M
+  `define L2_CACHE_512K
 
 
 

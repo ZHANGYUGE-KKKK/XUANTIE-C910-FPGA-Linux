@@ -86,7 +86,7 @@ output           wb_stage_fatal_err;
 output           wb_stage_vld;           
 output           wb_tag_cen;             
 output           wb_tag_gwen;            
-output  [8  :0]  wb_tag_index;           
+output  [`L2C_TAG_INDEX_WIDTH-1:0]  wb_tag_index;           
 output           wb_tag_req;             
 
 // &Regs; @22
@@ -146,7 +146,7 @@ wire             wb_stage_fatal_err;
 wire    [4  :0]  wb_stage_resp_after_ecc; 
 wire             wb_tag_cen;             
 wire             wb_tag_gwen;            
-wire    [8  :0]  wb_tag_index;           
+wire    [`L2C_TAG_INDEX_WIDTH-1:0]  wb_tag_index;           
 wire             wb_tag_req;             
 
 

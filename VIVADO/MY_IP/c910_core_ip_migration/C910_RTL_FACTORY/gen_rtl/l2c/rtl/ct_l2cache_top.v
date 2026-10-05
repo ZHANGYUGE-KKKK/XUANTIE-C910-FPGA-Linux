@@ -42,10 +42,10 @@ module ct_l2cache_top(
 // &Ports; @26
 input            l2c_data_clk_x;    
 input   [511:0]  l2c_data_din;      
-input   [12 :0]  l2c_data_index0;   
-input   [12 :0]  l2c_data_index1;   
-input   [12 :0]  l2c_data_index2;   
-input   [12 :0]  l2c_data_index3;   
+input   [`L2C_DATA_INDEX_WIDTH-1:0]  l2c_data_index0;   
+input   [`L2C_DATA_INDEX_WIDTH-1:0]  l2c_data_index1;   
+input   [`L2C_DATA_INDEX_WIDTH-1:0]  l2c_data_index2;   
+input   [`L2C_DATA_INDEX_WIDTH-1:0]  l2c_data_index3;   
 input   [3  :0]  l2c_data_ram_cen;  
 input   [3  :0]  l2c_data_wen;      
 input   [143:0]  l2c_dirty_din;     
@@ -53,15 +53,15 @@ input            l2c_dirty_gwen;
 input            l2c_dirty_ram_cen; 
 input   [143:0]  l2c_dirty_wen;     
 input            l2c_tag_clk_x;     
-input   [383:0]  l2c_tag_din;       
+input   [16*`L2C_TAG_DATA_WIDTH-1:0]  l2c_tag_din;       
 input            l2c_tag_gwen;      
-input   [8  :0]  l2c_tag_index;     
+input   [`L2C_TAG_INDEX_WIDTH-1:0]  l2c_tag_index;     
 input            l2c_tag_ram_cen;   
-input   [383:0]  l2c_tag_wen;       
+input   [16*`L2C_TAG_DATA_WIDTH-1:0]  l2c_tag_wen;       
 input            pad_yy_icg_scan_en; 
 output  [511:0]  l2c_data_dout;     
 output  [143:0]  l2c_dirty_dout;    
-output  [383:0]  l2c_tag_dout;      
+output  [16*`L2C_TAG_DATA_WIDTH-1:0]  l2c_tag_dout;      
 
 // &Regs; @27
 
@@ -71,10 +71,10 @@ wire             l2c_data_clk_x;
 wire    [511:0]  l2c_data_din;      
 wire    [511:0]  l2c_data_dout;     
 wire    [3  :0]  l2c_data_gwen;     
-wire    [12 :0]  l2c_data_index0;   
-wire    [12 :0]  l2c_data_index1;   
-wire    [12 :0]  l2c_data_index2;   
-wire    [12 :0]  l2c_data_index3;   
+wire    [`L2C_DATA_INDEX_WIDTH-1:0]  l2c_data_index0;   
+wire    [`L2C_DATA_INDEX_WIDTH-1:0]  l2c_data_index1;   
+wire    [`L2C_DATA_INDEX_WIDTH-1:0]  l2c_data_index2;   
+wire    [`L2C_DATA_INDEX_WIDTH-1:0]  l2c_data_index3;   
 wire    [3  :0]  l2c_data_ram_cen;  
 wire    [3  :0]  l2c_data_wen;      
 wire    [127:0]  l2c_data_wen0;     
@@ -88,12 +88,12 @@ wire             l2c_dirty_ram_cen;
 wire    [143:0]  l2c_dirty_wen;     
 wire             l2c_tag_clk;       
 wire             l2c_tag_clk_x;     
-wire    [383:0]  l2c_tag_din;       
-wire    [383:0]  l2c_tag_dout;      
+wire    [16*`L2C_TAG_DATA_WIDTH-1:0]  l2c_tag_din;       
+wire    [16*`L2C_TAG_DATA_WIDTH-1:0]  l2c_tag_dout;      
 wire             l2c_tag_gwen;      
-wire    [8  :0]  l2c_tag_index;     
+wire    [`L2C_TAG_INDEX_WIDTH-1:0]  l2c_tag_index;     
 wire             l2c_tag_ram_cen;   
-wire    [383:0]  l2c_tag_wen;       
+wire    [16*`L2C_TAG_DATA_WIDTH-1:0]  l2c_tag_wen;       
 wire             pad_yy_icg_scan_en; 
 
 

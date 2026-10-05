@@ -62,7 +62,7 @@ module ct_l2c_data(
 input   [3  :0]  ciu_l2c_data_acc_cycle; 
 input            ciu_l2c_data_setup;    
 input   [511:0]  cmp_data_din;          
-input   [12 :0]  cmp_data_index;        
+input   [`L2C_DATA_INDEX_WIDTH-1:0]  cmp_data_index;        
 input            cmp_data_req;          
 input            cmp_data_req_gate;     
 input            cmp_data_wen;          
@@ -76,7 +76,7 @@ input            cpurst_b;
 input            forever_cpuclk;        
 input   [4  :0]  icc_data_cen;          
 input            icc_data_flop;         
-input   [12 :0]  icc_data_index;        
+input   [`L2C_DATA_INDEX_WIDTH-1:0]  icc_data_index;        
 input            icc_data_req;          
 input            l2c_clk;               
 input   [511:0]  l2c_data_dout;         
@@ -95,10 +95,10 @@ output           data_yy_flop_vld;
 output           data_yy_ram_idle;      
 output  [511:0]  l2c_data_din;          
 output  [511:0]  l2c_data_dout_flop;    
-output  [12 :0]  l2c_data_index0;       
-output  [12 :0]  l2c_data_index1;       
-output  [12 :0]  l2c_data_index2;       
-output  [12 :0]  l2c_data_index3;       
+output  [`L2C_DATA_INDEX_WIDTH-1:0]  l2c_data_index0;       
+output  [`L2C_DATA_INDEX_WIDTH-1:0]  l2c_data_index1;       
+output  [`L2C_DATA_INDEX_WIDTH-1:0]  l2c_data_index2;       
+output  [`L2C_DATA_INDEX_WIDTH-1:0]  l2c_data_index3;       
 output  [3  :0]  l2c_data_ram_cen;      
 output           l2c_data_ram_clk_en_x; 
 output  [3  :0]  l2c_data_wen;          
@@ -119,21 +119,21 @@ reg     [4  :0]  l2c_data_cen_flop;
 reg     [511:0]  l2c_data_din;          
 reg     [511:0]  l2c_data_din_flop;     
 reg     [511:0]  l2c_data_dout_flop;    
-reg     [12 :0]  l2c_data_index0;       
-reg     [12 :0]  l2c_data_index0_flop;  
-reg     [12 :0]  l2c_data_index1;       
-reg     [12 :0]  l2c_data_index1_flop;  
-reg     [12 :0]  l2c_data_index2;       
-reg     [12 :0]  l2c_data_index2_flop;  
-reg     [12 :0]  l2c_data_index3;       
-reg     [12 :0]  l2c_data_index3_flop;  
+reg     [`L2C_DATA_INDEX_WIDTH-1:0]  l2c_data_index0;       
+reg     [`L2C_DATA_INDEX_WIDTH-1:0]  l2c_data_index0_flop;  
+reg     [`L2C_DATA_INDEX_WIDTH-1:0]  l2c_data_index1;       
+reg     [`L2C_DATA_INDEX_WIDTH-1:0]  l2c_data_index1_flop;  
+reg     [`L2C_DATA_INDEX_WIDTH-1:0]  l2c_data_index2;       
+reg     [`L2C_DATA_INDEX_WIDTH-1:0]  l2c_data_index2_flop;  
+reg     [`L2C_DATA_INDEX_WIDTH-1:0]  l2c_data_index3;       
+reg     [`L2C_DATA_INDEX_WIDTH-1:0]  l2c_data_index3_flop;  
 reg     [4  :0]  l2c_data_wen_flop;     
 
 // &Wires; @24
 wire    [3  :0]  ciu_l2c_data_acc_cycle; 
 wire             ciu_l2c_data_setup;    
 wire    [511:0]  cmp_data_din;          
-wire    [12 :0]  cmp_data_index;        
+wire    [`L2C_DATA_INDEX_WIDTH-1:0]  cmp_data_index;        
 wire             cmp_data_req;          
 wire             cmp_data_req_gate;     
 wire             cmp_data_wen;          
@@ -170,12 +170,12 @@ wire             data_yy_ram_idle;
 wire             forever_cpuclk;        
 wire    [4  :0]  icc_data_cen;          
 wire             icc_data_flop;         
-wire    [12 :0]  icc_data_index;        
+wire    [`L2C_DATA_INDEX_WIDTH-1:0]  icc_data_index;        
 wire             icc_data_req;          
 wire             l2c_clk;               
 wire    [511:0]  l2c_data_din_pre;      
 wire    [511:0]  l2c_data_dout;         
-wire    [12 :0]  l2c_data_index_pre;    
+wire    [`L2C_DATA_INDEX_WIDTH-1:0]  l2c_data_index_pre;    
 wire    [3  :0]  l2c_data_ram_cen;      
 wire    [4  :0]  l2c_data_ram_cen_pre;  
 wire             l2c_data_ram_clk_en_x; 
@@ -358,18 +358,18 @@ end
 //------------------------------------------------
 
 // &CombBeg; @154
-always @( l2c_data_index1_flop[12:0]
+always @( l2c_data_index1_flop[`L2C_DATA_INDEX_WIDTH-1:0]
        or l2c_data_cen_flop[4:0]
        or l2c_data_ram_cen_pre[4:0]
        or l2c_data_din_flop[511:0]
-       or l2c_data_index0_flop[12:0]
-       or l2c_data_index_pre[12:0]
+       or l2c_data_index0_flop[`L2C_DATA_INDEX_WIDTH-1:0]
+       or l2c_data_index_pre[`L2C_DATA_INDEX_WIDTH-1:0]
        or l2c_data_wen_flop[4:0]
        or ciu_l2c_data_setup
-       or l2c_data_index3_flop[12:0]
+       or l2c_data_index3_flop[`L2C_DATA_INDEX_WIDTH-1:0]
        or l2c_data_din_pre[511:0]
        or l2c_data_wen_pre
-       or l2c_data_index2_flop[12:0])
+       or l2c_data_index2_flop[`L2C_DATA_INDEX_WIDTH-1:0])
 begin
 if(ciu_l2c_data_setup)
 begin
