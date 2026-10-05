@@ -365,7 +365,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>96d798b6</spirit:value>
+            <spirit:value>f8f22b36</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -381,7 +381,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>96d798b6</spirit:value>
+            <spirit:value>f8f22b36</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1082,17 +1082,17 @@
       <spirit:modelParameter xsi:type="spirit:nameValueTypeType" spirit:dataType="std_logic_vector">
         <spirit:name>RESET_VECTOR</spirit:name>
         <spirit:displayName>Reset Vector</spirit:displayName>
-        <spirit:value spirit:format="bitString" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.RESET_VECTOR" spirit:bitStringLength="40">0</spirit:value>
+        <spirit:value spirit:format="bitString" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.RESET_VECTOR" spirit:bitStringLength="40">&quot;0000000000000000000000000000000000000000&quot;</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="std_logic_vector">
         <spirit:name>CPU_APB_BASE</spirit:name>
         <spirit:displayName>Cpu Apb Base</spirit:displayName>
-        <spirit:value spirit:format="bitString" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.CPU_APB_BASE" spirit:bitStringLength="40">134217728</spirit:value>
+        <spirit:value spirit:format="bitString" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.CPU_APB_BASE" spirit:bitStringLength="40">&quot;0000000000001000000000000000000000000000&quot;</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>HART_ID</spirit:name>
         <spirit:displayName>Hart Id</spirit:displayName>
-        <spirit:value spirit:format="bitString" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.HART_ID" spirit:bitStringLength="3">0</spirit:value>
+        <spirit:value spirit:format="bitString" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.HART_ID" spirit:bitStringLength="3">&quot;000&quot;</spirit:value>
       </spirit:modelParameter>
     </spirit:modelParameters>
   </spirit:model>
@@ -1341,6 +1341,10 @@
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
+        <spirit:name>C910_RTL_FACTORY/gen_rtl/fpga/rtl/ct_f_spsram_128x144.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
         <spirit:name>C910_RTL_FACTORY/gen_rtl/fpga/rtl/ct_f_spsram_256x144.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
@@ -1373,11 +1377,19 @@
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
+        <spirit:name>C910_RTL_FACTORY/gen_rtl/fpga/rtl/ct_f_spsram_128x104.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
         <spirit:name>C910_RTL_FACTORY/gen_rtl/fpga/rtl/ct_f_spsram_256x100.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
         <spirit:name>C910_RTL_FACTORY/gen_rtl/fpga/rtl/ct_f_spsram_512x96.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>C910_RTL_FACTORY/gen_rtl/fpga/rtl/ct_f_spsram_2048x128.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -2601,6 +2613,10 @@
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
+        <spirit:name>C910_RTL_FACTORY/gen_rtl/l2c/rtl/ct_spsram_128x144.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
         <spirit:name>C910_RTL_FACTORY/gen_rtl/l2c/rtl/ct_spsram_256x144.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
@@ -2633,11 +2649,19 @@
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
+        <spirit:name>C910_RTL_FACTORY/gen_rtl/l2c/rtl/ct_spsram_128x104.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
         <spirit:name>C910_RTL_FACTORY/gen_rtl/l2c/rtl/ct_spsram_256x100.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
         <spirit:name>C910_RTL_FACTORY/gen_rtl/l2c/rtl/ct_spsram_512x96.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>C910_RTL_FACTORY/gen_rtl/l2c/rtl/ct_spsram_2048x128.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -3097,6 +3121,10 @@
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
+        <spirit:name>C910_RTL_FACTORY/gen_rtl/fpga/rtl/ct_f_spsram_128x144.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
         <spirit:name>C910_RTL_FACTORY/gen_rtl/fpga/rtl/ct_f_spsram_256x144.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
@@ -3129,11 +3157,19 @@
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
+        <spirit:name>C910_RTL_FACTORY/gen_rtl/fpga/rtl/ct_f_spsram_128x104.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
         <spirit:name>C910_RTL_FACTORY/gen_rtl/fpga/rtl/ct_f_spsram_256x100.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
         <spirit:name>C910_RTL_FACTORY/gen_rtl/fpga/rtl/ct_f_spsram_512x96.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>C910_RTL_FACTORY/gen_rtl/fpga/rtl/ct_f_spsram_2048x128.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -4357,6 +4393,10 @@
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
+        <spirit:name>C910_RTL_FACTORY/gen_rtl/l2c/rtl/ct_spsram_128x144.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
         <spirit:name>C910_RTL_FACTORY/gen_rtl/l2c/rtl/ct_spsram_256x144.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
@@ -4389,11 +4429,19 @@
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
+        <spirit:name>C910_RTL_FACTORY/gen_rtl/l2c/rtl/ct_spsram_128x104.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
         <spirit:name>C910_RTL_FACTORY/gen_rtl/l2c/rtl/ct_spsram_256x100.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
         <spirit:name>C910_RTL_FACTORY/gen_rtl/l2c/rtl/ct_spsram_512x96.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>C910_RTL_FACTORY/gen_rtl/l2c/rtl/ct_spsram_2048x128.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -4630,17 +4678,17 @@
     <spirit:parameter>
       <spirit:name>RESET_VECTOR</spirit:name>
       <spirit:displayName>Reset Vector</spirit:displayName>
-      <spirit:value spirit:format="bitString" spirit:resolve="user" spirit:id="PARAM_VALUE.RESET_VECTOR" spirit:bitStringLength="40">0</spirit:value>
+      <spirit:value spirit:format="bitString" spirit:resolve="user" spirit:id="PARAM_VALUE.RESET_VECTOR" spirit:bitStringLength="40">&quot;0000000000000000000000000000000000000000&quot;</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>CPU_APB_BASE</spirit:name>
       <spirit:displayName>Cpu Apb Base</spirit:displayName>
-      <spirit:value spirit:format="bitString" spirit:resolve="user" spirit:id="PARAM_VALUE.CPU_APB_BASE" spirit:bitStringLength="40">134217728</spirit:value>
+      <spirit:value spirit:format="bitString" spirit:resolve="user" spirit:id="PARAM_VALUE.CPU_APB_BASE" spirit:bitStringLength="40">&quot;0000000000001000000000000000000000000000&quot;</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>HART_ID</spirit:name>
       <spirit:displayName>Hart Id</spirit:displayName>
-      <spirit:value spirit:format="bitString" spirit:resolve="user" spirit:id="PARAM_VALUE.HART_ID" spirit:bitStringLength="3">0</spirit:value>
+      <spirit:value spirit:format="bitString" spirit:resolve="user" spirit:id="PARAM_VALUE.HART_ID" spirit:bitStringLength="3">&quot;000&quot;</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>Component_Name</spirit:name>
@@ -4680,8 +4728,8 @@
       </xilinx:taxonomies>
       <xilinx:displayName>C910_core</xilinx:displayName>
       <xilinx:definitionSource>package_project</xilinx:definitionSource>
-      <xilinx:coreRevision>4</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2026-10-05T04:27:40Z</xilinx:coreCreationDateTime>
+      <xilinx:coreRevision>6</xilinx:coreRevision>
+      <xilinx:coreCreationDateTime>2026-10-05T09:23:22Z</xilinx:coreCreationDateTime>
       <xilinx:tags>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@2b1a3ca8_ARCHIVE_LOCATION">d:/xilinx_fpga/c910_uart</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@1a614a56_ARCHIVE_LOCATION">d:/xilinx_fpga/c910_uart</xilinx:tag>
@@ -4710,16 +4758,28 @@
         <xilinx:tag xilinx:name="ui.data.coregen.dd@3c05e5cc_ARCHIVE_LOCATION">D:/Xilinx_FPGA/C910_SOC/VIVADO/MY_IP/c910_core_ip_migration</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@1a2af75e_ARCHIVE_LOCATION">D:/Xilinx_FPGA/C910_SOC/VIVADO/MY_IP/c910_core_ip_migration</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@35d4b0e9_ARCHIVE_LOCATION">D:/Xilinx_FPGA/C910_SOC/VIVADO/MY_IP/c910_core_ip_migration</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@445db5fb_ARCHIVE_LOCATION">d:/Xilinx_FPGA/C910_SOC_L2CACHE_Coremark_Pro_Test/XUANTIE-C910-FPGA-Linux/VIVADO/MY_IP/c910_core_ip_migration</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1e8eeefe_ARCHIVE_LOCATION">d:/Xilinx_FPGA/C910_SOC_L2CACHE_Coremark_Pro_Test/XUANTIE-C910-FPGA-Linux/VIVADO/MY_IP/c910_core_ip_migration</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6341cb7e_ARCHIVE_LOCATION">d:/Xilinx_FPGA/C910_SOC_L2CACHE_Coremark_Pro_Test/XUANTIE-C910-FPGA-Linux/VIVADO/MY_IP/c910_core_ip_migration</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@391f611c_ARCHIVE_LOCATION">d:/Xilinx_FPGA/C910_SOC_L2CACHE_Coremark_Pro_Test/XUANTIE-C910-FPGA-Linux/VIVADO/MY_IP/c910_core_ip_migration</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@719e5aa_ARCHIVE_LOCATION">d:/Xilinx_FPGA/C910_SOC_L2CACHE_Coremark_Pro_Test/XUANTIE-C910-FPGA-Linux/VIVADO/MY_IP/c910_core_ip_migration</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@15625168_ARCHIVE_LOCATION">d:/Xilinx_FPGA/C910_SOC_L2CACHE_Coremark_Pro_Test/XUANTIE-C910-FPGA-Linux/VIVADO/MY_IP/c910_core_ip_migration</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5b33c56f_ARCHIVE_LOCATION">d:/Xilinx_FPGA/C910_SOC_L2CACHE_Coremark_Pro_Test/XUANTIE-C910-FPGA-Linux/VIVADO/MY_IP/c910_core_ip_migration</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3d8d3241_ARCHIVE_LOCATION">d:/Xilinx_FPGA/C910_SOC_L2CACHE_Coremark_Pro_Test/XUANTIE-C910-FPGA-Linux/VIVADO/MY_IP/c910_core_ip_migration</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1c04c116_ARCHIVE_LOCATION">d:/Xilinx_FPGA/C910_SOC_L2CACHE_Coremark_Pro_Test/XUANTIE-C910-FPGA-Linux/VIVADO/MY_IP/c910_core_ip_migration</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1e6d5c71_ARCHIVE_LOCATION">d:/Xilinx_FPGA/C910_SOC_L2CACHE_Coremark_Pro_Test/XUANTIE-C910-FPGA-Linux/VIVADO/MY_IP/c910_core_ip_migration</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@750f576_ARCHIVE_LOCATION">d:/Xilinx_FPGA/C910_SOC_L2CACHE_Coremark_Pro_Test/XUANTIE-C910-FPGA-Linux/VIVADO/MY_IP/c910_core_ip_migration</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5ed8a0b2_ARCHIVE_LOCATION">d:/Xilinx_FPGA/C910_SOC_L2CACHE_Coremark_Pro_Test/XUANTIE-C910-FPGA-Linux/VIVADO/MY_IP/c910_core_ip_migration</xilinx:tag>
       </xilinx:tags>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2020.2</xilinx:xilinxVersion>
       <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="22069949"/>
       <xilinx:checksum xilinx:scope="addressSpaces" xilinx:value="9d9a2cf9"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="848b8344"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="ed021f4a"/>
       <xilinx:checksum xilinx:scope="ports" xilinx:value="343c4fef"/>
-      <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="e703365a"/>
-      <xilinx:checksum xilinx:scope="parameters" xilinx:value="bb7904a5"/>
+      <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="288e2328"/>
+      <xilinx:checksum xilinx:scope="parameters" xilinx:value="5050aa81"/>
     </xilinx:packagingInfo>
   </spirit:vendorExtensions>
 </spirit:component>
