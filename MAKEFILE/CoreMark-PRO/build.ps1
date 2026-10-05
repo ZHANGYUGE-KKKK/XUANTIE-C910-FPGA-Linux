@@ -1,8 +1,8 @@
 param(
     [string]$Workload = 'all',
-    [ValidateRange(1,2147483647)][long]$CpuHz = 150000000,
+    [ValidateRange(1,2147483647)][long]$CpuHz = 100000000,
     [ValidateRange(1,2147483647)][long]$Iterations = 1,
-    [ValidateRange(1,100)][int]$Runs = 5,
+    [ValidateRange(1,100)][int]$Runs = 3,
     [ValidateRange(0,3600)][int]$MinSeconds = 1,
     [switch]$CheckOnly,
     [switch]$Clean

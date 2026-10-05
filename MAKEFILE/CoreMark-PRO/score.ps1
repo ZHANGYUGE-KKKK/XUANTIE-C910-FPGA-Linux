@@ -1,6 +1,6 @@
 param(
     [Parameter(Mandatory=$true)][string[]]$Logs,
-    [ValidateRange(1,100)][int]$ExpectedRuns = 5
+    [ValidateRange(1,100)][int]$ExpectedRuns = 3
 )
 $ErrorActionPreference = 'Stop'
 $culture = [Globalization.CultureInfo]::InvariantCulture

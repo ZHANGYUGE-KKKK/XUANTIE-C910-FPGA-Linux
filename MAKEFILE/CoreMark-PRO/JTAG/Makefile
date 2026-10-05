@@ -2,9 +2,9 @@ THIS_MAKEFILE := $(lastword $(MAKEFILE_LIST))
 JTAG_DIR := $(patsubst %/,%,$(dir $(THIS_MAKEFILE)))
 CASE_DIR := $(JTAG_DIR)/..
 WORKLOAD ?= all
-CPU_HZ ?= 150000000
+CPU_HZ ?= 100000000
 ITERATIONS ?= 1
-RUNS ?= 5
+RUNS ?= 3
 MIN_SECONDS ?= 1
 
 .PHONY: all check clean

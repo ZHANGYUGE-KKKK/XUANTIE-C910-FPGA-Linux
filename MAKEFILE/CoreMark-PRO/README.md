@@ -18,9 +18,8 @@ make -f MAKEFILE/Makefile CoreMark-PRO
 如果当前机器 PATH 中的 `make.exe` 链接不能启动，可使用已安装的 Vivado 自带版本：
 
 ```powershell
-& D:/Xilinx/Vivado/2020.2/gnuwin/bin/make.exe -f MAKEFILE/Makefile CoreMark-PRO
+D:/Xilinx/Vivado/2020.2/gnuwin/bin/make.exe -f MAKEFILE/Makefile CoreMark-PRO
 ```
-
 这会生成 BOOTROM / BRAM 的 ELF、BIN、COE、反汇编，按现有顶层流程更新 `MAKEFILE/COEFILES`
 和 Vivado MIF，并编译一个包含九项的 DDR 套件镜像。仅重新编译 DDR 套件时：
 
@@ -36,13 +35,13 @@ DDR 构建也可以直接调用 PowerShell：
 powershell -NoProfile -ExecutionPolicy Bypass -File MAKEFILE/CoreMark-PRO/build.ps1
 ```
 
-默认参数：`CPU_HZ=150000000 ITERATIONS=1 RUNS=5 MIN_SECONDS=1`。
+默认参数：`CPU_HZ=100000000 ITERATIONS=1 RUNS=3 MIN_SECONDS=1`。
 `ITERATIONS` 是自动校准的起始值；校准只增加完整 workload 的执行次数，不改变输入规模。
-`CPU_HZ` 必须是所测 bitstream 的实际 CPU 时钟。当前 BD 的 `clk_wiz` 配置为 150 MHz；
+`CPU_HZ` 必须是所测 bitstream 的实际 CPU 时钟。本工程 CPU 时钟配置为 100 MHz；
 这里直接读取 `mcycle`，不使用 Linux DTS 中的计时频率。
 
 ```powershell
-make -f MAKEFILE/CoreMark-PRO/JTAG/Makefile CPU_HZ=150000000 RUNS=5 MIN_SECONDS=1
+make -f MAKEFILE/CoreMark-PRO/JTAG/Makefile CPU_HZ=100000000 RUNS=3 MIN_SECONDS=1
 ```
 
 仅为快速连通检查可设置 `RUNS=1 MIN_SECONDS=0`；这时只打印分项结果和完成状态，不打印总分，
@@ -58,6 +57,8 @@ make -f MAKEFILE/CoreMark-PRO/JTAG/Makefile CPU_HZ=150000000 RUNS=5 MIN_SECONDS=
 3. 通过原来的 DebugServer/JTAG 连接 GDB，CPU 停在 BRAM 的 `ebreak` 后，执行生成的加载脚本：
 
 ```gdb
+.\MAKEFILE\Xuantie-900-gcc-elf-newlib-mingw-V3.2.0\bin\riscv64-unknown-elf-gdb.exe
+
 # 地址替换为你当前 DebugServer 的地址：
 target remote 198.18.0.1:1234
 source MAKEFILE/CoreMark-PRO/JTAG/build/load_suite.gdb
@@ -89,30 +90,33 @@ source MAKEFILE/CoreMark-PRO/JTAG/build/load_suite.gdb
 
 ## 3. 串口结果
 
-每个 workload 自动执行：官方 `-v1` 校验 → `-v0` 校准/预热 → 五次计时 → 再次 `-v1` 校验。
+每个 workload 自动执行：官方 `-v1` 校验 → `-v0` 校准/预热 → 三次计时 → 再次 `-v1` 校验。
 计时边界使用官方 MITH 的 `al_signal_start/al_signal_finished`，包含其正常的初始化、执行和释放过程。
 新增结果行的串口输出在计时结束后进行。
 
 ```text
 COREMARK_PRO_SUITE_BEGIN workloads=9
 ... cjpeg-rose7-preset 的校验、计时和结果 ...
-COREMARK_PRO_BEGIN workload=core cpu_hz=150000000 hart=0 contexts=1
+COREMARK_PRO_BEGIN workload=core cpu_hz=100000000 hart=0 contexts=1
 BUILD ...
 CONFIG mhcr=... mxstatus=... mccr2=... mhint=... code=data=heap=stack=DDR
-MEASURE runs=5 min_seconds=1 timer=mcycle units=cycles
+MEASURE runs=3 min_seconds=1 timer=mcycle units=cycles
 VALIDATION_PASS workload=core
 CALIBRATION_DONE iterations=...
 RESULT,core,1,<iterations>,<cycles>,<instructions>,<seconds>,<iter/s>,<IPC>,PASS
-...
+RESULT,core,2,<iterations>,<cycles>,<instructions>,<seconds>,<iter/s>,<IPC>,PASS
+RESULT,core,3,<iterations>,<cycles>,<instructions>,<seconds>,<iter/s>,<IPC>,PASS
 POST_VALIDATION_PASS workload=core
-SUMMARY,core,5,<median_iter/s>,PASS
+SUMMARY,core,3,<median_iter/s>,PASS
 COREMARK_PRO_DONE code=0x0000000000000000
 ... 其余七项的校验、计时和结果 ...
 COREMARK_PRO_RESEARCH_SCORE ...
 COREMARK_PRO_SUITE_DONE workloads=9 passed=9 failed=0
 ```
 
-上面是日志格式示意，尖括号是字段说明。九项都分别输出各次 `RESULT` 和中位值 `SUMMARY`。
+上面是日志格式示意，尖括号是字段说明。每次正式测量结束后立即输出一条 `RESULT`，
+包含本次的周期数、指令数、耗时、吞吐量和 IPC；默认每项输出三条，不是平均值。
+三次测量及后校验完成后，另外输出吞吐量中位值 `SUMMARY`，用于套件总分计算。
 `RESULT` 的指令数来自 `minstret`；
 IPC 是该计时区间的指令数/周期数，读取两个计数器之间有少量固定开销。
 官方原始报告也保留，里面名为 `time(ns)` 的字段在这个移植中实际是 **mcycle ticks**，
@@ -127,7 +131,7 @@ IPC 是该计时区间的指令数/周期数，读取两个计数器之间有少
 
 每个 RTL 配置保存一次完整串口日志，例如 `results/L2_1M/suite.log`。
 固定工具链、ELF、CPU 频率、L1、DDR 和 cache/prefetch 设置，改变待测 CPU/L2 RTL 配置；
-先比较每项的五次中位吞吐量，保留周期数和 IPC，观察哪些应用受益。
+先比较每项的三次测量吞吐量中位值，保留周期数和 IPC，观察哪些应用受益。
 CPU 初始化启用 L1 I/D cache、write allocate 和分支预测（`MHCR=0x11ff`）。
 保留 MCCR2/MHINT 的复位配置并打印原值；当前 RTL 的 L2 enable 固定为 1，
 不会用一个通用常数覆盖 FPGA 的 L2 RAM latency。
@@ -139,7 +143,7 @@ DDR 在当前 sysmap 中是正常可缓存区域；BRAM 和 UART 属于设备区
 powershell -NoProfile -ExecutionPolicy Bypass -File MAKEFILE/CoreMark-PRO/score.ps1 -Logs "MAKEFILE/CoreMark-PRO/results/L2_1M/suite.log"
 ```
 
-脚本检查九项齐全、前后校验、DONE、五次有效测量、频率和构建配置一致，
+脚本默认检查九项齐全、前后校验、DONE、三次有效测量、频率和构建配置一致，
 用周期数重新计算吞吐量，再按照上游 `util/perl/cert_mark.pl` 的参考因子计算
 `1000 × geometric_mean(median_iter/s / reference_iter/s)`。
 输出 `COREMARK_PRO_RESEARCH_SCORE`；这是采用官方公式的研究用汇总值，不是 EEMBC 认证声明。

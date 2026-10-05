@@ -25,6 +25,12 @@ int __wrap_mith_main(ee_workload *wl, unsigned iters, unsigned contexts,
     for (unsigned i = 0; i < wl->max_idx; ++i) {
         bench_failed += wl->load[i]->failed;
         bench_completed += wl->load[i]->finished;
+        /* One workload iteration may contain multiple work items. */
+        if (wl->load[i]->finished != wl->load[i]->required) {
+            printf("RESULT_ERROR workload=%s item=%u completed=%u expected=%u\n",
+                   BENCH_WORKLOAD, i, wl->load[i]->finished, wl->load[i]->required);
+            board_exit(5);
+        }
     }
     return result;
 }
@@ -83,7 +89,6 @@ int main(void) {
     double rates[100];
     for (unsigned run = 1; run <= bench_runs; ++run) {
         invoke(iters, 0);
-        if (bench_completed != iters) board_exit(5);
         if (bench_last_cycles < minimum_cycles) {
             printf("RESULT_ERROR workload=%s measurement shorter than min_seconds\n", BENCH_WORKLOAD);
             board_exit(6);
