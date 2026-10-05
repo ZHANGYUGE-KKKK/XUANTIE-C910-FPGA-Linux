@@ -28,7 +28,8 @@
       "rst_sys_clk": "",
       "smartconnect": "",
       "util_ds_buf_0": "",
-      "DDR3": ""
+      "DDR3": "",
+      "board_sysclk_bufg_0": ""
     },
     "interface_ports": {
       "BADJ_CLK": {
@@ -676,6 +677,39 @@
             "memory_map_ref": "C0_DDR3_MEMORY_MAP"
           }
         }
+      },
+      "board_sysclk_bufg_0": {
+        "vlnv": "xilinx.com:module_ref:board_sysclk_bufg:1.0",
+        "xci_name": "C910_SOC_board_sysclk_bufg_0_0",
+        "xci_path": "ip\\C910_SOC_board_sysclk_bufg_0_0\\C910_SOC_board_sysclk_bufg_0_0.xci",
+        "inst_hier_path": "board_sysclk_bufg_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "board_sysclk_bufg",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk_in": {
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "250000000",
+                "value_src": "ip_prop"
+              },
+              "PHASE": {
+                "value": "0.000",
+                "value_src": "default_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "C910_SOC_util_ds_buf_0_0_IBUF_OUT",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "clk_out": {
+            "direction": "O"
+          }
+        }
       }
     },
     "interface_nets": {
@@ -685,16 +719,10 @@
           "DDR3/C0_DDR3"
         ]
       },
-      "smartconnect_M02_AXI": {
+      "C910_core_0_m_axi": {
         "interface_ports": [
-          "axi_clock_converter_1/S_AXI",
-          "smartconnect/M02_AXI"
-        ]
-      },
-      "smartconnect_M03_AXI1": {
-        "interface_ports": [
-          "axi_uartlite/S_AXI",
-          "smartconnect/M03_AXI"
+          "C910_core/m_axi",
+          "smartconnect/S00_AXI"
         ]
       },
       "smartconnect_0_M00_AXI": {
@@ -709,22 +737,28 @@
           "smartconnect/M01_AXI"
         ]
       },
-      "axi_clock_converter_1_M_AXI": {
-        "interface_ports": [
-          "axi_clock_converter_1/M_AXI",
-          "DDR3/C0_DDR3_S_AXI"
-        ]
-      },
       "CLK_IN_D_0_1": {
         "interface_ports": [
           "BADJ_CLK",
           "util_ds_buf_0/CLK_IN_D"
         ]
       },
-      "C910_core_0_m_axi": {
+      "axi_clock_converter_1_M_AXI": {
         "interface_ports": [
-          "C910_core/m_axi",
-          "smartconnect/S00_AXI"
+          "axi_clock_converter_1/M_AXI",
+          "DDR3/C0_DDR3_S_AXI"
+        ]
+      },
+      "smartconnect_M03_AXI1": {
+        "interface_ports": [
+          "axi_uartlite/S_AXI",
+          "smartconnect/M03_AXI"
+        ]
+      },
+      "smartconnect_M02_AXI": {
+        "interface_ports": [
+          "axi_clock_converter_1/S_AXI",
+          "smartconnect/M02_AXI"
         ]
       }
     },
@@ -913,8 +947,7 @@
       "Net": {
         "ports": [
           "util_ds_buf_0/IBUF_OUT",
-          "DDR3/c0_sys_clk_i",
-          "clk_wiz/clk_in1"
+          "board_sysclk_bufg_0/clk_in"
         ]
       },
       "rtsn2rst1_Res": {
@@ -934,6 +967,13 @@
         "ports": [
           "DDR3/c0_ddr3_ui_clk_sync_rst",
           "rtsn2rst1/Op1"
+        ]
+      },
+      "board_sysclk_bufg_0_clk_out": {
+        "ports": [
+          "board_sysclk_bufg_0/clk_out",
+          "DDR3/c0_sys_clk_i",
+          "clk_wiz/clk_in1"
         ]
       }
     },

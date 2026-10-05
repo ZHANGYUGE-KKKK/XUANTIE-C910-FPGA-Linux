@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="420mm" height="297mm" viewBox="0 0 1190.5511811023623 841.8897637795277"><text x="32" y="40.0" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="23" fill="#183246">FMC DDR3 无源转接板 - 连线核对图 Rev C</text>
+<text x="32" y="62.0" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#687784">J1 bottom mates VCU118 J2 | J2 top mates daughtercard J4 | Primary handoff: connections.md</text>
+<line x1="32" y1="78.0" x2="1158.5511811023623" y2="78.0" stroke="#005f93" stroke-width="1.5"/>
+<line x1="32" y1="799.8897637795277" x2="1158.5511811023623" y2="799.8897637795277" stroke="#687784" stroke-width="0.7"/>
+<text x="32" y="816.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9" fill="#687784">2026-10-04-C | Wiring reference - not PCB fabrication release</text>
+<text x="1060.5511811023623" y="816.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="10" fill="#687784">Sheet 1 / 11</text>
+<text x="35" y="121.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="17" fill="#005f93">母板参考输入：不经过转接板</text>
+<rect x="35" y="149.8897637795277" width="245" height="75" stroke="#183246" fill="#edf3f7"/>
+<text x="47" y="179.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="14" fill="#183246">VCU118 U18 Si570</text>
+<text x="47" y="204.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="10" fill="#183246">250 MHz - program after power-up</text>
+<line x1="280" y1="187.8897637795277" x2="317" y2="187.8897637795277" stroke="#005f93" stroke-width="1.5"/>
+<line x1="310" y1="183.8897637795277" x2="317" y2="187.8897637795277" stroke="#005f93" stroke-width="1.5"/>
+<line x1="310" y1="191.8897637795277" x2="317" y2="187.8897637795277" stroke="#005f93" stroke-width="1.5"/>
+<rect x="320" y="149.8897637795277" width="245" height="75" stroke="#183246" fill="#edf3f7"/>
+<text x="332" y="179.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="14" fill="#183246">U157 Q2 / AW23, AW22</text>
+<text x="332" y="204.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="10" fill="#183246">J8 installed; LVDS input</text>
+<line x1="565" y1="187.8897637795277" x2="602" y2="187.8897637795277" stroke="#005f93" stroke-width="1.5"/>
+<line x1="595" y1="183.8897637795277" x2="602" y2="187.8897637795277" stroke="#005f93" stroke-width="1.5"/>
+<line x1="595" y1="191.8897637795277" x2="602" y2="187.8897637795277" stroke="#005f93" stroke-width="1.5"/>
+<rect x="605" y="149.8897637795277" width="245" height="75" stroke="#183246" fill="#edf3f7"/>
+<text x="617" y="179.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="14" fill="#183246">IBUFDS -&gt; BUFG</text>
+<text x="617" y="204.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="10" fill="#183246">BUFGCE_X1Y120 / BACKBONE</text>
+<line x1="850" y1="187.8897637795277" x2="887" y2="187.8897637795277" stroke="#005f93" stroke-width="1.5"/>
+<line x1="880" y1="183.8897637795277" x2="887" y2="187.8897637795277" stroke="#005f93" stroke-width="1.5"/>
+<line x1="880" y1="191.8897637795277" x2="887" y2="187.8897637795277" stroke="#005f93" stroke-width="1.5"/>
+<rect x="890" y="149.8897637795277" width="245" height="75" stroke="#183246" fill="#edf3f7"/>
+<text x="902" y="179.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="14" fill="#183246">MIG + clk_wiz</text>
+<text x="902" y="204.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="10" fill="#183246">No adapter clock circuitry</text>
+<text x="35" y="255.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="13" fill="#183246">U18 上电默认 156.25 MHz；J8 开路选 300 MHz。每次断电重启后将 SCUI Si570_0 设为 250 MHz。MIG / XDC 均保持 250 MHz，约束不会给外部器件自动编程。</text>
+<text x="35" y="331.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="17" fill="#005f93">DRAM 时钟和总线：由 FPGA 输出，经两个 FMC 接口重排</text>
+<rect x="35" y="359.8897637795277" width="245" height="75" stroke="#183246" fill="#edf3f7"/>
+<text x="47" y="391.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="14" fill="#183246">FPGA MIG</text>
+<text x="47" y="415.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">Bank 66/67, SLR1</text>
+<line x1="280" y1="397.8897637795277" x2="317" y2="397.8897637795277" stroke="#005f93" stroke-width="1.5"/>
+<line x1="310" y1="393.8897637795277" x2="317" y2="397.8897637795277" stroke="#005f93" stroke-width="1.5"/>
+<line x1="310" y1="401.8897637795277" x2="317" y2="397.8897637795277" stroke="#005f93" stroke-width="1.5"/>
+<rect x="320" y="359.8897637795277" width="245" height="75" stroke="#183246" fill="#f4faf6"/>
+<text x="332" y="391.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="14" fill="#183246">J1 - adapter bottom</text>
+<text x="332" y="415.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">ASP-134488-01</text>
+<line x1="565" y1="397.8897637795277" x2="602" y2="397.8897637795277" stroke="#005f93" stroke-width="1.5"/>
+<line x1="595" y1="393.8897637795277" x2="602" y2="397.8897637795277" stroke="#005f93" stroke-width="1.5"/>
+<line x1="595" y1="401.8897637795277" x2="602" y2="397.8897637795277" stroke="#005f93" stroke-width="1.5"/>
+<rect x="605" y="359.8897637795277" width="245" height="75" stroke="#183246" fill="#f4faf6"/>
+<text x="617" y="391.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="14" fill="#183246">J2 - adapter top</text>
+<text x="617" y="415.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">ASP-134486-01</text>
+<line x1="850" y1="397.8897637795277" x2="887" y2="397.8897637795277" stroke="#005f93" stroke-width="1.5"/>
+<line x1="880" y1="393.8897637795277" x2="887" y2="397.8897637795277" stroke="#005f93" stroke-width="1.5"/>
+<line x1="880" y1="401.8897637795277" x2="887" y2="397.8897637795277" stroke="#005f93" stroke-width="1.5"/>
+<rect x="890" y="359.8897637795277" width="245" height="75" stroke="#183246" fill="#edf3f7"/>
+<text x="902" y="391.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="14" fill="#183246">Daughtercard J4 / U26</text>
+<text x="902" y="415.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">MT41K512M16HA-125 config</text>
+<text x="35" y="463.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="13" fill="#183246">DDR_CK_P: BC9 -&gt; carrier J2.H4 -&gt; adapter J1.H4 / J2.D11 -&gt; daughter J4.D11 -&gt; U26.J7</text>
+<text x="35" y="491.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="13" fill="#183246">DDR_CK_N: BC8 -&gt; carrier J2.H5 -&gt; adapter J1.H5 / J2.D12 -&gt; daughter J4.D12 -&gt; U26.K7</text>
+<text x="35" y="521.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="13" fill="#a23226">CK = 800 MHz / 1600 MT/s. Never connect DDR CK to the 250 MHz reference input.</text>
+<text x="35" y="561.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="13" fill="#183246">图纸使用全局同名网络：相同 DDR_x / 3V3 / VADJ / GND 标签在所有页互连。NC 用叉号表示，彼此不互连。第 2-6 页列出两个接口全部 800 针；第 7-8 页是 50 条 DDR 的球号、接点和</text>
+<text x="35" y="585.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="13" fill="#183246">子板网络核对表。</text>
+<text x="35" y="645.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="13" fill="#183246">无晶振、无 PLL、无电平转换器。电源/地接通，其他接点不直通。母板 G6/G7 已停用；子板 G6/G7 分别是 ODT/RESET_n。复位 DNP 下拉及 RN28 条件详见第 9 页。</text>
+<text x="35" y="751.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="13" fill="#a23226">本次：原始连线 / 静态针脚核对；未改 Vivado / 时钟，未运行综合、实现、物理 DRC 或上板测试。</text></svg>

@@ -1,5 +1,10 @@
 # FMC_HPC1 引脚方案验证记录
 
+> 历史记录：这些报告仅对应 revision A 的 AY9/BA9、J2 G6/G7 外部参考输入。
+> 2026-10-04 revision B 已改用板载 U18 -> AW23/AW22，并增加输入 BUFG/BACKBONE。
+> DDR 的 50 根信号映射不变，但旧报告不能证明 revision B 的时钟布局或 DRC 已通过。
+> revision B 本次只做器件位置查询、BD 验证、HDL 生成和静态一致性检查，不做综合/实现。
+
 完成时间：2026-10-04 01:27:18（本机时间）。工具：Vivado 2020.2，Build 3064766，Windows。器件：xcvu9p-flga2104-2L-e。
 
 ## 验证对象与范围
@@ -15,7 +20,7 @@
 - place_design、route_design 均成功，日志返回码均为 0。
 - [route_status.rpt](route_status.rpt)：22133 个可布线网络全部布通，routing errors=0。
 - [drc_post_route.rpt](drc_post_route.rpt) 与 [drc_bitstream.rpt](drc_bitstream.rpt)：均为 0 Error、0 Critical Warning；有 1 条 RTSTAT-10 普通 Warning，涉及 MIG 内部无可布线负载的网络，未屏蔽它。
-- [io_post_route.rpt](io_post_route.rpt)：最终实物引脚与 pinmap.json 的 50 根 DDR3 + 2 根参考时钟对应。
+- [io_post_route.rpt](io_post_route.rpt)：对应历史 revision A 的 50 根 DDR3 + AY9/BA9 参考输入；不是当前 pinmap.json 的参考输入。
 - [timing_post_route.rpt](timing_post_route.rpt)：WNS=1.156 ns、WHS=0.010 ns、WPWS=0.143 ns，TNS/THS/TPWS 均为 0。此结论仅覆盖本隔离顶层中已约束的路径。
 - 未修改 DDR DRC 严重性，没有 DDR CLOCK_DEDICATED_ROUTE FALSE 豁免。原 XDC 中独立的低速 C910 JTAG 时钟布线例外保留，不是 DDR 检查的例外。
 
@@ -25,7 +30,7 @@
 
 ## 不包含的验证
 
-正式工程 MIG 的输入周期仍为 13334 ps，未改 BD/XCI、未重新生成正式 IP，也未验证整个 C910 SoC 的实现。该参数必须与最终 250 MHz 参考输入同步后，才能要求正式工程通过相应时钟检查。
+归档 revision A 时，正式 MIG 仍为 13334 ps；这是历史状态。用户随后已将正式 MIG 改为 4000 ps（250 MHz）。本次 revision B 保留该频率配置，并未验证整个 C910 SoC 的实现。
 
 没有生成 bitstream、下载硬件、测量实际 VADJ/DRAM 电压、验证外部参考时钟、测试 DDR 校准或读写，也没有完成转接板 SI/时延预算。本记录不能作为板级功能通过或 PCB 可投板的证明。尤其 VADJ 调为 1.5 V 后，共用该电源的原 1.8 V FMC JTAG 仍须单独处理。
 

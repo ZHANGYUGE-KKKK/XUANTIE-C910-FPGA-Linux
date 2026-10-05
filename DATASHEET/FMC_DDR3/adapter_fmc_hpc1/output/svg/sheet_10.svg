@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="420mm" height="297mm" viewBox="0 0 1190.5511811023623 841.8897637795277"><text x="32" y="40.0" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="23" fill="#183246">PCB 制作指导 - 全链路预算，非仅转接板等长</text>
+<text x="32" y="62.0" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#687784">800 MHz CK / 1600 MT/s target is conditional on complete three-board channel SI and timing verification.</text>
+<line x1="32" y1="78.0" x2="1158.5511811023623" y2="78.0" stroke="#005f93" stroke-width="1.5"/>
+<line x1="32" y1="799.8897637795277" x2="1158.5511811023623" y2="799.8897637795277" stroke="#687784" stroke-width="0.7"/>
+<text x="32" y="816.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9" fill="#687784">2026-10-04-C | Wiring reference - not PCB fabrication release</text>
+<text x="1060.5511811023623" y="816.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="10" fill="#687784">Sheet 10 / 11</text>
+<text x="35" y="108.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="15" fill="#005f93">1 机械及层叠</text>
+<text x="35" y="134.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="12" fill="#183246">上下各一个原厂 FMC；按料号 3D 模型核对高度、孔、定位柱、散热器净空和 A1。不要镜像针号，不同网络顶底焊盘不能共用孔。建议 8 层：SIG/GND/SIG/GND/POWER/SIG/GND/SIG；实际介质、铜厚、线宽</text>
+<text x="35" y="154.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="12" fill="#183246">由制造厂求解。</text>
+<text x="35" y="186.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="15" fill="#005f93">2 连续回流与换层</text>
+<text x="35" y="212.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="12" fill="#183246">CK/DQS 差分；DQ/DM 单端，按字节分组，同字节除逃线尽量同层。参考地连续、不跨缝；差分同步换层/过孔数一致。回流地过孔距信号换层过孔 &lt;=50 mil (1.27 mm)。不加长测试支路。</text>
+<text x="35" y="244.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="15" fill="#005f93">3 阻抗不是统一 100 ohm</text>
+<text x="35" y="270.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="12" fill="#183246">UG583 数据参考主干单端 39 ohm +/-10%、DQS 76 ohm +/-10%，逃线 50/86 ohm。实际三板已有阻抗和子板 20/39/51/100 ohm 终端须纳入模型，再定 CK/CA/DQ/DQS 网类及制造阻抗券。参考值不是投板许</text>
+<text x="35" y="290.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="12" fill="#183246">可。</text>
+<text x="35" y="322.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="15" fill="#005f93">4 补偿总延迟</text>
+<text x="35" y="348.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="12" fill="#183246">T总=T封装+T母板+T两次接口+T转接板+T子板。FPGA package min/max 用中值。取得既有板逐线长度/层叠/过孔与连接器模型，再补偿本板；不编造毫米等长值。</text>
+<text x="35" y="380.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="13" fill="#005f93">UG583 保守全链路参考：实际速度等级/速率可依据官方降额表重审，不能凭空放宽</text>
+<text x="40" y="409.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">DQ/DM to own DQS</text>
+<text x="565" y="409.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">+/-10 ps</text>
+<text x="40" y="431.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">CK P/N and DQS P/N</text>
+<text x="565" y="431.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">2 ps each</text>
+<text x="40" y="453.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">CA/control to CK (RESET_n excluded)</text>
+<text x="565" y="453.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">+/-8 ps</text>
+<text x="40" y="475.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">CK to DQS</text>
+<text x="565" y="475.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">-149..1796 ps, per guide definition</text>
+<text x="40" y="497.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">Data total including FPGA package</text>
+<text x="565" y="497.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">&lt;=1186 ps</text>
+<text x="35" y="524.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="12" fill="#183246">数据参考最大 PCB 过孔数 2 是全链路，不是每块板 2 个；三板两接口的偏离须做完整 SI。VADJ/3V3 分网、12 V 隔离；电源铜宽/过孔按真实负载、压降、额定值、温升计算。Vivado DRC 不能证明此链</text>
+<text x="35" y="544.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="12" fill="#183246">路稳定校准。</text></svg>

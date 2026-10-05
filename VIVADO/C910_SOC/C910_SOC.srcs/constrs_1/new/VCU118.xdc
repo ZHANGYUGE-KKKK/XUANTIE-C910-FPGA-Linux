@@ -4,14 +4,30 @@
 ## Carrier VADJ/VCCO and DRAM VDD/VDDQ MUST be 1.5 V; internal VREF = 0.75 V.
 ## VADJ is shared with other FMC banks: review external JTAG voltage before hardware use.
 
-## Adapter MUST supply a 250 MHz differential reference clock on J2 G6/G7.
-## G6/G7 = FMC_HPC1_LA00_CC_P/N = AY9/BA9, Bank 66 / SLR1.
-## E12/D12 is in SLR2 and cannot be used as this MIG's direct system clock.
-## LVDS receiver, no internal differential termination; fit 100 ohms on adapter.
-## MIG reference input must separately be configured for 4000 ps / 250 MHz.
-set_property -dict {PACKAGE_PIN AY9 IOSTANDARD LVDS DIFF_TERM_ADV TERM_NONE} [get_ports BADJ_CLK_clk_p]
-set_property -dict {PACKAGE_PIN BA9 IOSTANDARD LVDS DIFF_TERM_ADV TERM_NONE} [get_ports BADJ_CLK_clk_n]
+## MIG reference INPUT is supplied by the VCU118, NOT by the FMC adapter.
+## Board U18 Si570 -> U157 Q2 -> USER_SI570_CLOCK1_P/N -> AW23/AW22.
+## Install J8 to select U18; program U18 to 250 MHz AFTER EVERY power cycle.
+## J8 open selects 300 MHz; U18 power-up default is 156.25 MHz, NOT 250 MHz.
+## Bank 64 GCIO is in SLR1 / I/O column X1, like DDR Banks 66/67.
+## Board clock receiver termination is already fitted; no adapter clock circuit.
+## Original fixed 250 MHz pins E12/D12 (SLR2) and AW26/AW27 (SLR0) are not
+## valid direct reference sources for this SLR1 memory interface.
+## Keep MIG 4000 ps / 250 MHz and No_Buffer; BD adds board_sysclk_bufg_0.
+set_property -dict {PACKAGE_PIN AW23 IOSTANDARD LVDS DIFF_TERM_ADV TERM_NONE} [get_ports BADJ_CLK_clk_p]
+set_property -dict {PACKAGE_PIN AW22 IOSTANDARD LVDS DIFF_TERM_ADV TERM_NONE} [get_ports BADJ_CLK_clk_n]
 create_clock -period 4.000 -name BOARD_SYSCLK_250M [get_ports BADJ_CLK_clk_p]
+
+## PG150 cross-bank reference: GCIO -> BUFG in the GCIO CMT -> BACKBONE -> MMCM.
+## This is a dedicated clock route, not a CLOCK_DEDICATED_ROUTE FALSE waiver.
+## BUFGCE_X1Y120 belongs to Bank 64 clock region X4Y5 (device query verified).
+## The named RTL buffer is shared by MIG and clk_wiz, without PLL/MMCM cascading.
+set board_ref_bufg [get_cells -hierarchical -filter {NAME =~ *board_sysclk_bufg_0*/clk_bufg}]
+if {[llength $board_ref_bufg] != 1} {
+    error "Expected board_sysclk_bufg_0/clk_bufg: regenerate C910_SOC BD output products before using this XDC."
+}
+set_property LOC BUFGCE_X1Y120 $board_ref_bufg
+set_property CLOCK_DEDICATED_ROUTE BACKBONE [get_nets -of_objects [get_pins -of_objects $board_ref_bufg -filter {REF_PIN_NAME == O}]]
+unset board_ref_bufg
 
 ## Address/control/CK/reset: Bank 66. All DDR address/control stays in one bank.
 ## DQ[7:0]/DQS0/DM0: Bank 67 T0; DQ[15:8]/DQS1/DM1: Bank 67 T3.
@@ -68,9 +84,11 @@ set_property PACKAGE_PIN BB12 [get_ports {C0_DDR3_0_cke[0]}]
 set_property PACKAGE_PIN AV9 [get_ports {C0_DDR3_0_odt[0]}]
 # FMC_HPC1_LA16_N, J2-G19 -> adapter -> J4-G7; IO_L16N_T2U_N7_QBC_AD3N_66
 set_property PACKAGE_PIN AV8 [get_ports {C0_DDR3_0_reset_n}]
-# FMC_HPC1_CLK0_M2C_P, J2-H4 -> adapter -> J4-D11; IO_L12P_T1U_N10_GC_66
+# MIG DDR CK OUTPUT: FPGA -> J2-H4 -> adapter -> J4-D11 -> U26-J7.
+# FMC_HPC1_CLK0_M2C_P; IO_L12P_T1U_N10_GC_66 (repurposed as an output).
 set_property PACKAGE_PIN BC9 [get_ports {C0_DDR3_0_ck_p[0]}]
-# FMC_HPC1_CLK0_M2C_N, J2-H5 -> adapter -> J4-D12; IO_L12N_T1U_N11_GC_66
+# MIG DDR CK OUTPUT: FPGA -> J2-H5 -> adapter -> J4-D12 -> U26-K7.
+# FMC_HPC1_CLK0_M2C_N; IO_L12N_T1U_N11_GC_66 (repurposed as an output).
 set_property PACKAGE_PIN BC8 [get_ports {C0_DDR3_0_ck_n[0]}]
 # FMC_HPC1_LA19_P, J2-H22 -> adapter -> J4-G30; IO_L2P_T0L_N2_67
 set_property PACKAGE_PIN AW12 [get_ports {C0_DDR3_0_dq[0]}]

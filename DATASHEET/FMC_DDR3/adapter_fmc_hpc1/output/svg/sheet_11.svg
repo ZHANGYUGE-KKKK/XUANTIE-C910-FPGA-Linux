@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="420mm" height="297mm" viewBox="0 0 1190.5511811023623 841.8897637795277"><text x="32" y="40.0" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="23" fill="#183246">验证记录、投板检查与资料来源</text>
+<text x="32" y="62.0" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#687784">Revision C: original PDF pin/wire audit + static consistency checks only. No Vivado project changes.</text>
+<line x1="32" y1="78.0" x2="1158.5511811023623" y2="78.0" stroke="#005f93" stroke-width="1.5"/>
+<line x1="32" y1="799.8897637795277" x2="1158.5511811023623" y2="799.8897637795277" stroke="#687784" stroke-width="0.7"/>
+<text x="32" y="816.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9" fill="#687784">2026-10-04-C | Wiring reference - not PCB fabrication release</text>
+<text x="1060.5511811023623" y="816.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="10" fill="#687784">Sheet 11 / 11</text>
+<text x="35" y="111.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="17" fill="#005f93">已完成 / 未完成</text>
+<text x="35" y="143.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="13" fill="#183246">本次从原始 PDF 独立核对母板 50 对针号/网络、子板全部 400 针引线与地总线及 50 对针号/GPIO 网络。DDR 位序未变；纠正子板 B2/F2 为 GND、G17/G26/H6 为 NC。800 针网表与 wrap</text>
+<text x="35" y="166.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="13" fill="#183246">per/XDC 一致；U26 球号、CK/DQS、供电和 RN28 已作图面复查。</text>
+<text x="35" y="236.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="13" fill="#183246">本次仅修改连线资料和图纸，未修改 Vivado/XDC/时钟，未综合、实现、编程 U18 或上板测试。版本 B 的参考路径尚未做新物理 DRC；旧 validation 报告仅属于 A。未运行原生 EDA ERC</text>
+<text x="35" y="259.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="13" fill="#183246">；本图不是 PCB 制造放行。</text>
+<text x="35" y="318.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="17" fill="#005f93">投板及装配放行清单</text>
+<text x="35" y="349.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="13" fill="#183246">原理图 ERC -&gt; 800 接点网表比对 -&gt; PCB DRC / 机械 3D 对接 -&gt; 全链路延迟 / SI -&gt; 制造输出。资料包括 Gerber/ODB++、钻孔、层叠/阻抗券、板框/孔/公差、BOM/坐标/装配图、电测</text>
+<text x="35" y="372.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="13" fill="#183246">网表与表面处理。当前仅原理图指导，无已布线 PCB / Gerber。</text>
+<text x="35" y="444.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="13" fill="#183246">断电验收：50 条 DDR、公共电源地、每个 NC 隔离和相邻针短路。先实测 VADJ=1.5 V、DRAM 电源及复位低电平，再确认 J8 + U18=250 MHz；最后观察 MIG init_calib_complete，做全地</text>
+<text x="35" y="467.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="13" fill="#183246">址、跨字节、长时间读写和温度测试。</text>
+<text x="35" y="542.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="16" fill="#005f93">核对来源（完整链接与跳线表见 README）</text>
+<text x="35" y="570.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">VCU118 Rev2.0 schematic: sheets 11/12, 39/40/41, 44; official XDC; native connector GND symbol.</text>
+<text x="35" y="594.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">Efinix fmc-ddr-gpio-card-schematics-v1.0(1).pdf: pages 3/4, actual exterior pin numbers.</text>
+<text x="35" y="618.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">AMD PG150 DDR3 Pin Rules / cross-bank BUFG clocking; VCU118 UG1224 U18/J8/Q2.</text>
+<text x="35" y="642.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">AMD UG583 DDR3 routing constraints, data topology and general memory routing guidelines.</text>
+<text x="35" y="666.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">Samtec ASP-134486-01 / ASP-134488-01 drawings and mating/3D models: verify before PCB release.</text>
+<text x="35" y="710.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">Netlist: 800 contacts / 53 connected nets / J1 GND 162, NC 179 / J2 GND 157, NC 184</text>
+<text x="35" y="735.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="10" fill="#687784">pinmap.json SHA256: 547dab68aece1769af5dbc1c9737dd6a5960d390cb0e9d6366763e9585d5347f</text>
+<text x="35" y="762.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#a23226">用 EDA 逐针网表原则与 PDF 渲染核对整理；不是已验证的 EasyEDA 原生工程或已投板 PCB。</text></svg>

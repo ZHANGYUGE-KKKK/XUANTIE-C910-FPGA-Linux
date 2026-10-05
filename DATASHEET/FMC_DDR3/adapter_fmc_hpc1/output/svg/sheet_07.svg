@@ -1,0 +1,225 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="420mm" height="297mm" viewBox="0 0 1190.5511811023623 841.8897637795277"><text x="32" y="40.0" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="23" fill="#183246">DDR 地址、控制及 CK 对照表 - 28 根</text>
+<text x="32" y="62.0" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#687784">Adapter J1 = carrier J2 contacts; adapter J2 = daughtercard J4 contacts. FPGA ball is not FMC contact.</text>
+<line x1="32" y1="78.0" x2="1158.5511811023623" y2="78.0" stroke="#005f93" stroke-width="1.5"/>
+<line x1="32" y1="799.8897637795277" x2="1158.5511811023623" y2="799.8897637795277" stroke="#687784" stroke-width="0.7"/>
+<text x="32" y="816.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9" fill="#687784">2026-10-04-C | Wiring reference - not PCB fabrication release</text>
+<text x="1060.5511811023623" y="816.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="10" fill="#687784">Sheet 7 / 11</text>
+<rect x="35" y="102.8897637795277" width="1120.5511811023623" height="27" stroke="#183246" fill="#edf3f7"/>
+<text x="40" y="121.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="10" fill="#183246">Adapter global net</text>
+<text x="183" y="121.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="10" fill="#183246">J1 / carrier J2</text>
+<text x="292" y="121.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="10" fill="#183246">J2 / daughter J4</text>
+<text x="411" y="121.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="10" fill="#183246">FPGA ball</text>
+<text x="498" y="121.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="10" fill="#183246">Bank</text>
+<text x="559" y="121.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="10" fill="#183246">U26 ball</text>
+<text x="649" y="121.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="10" fill="#183246">Daughtercard original net</text>
+<rect x="35" y="130.3897637795277" width="1120.5511811023623" height="21.5" stroke="#f8fafc" fill="#f8fafc"/>
+<text x="40" y="144.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">DDR_A0</text>
+<text x="183" y="144.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">G9</text>
+<text x="292" y="144.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">D9</text>
+<text x="411" y="144.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">BD12</text>
+<text x="498" y="144.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">66</text>
+<text x="559" y="144.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">N3</text>
+<text x="649" y="144.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">GPIOR_N_31</text>
+<text x="40" y="166.3897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">DDR_A1</text>
+<text x="183" y="166.3897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">G10</text>
+<text x="292" y="166.3897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">D8</text>
+<text x="411" y="166.3897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">BE12</text>
+<text x="498" y="166.3897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">66</text>
+<text x="559" y="166.3897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">P7</text>
+<text x="649" y="166.3897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">GPIOR_P_31_PLLIN1</text>
+<rect x="35" y="173.3897637795277" width="1120.5511811023623" height="21.5" stroke="#f8fafc" fill="#f8fafc"/>
+<text x="40" y="187.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">DDR_A2</text>
+<text x="183" y="187.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">H10</text>
+<text x="292" y="187.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">G9</text>
+<text x="411" y="187.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">BF12</text>
+<text x="498" y="187.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">66</text>
+<text x="559" y="187.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">P3</text>
+<text x="649" y="187.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">GPIOR_P_28</text>
+<text x="40" y="209.3897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">DDR_A3</text>
+<text x="183" y="209.3897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">H11</text>
+<text x="292" y="209.3897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">G10</text>
+<text x="411" y="209.3897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">BF11</text>
+<text x="498" y="209.3897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">66</text>
+<text x="559" y="209.3897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">N2</text>
+<text x="649" y="209.3897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">GPIOR_N_28</text>
+<rect x="35" y="216.3897637795277" width="1120.5511811023623" height="21.5" stroke="#f8fafc" fill="#f8fafc"/>
+<text x="40" y="230.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">DDR_A4</text>
+<text x="183" y="230.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">H7</text>
+<text x="292" y="230.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">H14</text>
+<text x="411" y="230.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">BC11</text>
+<text x="498" y="230.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">66</text>
+<text x="559" y="230.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">P8</text>
+<text x="649" y="230.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">GPIOR_N_26_CLK9_N</text>
+<text x="40" y="252.3897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">DDR_A5</text>
+<text x="183" y="252.3897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">H8</text>
+<text x="292" y="252.3897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">H13</text>
+<text x="411" y="252.3897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">BD11</text>
+<text x="498" y="252.3897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">66</text>
+<text x="559" y="252.3897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">P2</text>
+<text x="649" y="252.3897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">GPIOR_P_26_CLK9_P</text>
+<rect x="35" y="259.3897637795277" width="1120.5511811023623" height="21.5" stroke="#f8fafc" fill="#f8fafc"/>
+<text x="40" y="273.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">DDR_A6</text>
+<text x="183" y="273.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">C10</text>
+<text x="292" y="273.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">D15</text>
+<text x="411" y="273.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">BD13</text>
+<text x="498" y="273.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">66</text>
+<text x="559" y="273.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">R8</text>
+<text x="649" y="273.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">GPIOR_N_25_CLK10_N</text>
+<text x="40" y="295.3897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">DDR_A7</text>
+<text x="183" y="295.3897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">C11</text>
+<text x="292" y="295.3897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">D14</text>
+<text x="411" y="295.3897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">BE13</text>
+<text x="498" y="295.3897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">66</text>
+<text x="559" y="295.3897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">R2</text>
+<text x="649" y="295.3897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">GPIOR_P_25_CLK10_P</text>
+<rect x="35" y="302.3897637795277" width="1120.5511811023623" height="21.5" stroke="#f8fafc" fill="#f8fafc"/>
+<text x="40" y="316.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">DDR_A8</text>
+<text x="183" y="316.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">D11</text>
+<text x="292" y="316.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">H7</text>
+<text x="411" y="316.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">BE14</text>
+<text x="498" y="316.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">66</text>
+<text x="559" y="316.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">T8</text>
+<text x="649" y="316.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">GPIOR_P_24_CLK11_P</text>
+<text x="40" y="338.3897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">DDR_A9</text>
+<text x="183" y="338.3897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">D12</text>
+<text x="292" y="338.3897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">H8</text>
+<text x="411" y="338.3897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">BF14</text>
+<text x="498" y="338.3897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">66</text>
+<text x="559" y="338.3897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">R3</text>
+<text x="649" y="338.3897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">GPIOR_N_24_CLK11_N</text>
+<rect x="35" y="345.3897637795277" width="1120.5511811023623" height="21.5" stroke="#f8fafc" fill="#f8fafc"/>
+<text x="40" y="359.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">DDR_A10</text>
+<text x="183" y="359.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">G12</text>
+<text x="292" y="359.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">H11</text>
+<text x="411" y="359.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">BE15</text>
+<text x="498" y="359.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">66</text>
+<text x="559" y="359.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">L7</text>
+<text x="649" y="359.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">GPIOR_N_23_CLK12_N</text>
+<text x="40" y="381.3897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">DDR_A11</text>
+<text x="183" y="381.3897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">G13</text>
+<text x="292" y="381.3897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">H10</text>
+<text x="411" y="381.3897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">BF15</text>
+<text x="498" y="381.3897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">66</text>
+<text x="559" y="381.3897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">R7</text>
+<text x="649" y="381.3897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">GPIOR_P_23_CLK12_P</text>
+<rect x="35" y="388.3897637795277" width="1120.5511811023623" height="21.5" stroke="#f8fafc" fill="#f8fafc"/>
+<text x="40" y="402.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">DDR_A12</text>
+<text x="183" y="402.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">G15</text>
+<text x="292" y="402.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">C11</text>
+<text x="411" y="402.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">BC14</text>
+<text x="498" y="402.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">66</text>
+<text x="559" y="402.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">N7</text>
+<text x="649" y="402.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">GPIOR_N_22_CLK13_N</text>
+<text x="40" y="424.3897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">DDR_A13</text>
+<text x="183" y="424.3897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">G16</text>
+<text x="292" y="424.3897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">C10</text>
+<text x="411" y="424.3897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">BC13</text>
+<text x="498" y="424.3897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">66</text>
+<text x="559" y="424.3897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">T3</text>
+<text x="649" y="424.3897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">GPIOR_P_22_CLK13_P</text>
+<rect x="35" y="431.3897637795277" width="1120.5511811023623" height="21.5" stroke="#f8fafc" fill="#f8fafc"/>
+<text x="40" y="445.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">DDR_A14</text>
+<text x="183" y="445.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">H19</text>
+<text x="292" y="445.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">G13</text>
+<text x="411" y="445.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">BB16</text>
+<text x="498" y="445.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">66</text>
+<text x="559" y="445.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">T7</text>
+<text x="649" y="445.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">GPIOR_N_21_CLK14_N</text>
+<text x="40" y="467.3897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">DDR_A15</text>
+<text x="183" y="467.3897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">H20</text>
+<text x="292" y="467.3897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">G12</text>
+<text x="411" y="467.3897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">BC16</text>
+<text x="498" y="467.3897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">66</text>
+<text x="559" y="467.3897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">M7</text>
+<text x="649" y="467.3897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">GPIOR_P_21_CLK14_P</text>
+<rect x="35" y="474.3897637795277" width="1120.5511811023623" height="21.5" stroke="#f8fafc" fill="#f8fafc"/>
+<text x="40" y="488.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">DDR_BA0</text>
+<text x="183" y="488.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">H13</text>
+<text x="292" y="488.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">C14</text>
+<text x="411" y="488.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">BC15</text>
+<text x="498" y="488.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">66</text>
+<text x="559" y="488.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">M2</text>
+<text x="649" y="488.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">GPIOR_P_20_CLK15_P</text>
+<text x="40" y="510.3897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">DDR_BA1</text>
+<text x="183" y="510.3897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">H14</text>
+<text x="292" y="510.3897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">C15</text>
+<text x="411" y="510.3897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">BD15</text>
+<text x="498" y="510.3897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">66</text>
+<text x="559" y="510.3897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">N8</text>
+<text x="649" y="510.3897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">GPIOR_N_20_CLK15_N</text>
+<rect x="35" y="517.3897637795277" width="1120.5511811023623" height="21.5" stroke="#f8fafc" fill="#f8fafc"/>
+<text x="40" y="531.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">DDR_BA2</text>
+<text x="183" y="531.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">H16</text>
+<text x="292" y="531.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">G16</text>
+<text x="411" y="531.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">BA16</text>
+<text x="498" y="531.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">66</text>
+<text x="559" y="531.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">M3</text>
+<text x="649" y="531.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">GPIOR_N_19</text>
+<text x="40" y="553.3897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">DDR_RAS_N</text>
+<text x="183" y="553.3897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">D14</text>
+<text x="292" y="553.3897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">C18</text>
+<text x="411" y="553.3897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">BA14</text>
+<text x="498" y="553.3897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">66</text>
+<text x="559" y="553.3897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">J3</text>
+<text x="649" y="553.3897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">GPIOR_P_18</text>
+<rect x="35" y="560.3897637795277" width="1120.5511811023623" height="21.5" stroke="#f8fafc" fill="#f8fafc"/>
+<text x="40" y="574.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">DDR_CAS_N</text>
+<text x="183" y="574.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">H17</text>
+<text x="292" y="574.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">C19</text>
+<text x="411" y="574.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">BA15</text>
+<text x="498" y="574.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">66</text>
+<text x="559" y="574.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">K3</text>
+<text x="649" y="574.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">GPIOR_N_18</text>
+<text x="40" y="596.3897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">DDR_WE_N</text>
+<text x="183" y="596.3897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">D15</text>
+<text x="292" y="596.3897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">G15</text>
+<text x="411" y="596.3897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">BB14</text>
+<text x="498" y="596.3897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">66</text>
+<text x="559" y="596.3897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">L3</text>
+<text x="649" y="596.3897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">GPIOR_P_19</text>
+<rect x="35" y="603.3897637795277" width="1120.5511811023623" height="21.5" stroke="#f8fafc" fill="#f8fafc"/>
+<text x="40" y="617.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">DDR_CS_N</text>
+<text x="183" y="617.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">C14</text>
+<text x="292" y="617.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">G19</text>
+<text x="411" y="617.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">BB13</text>
+<text x="498" y="617.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">66</text>
+<text x="559" y="617.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">L2</text>
+<text x="649" y="617.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">GPIOR_N_17</text>
+<text x="40" y="639.3897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">DDR_CKE</text>
+<text x="183" y="639.3897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">C15</text>
+<text x="292" y="639.3897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">G18</text>
+<text x="411" y="639.3897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">BB12</text>
+<text x="498" y="639.3897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">66</text>
+<text x="559" y="639.3897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">K9</text>
+<text x="649" y="639.3897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">GPIOR_P_17</text>
+<rect x="35" y="646.3897637795277" width="1120.5511811023623" height="21.5" stroke="#f8fafc" fill="#f8fafc"/>
+<text x="40" y="660.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">DDR_ODT</text>
+<text x="183" y="660.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">G18</text>
+<text x="292" y="660.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">G6</text>
+<text x="411" y="660.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">AV9</text>
+<text x="498" y="660.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">66</text>
+<text x="559" y="660.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">K1</text>
+<text x="649" y="660.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">GPIOR_P_16_PLLIN1</text>
+<text x="40" y="682.3897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">DDR_RESET_N</text>
+<text x="183" y="682.3897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">G19</text>
+<text x="292" y="682.3897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">G7</text>
+<text x="411" y="682.3897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">AV8</text>
+<text x="498" y="682.3897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">66</text>
+<text x="559" y="682.3897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">T2</text>
+<text x="649" y="682.3897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">GPIOR_N_16</text>
+<rect x="35" y="689.3897637795277" width="1120.5511811023623" height="21.5" stroke="#f8fafc" fill="#f8fafc"/>
+<text x="40" y="703.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">DDR_CK_P</text>
+<text x="183" y="703.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">H4</text>
+<text x="292" y="703.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">D11</text>
+<text x="411" y="703.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">BC9</text>
+<text x="498" y="703.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">66</text>
+<text x="559" y="703.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">J7</text>
+<text x="649" y="703.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">GPIOR_P_27_CLK8_P</text>
+<text x="40" y="725.3897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">DDR_CK_N</text>
+<text x="183" y="725.3897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">H5</text>
+<text x="292" y="725.3897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">D12</text>
+<text x="411" y="725.3897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">BC8</text>
+<text x="498" y="725.3897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">66</text>
+<text x="559" y="725.3897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">K7</text>
+<text x="649" y="725.3897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">GPIOR_N_27_CLK8_N</text>
+<text x="35" y="765.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#a23226">ADDR/BA/control/CK: Bank 66. CK is FPGA output. RESET_n termination/population condition: sheet 9.</text></svg>

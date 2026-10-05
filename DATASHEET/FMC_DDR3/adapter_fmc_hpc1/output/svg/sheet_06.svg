@@ -1,0 +1,703 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="420mm" height="297mm" viewBox="0 0 1190.5511811023623 841.8897637795277"><text x="32" y="40.0" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="23" fill="#183246">接插件逐针原理图 - J / K 行</text>
+<text x="32" y="62.0" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#687784">Identical global net labels connect across sheets; NC crosses are independent, not a common net. Electrical pin numbers only.</text>
+<line x1="32" y1="78.0" x2="1158.5511811023623" y2="78.0" stroke="#005f93" stroke-width="1.5"/>
+<line x1="32" y1="799.8897637795277" x2="1158.5511811023623" y2="799.8897637795277" stroke="#687784" stroke-width="0.7"/>
+<text x="32" y="816.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9" fill="#687784">2026-10-04-C | Wiring reference - not PCB fabrication release</text>
+<text x="1060.5511811023623" y="816.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="10" fill="#687784">Sheet 6 / 11</text>
+<text x="35" y="103.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="14" fill="#005f93">J1J  (BOTTOM)</text>
+<text x="35" y="121.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="10" fill="#687784">to VCU118 J2</text>
+<rect x="35" y="132.8897637795277" width="54" height="635" stroke="#183246" fill="#f8fafb"/>
+<text x="42" y="148.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#183246">J1</text>
+<line x1="89" y1="145.8897637795277" x2="117" y2="145.8897637795277" stroke="#06715f" stroke-width="0.7"/>
+<text x="125" y="148.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#06715f">GND</text>
+<text x="42" y="164.58976377952774" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#183246">J2</text>
+<line x1="89" y1="161.58976377952774" x2="117" y2="161.58976377952774" stroke="#687784" stroke-width="0.7"/>
+<line x1="114" y1="164.58976377952774" x2="120" y2="158.58976377952774" stroke="#687784" stroke-width="0.7"/>
+<line x1="114" y1="158.58976377952774" x2="120" y2="164.58976377952774" stroke="#687784" stroke-width="0.7"/>
+<text x="127" y="164.58976377952774" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#687784">NC</text>
+<text x="42" y="180.28976377952768" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#183246">J3</text>
+<line x1="89" y1="177.28976377952768" x2="117" y2="177.28976377952768" stroke="#687784" stroke-width="0.7"/>
+<line x1="114" y1="180.28976377952768" x2="120" y2="174.28976377952768" stroke="#687784" stroke-width="0.7"/>
+<line x1="114" y1="174.28976377952768" x2="120" y2="180.28976377952768" stroke="#687784" stroke-width="0.7"/>
+<text x="127" y="180.28976377952768" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#687784">NC</text>
+<text x="42" y="195.98976377952772" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#183246">J4</text>
+<line x1="89" y1="192.98976377952772" x2="117" y2="192.98976377952772" stroke="#06715f" stroke-width="0.7"/>
+<text x="125" y="195.98976377952772" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#06715f">GND</text>
+<text x="42" y="211.68976377952765" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#183246">J5</text>
+<line x1="89" y1="208.68976377952765" x2="117" y2="208.68976377952765" stroke="#06715f" stroke-width="0.7"/>
+<text x="125" y="211.68976377952765" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#06715f">GND</text>
+<text x="42" y="227.3897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#183246">J6</text>
+<line x1="89" y1="224.3897637795277" x2="117" y2="224.3897637795277" stroke="#687784" stroke-width="0.7"/>
+<line x1="114" y1="227.3897637795277" x2="120" y2="221.3897637795277" stroke="#687784" stroke-width="0.7"/>
+<line x1="114" y1="221.3897637795277" x2="120" y2="227.3897637795277" stroke="#687784" stroke-width="0.7"/>
+<text x="127" y="227.3897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#687784">NC</text>
+<text x="42" y="243.08976377952774" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#183246">J7</text>
+<line x1="89" y1="240.08976377952774" x2="117" y2="240.08976377952774" stroke="#687784" stroke-width="0.7"/>
+<line x1="114" y1="243.08976377952774" x2="120" y2="237.08976377952774" stroke="#687784" stroke-width="0.7"/>
+<line x1="114" y1="237.08976377952774" x2="120" y2="243.08976377952774" stroke="#687784" stroke-width="0.7"/>
+<text x="127" y="243.08976377952774" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#687784">NC</text>
+<text x="42" y="258.7897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#183246">J8</text>
+<line x1="89" y1="255.78976377952768" x2="117" y2="255.78976377952768" stroke="#06715f" stroke-width="0.7"/>
+<text x="125" y="258.7897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#06715f">GND</text>
+<text x="42" y="274.4897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#183246">J9</text>
+<line x1="89" y1="271.4897637795277" x2="117" y2="271.4897637795277" stroke="#687784" stroke-width="0.7"/>
+<line x1="114" y1="274.4897637795277" x2="120" y2="268.4897637795277" stroke="#687784" stroke-width="0.7"/>
+<line x1="114" y1="268.4897637795277" x2="120" y2="274.4897637795277" stroke="#687784" stroke-width="0.7"/>
+<text x="127" y="274.4897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#687784">NC</text>
+<text x="42" y="290.18976377952765" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#183246">J10</text>
+<line x1="89" y1="287.18976377952765" x2="117" y2="287.18976377952765" stroke="#687784" stroke-width="0.7"/>
+<line x1="114" y1="290.18976377952765" x2="120" y2="284.18976377952765" stroke="#687784" stroke-width="0.7"/>
+<line x1="114" y1="284.18976377952765" x2="120" y2="290.18976377952765" stroke="#687784" stroke-width="0.7"/>
+<text x="127" y="290.18976377952765" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#687784">NC</text>
+<text x="42" y="305.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#183246">J11</text>
+<line x1="89" y1="302.8897637795277" x2="117" y2="302.8897637795277" stroke="#06715f" stroke-width="0.7"/>
+<text x="125" y="305.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#06715f">GND</text>
+<text x="42" y="321.58976377952774" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#183246">J12</text>
+<line x1="89" y1="318.58976377952774" x2="117" y2="318.58976377952774" stroke="#687784" stroke-width="0.7"/>
+<line x1="114" y1="321.58976377952774" x2="120" y2="315.58976377952774" stroke="#687784" stroke-width="0.7"/>
+<line x1="114" y1="315.58976377952774" x2="120" y2="321.58976377952774" stroke="#687784" stroke-width="0.7"/>
+<text x="127" y="321.58976377952774" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#687784">NC</text>
+<text x="42" y="337.2897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#183246">J13</text>
+<line x1="89" y1="334.2897637795277" x2="117" y2="334.2897637795277" stroke="#687784" stroke-width="0.7"/>
+<line x1="114" y1="337.2897637795277" x2="120" y2="331.2897637795277" stroke="#687784" stroke-width="0.7"/>
+<line x1="114" y1="331.2897637795277" x2="120" y2="337.2897637795277" stroke="#687784" stroke-width="0.7"/>
+<text x="127" y="337.2897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#687784">NC</text>
+<text x="42" y="352.9897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#183246">J14</text>
+<line x1="89" y1="349.9897637795277" x2="117" y2="349.9897637795277" stroke="#06715f" stroke-width="0.7"/>
+<text x="125" y="352.9897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#06715f">GND</text>
+<text x="42" y="368.68976377952765" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#183246">J15</text>
+<line x1="89" y1="365.68976377952765" x2="117" y2="365.68976377952765" stroke="#687784" stroke-width="0.7"/>
+<line x1="114" y1="368.68976377952765" x2="120" y2="362.68976377952765" stroke="#687784" stroke-width="0.7"/>
+<line x1="114" y1="362.68976377952765" x2="120" y2="368.68976377952765" stroke="#687784" stroke-width="0.7"/>
+<text x="127" y="368.68976377952765" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#687784">NC</text>
+<text x="42" y="384.3897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#183246">J16</text>
+<line x1="89" y1="381.3897637795277" x2="117" y2="381.3897637795277" stroke="#687784" stroke-width="0.7"/>
+<line x1="114" y1="384.3897637795277" x2="120" y2="378.3897637795277" stroke="#687784" stroke-width="0.7"/>
+<line x1="114" y1="378.3897637795277" x2="120" y2="384.3897637795277" stroke="#687784" stroke-width="0.7"/>
+<text x="127" y="384.3897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#687784">NC</text>
+<text x="42" y="400.0897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#183246">J17</text>
+<line x1="89" y1="397.0897637795277" x2="117" y2="397.0897637795277" stroke="#06715f" stroke-width="0.7"/>
+<text x="125" y="400.0897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#06715f">GND</text>
+<text x="42" y="415.7897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#183246">J18</text>
+<line x1="89" y1="412.7897637795277" x2="117" y2="412.7897637795277" stroke="#687784" stroke-width="0.7"/>
+<line x1="114" y1="415.7897637795277" x2="120" y2="409.7897637795277" stroke="#687784" stroke-width="0.7"/>
+<line x1="114" y1="409.7897637795277" x2="120" y2="415.7897637795277" stroke="#687784" stroke-width="0.7"/>
+<text x="127" y="415.7897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#687784">NC</text>
+<text x="42" y="431.48976377952766" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#183246">J19</text>
+<line x1="89" y1="428.48976377952766" x2="117" y2="428.48976377952766" stroke="#687784" stroke-width="0.7"/>
+<line x1="114" y1="431.48976377952766" x2="120" y2="425.48976377952766" stroke="#687784" stroke-width="0.7"/>
+<line x1="114" y1="425.48976377952766" x2="120" y2="431.48976377952766" stroke="#687784" stroke-width="0.7"/>
+<text x="127" y="431.48976377952766" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#687784">NC</text>
+<text x="42" y="447.1897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#183246">J20</text>
+<line x1="89" y1="444.1897637795277" x2="117" y2="444.1897637795277" stroke="#06715f" stroke-width="0.7"/>
+<text x="125" y="447.1897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#06715f">GND</text>
+<text x="42" y="462.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#183246">J21</text>
+<line x1="89" y1="459.8897637795277" x2="117" y2="459.8897637795277" stroke="#687784" stroke-width="0.7"/>
+<line x1="114" y1="462.8897637795277" x2="120" y2="456.8897637795277" stroke="#687784" stroke-width="0.7"/>
+<line x1="114" y1="456.8897637795277" x2="120" y2="462.8897637795277" stroke="#687784" stroke-width="0.7"/>
+<text x="127" y="462.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#687784">NC</text>
+<text x="42" y="478.5897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#183246">J22</text>
+<line x1="89" y1="475.5897637795277" x2="117" y2="475.5897637795277" stroke="#687784" stroke-width="0.7"/>
+<line x1="114" y1="478.5897637795277" x2="120" y2="472.5897637795277" stroke="#687784" stroke-width="0.7"/>
+<line x1="114" y1="472.5897637795277" x2="120" y2="478.5897637795277" stroke="#687784" stroke-width="0.7"/>
+<text x="127" y="478.5897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#687784">NC</text>
+<text x="42" y="494.2897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#183246">J23</text>
+<line x1="89" y1="491.2897637795277" x2="117" y2="491.2897637795277" stroke="#06715f" stroke-width="0.7"/>
+<text x="125" y="494.2897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#06715f">GND</text>
+<text x="42" y="509.98976377952766" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#183246">J24</text>
+<line x1="89" y1="506.98976377952766" x2="117" y2="506.98976377952766" stroke="#687784" stroke-width="0.7"/>
+<line x1="114" y1="509.98976377952766" x2="120" y2="503.98976377952766" stroke="#687784" stroke-width="0.7"/>
+<line x1="114" y1="503.98976377952766" x2="120" y2="509.98976377952766" stroke="#687784" stroke-width="0.7"/>
+<text x="127" y="509.98976377952766" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#687784">NC</text>
+<text x="42" y="525.6897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#183246">J25</text>
+<line x1="89" y1="522.6897637795277" x2="117" y2="522.6897637795277" stroke="#687784" stroke-width="0.7"/>
+<line x1="114" y1="525.6897637795277" x2="120" y2="519.6897637795277" stroke="#687784" stroke-width="0.7"/>
+<line x1="114" y1="519.6897637795277" x2="120" y2="525.6897637795277" stroke="#687784" stroke-width="0.7"/>
+<text x="127" y="525.6897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#687784">NC</text>
+<text x="42" y="541.3897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#183246">J26</text>
+<line x1="89" y1="538.3897637795277" x2="117" y2="538.3897637795277" stroke="#06715f" stroke-width="0.7"/>
+<text x="125" y="541.3897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#06715f">GND</text>
+<text x="42" y="557.0897637795276" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#183246">J27</text>
+<line x1="89" y1="554.0897637795276" x2="117" y2="554.0897637795276" stroke="#687784" stroke-width="0.7"/>
+<line x1="114" y1="557.0897637795276" x2="120" y2="551.0897637795276" stroke="#687784" stroke-width="0.7"/>
+<line x1="114" y1="551.0897637795276" x2="120" y2="557.0897637795276" stroke="#687784" stroke-width="0.7"/>
+<text x="127" y="557.0897637795276" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#687784">NC</text>
+<text x="42" y="572.7897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#183246">J28</text>
+<line x1="89" y1="569.7897637795277" x2="117" y2="569.7897637795277" stroke="#687784" stroke-width="0.7"/>
+<line x1="114" y1="572.7897637795277" x2="120" y2="566.7897637795277" stroke="#687784" stroke-width="0.7"/>
+<line x1="114" y1="566.7897637795277" x2="120" y2="572.7897637795277" stroke="#687784" stroke-width="0.7"/>
+<text x="127" y="572.7897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#687784">NC</text>
+<text x="42" y="588.4897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#183246">J29</text>
+<line x1="89" y1="585.4897637795277" x2="117" y2="585.4897637795277" stroke="#06715f" stroke-width="0.7"/>
+<text x="125" y="588.4897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#06715f">GND</text>
+<text x="42" y="604.1897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#183246">J30</text>
+<line x1="89" y1="601.1897637795277" x2="117" y2="601.1897637795277" stroke="#687784" stroke-width="0.7"/>
+<line x1="114" y1="604.1897637795277" x2="120" y2="598.1897637795277" stroke="#687784" stroke-width="0.7"/>
+<line x1="114" y1="598.1897637795277" x2="120" y2="604.1897637795277" stroke="#687784" stroke-width="0.7"/>
+<text x="127" y="604.1897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#687784">NC</text>
+<text x="42" y="619.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#183246">J31</text>
+<line x1="89" y1="616.8897637795277" x2="117" y2="616.8897637795277" stroke="#687784" stroke-width="0.7"/>
+<line x1="114" y1="619.8897637795277" x2="120" y2="613.8897637795277" stroke="#687784" stroke-width="0.7"/>
+<line x1="114" y1="613.8897637795277" x2="120" y2="619.8897637795277" stroke="#687784" stroke-width="0.7"/>
+<text x="127" y="619.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#687784">NC</text>
+<text x="42" y="635.5897637795276" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#183246">J32</text>
+<line x1="89" y1="632.5897637795276" x2="117" y2="632.5897637795276" stroke="#06715f" stroke-width="0.7"/>
+<text x="125" y="635.5897637795276" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#06715f">GND</text>
+<text x="42" y="651.2897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#183246">J33</text>
+<line x1="89" y1="648.2897637795277" x2="117" y2="648.2897637795277" stroke="#687784" stroke-width="0.7"/>
+<line x1="114" y1="651.2897637795277" x2="120" y2="645.2897637795277" stroke="#687784" stroke-width="0.7"/>
+<line x1="114" y1="645.2897637795277" x2="120" y2="651.2897637795277" stroke="#687784" stroke-width="0.7"/>
+<text x="127" y="651.2897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#687784">NC</text>
+<text x="42" y="666.9897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#183246">J34</text>
+<line x1="89" y1="663.9897637795277" x2="117" y2="663.9897637795277" stroke="#687784" stroke-width="0.7"/>
+<line x1="114" y1="666.9897637795277" x2="120" y2="660.9897637795277" stroke="#687784" stroke-width="0.7"/>
+<line x1="114" y1="660.9897637795277" x2="120" y2="666.9897637795277" stroke="#687784" stroke-width="0.7"/>
+<text x="127" y="666.9897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#687784">NC</text>
+<text x="42" y="682.6897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#183246">J35</text>
+<line x1="89" y1="679.6897637795277" x2="117" y2="679.6897637795277" stroke="#06715f" stroke-width="0.7"/>
+<text x="125" y="682.6897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#06715f">GND</text>
+<text x="42" y="698.3897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#183246">J36</text>
+<line x1="89" y1="695.3897637795277" x2="117" y2="695.3897637795277" stroke="#687784" stroke-width="0.7"/>
+<line x1="114" y1="698.3897637795277" x2="120" y2="692.3897637795277" stroke="#687784" stroke-width="0.7"/>
+<line x1="114" y1="692.3897637795277" x2="120" y2="698.3897637795277" stroke="#687784" stroke-width="0.7"/>
+<text x="127" y="698.3897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#687784">NC</text>
+<text x="42" y="714.0897637795276" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#183246">J37</text>
+<line x1="89" y1="711.0897637795276" x2="117" y2="711.0897637795276" stroke="#687784" stroke-width="0.7"/>
+<line x1="114" y1="714.0897637795276" x2="120" y2="708.0897637795276" stroke="#687784" stroke-width="0.7"/>
+<line x1="114" y1="708.0897637795276" x2="120" y2="714.0897637795276" stroke="#687784" stroke-width="0.7"/>
+<text x="127" y="714.0897637795276" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#687784">NC</text>
+<text x="42" y="729.7897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#183246">J38</text>
+<line x1="89" y1="726.7897637795277" x2="117" y2="726.7897637795277" stroke="#06715f" stroke-width="0.7"/>
+<text x="125" y="729.7897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#06715f">GND</text>
+<text x="42" y="745.4897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#183246">J39</text>
+<line x1="89" y1="742.4897637795277" x2="117" y2="742.4897637795277" stroke="#687784" stroke-width="0.7"/>
+<line x1="114" y1="745.4897637795277" x2="120" y2="739.4897637795277" stroke="#687784" stroke-width="0.7"/>
+<line x1="114" y1="739.4897637795277" x2="120" y2="745.4897637795277" stroke="#687784" stroke-width="0.7"/>
+<text x="127" y="745.4897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#687784">NC</text>
+<text x="42" y="761.1897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#183246">J40</text>
+<line x1="89" y1="758.1897637795277" x2="117" y2="758.1897637795277" stroke="#06715f" stroke-width="0.7"/>
+<text x="125" y="761.1897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#06715f">GND</text>
+<text x="321" y="103.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="14" fill="#005f93">J2J  (TOP)</text>
+<text x="321" y="121.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="10" fill="#687784">to daughtercard J4</text>
+<rect x="321" y="132.8897637795277" width="54" height="635" stroke="#183246" fill="#f8fafb"/>
+<text x="328" y="148.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#183246">J1</text>
+<line x1="375" y1="145.8897637795277" x2="403" y2="145.8897637795277" stroke="#06715f" stroke-width="0.7"/>
+<text x="411" y="148.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#06715f">GND</text>
+<text x="328" y="164.58976377952774" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#183246">J2</text>
+<line x1="375" y1="161.58976377952774" x2="403" y2="161.58976377952774" stroke="#687784" stroke-width="0.7"/>
+<line x1="400" y1="164.58976377952774" x2="406" y2="158.58976377952774" stroke="#687784" stroke-width="0.7"/>
+<line x1="400" y1="158.58976377952774" x2="406" y2="164.58976377952774" stroke="#687784" stroke-width="0.7"/>
+<text x="413" y="164.58976377952774" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#687784">NC</text>
+<text x="328" y="180.28976377952768" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#183246">J3</text>
+<line x1="375" y1="177.28976377952768" x2="403" y2="177.28976377952768" stroke="#687784" stroke-width="0.7"/>
+<line x1="400" y1="180.28976377952768" x2="406" y2="174.28976377952768" stroke="#687784" stroke-width="0.7"/>
+<line x1="400" y1="174.28976377952768" x2="406" y2="180.28976377952768" stroke="#687784" stroke-width="0.7"/>
+<text x="413" y="180.28976377952768" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#687784">NC</text>
+<text x="328" y="195.98976377952772" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#183246">J4</text>
+<line x1="375" y1="192.98976377952772" x2="403" y2="192.98976377952772" stroke="#06715f" stroke-width="0.7"/>
+<text x="411" y="195.98976377952772" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#06715f">GND</text>
+<text x="328" y="211.68976377952765" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#183246">J5</text>
+<line x1="375" y1="208.68976377952765" x2="403" y2="208.68976377952765" stroke="#06715f" stroke-width="0.7"/>
+<text x="411" y="211.68976377952765" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#06715f">GND</text>
+<text x="328" y="227.3897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#183246">J6</text>
+<line x1="375" y1="224.3897637795277" x2="403" y2="224.3897637795277" stroke="#687784" stroke-width="0.7"/>
+<line x1="400" y1="227.3897637795277" x2="406" y2="221.3897637795277" stroke="#687784" stroke-width="0.7"/>
+<line x1="400" y1="221.3897637795277" x2="406" y2="227.3897637795277" stroke="#687784" stroke-width="0.7"/>
+<text x="413" y="227.3897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#687784">NC</text>
+<text x="328" y="243.08976377952774" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#183246">J7</text>
+<line x1="375" y1="240.08976377952774" x2="403" y2="240.08976377952774" stroke="#687784" stroke-width="0.7"/>
+<line x1="400" y1="243.08976377952774" x2="406" y2="237.08976377952774" stroke="#687784" stroke-width="0.7"/>
+<line x1="400" y1="237.08976377952774" x2="406" y2="243.08976377952774" stroke="#687784" stroke-width="0.7"/>
+<text x="413" y="243.08976377952774" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#687784">NC</text>
+<text x="328" y="258.7897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#183246">J8</text>
+<line x1="375" y1="255.78976377952768" x2="403" y2="255.78976377952768" stroke="#06715f" stroke-width="0.7"/>
+<text x="411" y="258.7897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#06715f">GND</text>
+<text x="328" y="274.4897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#183246">J9</text>
+<line x1="375" y1="271.4897637795277" x2="403" y2="271.4897637795277" stroke="#687784" stroke-width="0.7"/>
+<line x1="400" y1="274.4897637795277" x2="406" y2="268.4897637795277" stroke="#687784" stroke-width="0.7"/>
+<line x1="400" y1="268.4897637795277" x2="406" y2="274.4897637795277" stroke="#687784" stroke-width="0.7"/>
+<text x="413" y="274.4897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#687784">NC</text>
+<text x="328" y="290.18976377952765" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#183246">J10</text>
+<line x1="375" y1="287.18976377952765" x2="403" y2="287.18976377952765" stroke="#687784" stroke-width="0.7"/>
+<line x1="400" y1="290.18976377952765" x2="406" y2="284.18976377952765" stroke="#687784" stroke-width="0.7"/>
+<line x1="400" y1="284.18976377952765" x2="406" y2="290.18976377952765" stroke="#687784" stroke-width="0.7"/>
+<text x="413" y="290.18976377952765" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#687784">NC</text>
+<text x="328" y="305.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#183246">J11</text>
+<line x1="375" y1="302.8897637795277" x2="403" y2="302.8897637795277" stroke="#06715f" stroke-width="0.7"/>
+<text x="411" y="305.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#06715f">GND</text>
+<text x="328" y="321.58976377952774" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#183246">J12</text>
+<line x1="375" y1="318.58976377952774" x2="403" y2="318.58976377952774" stroke="#687784" stroke-width="0.7"/>
+<line x1="400" y1="321.58976377952774" x2="406" y2="315.58976377952774" stroke="#687784" stroke-width="0.7"/>
+<line x1="400" y1="315.58976377952774" x2="406" y2="321.58976377952774" stroke="#687784" stroke-width="0.7"/>
+<text x="413" y="321.58976377952774" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#687784">NC</text>
+<text x="328" y="337.2897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#183246">J13</text>
+<line x1="375" y1="334.2897637795277" x2="403" y2="334.2897637795277" stroke="#687784" stroke-width="0.7"/>
+<line x1="400" y1="337.2897637795277" x2="406" y2="331.2897637795277" stroke="#687784" stroke-width="0.7"/>
+<line x1="400" y1="331.2897637795277" x2="406" y2="337.2897637795277" stroke="#687784" stroke-width="0.7"/>
+<text x="413" y="337.2897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#687784">NC</text>
+<text x="328" y="352.9897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#183246">J14</text>
+<line x1="375" y1="349.9897637795277" x2="403" y2="349.9897637795277" stroke="#06715f" stroke-width="0.7"/>
+<text x="411" y="352.9897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#06715f">GND</text>
+<text x="328" y="368.68976377952765" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#183246">J15</text>
+<line x1="375" y1="365.68976377952765" x2="403" y2="365.68976377952765" stroke="#687784" stroke-width="0.7"/>
+<line x1="400" y1="368.68976377952765" x2="406" y2="362.68976377952765" stroke="#687784" stroke-width="0.7"/>
+<line x1="400" y1="362.68976377952765" x2="406" y2="368.68976377952765" stroke="#687784" stroke-width="0.7"/>
+<text x="413" y="368.68976377952765" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#687784">NC</text>
+<text x="328" y="384.3897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#183246">J16</text>
+<line x1="375" y1="381.3897637795277" x2="403" y2="381.3897637795277" stroke="#687784" stroke-width="0.7"/>
+<line x1="400" y1="384.3897637795277" x2="406" y2="378.3897637795277" stroke="#687784" stroke-width="0.7"/>
+<line x1="400" y1="378.3897637795277" x2="406" y2="384.3897637795277" stroke="#687784" stroke-width="0.7"/>
+<text x="413" y="384.3897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#687784">NC</text>
+<text x="328" y="400.0897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#183246">J17</text>
+<line x1="375" y1="397.0897637795277" x2="403" y2="397.0897637795277" stroke="#06715f" stroke-width="0.7"/>
+<text x="411" y="400.0897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#06715f">GND</text>
+<text x="328" y="415.7897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#183246">J18</text>
+<line x1="375" y1="412.7897637795277" x2="403" y2="412.7897637795277" stroke="#687784" stroke-width="0.7"/>
+<line x1="400" y1="415.7897637795277" x2="406" y2="409.7897637795277" stroke="#687784" stroke-width="0.7"/>
+<line x1="400" y1="409.7897637795277" x2="406" y2="415.7897637795277" stroke="#687784" stroke-width="0.7"/>
+<text x="413" y="415.7897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#687784">NC</text>
+<text x="328" y="431.48976377952766" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#183246">J19</text>
+<line x1="375" y1="428.48976377952766" x2="403" y2="428.48976377952766" stroke="#687784" stroke-width="0.7"/>
+<line x1="400" y1="431.48976377952766" x2="406" y2="425.48976377952766" stroke="#687784" stroke-width="0.7"/>
+<line x1="400" y1="425.48976377952766" x2="406" y2="431.48976377952766" stroke="#687784" stroke-width="0.7"/>
+<text x="413" y="431.48976377952766" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#687784">NC</text>
+<text x="328" y="447.1897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#183246">J20</text>
+<line x1="375" y1="444.1897637795277" x2="403" y2="444.1897637795277" stroke="#06715f" stroke-width="0.7"/>
+<text x="411" y="447.1897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#06715f">GND</text>
+<text x="328" y="462.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#183246">J21</text>
+<line x1="375" y1="459.8897637795277" x2="403" y2="459.8897637795277" stroke="#687784" stroke-width="0.7"/>
+<line x1="400" y1="462.8897637795277" x2="406" y2="456.8897637795277" stroke="#687784" stroke-width="0.7"/>
+<line x1="400" y1="456.8897637795277" x2="406" y2="462.8897637795277" stroke="#687784" stroke-width="0.7"/>
+<text x="413" y="462.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#687784">NC</text>
+<text x="328" y="478.5897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#183246">J22</text>
+<line x1="375" y1="475.5897637795277" x2="403" y2="475.5897637795277" stroke="#687784" stroke-width="0.7"/>
+<line x1="400" y1="478.5897637795277" x2="406" y2="472.5897637795277" stroke="#687784" stroke-width="0.7"/>
+<line x1="400" y1="472.5897637795277" x2="406" y2="478.5897637795277" stroke="#687784" stroke-width="0.7"/>
+<text x="413" y="478.5897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#687784">NC</text>
+<text x="328" y="494.2897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#183246">J23</text>
+<line x1="375" y1="491.2897637795277" x2="403" y2="491.2897637795277" stroke="#06715f" stroke-width="0.7"/>
+<text x="411" y="494.2897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#06715f">GND</text>
+<text x="328" y="509.98976377952766" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#183246">J24</text>
+<line x1="375" y1="506.98976377952766" x2="403" y2="506.98976377952766" stroke="#687784" stroke-width="0.7"/>
+<line x1="400" y1="509.98976377952766" x2="406" y2="503.98976377952766" stroke="#687784" stroke-width="0.7"/>
+<line x1="400" y1="503.98976377952766" x2="406" y2="509.98976377952766" stroke="#687784" stroke-width="0.7"/>
+<text x="413" y="509.98976377952766" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#687784">NC</text>
+<text x="328" y="525.6897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#183246">J25</text>
+<line x1="375" y1="522.6897637795277" x2="403" y2="522.6897637795277" stroke="#687784" stroke-width="0.7"/>
+<line x1="400" y1="525.6897637795277" x2="406" y2="519.6897637795277" stroke="#687784" stroke-width="0.7"/>
+<line x1="400" y1="519.6897637795277" x2="406" y2="525.6897637795277" stroke="#687784" stroke-width="0.7"/>
+<text x="413" y="525.6897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#687784">NC</text>
+<text x="328" y="541.3897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#183246">J26</text>
+<line x1="375" y1="538.3897637795277" x2="403" y2="538.3897637795277" stroke="#06715f" stroke-width="0.7"/>
+<text x="411" y="541.3897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#06715f">GND</text>
+<text x="328" y="557.0897637795276" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#183246">J27</text>
+<line x1="375" y1="554.0897637795276" x2="403" y2="554.0897637795276" stroke="#687784" stroke-width="0.7"/>
+<line x1="400" y1="557.0897637795276" x2="406" y2="551.0897637795276" stroke="#687784" stroke-width="0.7"/>
+<line x1="400" y1="551.0897637795276" x2="406" y2="557.0897637795276" stroke="#687784" stroke-width="0.7"/>
+<text x="413" y="557.0897637795276" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#687784">NC</text>
+<text x="328" y="572.7897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#183246">J28</text>
+<line x1="375" y1="569.7897637795277" x2="403" y2="569.7897637795277" stroke="#687784" stroke-width="0.7"/>
+<line x1="400" y1="572.7897637795277" x2="406" y2="566.7897637795277" stroke="#687784" stroke-width="0.7"/>
+<line x1="400" y1="566.7897637795277" x2="406" y2="572.7897637795277" stroke="#687784" stroke-width="0.7"/>
+<text x="413" y="572.7897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#687784">NC</text>
+<text x="328" y="588.4897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#183246">J29</text>
+<line x1="375" y1="585.4897637795277" x2="403" y2="585.4897637795277" stroke="#06715f" stroke-width="0.7"/>
+<text x="411" y="588.4897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#06715f">GND</text>
+<text x="328" y="604.1897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#183246">J30</text>
+<line x1="375" y1="601.1897637795277" x2="403" y2="601.1897637795277" stroke="#687784" stroke-width="0.7"/>
+<line x1="400" y1="604.1897637795277" x2="406" y2="598.1897637795277" stroke="#687784" stroke-width="0.7"/>
+<line x1="400" y1="598.1897637795277" x2="406" y2="604.1897637795277" stroke="#687784" stroke-width="0.7"/>
+<text x="413" y="604.1897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#687784">NC</text>
+<text x="328" y="619.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#183246">J31</text>
+<line x1="375" y1="616.8897637795277" x2="403" y2="616.8897637795277" stroke="#687784" stroke-width="0.7"/>
+<line x1="400" y1="619.8897637795277" x2="406" y2="613.8897637795277" stroke="#687784" stroke-width="0.7"/>
+<line x1="400" y1="613.8897637795277" x2="406" y2="619.8897637795277" stroke="#687784" stroke-width="0.7"/>
+<text x="413" y="619.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#687784">NC</text>
+<text x="328" y="635.5897637795276" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#183246">J32</text>
+<line x1="375" y1="632.5897637795276" x2="403" y2="632.5897637795276" stroke="#06715f" stroke-width="0.7"/>
+<text x="411" y="635.5897637795276" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#06715f">GND</text>
+<text x="328" y="651.2897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#183246">J33</text>
+<line x1="375" y1="648.2897637795277" x2="403" y2="648.2897637795277" stroke="#687784" stroke-width="0.7"/>
+<line x1="400" y1="651.2897637795277" x2="406" y2="645.2897637795277" stroke="#687784" stroke-width="0.7"/>
+<line x1="400" y1="645.2897637795277" x2="406" y2="651.2897637795277" stroke="#687784" stroke-width="0.7"/>
+<text x="413" y="651.2897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#687784">NC</text>
+<text x="328" y="666.9897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#183246">J34</text>
+<line x1="375" y1="663.9897637795277" x2="403" y2="663.9897637795277" stroke="#687784" stroke-width="0.7"/>
+<line x1="400" y1="666.9897637795277" x2="406" y2="660.9897637795277" stroke="#687784" stroke-width="0.7"/>
+<line x1="400" y1="660.9897637795277" x2="406" y2="666.9897637795277" stroke="#687784" stroke-width="0.7"/>
+<text x="413" y="666.9897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#687784">NC</text>
+<text x="328" y="682.6897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#183246">J35</text>
+<line x1="375" y1="679.6897637795277" x2="403" y2="679.6897637795277" stroke="#06715f" stroke-width="0.7"/>
+<text x="411" y="682.6897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#06715f">GND</text>
+<text x="328" y="698.3897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#183246">J36</text>
+<line x1="375" y1="695.3897637795277" x2="403" y2="695.3897637795277" stroke="#687784" stroke-width="0.7"/>
+<line x1="400" y1="698.3897637795277" x2="406" y2="692.3897637795277" stroke="#687784" stroke-width="0.7"/>
+<line x1="400" y1="692.3897637795277" x2="406" y2="698.3897637795277" stroke="#687784" stroke-width="0.7"/>
+<text x="413" y="698.3897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#687784">NC</text>
+<text x="328" y="714.0897637795276" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#183246">J37</text>
+<line x1="375" y1="711.0897637795276" x2="403" y2="711.0897637795276" stroke="#687784" stroke-width="0.7"/>
+<line x1="400" y1="714.0897637795276" x2="406" y2="708.0897637795276" stroke="#687784" stroke-width="0.7"/>
+<line x1="400" y1="708.0897637795276" x2="406" y2="714.0897637795276" stroke="#687784" stroke-width="0.7"/>
+<text x="413" y="714.0897637795276" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#687784">NC</text>
+<text x="328" y="729.7897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#183246">J38</text>
+<line x1="375" y1="726.7897637795277" x2="403" y2="726.7897637795277" stroke="#06715f" stroke-width="0.7"/>
+<text x="411" y="729.7897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#06715f">GND</text>
+<text x="328" y="745.4897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#183246">J39</text>
+<line x1="375" y1="742.4897637795277" x2="403" y2="742.4897637795277" stroke="#687784" stroke-width="0.7"/>
+<line x1="400" y1="745.4897637795277" x2="406" y2="739.4897637795277" stroke="#687784" stroke-width="0.7"/>
+<line x1="400" y1="739.4897637795277" x2="406" y2="745.4897637795277" stroke="#687784" stroke-width="0.7"/>
+<text x="413" y="745.4897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#687784">NC</text>
+<text x="328" y="761.1897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#183246">J40</text>
+<line x1="375" y1="758.1897637795277" x2="403" y2="758.1897637795277" stroke="#06715f" stroke-width="0.7"/>
+<text x="411" y="761.1897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#06715f">GND</text>
+<text x="607" y="103.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="14" fill="#005f93">J1K  (BOTTOM)</text>
+<text x="607" y="121.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="10" fill="#687784">to VCU118 J2</text>
+<rect x="607" y="132.8897637795277" width="54" height="635" stroke="#183246" fill="#f8fafb"/>
+<text x="614" y="148.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#183246">K1</text>
+<line x1="661" y1="145.8897637795277" x2="689" y2="145.8897637795277" stroke="#687784" stroke-width="0.7"/>
+<line x1="686" y1="148.8897637795277" x2="692" y2="142.8897637795277" stroke="#687784" stroke-width="0.7"/>
+<line x1="686" y1="142.8897637795277" x2="692" y2="148.8897637795277" stroke="#687784" stroke-width="0.7"/>
+<text x="699" y="148.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#687784">NC</text>
+<text x="614" y="164.58976377952774" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#183246">K2</text>
+<line x1="661" y1="161.58976377952774" x2="689" y2="161.58976377952774" stroke="#06715f" stroke-width="0.7"/>
+<text x="697" y="164.58976377952774" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#06715f">GND</text>
+<text x="614" y="180.28976377952768" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#183246">K3</text>
+<line x1="661" y1="177.28976377952768" x2="689" y2="177.28976377952768" stroke="#06715f" stroke-width="0.7"/>
+<text x="697" y="180.28976377952768" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#06715f">GND</text>
+<text x="614" y="195.98976377952772" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#183246">K4</text>
+<line x1="661" y1="192.98976377952772" x2="689" y2="192.98976377952772" stroke="#687784" stroke-width="0.7"/>
+<line x1="686" y1="195.98976377952772" x2="692" y2="189.98976377952772" stroke="#687784" stroke-width="0.7"/>
+<line x1="686" y1="189.98976377952772" x2="692" y2="195.98976377952772" stroke="#687784" stroke-width="0.7"/>
+<text x="699" y="195.98976377952772" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#687784">NC</text>
+<text x="614" y="211.68976377952765" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#183246">K5</text>
+<line x1="661" y1="208.68976377952765" x2="689" y2="208.68976377952765" stroke="#687784" stroke-width="0.7"/>
+<line x1="686" y1="211.68976377952765" x2="692" y2="205.68976377952765" stroke="#687784" stroke-width="0.7"/>
+<line x1="686" y1="205.68976377952765" x2="692" y2="211.68976377952765" stroke="#687784" stroke-width="0.7"/>
+<text x="699" y="211.68976377952765" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#687784">NC</text>
+<text x="614" y="227.3897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#183246">K6</text>
+<line x1="661" y1="224.3897637795277" x2="689" y2="224.3897637795277" stroke="#06715f" stroke-width="0.7"/>
+<text x="697" y="227.3897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#06715f">GND</text>
+<text x="614" y="243.08976377952774" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#183246">K7</text>
+<line x1="661" y1="240.08976377952774" x2="689" y2="240.08976377952774" stroke="#687784" stroke-width="0.7"/>
+<line x1="686" y1="243.08976377952774" x2="692" y2="237.08976377952774" stroke="#687784" stroke-width="0.7"/>
+<line x1="686" y1="237.08976377952774" x2="692" y2="243.08976377952774" stroke="#687784" stroke-width="0.7"/>
+<text x="699" y="243.08976377952774" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#687784">NC</text>
+<text x="614" y="258.7897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#183246">K8</text>
+<line x1="661" y1="255.78976377952768" x2="689" y2="255.78976377952768" stroke="#687784" stroke-width="0.7"/>
+<line x1="686" y1="258.7897637795277" x2="692" y2="252.78976377952768" stroke="#687784" stroke-width="0.7"/>
+<line x1="686" y1="252.78976377952768" x2="692" y2="258.7897637795277" stroke="#687784" stroke-width="0.7"/>
+<text x="699" y="258.7897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#687784">NC</text>
+<text x="614" y="274.4897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#183246">K9</text>
+<line x1="661" y1="271.4897637795277" x2="689" y2="271.4897637795277" stroke="#06715f" stroke-width="0.7"/>
+<text x="697" y="274.4897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#06715f">GND</text>
+<text x="614" y="290.18976377952765" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#183246">K10</text>
+<line x1="661" y1="287.18976377952765" x2="689" y2="287.18976377952765" stroke="#687784" stroke-width="0.7"/>
+<line x1="686" y1="290.18976377952765" x2="692" y2="284.18976377952765" stroke="#687784" stroke-width="0.7"/>
+<line x1="686" y1="284.18976377952765" x2="692" y2="290.18976377952765" stroke="#687784" stroke-width="0.7"/>
+<text x="699" y="290.18976377952765" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#687784">NC</text>
+<text x="614" y="305.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#183246">K11</text>
+<line x1="661" y1="302.8897637795277" x2="689" y2="302.8897637795277" stroke="#687784" stroke-width="0.7"/>
+<line x1="686" y1="305.8897637795277" x2="692" y2="299.8897637795277" stroke="#687784" stroke-width="0.7"/>
+<line x1="686" y1="299.8897637795277" x2="692" y2="305.8897637795277" stroke="#687784" stroke-width="0.7"/>
+<text x="699" y="305.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#687784">NC</text>
+<text x="614" y="321.58976377952774" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#183246">K12</text>
+<line x1="661" y1="318.58976377952774" x2="689" y2="318.58976377952774" stroke="#06715f" stroke-width="0.7"/>
+<text x="697" y="321.58976377952774" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#06715f">GND</text>
+<text x="614" y="337.2897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#183246">K13</text>
+<line x1="661" y1="334.2897637795277" x2="689" y2="334.2897637795277" stroke="#687784" stroke-width="0.7"/>
+<line x1="686" y1="337.2897637795277" x2="692" y2="331.2897637795277" stroke="#687784" stroke-width="0.7"/>
+<line x1="686" y1="331.2897637795277" x2="692" y2="337.2897637795277" stroke="#687784" stroke-width="0.7"/>
+<text x="699" y="337.2897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#687784">NC</text>
+<text x="614" y="352.9897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#183246">K14</text>
+<line x1="661" y1="349.9897637795277" x2="689" y2="349.9897637795277" stroke="#687784" stroke-width="0.7"/>
+<line x1="686" y1="352.9897637795277" x2="692" y2="346.9897637795277" stroke="#687784" stroke-width="0.7"/>
+<line x1="686" y1="346.9897637795277" x2="692" y2="352.9897637795277" stroke="#687784" stroke-width="0.7"/>
+<text x="699" y="352.9897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#687784">NC</text>
+<text x="614" y="368.68976377952765" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#183246">K15</text>
+<line x1="661" y1="365.68976377952765" x2="689" y2="365.68976377952765" stroke="#06715f" stroke-width="0.7"/>
+<text x="697" y="368.68976377952765" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#06715f">GND</text>
+<text x="614" y="384.3897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#183246">K16</text>
+<line x1="661" y1="381.3897637795277" x2="689" y2="381.3897637795277" stroke="#687784" stroke-width="0.7"/>
+<line x1="686" y1="384.3897637795277" x2="692" y2="378.3897637795277" stroke="#687784" stroke-width="0.7"/>
+<line x1="686" y1="378.3897637795277" x2="692" y2="384.3897637795277" stroke="#687784" stroke-width="0.7"/>
+<text x="699" y="384.3897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#687784">NC</text>
+<text x="614" y="400.0897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#183246">K17</text>
+<line x1="661" y1="397.0897637795277" x2="689" y2="397.0897637795277" stroke="#687784" stroke-width="0.7"/>
+<line x1="686" y1="400.0897637795277" x2="692" y2="394.0897637795277" stroke="#687784" stroke-width="0.7"/>
+<line x1="686" y1="394.0897637795277" x2="692" y2="400.0897637795277" stroke="#687784" stroke-width="0.7"/>
+<text x="699" y="400.0897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#687784">NC</text>
+<text x="614" y="415.7897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#183246">K18</text>
+<line x1="661" y1="412.7897637795277" x2="689" y2="412.7897637795277" stroke="#06715f" stroke-width="0.7"/>
+<text x="697" y="415.7897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#06715f">GND</text>
+<text x="614" y="431.48976377952766" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#183246">K19</text>
+<line x1="661" y1="428.48976377952766" x2="689" y2="428.48976377952766" stroke="#687784" stroke-width="0.7"/>
+<line x1="686" y1="431.48976377952766" x2="692" y2="425.48976377952766" stroke="#687784" stroke-width="0.7"/>
+<line x1="686" y1="425.48976377952766" x2="692" y2="431.48976377952766" stroke="#687784" stroke-width="0.7"/>
+<text x="699" y="431.48976377952766" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#687784">NC</text>
+<text x="614" y="447.1897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#183246">K20</text>
+<line x1="661" y1="444.1897637795277" x2="689" y2="444.1897637795277" stroke="#687784" stroke-width="0.7"/>
+<line x1="686" y1="447.1897637795277" x2="692" y2="441.1897637795277" stroke="#687784" stroke-width="0.7"/>
+<line x1="686" y1="441.1897637795277" x2="692" y2="447.1897637795277" stroke="#687784" stroke-width="0.7"/>
+<text x="699" y="447.1897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#687784">NC</text>
+<text x="614" y="462.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#183246">K21</text>
+<line x1="661" y1="459.8897637795277" x2="689" y2="459.8897637795277" stroke="#06715f" stroke-width="0.7"/>
+<text x="697" y="462.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#06715f">GND</text>
+<text x="614" y="478.5897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#183246">K22</text>
+<line x1="661" y1="475.5897637795277" x2="689" y2="475.5897637795277" stroke="#687784" stroke-width="0.7"/>
+<line x1="686" y1="478.5897637795277" x2="692" y2="472.5897637795277" stroke="#687784" stroke-width="0.7"/>
+<line x1="686" y1="472.5897637795277" x2="692" y2="478.5897637795277" stroke="#687784" stroke-width="0.7"/>
+<text x="699" y="478.5897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#687784">NC</text>
+<text x="614" y="494.2897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#183246">K23</text>
+<line x1="661" y1="491.2897637795277" x2="689" y2="491.2897637795277" stroke="#687784" stroke-width="0.7"/>
+<line x1="686" y1="494.2897637795277" x2="692" y2="488.2897637795277" stroke="#687784" stroke-width="0.7"/>
+<line x1="686" y1="488.2897637795277" x2="692" y2="494.2897637795277" stroke="#687784" stroke-width="0.7"/>
+<text x="699" y="494.2897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#687784">NC</text>
+<text x="614" y="509.98976377952766" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#183246">K24</text>
+<line x1="661" y1="506.98976377952766" x2="689" y2="506.98976377952766" stroke="#06715f" stroke-width="0.7"/>
+<text x="697" y="509.98976377952766" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#06715f">GND</text>
+<text x="614" y="525.6897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#183246">K25</text>
+<line x1="661" y1="522.6897637795277" x2="689" y2="522.6897637795277" stroke="#687784" stroke-width="0.7"/>
+<line x1="686" y1="525.6897637795277" x2="692" y2="519.6897637795277" stroke="#687784" stroke-width="0.7"/>
+<line x1="686" y1="519.6897637795277" x2="692" y2="525.6897637795277" stroke="#687784" stroke-width="0.7"/>
+<text x="699" y="525.6897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#687784">NC</text>
+<text x="614" y="541.3897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#183246">K26</text>
+<line x1="661" y1="538.3897637795277" x2="689" y2="538.3897637795277" stroke="#687784" stroke-width="0.7"/>
+<line x1="686" y1="541.3897637795277" x2="692" y2="535.3897637795277" stroke="#687784" stroke-width="0.7"/>
+<line x1="686" y1="535.3897637795277" x2="692" y2="541.3897637795277" stroke="#687784" stroke-width="0.7"/>
+<text x="699" y="541.3897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#687784">NC</text>
+<text x="614" y="557.0897637795276" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#183246">K27</text>
+<line x1="661" y1="554.0897637795276" x2="689" y2="554.0897637795276" stroke="#06715f" stroke-width="0.7"/>
+<text x="697" y="557.0897637795276" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#06715f">GND</text>
+<text x="614" y="572.7897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#183246">K28</text>
+<line x1="661" y1="569.7897637795277" x2="689" y2="569.7897637795277" stroke="#687784" stroke-width="0.7"/>
+<line x1="686" y1="572.7897637795277" x2="692" y2="566.7897637795277" stroke="#687784" stroke-width="0.7"/>
+<line x1="686" y1="566.7897637795277" x2="692" y2="572.7897637795277" stroke="#687784" stroke-width="0.7"/>
+<text x="699" y="572.7897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#687784">NC</text>
+<text x="614" y="588.4897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#183246">K29</text>
+<line x1="661" y1="585.4897637795277" x2="689" y2="585.4897637795277" stroke="#687784" stroke-width="0.7"/>
+<line x1="686" y1="588.4897637795277" x2="692" y2="582.4897637795277" stroke="#687784" stroke-width="0.7"/>
+<line x1="686" y1="582.4897637795277" x2="692" y2="588.4897637795277" stroke="#687784" stroke-width="0.7"/>
+<text x="699" y="588.4897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#687784">NC</text>
+<text x="614" y="604.1897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#183246">K30</text>
+<line x1="661" y1="601.1897637795277" x2="689" y2="601.1897637795277" stroke="#06715f" stroke-width="0.7"/>
+<text x="697" y="604.1897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#06715f">GND</text>
+<text x="614" y="619.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#183246">K31</text>
+<line x1="661" y1="616.8897637795277" x2="689" y2="616.8897637795277" stroke="#687784" stroke-width="0.7"/>
+<line x1="686" y1="619.8897637795277" x2="692" y2="613.8897637795277" stroke="#687784" stroke-width="0.7"/>
+<line x1="686" y1="613.8897637795277" x2="692" y2="619.8897637795277" stroke="#687784" stroke-width="0.7"/>
+<text x="699" y="619.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#687784">NC</text>
+<text x="614" y="635.5897637795276" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#183246">K32</text>
+<line x1="661" y1="632.5897637795276" x2="689" y2="632.5897637795276" stroke="#687784" stroke-width="0.7"/>
+<line x1="686" y1="635.5897637795276" x2="692" y2="629.5897637795276" stroke="#687784" stroke-width="0.7"/>
+<line x1="686" y1="629.5897637795276" x2="692" y2="635.5897637795276" stroke="#687784" stroke-width="0.7"/>
+<text x="699" y="635.5897637795276" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#687784">NC</text>
+<text x="614" y="651.2897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#183246">K33</text>
+<line x1="661" y1="648.2897637795277" x2="689" y2="648.2897637795277" stroke="#06715f" stroke-width="0.7"/>
+<text x="697" y="651.2897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#06715f">GND</text>
+<text x="614" y="666.9897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#183246">K34</text>
+<line x1="661" y1="663.9897637795277" x2="689" y2="663.9897637795277" stroke="#687784" stroke-width="0.7"/>
+<line x1="686" y1="666.9897637795277" x2="692" y2="660.9897637795277" stroke="#687784" stroke-width="0.7"/>
+<line x1="686" y1="660.9897637795277" x2="692" y2="666.9897637795277" stroke="#687784" stroke-width="0.7"/>
+<text x="699" y="666.9897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#687784">NC</text>
+<text x="614" y="682.6897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#183246">K35</text>
+<line x1="661" y1="679.6897637795277" x2="689" y2="679.6897637795277" stroke="#687784" stroke-width="0.7"/>
+<line x1="686" y1="682.6897637795277" x2="692" y2="676.6897637795277" stroke="#687784" stroke-width="0.7"/>
+<line x1="686" y1="676.6897637795277" x2="692" y2="682.6897637795277" stroke="#687784" stroke-width="0.7"/>
+<text x="699" y="682.6897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#687784">NC</text>
+<text x="614" y="698.3897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#183246">K36</text>
+<line x1="661" y1="695.3897637795277" x2="689" y2="695.3897637795277" stroke="#06715f" stroke-width="0.7"/>
+<text x="697" y="698.3897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#06715f">GND</text>
+<text x="614" y="714.0897637795276" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#183246">K37</text>
+<line x1="661" y1="711.0897637795276" x2="689" y2="711.0897637795276" stroke="#687784" stroke-width="0.7"/>
+<line x1="686" y1="714.0897637795276" x2="692" y2="708.0897637795276" stroke="#687784" stroke-width="0.7"/>
+<line x1="686" y1="708.0897637795276" x2="692" y2="714.0897637795276" stroke="#687784" stroke-width="0.7"/>
+<text x="699" y="714.0897637795276" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#687784">NC</text>
+<text x="614" y="729.7897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#183246">K38</text>
+<line x1="661" y1="726.7897637795277" x2="689" y2="726.7897637795277" stroke="#687784" stroke-width="0.7"/>
+<line x1="686" y1="729.7897637795277" x2="692" y2="723.7897637795277" stroke="#687784" stroke-width="0.7"/>
+<line x1="686" y1="723.7897637795277" x2="692" y2="729.7897637795277" stroke="#687784" stroke-width="0.7"/>
+<text x="699" y="729.7897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#687784">NC</text>
+<text x="614" y="745.4897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#183246">K39</text>
+<line x1="661" y1="742.4897637795277" x2="689" y2="742.4897637795277" stroke="#06715f" stroke-width="0.7"/>
+<text x="697" y="745.4897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#06715f">GND</text>
+<text x="614" y="761.1897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#183246">K40</text>
+<line x1="661" y1="758.1897637795277" x2="689" y2="758.1897637795277" stroke="#687784" stroke-width="0.7"/>
+<line x1="686" y1="761.1897637795277" x2="692" y2="755.1897637795277" stroke="#687784" stroke-width="0.7"/>
+<line x1="686" y1="755.1897637795277" x2="692" y2="761.1897637795277" stroke="#687784" stroke-width="0.7"/>
+<text x="699" y="761.1897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#687784">NC</text>
+<text x="893" y="103.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="14" fill="#005f93">J2K  (TOP)</text>
+<text x="893" y="121.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="10" fill="#687784">to daughtercard J4</text>
+<rect x="893" y="132.8897637795277" width="54" height="635" stroke="#183246" fill="#f8fafb"/>
+<text x="900" y="148.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#183246">K1</text>
+<line x1="947" y1="145.8897637795277" x2="975" y2="145.8897637795277" stroke="#687784" stroke-width="0.7"/>
+<line x1="972" y1="148.8897637795277" x2="978" y2="142.8897637795277" stroke="#687784" stroke-width="0.7"/>
+<line x1="972" y1="142.8897637795277" x2="978" y2="148.8897637795277" stroke="#687784" stroke-width="0.7"/>
+<text x="985" y="148.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#687784">NC</text>
+<text x="900" y="164.58976377952774" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#183246">K2</text>
+<line x1="947" y1="161.58976377952774" x2="975" y2="161.58976377952774" stroke="#06715f" stroke-width="0.7"/>
+<text x="983" y="164.58976377952774" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#06715f">GND</text>
+<text x="900" y="180.28976377952768" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#183246">K3</text>
+<line x1="947" y1="177.28976377952768" x2="975" y2="177.28976377952768" stroke="#06715f" stroke-width="0.7"/>
+<text x="983" y="180.28976377952768" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#06715f">GND</text>
+<text x="900" y="195.98976377952772" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#183246">K4</text>
+<line x1="947" y1="192.98976377952772" x2="975" y2="192.98976377952772" stroke="#687784" stroke-width="0.7"/>
+<line x1="972" y1="195.98976377952772" x2="978" y2="189.98976377952772" stroke="#687784" stroke-width="0.7"/>
+<line x1="972" y1="189.98976377952772" x2="978" y2="195.98976377952772" stroke="#687784" stroke-width="0.7"/>
+<text x="985" y="195.98976377952772" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#687784">NC</text>
+<text x="900" y="211.68976377952765" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#183246">K5</text>
+<line x1="947" y1="208.68976377952765" x2="975" y2="208.68976377952765" stroke="#687784" stroke-width="0.7"/>
+<line x1="972" y1="211.68976377952765" x2="978" y2="205.68976377952765" stroke="#687784" stroke-width="0.7"/>
+<line x1="972" y1="205.68976377952765" x2="978" y2="211.68976377952765" stroke="#687784" stroke-width="0.7"/>
+<text x="985" y="211.68976377952765" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#687784">NC</text>
+<text x="900" y="227.3897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#183246">K6</text>
+<line x1="947" y1="224.3897637795277" x2="975" y2="224.3897637795277" stroke="#06715f" stroke-width="0.7"/>
+<text x="983" y="227.3897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#06715f">GND</text>
+<text x="900" y="243.08976377952774" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#183246">K7</text>
+<line x1="947" y1="240.08976377952774" x2="975" y2="240.08976377952774" stroke="#687784" stroke-width="0.7"/>
+<line x1="972" y1="243.08976377952774" x2="978" y2="237.08976377952774" stroke="#687784" stroke-width="0.7"/>
+<line x1="972" y1="237.08976377952774" x2="978" y2="243.08976377952774" stroke="#687784" stroke-width="0.7"/>
+<text x="985" y="243.08976377952774" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#687784">NC</text>
+<text x="900" y="258.7897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#183246">K8</text>
+<line x1="947" y1="255.78976377952768" x2="975" y2="255.78976377952768" stroke="#687784" stroke-width="0.7"/>
+<line x1="972" y1="258.7897637795277" x2="978" y2="252.78976377952768" stroke="#687784" stroke-width="0.7"/>
+<line x1="972" y1="252.78976377952768" x2="978" y2="258.7897637795277" stroke="#687784" stroke-width="0.7"/>
+<text x="985" y="258.7897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#687784">NC</text>
+<text x="900" y="274.4897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#183246">K9</text>
+<line x1="947" y1="271.4897637795277" x2="975" y2="271.4897637795277" stroke="#06715f" stroke-width="0.7"/>
+<text x="983" y="274.4897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#06715f">GND</text>
+<text x="900" y="290.18976377952765" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#183246">K10</text>
+<line x1="947" y1="287.18976377952765" x2="975" y2="287.18976377952765" stroke="#687784" stroke-width="0.7"/>
+<line x1="972" y1="290.18976377952765" x2="978" y2="284.18976377952765" stroke="#687784" stroke-width="0.7"/>
+<line x1="972" y1="284.18976377952765" x2="978" y2="290.18976377952765" stroke="#687784" stroke-width="0.7"/>
+<text x="985" y="290.18976377952765" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#687784">NC</text>
+<text x="900" y="305.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#183246">K11</text>
+<line x1="947" y1="302.8897637795277" x2="975" y2="302.8897637795277" stroke="#687784" stroke-width="0.7"/>
+<line x1="972" y1="305.8897637795277" x2="978" y2="299.8897637795277" stroke="#687784" stroke-width="0.7"/>
+<line x1="972" y1="299.8897637795277" x2="978" y2="305.8897637795277" stroke="#687784" stroke-width="0.7"/>
+<text x="985" y="305.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#687784">NC</text>
+<text x="900" y="321.58976377952774" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#183246">K12</text>
+<line x1="947" y1="318.58976377952774" x2="975" y2="318.58976377952774" stroke="#06715f" stroke-width="0.7"/>
+<text x="983" y="321.58976377952774" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#06715f">GND</text>
+<text x="900" y="337.2897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#183246">K13</text>
+<line x1="947" y1="334.2897637795277" x2="975" y2="334.2897637795277" stroke="#687784" stroke-width="0.7"/>
+<line x1="972" y1="337.2897637795277" x2="978" y2="331.2897637795277" stroke="#687784" stroke-width="0.7"/>
+<line x1="972" y1="331.2897637795277" x2="978" y2="337.2897637795277" stroke="#687784" stroke-width="0.7"/>
+<text x="985" y="337.2897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#687784">NC</text>
+<text x="900" y="352.9897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#183246">K14</text>
+<line x1="947" y1="349.9897637795277" x2="975" y2="349.9897637795277" stroke="#687784" stroke-width="0.7"/>
+<line x1="972" y1="352.9897637795277" x2="978" y2="346.9897637795277" stroke="#687784" stroke-width="0.7"/>
+<line x1="972" y1="346.9897637795277" x2="978" y2="352.9897637795277" stroke="#687784" stroke-width="0.7"/>
+<text x="985" y="352.9897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#687784">NC</text>
+<text x="900" y="368.68976377952765" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#183246">K15</text>
+<line x1="947" y1="365.68976377952765" x2="975" y2="365.68976377952765" stroke="#06715f" stroke-width="0.7"/>
+<text x="983" y="368.68976377952765" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#06715f">GND</text>
+<text x="900" y="384.3897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#183246">K16</text>
+<line x1="947" y1="381.3897637795277" x2="975" y2="381.3897637795277" stroke="#687784" stroke-width="0.7"/>
+<line x1="972" y1="384.3897637795277" x2="978" y2="378.3897637795277" stroke="#687784" stroke-width="0.7"/>
+<line x1="972" y1="378.3897637795277" x2="978" y2="384.3897637795277" stroke="#687784" stroke-width="0.7"/>
+<text x="985" y="384.3897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#687784">NC</text>
+<text x="900" y="400.0897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#183246">K17</text>
+<line x1="947" y1="397.0897637795277" x2="975" y2="397.0897637795277" stroke="#687784" stroke-width="0.7"/>
+<line x1="972" y1="400.0897637795277" x2="978" y2="394.0897637795277" stroke="#687784" stroke-width="0.7"/>
+<line x1="972" y1="394.0897637795277" x2="978" y2="400.0897637795277" stroke="#687784" stroke-width="0.7"/>
+<text x="985" y="400.0897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#687784">NC</text>
+<text x="900" y="415.7897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#183246">K18</text>
+<line x1="947" y1="412.7897637795277" x2="975" y2="412.7897637795277" stroke="#06715f" stroke-width="0.7"/>
+<text x="983" y="415.7897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#06715f">GND</text>
+<text x="900" y="431.48976377952766" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#183246">K19</text>
+<line x1="947" y1="428.48976377952766" x2="975" y2="428.48976377952766" stroke="#687784" stroke-width="0.7"/>
+<line x1="972" y1="431.48976377952766" x2="978" y2="425.48976377952766" stroke="#687784" stroke-width="0.7"/>
+<line x1="972" y1="425.48976377952766" x2="978" y2="431.48976377952766" stroke="#687784" stroke-width="0.7"/>
+<text x="985" y="431.48976377952766" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#687784">NC</text>
+<text x="900" y="447.1897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#183246">K20</text>
+<line x1="947" y1="444.1897637795277" x2="975" y2="444.1897637795277" stroke="#687784" stroke-width="0.7"/>
+<line x1="972" y1="447.1897637795277" x2="978" y2="441.1897637795277" stroke="#687784" stroke-width="0.7"/>
+<line x1="972" y1="441.1897637795277" x2="978" y2="447.1897637795277" stroke="#687784" stroke-width="0.7"/>
+<text x="985" y="447.1897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#687784">NC</text>
+<text x="900" y="462.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#183246">K21</text>
+<line x1="947" y1="459.8897637795277" x2="975" y2="459.8897637795277" stroke="#06715f" stroke-width="0.7"/>
+<text x="983" y="462.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#06715f">GND</text>
+<text x="900" y="478.5897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#183246">K22</text>
+<line x1="947" y1="475.5897637795277" x2="975" y2="475.5897637795277" stroke="#687784" stroke-width="0.7"/>
+<line x1="972" y1="478.5897637795277" x2="978" y2="472.5897637795277" stroke="#687784" stroke-width="0.7"/>
+<line x1="972" y1="472.5897637795277" x2="978" y2="478.5897637795277" stroke="#687784" stroke-width="0.7"/>
+<text x="985" y="478.5897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#687784">NC</text>
+<text x="900" y="494.2897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#183246">K23</text>
+<line x1="947" y1="491.2897637795277" x2="975" y2="491.2897637795277" stroke="#687784" stroke-width="0.7"/>
+<line x1="972" y1="494.2897637795277" x2="978" y2="488.2897637795277" stroke="#687784" stroke-width="0.7"/>
+<line x1="972" y1="488.2897637795277" x2="978" y2="494.2897637795277" stroke="#687784" stroke-width="0.7"/>
+<text x="985" y="494.2897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#687784">NC</text>
+<text x="900" y="509.98976377952766" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#183246">K24</text>
+<line x1="947" y1="506.98976377952766" x2="975" y2="506.98976377952766" stroke="#06715f" stroke-width="0.7"/>
+<text x="983" y="509.98976377952766" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#06715f">GND</text>
+<text x="900" y="525.6897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#183246">K25</text>
+<line x1="947" y1="522.6897637795277" x2="975" y2="522.6897637795277" stroke="#687784" stroke-width="0.7"/>
+<line x1="972" y1="525.6897637795277" x2="978" y2="519.6897637795277" stroke="#687784" stroke-width="0.7"/>
+<line x1="972" y1="519.6897637795277" x2="978" y2="525.6897637795277" stroke="#687784" stroke-width="0.7"/>
+<text x="985" y="525.6897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#687784">NC</text>
+<text x="900" y="541.3897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#183246">K26</text>
+<line x1="947" y1="538.3897637795277" x2="975" y2="538.3897637795277" stroke="#687784" stroke-width="0.7"/>
+<line x1="972" y1="541.3897637795277" x2="978" y2="535.3897637795277" stroke="#687784" stroke-width="0.7"/>
+<line x1="972" y1="535.3897637795277" x2="978" y2="541.3897637795277" stroke="#687784" stroke-width="0.7"/>
+<text x="985" y="541.3897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#687784">NC</text>
+<text x="900" y="557.0897637795276" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#183246">K27</text>
+<line x1="947" y1="554.0897637795276" x2="975" y2="554.0897637795276" stroke="#06715f" stroke-width="0.7"/>
+<text x="983" y="557.0897637795276" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#06715f">GND</text>
+<text x="900" y="572.7897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#183246">K28</text>
+<line x1="947" y1="569.7897637795277" x2="975" y2="569.7897637795277" stroke="#687784" stroke-width="0.7"/>
+<line x1="972" y1="572.7897637795277" x2="978" y2="566.7897637795277" stroke="#687784" stroke-width="0.7"/>
+<line x1="972" y1="566.7897637795277" x2="978" y2="572.7897637795277" stroke="#687784" stroke-width="0.7"/>
+<text x="985" y="572.7897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#687784">NC</text>
+<text x="900" y="588.4897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#183246">K29</text>
+<line x1="947" y1="585.4897637795277" x2="975" y2="585.4897637795277" stroke="#687784" stroke-width="0.7"/>
+<line x1="972" y1="588.4897637795277" x2="978" y2="582.4897637795277" stroke="#687784" stroke-width="0.7"/>
+<line x1="972" y1="582.4897637795277" x2="978" y2="588.4897637795277" stroke="#687784" stroke-width="0.7"/>
+<text x="985" y="588.4897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#687784">NC</text>
+<text x="900" y="604.1897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#183246">K30</text>
+<line x1="947" y1="601.1897637795277" x2="975" y2="601.1897637795277" stroke="#06715f" stroke-width="0.7"/>
+<text x="983" y="604.1897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#06715f">GND</text>
+<text x="900" y="619.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#183246">K31</text>
+<line x1="947" y1="616.8897637795277" x2="975" y2="616.8897637795277" stroke="#687784" stroke-width="0.7"/>
+<line x1="972" y1="619.8897637795277" x2="978" y2="613.8897637795277" stroke="#687784" stroke-width="0.7"/>
+<line x1="972" y1="613.8897637795277" x2="978" y2="619.8897637795277" stroke="#687784" stroke-width="0.7"/>
+<text x="985" y="619.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#687784">NC</text>
+<text x="900" y="635.5897637795276" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#183246">K32</text>
+<line x1="947" y1="632.5897637795276" x2="975" y2="632.5897637795276" stroke="#687784" stroke-width="0.7"/>
+<line x1="972" y1="635.5897637795276" x2="978" y2="629.5897637795276" stroke="#687784" stroke-width="0.7"/>
+<line x1="972" y1="629.5897637795276" x2="978" y2="635.5897637795276" stroke="#687784" stroke-width="0.7"/>
+<text x="985" y="635.5897637795276" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#687784">NC</text>
+<text x="900" y="651.2897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#183246">K33</text>
+<line x1="947" y1="648.2897637795277" x2="975" y2="648.2897637795277" stroke="#06715f" stroke-width="0.7"/>
+<text x="983" y="651.2897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#06715f">GND</text>
+<text x="900" y="666.9897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#183246">K34</text>
+<line x1="947" y1="663.9897637795277" x2="975" y2="663.9897637795277" stroke="#687784" stroke-width="0.7"/>
+<line x1="972" y1="666.9897637795277" x2="978" y2="660.9897637795277" stroke="#687784" stroke-width="0.7"/>
+<line x1="972" y1="660.9897637795277" x2="978" y2="666.9897637795277" stroke="#687784" stroke-width="0.7"/>
+<text x="985" y="666.9897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#687784">NC</text>
+<text x="900" y="682.6897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#183246">K35</text>
+<line x1="947" y1="679.6897637795277" x2="975" y2="679.6897637795277" stroke="#687784" stroke-width="0.7"/>
+<line x1="972" y1="682.6897637795277" x2="978" y2="676.6897637795277" stroke="#687784" stroke-width="0.7"/>
+<line x1="972" y1="676.6897637795277" x2="978" y2="682.6897637795277" stroke="#687784" stroke-width="0.7"/>
+<text x="985" y="682.6897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#687784">NC</text>
+<text x="900" y="698.3897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#183246">K36</text>
+<line x1="947" y1="695.3897637795277" x2="975" y2="695.3897637795277" stroke="#06715f" stroke-width="0.7"/>
+<text x="983" y="698.3897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#06715f">GND</text>
+<text x="900" y="714.0897637795276" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#183246">K37</text>
+<line x1="947" y1="711.0897637795276" x2="975" y2="711.0897637795276" stroke="#687784" stroke-width="0.7"/>
+<line x1="972" y1="714.0897637795276" x2="978" y2="708.0897637795276" stroke="#687784" stroke-width="0.7"/>
+<line x1="972" y1="708.0897637795276" x2="978" y2="714.0897637795276" stroke="#687784" stroke-width="0.7"/>
+<text x="985" y="714.0897637795276" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#687784">NC</text>
+<text x="900" y="729.7897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#183246">K38</text>
+<line x1="947" y1="726.7897637795277" x2="975" y2="726.7897637795277" stroke="#687784" stroke-width="0.7"/>
+<line x1="972" y1="729.7897637795277" x2="978" y2="723.7897637795277" stroke="#687784" stroke-width="0.7"/>
+<line x1="972" y1="723.7897637795277" x2="978" y2="729.7897637795277" stroke="#687784" stroke-width="0.7"/>
+<text x="985" y="729.7897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#687784">NC</text>
+<text x="900" y="745.4897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#183246">K39</text>
+<line x1="947" y1="742.4897637795277" x2="975" y2="742.4897637795277" stroke="#06715f" stroke-width="0.7"/>
+<text x="983" y="745.4897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#06715f">GND</text>
+<text x="900" y="761.1897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#183246">K40</text>
+<line x1="947" y1="758.1897637795277" x2="975" y2="758.1897637795277" stroke="#687784" stroke-width="0.7"/>
+<line x1="972" y1="761.1897637795277" x2="978" y2="755.1897637795277" stroke="#687784" stroke-width="0.7"/>
+<line x1="972" y1="755.1897637795277" x2="978" y2="761.1897637795277" stroke="#687784" stroke-width="0.7"/>
+<text x="985" y="761.1897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9.5" fill="#687784">NC</text>
+<text x="35" y="787.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="10" fill="#a23226">C35/C37, D1: NC both sides. J1.G6/G7: NC. J2.B2/F2: GND. J2.G17/G26/H6: NC. J1.H2: GND.</text></svg>

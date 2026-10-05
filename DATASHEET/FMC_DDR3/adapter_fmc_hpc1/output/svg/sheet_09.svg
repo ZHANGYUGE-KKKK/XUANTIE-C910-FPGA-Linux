@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="420mm" height="297mm" viewBox="0 0 1190.5511811023623 841.8897637795277"><text x="32" y="40.0" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="23" fill="#183246">电源、地、NC、可选复位下拉与 BOM</text>
+<text x="32" y="62.0" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#687784">No adapter active components. Verify actual daughtercard regulator, decoupling and termination population.</text>
+<line x1="32" y1="78.0" x2="1158.5511811023623" y2="78.0" stroke="#005f93" stroke-width="1.5"/>
+<line x1="32" y1="799.8897637795277" x2="1158.5511811023623" y2="799.8897637795277" stroke="#687784" stroke-width="0.7"/>
+<text x="32" y="816.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="9" fill="#687784">2026-10-04-C | Wiring reference - not PCB fabrication release</text>
+<text x="1060.5511811023623" y="816.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="10" fill="#687784">Sheet 9 / 11</text>
+<text x="35" y="108.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="15" fill="#005f93">公共电源 / 地：全部同名针加入同一网，不按地针一对一独立接线</text>
+<text x="35" y="156.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="12" fill="#183246">J1 C39,D32,D36,D38,D40</text>
+<text x="650" y="156.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="12" fill="#183246">J2 C39,D32,D36,D38,D40</text>
+<line x1="35" y1="169.8897637795277" x2="1050" y2="169.8897637795277" stroke="#a23226" stroke-width="1.6"/>
+<text x="455" y="161.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="13" fill="#a23226">3V3</text>
+<text x="35" y="216.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="12" fill="#183246">J1 E39,F40,G39,H40</text>
+<text x="650" y="216.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="12" fill="#183246">J2 E39,F40,G39,H40</text>
+<line x1="35" y1="229.8897637795277" x2="1050" y2="229.8897637795277" stroke="#a23226" stroke-width="1.6"/>
+<text x="455" y="221.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="13" fill="#a23226">VADJ = 1.5 V</text>
+<text x="35" y="276.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="12" fill="#183246">J1 162 contacts</text>
+<text x="650" y="276.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="12" fill="#183246">J2 157 contacts</text>
+<line x1="35" y1="289.8897637795277" x2="1050" y2="289.8897637795277" stroke="#06715f" stroke-width="1.6"/>
+<text x="455" y="281.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="13" fill="#06715f">GND</text>
+<text x="35" y="320.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="13" fill="#183246">母板真实 VADJ/VCCO66/67 必须 1.5 V；共享 FMC Bank 的 C910 JTAG 仍是 LVCMOS18，另行解决电平兼容。子板 VDD/VDDQ=1.5 V，VTT/VREF=0.75 V。子板本地电源/跳线见 README，禁止</text>
+<text x="35" y="342.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="13" fill="#183246">并联不同来源。</text>
+<text x="35" y="397.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="15" fill="#005f93">可选上电复位下拉 - 默认不焊（DNP），先处理子板既有 RESET_n 终端</text>
+<text x="35" y="443.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="12" fill="#005f93">DDR_RESET_N</text>
+<line x1="150" y1="440.8897637795277" x2="250" y2="440.8897637795277" stroke="#005f93" stroke-width="0.7" stroke-dasharray="3 2"/>
+<rect x="250" y="431.8897637795277" width="64" height="18" stroke="#183246" fill="none"/>
+<text x="259" y="424.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#183246">R_RESET</text>
+<text x="256" y="470.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="11" fill="#a23226">4.7 kohm DNP</text>
+<line x1="314" y1="440.8897637795277" x2="365" y2="440.8897637795277" stroke="#06715f" stroke-width="0.7" stroke-dasharray="3 2"/>
+<line x1="365" y1="440.8897637795277" x2="365" y2="448.8897637795277" stroke="#06715f" stroke-width="0.7"/>
+<line x1="358.0" y1="448.8897637795277" x2="372.0" y2="448.8897637795277" stroke="#06715f" stroke-width="0.7"/>
+<line x1="360.5" y1="451.8897637795277" x2="369.5" y2="451.8897637795277" stroke="#06715f" stroke-width="0.7"/>
+<line x1="363.0" y1="454.8897637795277" x2="367.0" y2="454.8897637795277" stroke="#06715f" stroke-width="0.7"/>
+<text x="430" y="424.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="12" fill="#183246">子板 RN28 的 RESET_n / GPIOR_N_16 有 39 ohm 到 VTT 支路。若焊装，4.7k 下拉不能可靠拉低（约 0.744 V）。确认该支路缺省</text>
+<text x="430" y="445.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="12" fill="#183246">/单独隔离后才可焊 R_RESET；不整颗拆掉 RN28，其他 ODT/A13/A9 支路仍需核对。</text>
+<text x="35" y="525.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="15" fill="#a23226">强制隔离 / 不直通</text>
+<text x="35" y="551.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="12" fill="#183246">双方 C35/C37 NC（母板 12 V / 子板 NC，不是地）；双方 D1 NC（PGOOD / 3V3_B）。J1 G6/G7 NC。J2 B2/F2 接 GND；J2 G17/G26/H6 NC。J1 C34/D35 接 GND，子板同号 NC。J1 H2 接地表示插卡。其他</text>
+<text x="35" y="573.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="12" fill="#183246">未用 I/O / MGT / I2C / 管理 JTAG 均 NC。</text>
+<text x="35" y="635.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="15" fill="#005f93">最小 BOM</text>
+<text x="35" y="663.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="12" fill="#183246">J1  ASP-134488-01 x1 bottom   |   J2  ASP-134486-01 x1 top   |   R_RESET 4.7 kohm x1 DNP</text>
+<text x="35" y="692.8897637795277" font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif" font-size="12" fill="#183246">不加晶振、PLL 或缓冲芯片。电源去耦按 PDN / 实物需求决定，不在未知负载下编造参数。机械/屏蔽端子根据原厂封装接地，机械孔不默认视为电气针。图纸不是确认子板实物焊装完成的证明。</text></svg>

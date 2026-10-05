@@ -1,0 +1,7609 @@
+{
+  "revision": "2026-10-04-C",
+  "source_sha256": "547dab68aece1769af5dbc1c9737dd6a5960d390cb0e9d6366763e9585d5347f",
+  "scope": "Electrical documentation only; not a native CAD PCB or manufacturing release",
+  "connectors": {
+    "J1": {
+      "mount": "bottom",
+      "part": "ASP-134488-01",
+      "mates_with": "VCU118 J2 ASP-134486-01"
+    },
+    "J2": {
+      "mount": "top",
+      "part": "ASP-134486-01",
+      "mates_with": "daughtercard J4 ASP-134488-01"
+    }
+  },
+  "contact_count": 800,
+  "net_count": 53,
+  "contacts": {
+    "J1": {
+      "A1": {
+        "ref": "J1",
+        "pin": "A1",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "A2": {
+        "ref": "J1",
+        "pin": "A2",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "A3": {
+        "ref": "J1",
+        "pin": "A3",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "A4": {
+        "ref": "J1",
+        "pin": "A4",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "A5": {
+        "ref": "J1",
+        "pin": "A5",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "A6": {
+        "ref": "J1",
+        "pin": "A6",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "A7": {
+        "ref": "J1",
+        "pin": "A7",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "A8": {
+        "ref": "J1",
+        "pin": "A8",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "A9": {
+        "ref": "J1",
+        "pin": "A9",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "A10": {
+        "ref": "J1",
+        "pin": "A10",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "A11": {
+        "ref": "J1",
+        "pin": "A11",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "A12": {
+        "ref": "J1",
+        "pin": "A12",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "A13": {
+        "ref": "J1",
+        "pin": "A13",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "A14": {
+        "ref": "J1",
+        "pin": "A14",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "A15": {
+        "ref": "J1",
+        "pin": "A15",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "A16": {
+        "ref": "J1",
+        "pin": "A16",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "A17": {
+        "ref": "J1",
+        "pin": "A17",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "A18": {
+        "ref": "J1",
+        "pin": "A18",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "A19": {
+        "ref": "J1",
+        "pin": "A19",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "A20": {
+        "ref": "J1",
+        "pin": "A20",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "A21": {
+        "ref": "J1",
+        "pin": "A21",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "A22": {
+        "ref": "J1",
+        "pin": "A22",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "A23": {
+        "ref": "J1",
+        "pin": "A23",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "A24": {
+        "ref": "J1",
+        "pin": "A24",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "A25": {
+        "ref": "J1",
+        "pin": "A25",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "A26": {
+        "ref": "J1",
+        "pin": "A26",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "A27": {
+        "ref": "J1",
+        "pin": "A27",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "A28": {
+        "ref": "J1",
+        "pin": "A28",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "A29": {
+        "ref": "J1",
+        "pin": "A29",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "A30": {
+        "ref": "J1",
+        "pin": "A30",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "A31": {
+        "ref": "J1",
+        "pin": "A31",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "A32": {
+        "ref": "J1",
+        "pin": "A32",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "A33": {
+        "ref": "J1",
+        "pin": "A33",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "A34": {
+        "ref": "J1",
+        "pin": "A34",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "A35": {
+        "ref": "J1",
+        "pin": "A35",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "A36": {
+        "ref": "J1",
+        "pin": "A36",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "A37": {
+        "ref": "J1",
+        "pin": "A37",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "A38": {
+        "ref": "J1",
+        "pin": "A38",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "A39": {
+        "ref": "J1",
+        "pin": "A39",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "A40": {
+        "ref": "J1",
+        "pin": "A40",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "B1": {
+        "ref": "J1",
+        "pin": "B1",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "B2": {
+        "ref": "J1",
+        "pin": "B2",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "B3": {
+        "ref": "J1",
+        "pin": "B3",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "B4": {
+        "ref": "J1",
+        "pin": "B4",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "B5": {
+        "ref": "J1",
+        "pin": "B5",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "B6": {
+        "ref": "J1",
+        "pin": "B6",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "B7": {
+        "ref": "J1",
+        "pin": "B7",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "B8": {
+        "ref": "J1",
+        "pin": "B8",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "B9": {
+        "ref": "J1",
+        "pin": "B9",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "B10": {
+        "ref": "J1",
+        "pin": "B10",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "B11": {
+        "ref": "J1",
+        "pin": "B11",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "B12": {
+        "ref": "J1",
+        "pin": "B12",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "B13": {
+        "ref": "J1",
+        "pin": "B13",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "B14": {
+        "ref": "J1",
+        "pin": "B14",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "B15": {
+        "ref": "J1",
+        "pin": "B15",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "B16": {
+        "ref": "J1",
+        "pin": "B16",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "B17": {
+        "ref": "J1",
+        "pin": "B17",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "B18": {
+        "ref": "J1",
+        "pin": "B18",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "B19": {
+        "ref": "J1",
+        "pin": "B19",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "B20": {
+        "ref": "J1",
+        "pin": "B20",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "B21": {
+        "ref": "J1",
+        "pin": "B21",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "B22": {
+        "ref": "J1",
+        "pin": "B22",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "B23": {
+        "ref": "J1",
+        "pin": "B23",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "B24": {
+        "ref": "J1",
+        "pin": "B24",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "B25": {
+        "ref": "J1",
+        "pin": "B25",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "B26": {
+        "ref": "J1",
+        "pin": "B26",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "B27": {
+        "ref": "J1",
+        "pin": "B27",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "B28": {
+        "ref": "J1",
+        "pin": "B28",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "B29": {
+        "ref": "J1",
+        "pin": "B29",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "B30": {
+        "ref": "J1",
+        "pin": "B30",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "B31": {
+        "ref": "J1",
+        "pin": "B31",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "B32": {
+        "ref": "J1",
+        "pin": "B32",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "B33": {
+        "ref": "J1",
+        "pin": "B33",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "B34": {
+        "ref": "J1",
+        "pin": "B34",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "B35": {
+        "ref": "J1",
+        "pin": "B35",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "B36": {
+        "ref": "J1",
+        "pin": "B36",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "B37": {
+        "ref": "J1",
+        "pin": "B37",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "B38": {
+        "ref": "J1",
+        "pin": "B38",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "B39": {
+        "ref": "J1",
+        "pin": "B39",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "B40": {
+        "ref": "J1",
+        "pin": "B40",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "C1": {
+        "ref": "J1",
+        "pin": "C1",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "C2": {
+        "ref": "J1",
+        "pin": "C2",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "C3": {
+        "ref": "J1",
+        "pin": "C3",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "C4": {
+        "ref": "J1",
+        "pin": "C4",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "C5": {
+        "ref": "J1",
+        "pin": "C5",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "C6": {
+        "ref": "J1",
+        "pin": "C6",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "C7": {
+        "ref": "J1",
+        "pin": "C7",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "C8": {
+        "ref": "J1",
+        "pin": "C8",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "C9": {
+        "ref": "J1",
+        "pin": "C9",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "C10": {
+        "ref": "J1",
+        "pin": "C10",
+        "net": "DDR_A6",
+        "status": "CONNECTED",
+        "note": "FMC_HPC1_LA06_P",
+        "partner": "J2.D15"
+      },
+      "C11": {
+        "ref": "J1",
+        "pin": "C11",
+        "net": "DDR_A7",
+        "status": "CONNECTED",
+        "note": "FMC_HPC1_LA06_N",
+        "partner": "J2.D14"
+      },
+      "C12": {
+        "ref": "J1",
+        "pin": "C12",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "C13": {
+        "ref": "J1",
+        "pin": "C13",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "C14": {
+        "ref": "J1",
+        "pin": "C14",
+        "net": "DDR_CS_N",
+        "status": "CONNECTED",
+        "note": "FMC_HPC1_LA10_P",
+        "partner": "J2.G19"
+      },
+      "C15": {
+        "ref": "J1",
+        "pin": "C15",
+        "net": "DDR_CKE",
+        "status": "CONNECTED",
+        "note": "FMC_HPC1_LA10_N",
+        "partner": "J2.G18"
+      },
+      "C16": {
+        "ref": "J1",
+        "pin": "C16",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "C17": {
+        "ref": "J1",
+        "pin": "C17",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "C18": {
+        "ref": "J1",
+        "pin": "C18",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "C19": {
+        "ref": "J1",
+        "pin": "C19",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "C20": {
+        "ref": "J1",
+        "pin": "C20",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "C21": {
+        "ref": "J1",
+        "pin": "C21",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "C22": {
+        "ref": "J1",
+        "pin": "C22",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "C23": {
+        "ref": "J1",
+        "pin": "C23",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "C24": {
+        "ref": "J1",
+        "pin": "C24",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "C25": {
+        "ref": "J1",
+        "pin": "C25",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "C26": {
+        "ref": "J1",
+        "pin": "C26",
+        "net": "DDR_DM1",
+        "status": "CONNECTED",
+        "note": "FMC_HPC1_LA27_P",
+        "partner": "J2.C23"
+      },
+      "C27": {
+        "ref": "J1",
+        "pin": "C27",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "C28": {
+        "ref": "J1",
+        "pin": "C28",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "C29": {
+        "ref": "J1",
+        "pin": "C29",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "C30": {
+        "ref": "J1",
+        "pin": "C30",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "C31": {
+        "ref": "J1",
+        "pin": "C31",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "C32": {
+        "ref": "J1",
+        "pin": "C32",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "C33": {
+        "ref": "J1",
+        "pin": "C33",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "C34": {
+        "ref": "J1",
+        "pin": "C34",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "C35": {
+        "ref": "J1",
+        "pin": "C35",
+        "net": null,
+        "status": "NC",
+        "note": "Mandatory isolation; see power sheet"
+      },
+      "C36": {
+        "ref": "J1",
+        "pin": "C36",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "C37": {
+        "ref": "J1",
+        "pin": "C37",
+        "net": null,
+        "status": "NC",
+        "note": "Mandatory isolation; see power sheet"
+      },
+      "C38": {
+        "ref": "J1",
+        "pin": "C38",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "C39": {
+        "ref": "J1",
+        "pin": "C39",
+        "net": "3V3",
+        "status": "CONNECTED",
+        "note": "3.3 V; verify hardware before connection"
+      },
+      "C40": {
+        "ref": "J1",
+        "pin": "C40",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "D1": {
+        "ref": "J1",
+        "pin": "D1",
+        "net": null,
+        "status": "NC",
+        "note": "Mandatory isolation; see power sheet"
+      },
+      "D2": {
+        "ref": "J1",
+        "pin": "D2",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "D3": {
+        "ref": "J1",
+        "pin": "D3",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "D4": {
+        "ref": "J1",
+        "pin": "D4",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "D5": {
+        "ref": "J1",
+        "pin": "D5",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "D6": {
+        "ref": "J1",
+        "pin": "D6",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "D7": {
+        "ref": "J1",
+        "pin": "D7",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "D8": {
+        "ref": "J1",
+        "pin": "D8",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "D9": {
+        "ref": "J1",
+        "pin": "D9",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "D10": {
+        "ref": "J1",
+        "pin": "D10",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "D11": {
+        "ref": "J1",
+        "pin": "D11",
+        "net": "DDR_A8",
+        "status": "CONNECTED",
+        "note": "FMC_HPC1_LA05_P",
+        "partner": "J2.H7"
+      },
+      "D12": {
+        "ref": "J1",
+        "pin": "D12",
+        "net": "DDR_A9",
+        "status": "CONNECTED",
+        "note": "FMC_HPC1_LA05_N",
+        "partner": "J2.H8"
+      },
+      "D13": {
+        "ref": "J1",
+        "pin": "D13",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "D14": {
+        "ref": "J1",
+        "pin": "D14",
+        "net": "DDR_RAS_N",
+        "status": "CONNECTED",
+        "note": "FMC_HPC1_LA09_P",
+        "partner": "J2.C18"
+      },
+      "D15": {
+        "ref": "J1",
+        "pin": "D15",
+        "net": "DDR_WE_N",
+        "status": "CONNECTED",
+        "note": "FMC_HPC1_LA09_N",
+        "partner": "J2.G15"
+      },
+      "D16": {
+        "ref": "J1",
+        "pin": "D16",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "D17": {
+        "ref": "J1",
+        "pin": "D17",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "D18": {
+        "ref": "J1",
+        "pin": "D18",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "D19": {
+        "ref": "J1",
+        "pin": "D19",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "D20": {
+        "ref": "J1",
+        "pin": "D20",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "D21": {
+        "ref": "J1",
+        "pin": "D21",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "D22": {
+        "ref": "J1",
+        "pin": "D22",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "D23": {
+        "ref": "J1",
+        "pin": "D23",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "D24": {
+        "ref": "J1",
+        "pin": "D24",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "D25": {
+        "ref": "J1",
+        "pin": "D25",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "D26": {
+        "ref": "J1",
+        "pin": "D26",
+        "net": "DDR_DQ8",
+        "status": "CONNECTED",
+        "note": "FMC_HPC1_LA26_P",
+        "partner": "J2.G36"
+      },
+      "D27": {
+        "ref": "J1",
+        "pin": "D27",
+        "net": "DDR_DQ9",
+        "status": "CONNECTED",
+        "note": "FMC_HPC1_LA26_N",
+        "partner": "J2.G37"
+      },
+      "D28": {
+        "ref": "J1",
+        "pin": "D28",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "D29": {
+        "ref": "J1",
+        "pin": "D29",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "D30": {
+        "ref": "J1",
+        "pin": "D30",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "D31": {
+        "ref": "J1",
+        "pin": "D31",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "D32": {
+        "ref": "J1",
+        "pin": "D32",
+        "net": "3V3",
+        "status": "CONNECTED",
+        "note": "3.3 V; verify hardware before connection"
+      },
+      "D33": {
+        "ref": "J1",
+        "pin": "D33",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "D34": {
+        "ref": "J1",
+        "pin": "D34",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "D35": {
+        "ref": "J1",
+        "pin": "D35",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "D36": {
+        "ref": "J1",
+        "pin": "D36",
+        "net": "3V3",
+        "status": "CONNECTED",
+        "note": "3.3 V; verify hardware before connection"
+      },
+      "D37": {
+        "ref": "J1",
+        "pin": "D37",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "D38": {
+        "ref": "J1",
+        "pin": "D38",
+        "net": "3V3",
+        "status": "CONNECTED",
+        "note": "3.3 V; verify hardware before connection"
+      },
+      "D39": {
+        "ref": "J1",
+        "pin": "D39",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "D40": {
+        "ref": "J1",
+        "pin": "D40",
+        "net": "3V3",
+        "status": "CONNECTED",
+        "note": "3.3 V; verify hardware before connection"
+      },
+      "E1": {
+        "ref": "J1",
+        "pin": "E1",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "E2": {
+        "ref": "J1",
+        "pin": "E2",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "E3": {
+        "ref": "J1",
+        "pin": "E3",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "E4": {
+        "ref": "J1",
+        "pin": "E4",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "E5": {
+        "ref": "J1",
+        "pin": "E5",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "E6": {
+        "ref": "J1",
+        "pin": "E6",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "E7": {
+        "ref": "J1",
+        "pin": "E7",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "E8": {
+        "ref": "J1",
+        "pin": "E8",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "E9": {
+        "ref": "J1",
+        "pin": "E9",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "E10": {
+        "ref": "J1",
+        "pin": "E10",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "E11": {
+        "ref": "J1",
+        "pin": "E11",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "E12": {
+        "ref": "J1",
+        "pin": "E12",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "E13": {
+        "ref": "J1",
+        "pin": "E13",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "E14": {
+        "ref": "J1",
+        "pin": "E14",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "E15": {
+        "ref": "J1",
+        "pin": "E15",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "E16": {
+        "ref": "J1",
+        "pin": "E16",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "E17": {
+        "ref": "J1",
+        "pin": "E17",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "E18": {
+        "ref": "J1",
+        "pin": "E18",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "E19": {
+        "ref": "J1",
+        "pin": "E19",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "E20": {
+        "ref": "J1",
+        "pin": "E20",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "E21": {
+        "ref": "J1",
+        "pin": "E21",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "E22": {
+        "ref": "J1",
+        "pin": "E22",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "E23": {
+        "ref": "J1",
+        "pin": "E23",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "E24": {
+        "ref": "J1",
+        "pin": "E24",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "E25": {
+        "ref": "J1",
+        "pin": "E25",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "E26": {
+        "ref": "J1",
+        "pin": "E26",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "E27": {
+        "ref": "J1",
+        "pin": "E27",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "E28": {
+        "ref": "J1",
+        "pin": "E28",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "E29": {
+        "ref": "J1",
+        "pin": "E29",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "E30": {
+        "ref": "J1",
+        "pin": "E30",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "E31": {
+        "ref": "J1",
+        "pin": "E31",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "E32": {
+        "ref": "J1",
+        "pin": "E32",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "E33": {
+        "ref": "J1",
+        "pin": "E33",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "E34": {
+        "ref": "J1",
+        "pin": "E34",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "E35": {
+        "ref": "J1",
+        "pin": "E35",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "E36": {
+        "ref": "J1",
+        "pin": "E36",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "E37": {
+        "ref": "J1",
+        "pin": "E37",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "E38": {
+        "ref": "J1",
+        "pin": "E38",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "E39": {
+        "ref": "J1",
+        "pin": "E39",
+        "net": "VADJ",
+        "status": "CONNECTED",
+        "note": "1.5 V; verify hardware before connection"
+      },
+      "E40": {
+        "ref": "J1",
+        "pin": "E40",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "F1": {
+        "ref": "J1",
+        "pin": "F1",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "F2": {
+        "ref": "J1",
+        "pin": "F2",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "F3": {
+        "ref": "J1",
+        "pin": "F3",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "F4": {
+        "ref": "J1",
+        "pin": "F4",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "F5": {
+        "ref": "J1",
+        "pin": "F5",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "F6": {
+        "ref": "J1",
+        "pin": "F6",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "F7": {
+        "ref": "J1",
+        "pin": "F7",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "F8": {
+        "ref": "J1",
+        "pin": "F8",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "F9": {
+        "ref": "J1",
+        "pin": "F9",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "F10": {
+        "ref": "J1",
+        "pin": "F10",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "F11": {
+        "ref": "J1",
+        "pin": "F11",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "F12": {
+        "ref": "J1",
+        "pin": "F12",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "F13": {
+        "ref": "J1",
+        "pin": "F13",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "F14": {
+        "ref": "J1",
+        "pin": "F14",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "F15": {
+        "ref": "J1",
+        "pin": "F15",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "F16": {
+        "ref": "J1",
+        "pin": "F16",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "F17": {
+        "ref": "J1",
+        "pin": "F17",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "F18": {
+        "ref": "J1",
+        "pin": "F18",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "F19": {
+        "ref": "J1",
+        "pin": "F19",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "F20": {
+        "ref": "J1",
+        "pin": "F20",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "F21": {
+        "ref": "J1",
+        "pin": "F21",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "F22": {
+        "ref": "J1",
+        "pin": "F22",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "F23": {
+        "ref": "J1",
+        "pin": "F23",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "F24": {
+        "ref": "J1",
+        "pin": "F24",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "F25": {
+        "ref": "J1",
+        "pin": "F25",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "F26": {
+        "ref": "J1",
+        "pin": "F26",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "F27": {
+        "ref": "J1",
+        "pin": "F27",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "F28": {
+        "ref": "J1",
+        "pin": "F28",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "F29": {
+        "ref": "J1",
+        "pin": "F29",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "F30": {
+        "ref": "J1",
+        "pin": "F30",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "F31": {
+        "ref": "J1",
+        "pin": "F31",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "F32": {
+        "ref": "J1",
+        "pin": "F32",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "F33": {
+        "ref": "J1",
+        "pin": "F33",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "F34": {
+        "ref": "J1",
+        "pin": "F34",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "F35": {
+        "ref": "J1",
+        "pin": "F35",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "F36": {
+        "ref": "J1",
+        "pin": "F36",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "F37": {
+        "ref": "J1",
+        "pin": "F37",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "F38": {
+        "ref": "J1",
+        "pin": "F38",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "F39": {
+        "ref": "J1",
+        "pin": "F39",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "F40": {
+        "ref": "J1",
+        "pin": "F40",
+        "net": "VADJ",
+        "status": "CONNECTED",
+        "note": "1.5 V; verify hardware before connection"
+      },
+      "G1": {
+        "ref": "J1",
+        "pin": "G1",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "G2": {
+        "ref": "J1",
+        "pin": "G2",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "G3": {
+        "ref": "J1",
+        "pin": "G3",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "G4": {
+        "ref": "J1",
+        "pin": "G4",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "G5": {
+        "ref": "J1",
+        "pin": "G5",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "G6": {
+        "ref": "J1",
+        "pin": "G6",
+        "net": null,
+        "status": "NC",
+        "note": "No reference clock on FMC"
+      },
+      "G7": {
+        "ref": "J1",
+        "pin": "G7",
+        "net": null,
+        "status": "NC",
+        "note": "No reference clock on FMC"
+      },
+      "G8": {
+        "ref": "J1",
+        "pin": "G8",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "G9": {
+        "ref": "J1",
+        "pin": "G9",
+        "net": "DDR_A0",
+        "status": "CONNECTED",
+        "note": "FMC_HPC1_LA03_P",
+        "partner": "J2.D9"
+      },
+      "G10": {
+        "ref": "J1",
+        "pin": "G10",
+        "net": "DDR_A1",
+        "status": "CONNECTED",
+        "note": "FMC_HPC1_LA03_N",
+        "partner": "J2.D8"
+      },
+      "G11": {
+        "ref": "J1",
+        "pin": "G11",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "G12": {
+        "ref": "J1",
+        "pin": "G12",
+        "net": "DDR_A10",
+        "status": "CONNECTED",
+        "note": "FMC_HPC1_LA08_P",
+        "partner": "J2.H11"
+      },
+      "G13": {
+        "ref": "J1",
+        "pin": "G13",
+        "net": "DDR_A11",
+        "status": "CONNECTED",
+        "note": "FMC_HPC1_LA08_N",
+        "partner": "J2.H10"
+      },
+      "G14": {
+        "ref": "J1",
+        "pin": "G14",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "G15": {
+        "ref": "J1",
+        "pin": "G15",
+        "net": "DDR_A12",
+        "status": "CONNECTED",
+        "note": "FMC_HPC1_LA12_P",
+        "partner": "J2.C11"
+      },
+      "G16": {
+        "ref": "J1",
+        "pin": "G16",
+        "net": "DDR_A13",
+        "status": "CONNECTED",
+        "note": "FMC_HPC1_LA12_N",
+        "partner": "J2.C10"
+      },
+      "G17": {
+        "ref": "J1",
+        "pin": "G17",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "G18": {
+        "ref": "J1",
+        "pin": "G18",
+        "net": "DDR_ODT",
+        "status": "CONNECTED",
+        "note": "FMC_HPC1_LA16_P",
+        "partner": "J2.G6"
+      },
+      "G19": {
+        "ref": "J1",
+        "pin": "G19",
+        "net": "DDR_RESET_N",
+        "status": "CONNECTED",
+        "note": "FMC_HPC1_LA16_N",
+        "partner": "J2.G7"
+      },
+      "G20": {
+        "ref": "J1",
+        "pin": "G20",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "G21": {
+        "ref": "J1",
+        "pin": "G21",
+        "net": "DDR_DQ2",
+        "status": "CONNECTED",
+        "note": "FMC_HPC1_LA20_P",
+        "partner": "J2.H31"
+      },
+      "G22": {
+        "ref": "J1",
+        "pin": "G22",
+        "net": "DDR_DQ3",
+        "status": "CONNECTED",
+        "note": "FMC_HPC1_LA20_N",
+        "partner": "J2.H32"
+      },
+      "G23": {
+        "ref": "J1",
+        "pin": "G23",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "G24": {
+        "ref": "J1",
+        "pin": "G24",
+        "net": "DDR_DQ4",
+        "status": "CONNECTED",
+        "note": "FMC_HPC1_LA22_P",
+        "partner": "J2.G34"
+      },
+      "G25": {
+        "ref": "J1",
+        "pin": "G25",
+        "net": "DDR_DQ5",
+        "status": "CONNECTED",
+        "note": "FMC_HPC1_LA22_N",
+        "partner": "J2.G33"
+      },
+      "G26": {
+        "ref": "J1",
+        "pin": "G26",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "G27": {
+        "ref": "J1",
+        "pin": "G27",
+        "net": "DDR_DM0",
+        "status": "CONNECTED",
+        "note": "FMC_HPC1_LA25_P",
+        "partner": "J2.H28"
+      },
+      "G28": {
+        "ref": "J1",
+        "pin": "G28",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "G29": {
+        "ref": "J1",
+        "pin": "G29",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "G30": {
+        "ref": "J1",
+        "pin": "G30",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "G31": {
+        "ref": "J1",
+        "pin": "G31",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "G32": {
+        "ref": "J1",
+        "pin": "G32",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "G33": {
+        "ref": "J1",
+        "pin": "G33",
+        "net": "DDR_DQ12",
+        "status": "CONNECTED",
+        "note": "FMC_HPC1_LA31_P",
+        "partner": "J2.G22"
+      },
+      "G34": {
+        "ref": "J1",
+        "pin": "G34",
+        "net": "DDR_DQ13",
+        "status": "CONNECTED",
+        "note": "FMC_HPC1_LA31_N",
+        "partner": "J2.G24"
+      },
+      "G35": {
+        "ref": "J1",
+        "pin": "G35",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "G36": {
+        "ref": "J1",
+        "pin": "G36",
+        "net": "DDR_DQ14",
+        "status": "CONNECTED",
+        "note": "FMC_HPC1_LA33_P",
+        "partner": "J2.G25"
+      },
+      "G37": {
+        "ref": "J1",
+        "pin": "G37",
+        "net": "DDR_DQ15",
+        "status": "CONNECTED",
+        "note": "FMC_HPC1_LA33_N",
+        "partner": "J2.H29"
+      },
+      "G38": {
+        "ref": "J1",
+        "pin": "G38",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "G39": {
+        "ref": "J1",
+        "pin": "G39",
+        "net": "VADJ",
+        "status": "CONNECTED",
+        "note": "1.5 V; verify hardware before connection"
+      },
+      "G40": {
+        "ref": "J1",
+        "pin": "G40",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "H1": {
+        "ref": "J1",
+        "pin": "H1",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "H2": {
+        "ref": "J1",
+        "pin": "H2",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "PRSNT_M2C intentionally grounded on adapter"
+      },
+      "H3": {
+        "ref": "J1",
+        "pin": "H3",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "H4": {
+        "ref": "J1",
+        "pin": "H4",
+        "net": "DDR_CK_P",
+        "status": "CONNECTED",
+        "note": "FMC_HPC1_CLK0_M2C_P",
+        "partner": "J2.D11"
+      },
+      "H5": {
+        "ref": "J1",
+        "pin": "H5",
+        "net": "DDR_CK_N",
+        "status": "CONNECTED",
+        "note": "FMC_HPC1_CLK0_M2C_N",
+        "partner": "J2.D12"
+      },
+      "H6": {
+        "ref": "J1",
+        "pin": "H6",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "H7": {
+        "ref": "J1",
+        "pin": "H7",
+        "net": "DDR_A4",
+        "status": "CONNECTED",
+        "note": "FMC_HPC1_LA02_P",
+        "partner": "J2.H14"
+      },
+      "H8": {
+        "ref": "J1",
+        "pin": "H8",
+        "net": "DDR_A5",
+        "status": "CONNECTED",
+        "note": "FMC_HPC1_LA02_N",
+        "partner": "J2.H13"
+      },
+      "H9": {
+        "ref": "J1",
+        "pin": "H9",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "H10": {
+        "ref": "J1",
+        "pin": "H10",
+        "net": "DDR_A2",
+        "status": "CONNECTED",
+        "note": "FMC_HPC1_LA04_P",
+        "partner": "J2.G9"
+      },
+      "H11": {
+        "ref": "J1",
+        "pin": "H11",
+        "net": "DDR_A3",
+        "status": "CONNECTED",
+        "note": "FMC_HPC1_LA04_N",
+        "partner": "J2.G10"
+      },
+      "H12": {
+        "ref": "J1",
+        "pin": "H12",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "H13": {
+        "ref": "J1",
+        "pin": "H13",
+        "net": "DDR_BA0",
+        "status": "CONNECTED",
+        "note": "FMC_HPC1_LA07_P",
+        "partner": "J2.C14"
+      },
+      "H14": {
+        "ref": "J1",
+        "pin": "H14",
+        "net": "DDR_BA1",
+        "status": "CONNECTED",
+        "note": "FMC_HPC1_LA07_N",
+        "partner": "J2.C15"
+      },
+      "H15": {
+        "ref": "J1",
+        "pin": "H15",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "H16": {
+        "ref": "J1",
+        "pin": "H16",
+        "net": "DDR_BA2",
+        "status": "CONNECTED",
+        "note": "FMC_HPC1_LA11_P",
+        "partner": "J2.G16"
+      },
+      "H17": {
+        "ref": "J1",
+        "pin": "H17",
+        "net": "DDR_CAS_N",
+        "status": "CONNECTED",
+        "note": "FMC_HPC1_LA11_N",
+        "partner": "J2.C19"
+      },
+      "H18": {
+        "ref": "J1",
+        "pin": "H18",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "H19": {
+        "ref": "J1",
+        "pin": "H19",
+        "net": "DDR_A14",
+        "status": "CONNECTED",
+        "note": "FMC_HPC1_LA15_P",
+        "partner": "J2.G13"
+      },
+      "H20": {
+        "ref": "J1",
+        "pin": "H20",
+        "net": "DDR_A15",
+        "status": "CONNECTED",
+        "note": "FMC_HPC1_LA15_N",
+        "partner": "J2.G12"
+      },
+      "H21": {
+        "ref": "J1",
+        "pin": "H21",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "H22": {
+        "ref": "J1",
+        "pin": "H22",
+        "net": "DDR_DQ0",
+        "status": "CONNECTED",
+        "note": "FMC_HPC1_LA19_P",
+        "partner": "J2.G30"
+      },
+      "H23": {
+        "ref": "J1",
+        "pin": "H23",
+        "net": "DDR_DQ1",
+        "status": "CONNECTED",
+        "note": "FMC_HPC1_LA19_N",
+        "partner": "J2.G31"
+      },
+      "H24": {
+        "ref": "J1",
+        "pin": "H24",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "H25": {
+        "ref": "J1",
+        "pin": "H25",
+        "net": "DDR_DQ6",
+        "status": "CONNECTED",
+        "note": "FMC_HPC1_LA21_P",
+        "partner": "J2.H34"
+      },
+      "H26": {
+        "ref": "J1",
+        "pin": "H26",
+        "net": "DDR_DQ7",
+        "status": "CONNECTED",
+        "note": "FMC_HPC1_LA21_N",
+        "partner": "J2.H35"
+      },
+      "H27": {
+        "ref": "J1",
+        "pin": "H27",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "H28": {
+        "ref": "J1",
+        "pin": "H28",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "H29": {
+        "ref": "J1",
+        "pin": "H29",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "H30": {
+        "ref": "J1",
+        "pin": "H30",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "H31": {
+        "ref": "J1",
+        "pin": "H31",
+        "net": "DDR_DQS0_P",
+        "status": "CONNECTED",
+        "note": "FMC_HPC1_LA28_P",
+        "partner": "J2.D26"
+      },
+      "H32": {
+        "ref": "J1",
+        "pin": "H32",
+        "net": "DDR_DQS0_N",
+        "status": "CONNECTED",
+        "note": "FMC_HPC1_LA28_N",
+        "partner": "J2.D27"
+      },
+      "H33": {
+        "ref": "J1",
+        "pin": "H33",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "H34": {
+        "ref": "J1",
+        "pin": "H34",
+        "net": "DDR_DQ10",
+        "status": "CONNECTED",
+        "note": "FMC_HPC1_LA30_P",
+        "partner": "J2.H38"
+      },
+      "H35": {
+        "ref": "J1",
+        "pin": "H35",
+        "net": "DDR_DQ11",
+        "status": "CONNECTED",
+        "note": "FMC_HPC1_LA30_N",
+        "partner": "J2.H37"
+      },
+      "H36": {
+        "ref": "J1",
+        "pin": "H36",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "H37": {
+        "ref": "J1",
+        "pin": "H37",
+        "net": "DDR_DQS1_P",
+        "status": "CONNECTED",
+        "note": "FMC_HPC1_LA32_P",
+        "partner": "J2.C26"
+      },
+      "H38": {
+        "ref": "J1",
+        "pin": "H38",
+        "net": "DDR_DQS1_N",
+        "status": "CONNECTED",
+        "note": "FMC_HPC1_LA32_N",
+        "partner": "J2.C27"
+      },
+      "H39": {
+        "ref": "J1",
+        "pin": "H39",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "H40": {
+        "ref": "J1",
+        "pin": "H40",
+        "net": "VADJ",
+        "status": "CONNECTED",
+        "note": "1.5 V; verify hardware before connection"
+      },
+      "J1": {
+        "ref": "J1",
+        "pin": "J1",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "J2": {
+        "ref": "J1",
+        "pin": "J2",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "J3": {
+        "ref": "J1",
+        "pin": "J3",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "J4": {
+        "ref": "J1",
+        "pin": "J4",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "J5": {
+        "ref": "J1",
+        "pin": "J5",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "J6": {
+        "ref": "J1",
+        "pin": "J6",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "J7": {
+        "ref": "J1",
+        "pin": "J7",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "J8": {
+        "ref": "J1",
+        "pin": "J8",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "J9": {
+        "ref": "J1",
+        "pin": "J9",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "J10": {
+        "ref": "J1",
+        "pin": "J10",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "J11": {
+        "ref": "J1",
+        "pin": "J11",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "J12": {
+        "ref": "J1",
+        "pin": "J12",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "J13": {
+        "ref": "J1",
+        "pin": "J13",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "J14": {
+        "ref": "J1",
+        "pin": "J14",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "J15": {
+        "ref": "J1",
+        "pin": "J15",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "J16": {
+        "ref": "J1",
+        "pin": "J16",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "J17": {
+        "ref": "J1",
+        "pin": "J17",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "J18": {
+        "ref": "J1",
+        "pin": "J18",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "J19": {
+        "ref": "J1",
+        "pin": "J19",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "J20": {
+        "ref": "J1",
+        "pin": "J20",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "J21": {
+        "ref": "J1",
+        "pin": "J21",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "J22": {
+        "ref": "J1",
+        "pin": "J22",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "J23": {
+        "ref": "J1",
+        "pin": "J23",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "J24": {
+        "ref": "J1",
+        "pin": "J24",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "J25": {
+        "ref": "J1",
+        "pin": "J25",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "J26": {
+        "ref": "J1",
+        "pin": "J26",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "J27": {
+        "ref": "J1",
+        "pin": "J27",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "J28": {
+        "ref": "J1",
+        "pin": "J28",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "J29": {
+        "ref": "J1",
+        "pin": "J29",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "J30": {
+        "ref": "J1",
+        "pin": "J30",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "J31": {
+        "ref": "J1",
+        "pin": "J31",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "J32": {
+        "ref": "J1",
+        "pin": "J32",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "J33": {
+        "ref": "J1",
+        "pin": "J33",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "J34": {
+        "ref": "J1",
+        "pin": "J34",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "J35": {
+        "ref": "J1",
+        "pin": "J35",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "J36": {
+        "ref": "J1",
+        "pin": "J36",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "J37": {
+        "ref": "J1",
+        "pin": "J37",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "J38": {
+        "ref": "J1",
+        "pin": "J38",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "J39": {
+        "ref": "J1",
+        "pin": "J39",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "J40": {
+        "ref": "J1",
+        "pin": "J40",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "K1": {
+        "ref": "J1",
+        "pin": "K1",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "K2": {
+        "ref": "J1",
+        "pin": "K2",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "K3": {
+        "ref": "J1",
+        "pin": "K3",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "K4": {
+        "ref": "J1",
+        "pin": "K4",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "K5": {
+        "ref": "J1",
+        "pin": "K5",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "K6": {
+        "ref": "J1",
+        "pin": "K6",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "K7": {
+        "ref": "J1",
+        "pin": "K7",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "K8": {
+        "ref": "J1",
+        "pin": "K8",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "K9": {
+        "ref": "J1",
+        "pin": "K9",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "K10": {
+        "ref": "J1",
+        "pin": "K10",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "K11": {
+        "ref": "J1",
+        "pin": "K11",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "K12": {
+        "ref": "J1",
+        "pin": "K12",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "K13": {
+        "ref": "J1",
+        "pin": "K13",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "K14": {
+        "ref": "J1",
+        "pin": "K14",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "K15": {
+        "ref": "J1",
+        "pin": "K15",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "K16": {
+        "ref": "J1",
+        "pin": "K16",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "K17": {
+        "ref": "J1",
+        "pin": "K17",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "K18": {
+        "ref": "J1",
+        "pin": "K18",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "K19": {
+        "ref": "J1",
+        "pin": "K19",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "K20": {
+        "ref": "J1",
+        "pin": "K20",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "K21": {
+        "ref": "J1",
+        "pin": "K21",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "K22": {
+        "ref": "J1",
+        "pin": "K22",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "K23": {
+        "ref": "J1",
+        "pin": "K23",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "K24": {
+        "ref": "J1",
+        "pin": "K24",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "K25": {
+        "ref": "J1",
+        "pin": "K25",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "K26": {
+        "ref": "J1",
+        "pin": "K26",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "K27": {
+        "ref": "J1",
+        "pin": "K27",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "K28": {
+        "ref": "J1",
+        "pin": "K28",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "K29": {
+        "ref": "J1",
+        "pin": "K29",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "K30": {
+        "ref": "J1",
+        "pin": "K30",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "K31": {
+        "ref": "J1",
+        "pin": "K31",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "K32": {
+        "ref": "J1",
+        "pin": "K32",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "K33": {
+        "ref": "J1",
+        "pin": "K33",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "K34": {
+        "ref": "J1",
+        "pin": "K34",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "K35": {
+        "ref": "J1",
+        "pin": "K35",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "K36": {
+        "ref": "J1",
+        "pin": "K36",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "K37": {
+        "ref": "J1",
+        "pin": "K37",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "K38": {
+        "ref": "J1",
+        "pin": "K38",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "K39": {
+        "ref": "J1",
+        "pin": "K39",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "K40": {
+        "ref": "J1",
+        "pin": "K40",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      }
+    },
+    "J2": {
+      "A1": {
+        "ref": "J2",
+        "pin": "A1",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "A2": {
+        "ref": "J2",
+        "pin": "A2",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "A3": {
+        "ref": "J2",
+        "pin": "A3",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "A4": {
+        "ref": "J2",
+        "pin": "A4",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "A5": {
+        "ref": "J2",
+        "pin": "A5",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "A6": {
+        "ref": "J2",
+        "pin": "A6",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "A7": {
+        "ref": "J2",
+        "pin": "A7",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "A8": {
+        "ref": "J2",
+        "pin": "A8",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "A9": {
+        "ref": "J2",
+        "pin": "A9",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "A10": {
+        "ref": "J2",
+        "pin": "A10",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "A11": {
+        "ref": "J2",
+        "pin": "A11",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "A12": {
+        "ref": "J2",
+        "pin": "A12",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "A13": {
+        "ref": "J2",
+        "pin": "A13",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "A14": {
+        "ref": "J2",
+        "pin": "A14",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "A15": {
+        "ref": "J2",
+        "pin": "A15",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "A16": {
+        "ref": "J2",
+        "pin": "A16",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "A17": {
+        "ref": "J2",
+        "pin": "A17",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "A18": {
+        "ref": "J2",
+        "pin": "A18",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "A19": {
+        "ref": "J2",
+        "pin": "A19",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "A20": {
+        "ref": "J2",
+        "pin": "A20",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "A21": {
+        "ref": "J2",
+        "pin": "A21",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "A22": {
+        "ref": "J2",
+        "pin": "A22",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "A23": {
+        "ref": "J2",
+        "pin": "A23",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "A24": {
+        "ref": "J2",
+        "pin": "A24",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "A25": {
+        "ref": "J2",
+        "pin": "A25",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "A26": {
+        "ref": "J2",
+        "pin": "A26",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "A27": {
+        "ref": "J2",
+        "pin": "A27",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "A28": {
+        "ref": "J2",
+        "pin": "A28",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "A29": {
+        "ref": "J2",
+        "pin": "A29",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "A30": {
+        "ref": "J2",
+        "pin": "A30",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "A31": {
+        "ref": "J2",
+        "pin": "A31",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "A32": {
+        "ref": "J2",
+        "pin": "A32",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "A33": {
+        "ref": "J2",
+        "pin": "A33",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "A34": {
+        "ref": "J2",
+        "pin": "A34",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "A35": {
+        "ref": "J2",
+        "pin": "A35",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "A36": {
+        "ref": "J2",
+        "pin": "A36",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "A37": {
+        "ref": "J2",
+        "pin": "A37",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "A38": {
+        "ref": "J2",
+        "pin": "A38",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "A39": {
+        "ref": "J2",
+        "pin": "A39",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "A40": {
+        "ref": "J2",
+        "pin": "A40",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "B1": {
+        "ref": "J2",
+        "pin": "B1",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "B2": {
+        "ref": "J2",
+        "pin": "B2",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "B3": {
+        "ref": "J2",
+        "pin": "B3",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "B4": {
+        "ref": "J2",
+        "pin": "B4",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "B5": {
+        "ref": "J2",
+        "pin": "B5",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "B6": {
+        "ref": "J2",
+        "pin": "B6",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "B7": {
+        "ref": "J2",
+        "pin": "B7",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "B8": {
+        "ref": "J2",
+        "pin": "B8",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "B9": {
+        "ref": "J2",
+        "pin": "B9",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "B10": {
+        "ref": "J2",
+        "pin": "B10",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "B11": {
+        "ref": "J2",
+        "pin": "B11",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "B12": {
+        "ref": "J2",
+        "pin": "B12",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "B13": {
+        "ref": "J2",
+        "pin": "B13",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "B14": {
+        "ref": "J2",
+        "pin": "B14",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "B15": {
+        "ref": "J2",
+        "pin": "B15",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "B16": {
+        "ref": "J2",
+        "pin": "B16",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "B17": {
+        "ref": "J2",
+        "pin": "B17",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "B18": {
+        "ref": "J2",
+        "pin": "B18",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "B19": {
+        "ref": "J2",
+        "pin": "B19",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "B20": {
+        "ref": "J2",
+        "pin": "B20",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "B21": {
+        "ref": "J2",
+        "pin": "B21",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "B22": {
+        "ref": "J2",
+        "pin": "B22",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "B23": {
+        "ref": "J2",
+        "pin": "B23",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "B24": {
+        "ref": "J2",
+        "pin": "B24",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "B25": {
+        "ref": "J2",
+        "pin": "B25",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "B26": {
+        "ref": "J2",
+        "pin": "B26",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "B27": {
+        "ref": "J2",
+        "pin": "B27",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "B28": {
+        "ref": "J2",
+        "pin": "B28",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "B29": {
+        "ref": "J2",
+        "pin": "B29",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "B30": {
+        "ref": "J2",
+        "pin": "B30",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "B31": {
+        "ref": "J2",
+        "pin": "B31",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "B32": {
+        "ref": "J2",
+        "pin": "B32",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "B33": {
+        "ref": "J2",
+        "pin": "B33",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "B34": {
+        "ref": "J2",
+        "pin": "B34",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "B35": {
+        "ref": "J2",
+        "pin": "B35",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "B36": {
+        "ref": "J2",
+        "pin": "B36",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "B37": {
+        "ref": "J2",
+        "pin": "B37",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "B38": {
+        "ref": "J2",
+        "pin": "B38",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "B39": {
+        "ref": "J2",
+        "pin": "B39",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "B40": {
+        "ref": "J2",
+        "pin": "B40",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "C1": {
+        "ref": "J2",
+        "pin": "C1",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "C2": {
+        "ref": "J2",
+        "pin": "C2",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "C3": {
+        "ref": "J2",
+        "pin": "C3",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "C4": {
+        "ref": "J2",
+        "pin": "C4",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "C5": {
+        "ref": "J2",
+        "pin": "C5",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "C6": {
+        "ref": "J2",
+        "pin": "C6",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "C7": {
+        "ref": "J2",
+        "pin": "C7",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "C8": {
+        "ref": "J2",
+        "pin": "C8",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "C9": {
+        "ref": "J2",
+        "pin": "C9",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "C10": {
+        "ref": "J2",
+        "pin": "C10",
+        "net": "DDR_A13",
+        "status": "CONNECTED",
+        "note": "GPIOR_P_22_CLK13_P",
+        "partner": "J1.G16"
+      },
+      "C11": {
+        "ref": "J2",
+        "pin": "C11",
+        "net": "DDR_A12",
+        "status": "CONNECTED",
+        "note": "GPIOR_N_22_CLK13_N",
+        "partner": "J1.G15"
+      },
+      "C12": {
+        "ref": "J2",
+        "pin": "C12",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "C13": {
+        "ref": "J2",
+        "pin": "C13",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "C14": {
+        "ref": "J2",
+        "pin": "C14",
+        "net": "DDR_BA0",
+        "status": "CONNECTED",
+        "note": "GPIOR_P_20_CLK15_P",
+        "partner": "J1.H13"
+      },
+      "C15": {
+        "ref": "J2",
+        "pin": "C15",
+        "net": "DDR_BA1",
+        "status": "CONNECTED",
+        "note": "GPIOR_N_20_CLK15_N",
+        "partner": "J1.H14"
+      },
+      "C16": {
+        "ref": "J2",
+        "pin": "C16",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "C17": {
+        "ref": "J2",
+        "pin": "C17",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "C18": {
+        "ref": "J2",
+        "pin": "C18",
+        "net": "DDR_RAS_N",
+        "status": "CONNECTED",
+        "note": "GPIOR_P_18",
+        "partner": "J1.D14"
+      },
+      "C19": {
+        "ref": "J2",
+        "pin": "C19",
+        "net": "DDR_CAS_N",
+        "status": "CONNECTED",
+        "note": "GPIOR_N_18",
+        "partner": "J1.H17"
+      },
+      "C20": {
+        "ref": "J2",
+        "pin": "C20",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "C21": {
+        "ref": "J2",
+        "pin": "C21",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "C22": {
+        "ref": "J2",
+        "pin": "C22",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "C23": {
+        "ref": "J2",
+        "pin": "C23",
+        "net": "DDR_DM1",
+        "status": "CONNECTED",
+        "note": "GPIOB_N_23_CDI12",
+        "partner": "J1.C26"
+      },
+      "C24": {
+        "ref": "J2",
+        "pin": "C24",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "C25": {
+        "ref": "J2",
+        "pin": "C25",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "C26": {
+        "ref": "J2",
+        "pin": "C26",
+        "net": "DDR_DQS1_P",
+        "status": "CONNECTED",
+        "note": "GPIOB_P_24_EXTFB",
+        "partner": "J1.H37"
+      },
+      "C27": {
+        "ref": "J2",
+        "pin": "C27",
+        "net": "DDR_DQS1_N",
+        "status": "CONNECTED",
+        "note": "GPIOB_N_24_CDI13",
+        "partner": "J1.H38"
+      },
+      "C28": {
+        "ref": "J2",
+        "pin": "C28",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "C29": {
+        "ref": "J2",
+        "pin": "C29",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "C30": {
+        "ref": "J2",
+        "pin": "C30",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "C31": {
+        "ref": "J2",
+        "pin": "C31",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "C32": {
+        "ref": "J2",
+        "pin": "C32",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "C33": {
+        "ref": "J2",
+        "pin": "C33",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "C34": {
+        "ref": "J2",
+        "pin": "C34",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "C35": {
+        "ref": "J2",
+        "pin": "C35",
+        "net": null,
+        "status": "NC",
+        "note": "Mandatory isolation; see power sheet"
+      },
+      "C36": {
+        "ref": "J2",
+        "pin": "C36",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "C37": {
+        "ref": "J2",
+        "pin": "C37",
+        "net": null,
+        "status": "NC",
+        "note": "Mandatory isolation; see power sheet"
+      },
+      "C38": {
+        "ref": "J2",
+        "pin": "C38",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "C39": {
+        "ref": "J2",
+        "pin": "C39",
+        "net": "3V3",
+        "status": "CONNECTED",
+        "note": "3.3 V; verify hardware before connection"
+      },
+      "C40": {
+        "ref": "J2",
+        "pin": "C40",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "D1": {
+        "ref": "J2",
+        "pin": "D1",
+        "net": null,
+        "status": "NC",
+        "note": "Mandatory isolation; see power sheet"
+      },
+      "D2": {
+        "ref": "J2",
+        "pin": "D2",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "D3": {
+        "ref": "J2",
+        "pin": "D3",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "D4": {
+        "ref": "J2",
+        "pin": "D4",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "D5": {
+        "ref": "J2",
+        "pin": "D5",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "D6": {
+        "ref": "J2",
+        "pin": "D6",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "D7": {
+        "ref": "J2",
+        "pin": "D7",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "D8": {
+        "ref": "J2",
+        "pin": "D8",
+        "net": "DDR_A1",
+        "status": "CONNECTED",
+        "note": "GPIOR_P_31_PLLIN1",
+        "partner": "J1.G10"
+      },
+      "D9": {
+        "ref": "J2",
+        "pin": "D9",
+        "net": "DDR_A0",
+        "status": "CONNECTED",
+        "note": "GPIOR_N_31",
+        "partner": "J1.G9"
+      },
+      "D10": {
+        "ref": "J2",
+        "pin": "D10",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "D11": {
+        "ref": "J2",
+        "pin": "D11",
+        "net": "DDR_CK_P",
+        "status": "CONNECTED",
+        "note": "GPIOR_P_27_CLK8_P",
+        "partner": "J1.H4"
+      },
+      "D12": {
+        "ref": "J2",
+        "pin": "D12",
+        "net": "DDR_CK_N",
+        "status": "CONNECTED",
+        "note": "GPIOR_N_27_CLK8_N",
+        "partner": "J1.H5"
+      },
+      "D13": {
+        "ref": "J2",
+        "pin": "D13",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "D14": {
+        "ref": "J2",
+        "pin": "D14",
+        "net": "DDR_A7",
+        "status": "CONNECTED",
+        "note": "GPIOR_P_25_CLK10_P",
+        "partner": "J1.C11"
+      },
+      "D15": {
+        "ref": "J2",
+        "pin": "D15",
+        "net": "DDR_A6",
+        "status": "CONNECTED",
+        "note": "GPIOR_N_25_CLK10_N",
+        "partner": "J1.C10"
+      },
+      "D16": {
+        "ref": "J2",
+        "pin": "D16",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "D17": {
+        "ref": "J2",
+        "pin": "D17",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "D18": {
+        "ref": "J2",
+        "pin": "D18",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "D19": {
+        "ref": "J2",
+        "pin": "D19",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "D20": {
+        "ref": "J2",
+        "pin": "D20",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "D21": {
+        "ref": "J2",
+        "pin": "D21",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "D22": {
+        "ref": "J2",
+        "pin": "D22",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "D23": {
+        "ref": "J2",
+        "pin": "D23",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "D24": {
+        "ref": "J2",
+        "pin": "D24",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "D25": {
+        "ref": "J2",
+        "pin": "D25",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "D26": {
+        "ref": "J2",
+        "pin": "D26",
+        "net": "DDR_DQS0_P",
+        "status": "CONNECTED",
+        "note": "GPIOB_P_25_CDI15",
+        "partner": "J1.H31"
+      },
+      "D27": {
+        "ref": "J2",
+        "pin": "D27",
+        "net": "DDR_DQS0_N",
+        "status": "CONNECTED",
+        "note": "GPIOB_N_25_CDI14",
+        "partner": "J1.H32"
+      },
+      "D28": {
+        "ref": "J2",
+        "pin": "D28",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "D29": {
+        "ref": "J2",
+        "pin": "D29",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "D30": {
+        "ref": "J2",
+        "pin": "D30",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "D31": {
+        "ref": "J2",
+        "pin": "D31",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "D32": {
+        "ref": "J2",
+        "pin": "D32",
+        "net": "3V3",
+        "status": "CONNECTED",
+        "note": "3.3 V; verify hardware before connection"
+      },
+      "D33": {
+        "ref": "J2",
+        "pin": "D33",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "D34": {
+        "ref": "J2",
+        "pin": "D34",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "D35": {
+        "ref": "J2",
+        "pin": "D35",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "D36": {
+        "ref": "J2",
+        "pin": "D36",
+        "net": "3V3",
+        "status": "CONNECTED",
+        "note": "3.3 V; verify hardware before connection"
+      },
+      "D37": {
+        "ref": "J2",
+        "pin": "D37",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "D38": {
+        "ref": "J2",
+        "pin": "D38",
+        "net": "3V3",
+        "status": "CONNECTED",
+        "note": "3.3 V; verify hardware before connection"
+      },
+      "D39": {
+        "ref": "J2",
+        "pin": "D39",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "D40": {
+        "ref": "J2",
+        "pin": "D40",
+        "net": "3V3",
+        "status": "CONNECTED",
+        "note": "3.3 V; verify hardware before connection"
+      },
+      "E1": {
+        "ref": "J2",
+        "pin": "E1",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "E2": {
+        "ref": "J2",
+        "pin": "E2",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "E3": {
+        "ref": "J2",
+        "pin": "E3",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "E4": {
+        "ref": "J2",
+        "pin": "E4",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "E5": {
+        "ref": "J2",
+        "pin": "E5",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "E6": {
+        "ref": "J2",
+        "pin": "E6",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "E7": {
+        "ref": "J2",
+        "pin": "E7",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "E8": {
+        "ref": "J2",
+        "pin": "E8",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "E9": {
+        "ref": "J2",
+        "pin": "E9",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "E10": {
+        "ref": "J2",
+        "pin": "E10",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "E11": {
+        "ref": "J2",
+        "pin": "E11",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "E12": {
+        "ref": "J2",
+        "pin": "E12",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "E13": {
+        "ref": "J2",
+        "pin": "E13",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "E14": {
+        "ref": "J2",
+        "pin": "E14",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "E15": {
+        "ref": "J2",
+        "pin": "E15",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "E16": {
+        "ref": "J2",
+        "pin": "E16",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "E17": {
+        "ref": "J2",
+        "pin": "E17",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "E18": {
+        "ref": "J2",
+        "pin": "E18",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "E19": {
+        "ref": "J2",
+        "pin": "E19",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "E20": {
+        "ref": "J2",
+        "pin": "E20",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "E21": {
+        "ref": "J2",
+        "pin": "E21",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "E22": {
+        "ref": "J2",
+        "pin": "E22",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "E23": {
+        "ref": "J2",
+        "pin": "E23",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "E24": {
+        "ref": "J2",
+        "pin": "E24",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "E25": {
+        "ref": "J2",
+        "pin": "E25",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "E26": {
+        "ref": "J2",
+        "pin": "E26",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "E27": {
+        "ref": "J2",
+        "pin": "E27",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "E28": {
+        "ref": "J2",
+        "pin": "E28",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "E29": {
+        "ref": "J2",
+        "pin": "E29",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "E30": {
+        "ref": "J2",
+        "pin": "E30",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "E31": {
+        "ref": "J2",
+        "pin": "E31",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "E32": {
+        "ref": "J2",
+        "pin": "E32",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "E33": {
+        "ref": "J2",
+        "pin": "E33",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "E34": {
+        "ref": "J2",
+        "pin": "E34",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "E35": {
+        "ref": "J2",
+        "pin": "E35",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "E36": {
+        "ref": "J2",
+        "pin": "E36",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "E37": {
+        "ref": "J2",
+        "pin": "E37",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "E38": {
+        "ref": "J2",
+        "pin": "E38",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "E39": {
+        "ref": "J2",
+        "pin": "E39",
+        "net": "VADJ",
+        "status": "CONNECTED",
+        "note": "1.5 V; verify hardware before connection"
+      },
+      "E40": {
+        "ref": "J2",
+        "pin": "E40",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "F1": {
+        "ref": "J2",
+        "pin": "F1",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "F2": {
+        "ref": "J2",
+        "pin": "F2",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "F3": {
+        "ref": "J2",
+        "pin": "F3",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "F4": {
+        "ref": "J2",
+        "pin": "F4",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "F5": {
+        "ref": "J2",
+        "pin": "F5",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "F6": {
+        "ref": "J2",
+        "pin": "F6",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "F7": {
+        "ref": "J2",
+        "pin": "F7",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "F8": {
+        "ref": "J2",
+        "pin": "F8",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "F9": {
+        "ref": "J2",
+        "pin": "F9",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "F10": {
+        "ref": "J2",
+        "pin": "F10",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "F11": {
+        "ref": "J2",
+        "pin": "F11",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "F12": {
+        "ref": "J2",
+        "pin": "F12",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "F13": {
+        "ref": "J2",
+        "pin": "F13",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "F14": {
+        "ref": "J2",
+        "pin": "F14",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "F15": {
+        "ref": "J2",
+        "pin": "F15",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "F16": {
+        "ref": "J2",
+        "pin": "F16",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "F17": {
+        "ref": "J2",
+        "pin": "F17",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "F18": {
+        "ref": "J2",
+        "pin": "F18",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "F19": {
+        "ref": "J2",
+        "pin": "F19",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "F20": {
+        "ref": "J2",
+        "pin": "F20",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "F21": {
+        "ref": "J2",
+        "pin": "F21",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "F22": {
+        "ref": "J2",
+        "pin": "F22",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "F23": {
+        "ref": "J2",
+        "pin": "F23",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "F24": {
+        "ref": "J2",
+        "pin": "F24",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "F25": {
+        "ref": "J2",
+        "pin": "F25",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "F26": {
+        "ref": "J2",
+        "pin": "F26",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "F27": {
+        "ref": "J2",
+        "pin": "F27",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "F28": {
+        "ref": "J2",
+        "pin": "F28",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "F29": {
+        "ref": "J2",
+        "pin": "F29",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "F30": {
+        "ref": "J2",
+        "pin": "F30",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "F31": {
+        "ref": "J2",
+        "pin": "F31",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "F32": {
+        "ref": "J2",
+        "pin": "F32",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "F33": {
+        "ref": "J2",
+        "pin": "F33",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "F34": {
+        "ref": "J2",
+        "pin": "F34",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "F35": {
+        "ref": "J2",
+        "pin": "F35",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "F36": {
+        "ref": "J2",
+        "pin": "F36",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "F37": {
+        "ref": "J2",
+        "pin": "F37",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "F38": {
+        "ref": "J2",
+        "pin": "F38",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "F39": {
+        "ref": "J2",
+        "pin": "F39",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "F40": {
+        "ref": "J2",
+        "pin": "F40",
+        "net": "VADJ",
+        "status": "CONNECTED",
+        "note": "1.5 V; verify hardware before connection"
+      },
+      "G1": {
+        "ref": "J2",
+        "pin": "G1",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "G2": {
+        "ref": "J2",
+        "pin": "G2",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "G3": {
+        "ref": "J2",
+        "pin": "G3",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "G4": {
+        "ref": "J2",
+        "pin": "G4",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "G5": {
+        "ref": "J2",
+        "pin": "G5",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "G6": {
+        "ref": "J2",
+        "pin": "G6",
+        "net": "DDR_ODT",
+        "status": "CONNECTED",
+        "note": "GPIOR_P_16_PLLIN1",
+        "partner": "J1.G18"
+      },
+      "G7": {
+        "ref": "J2",
+        "pin": "G7",
+        "net": "DDR_RESET_N",
+        "status": "CONNECTED",
+        "note": "GPIOR_N_16",
+        "partner": "J1.G19"
+      },
+      "G8": {
+        "ref": "J2",
+        "pin": "G8",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "G9": {
+        "ref": "J2",
+        "pin": "G9",
+        "net": "DDR_A2",
+        "status": "CONNECTED",
+        "note": "GPIOR_P_28",
+        "partner": "J1.H10"
+      },
+      "G10": {
+        "ref": "J2",
+        "pin": "G10",
+        "net": "DDR_A3",
+        "status": "CONNECTED",
+        "note": "GPIOR_N_28",
+        "partner": "J1.H11"
+      },
+      "G11": {
+        "ref": "J2",
+        "pin": "G11",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "G12": {
+        "ref": "J2",
+        "pin": "G12",
+        "net": "DDR_A15",
+        "status": "CONNECTED",
+        "note": "GPIOR_P_21_CLK14_P",
+        "partner": "J1.H20"
+      },
+      "G13": {
+        "ref": "J2",
+        "pin": "G13",
+        "net": "DDR_A14",
+        "status": "CONNECTED",
+        "note": "GPIOR_N_21_CLK14_N",
+        "partner": "J1.H19"
+      },
+      "G14": {
+        "ref": "J2",
+        "pin": "G14",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "G15": {
+        "ref": "J2",
+        "pin": "G15",
+        "net": "DDR_WE_N",
+        "status": "CONNECTED",
+        "note": "GPIOR_P_19",
+        "partner": "J1.D15"
+      },
+      "G16": {
+        "ref": "J2",
+        "pin": "G16",
+        "net": "DDR_BA2",
+        "status": "CONNECTED",
+        "note": "GPIOR_N_19",
+        "partner": "J1.H16"
+      },
+      "G17": {
+        "ref": "J2",
+        "pin": "G17",
+        "net": null,
+        "status": "NC",
+        "note": "Daughtercard contact is NC, not GND"
+      },
+      "G18": {
+        "ref": "J2",
+        "pin": "G18",
+        "net": "DDR_CKE",
+        "status": "CONNECTED",
+        "note": "GPIOR_P_17",
+        "partner": "J1.C15"
+      },
+      "G19": {
+        "ref": "J2",
+        "pin": "G19",
+        "net": "DDR_CS_N",
+        "status": "CONNECTED",
+        "note": "GPIOR_N_17",
+        "partner": "J1.C14"
+      },
+      "G20": {
+        "ref": "J2",
+        "pin": "G20",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "G21": {
+        "ref": "J2",
+        "pin": "G21",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "G22": {
+        "ref": "J2",
+        "pin": "G22",
+        "net": "DDR_DQ12",
+        "status": "CONNECTED",
+        "note": "GPIOB_N_28_CDI20",
+        "partner": "J1.G33"
+      },
+      "G23": {
+        "ref": "J2",
+        "pin": "G23",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "G24": {
+        "ref": "J2",
+        "pin": "G24",
+        "net": "DDR_DQ13",
+        "status": "CONNECTED",
+        "note": "GPIOB_P_27_CDI19",
+        "partner": "J1.G34"
+      },
+      "G25": {
+        "ref": "J2",
+        "pin": "G25",
+        "net": "DDR_DQ14",
+        "status": "CONNECTED",
+        "note": "GPIOB_N_27_CDI18",
+        "partner": "J1.G36"
+      },
+      "G26": {
+        "ref": "J2",
+        "pin": "G26",
+        "net": null,
+        "status": "NC",
+        "note": "Daughtercard contact is NC, not GND"
+      },
+      "G27": {
+        "ref": "J2",
+        "pin": "G27",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "G28": {
+        "ref": "J2",
+        "pin": "G28",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "G29": {
+        "ref": "J2",
+        "pin": "G29",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "G30": {
+        "ref": "J2",
+        "pin": "G30",
+        "net": "DDR_DQ0",
+        "status": "CONNECTED",
+        "note": "GPIOB_P_34",
+        "partner": "J1.H22"
+      },
+      "G31": {
+        "ref": "J2",
+        "pin": "G31",
+        "net": "DDR_DQ1",
+        "status": "CONNECTED",
+        "note": "GPIOB_N_34",
+        "partner": "J1.H23"
+      },
+      "G32": {
+        "ref": "J2",
+        "pin": "G32",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "G33": {
+        "ref": "J2",
+        "pin": "G33",
+        "net": "DDR_DQ5",
+        "status": "CONNECTED",
+        "note": "GPIOB_P_32_CDI28",
+        "partner": "J1.G25"
+      },
+      "G34": {
+        "ref": "J2",
+        "pin": "G34",
+        "net": "DDR_DQ4",
+        "status": "CONNECTED",
+        "note": "GPIOB_N_32_CDI29",
+        "partner": "J1.G24"
+      },
+      "G35": {
+        "ref": "J2",
+        "pin": "G35",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "G36": {
+        "ref": "J2",
+        "pin": "G36",
+        "net": "DDR_DQ8",
+        "status": "CONNECTED",
+        "note": "GPIOB_P_30_CDI25",
+        "partner": "J1.D26"
+      },
+      "G37": {
+        "ref": "J2",
+        "pin": "G37",
+        "net": "DDR_DQ9",
+        "status": "CONNECTED",
+        "note": "GPIOB_N_30_CDI24",
+        "partner": "J1.D27"
+      },
+      "G38": {
+        "ref": "J2",
+        "pin": "G38",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "G39": {
+        "ref": "J2",
+        "pin": "G39",
+        "net": "VADJ",
+        "status": "CONNECTED",
+        "note": "1.5 V; verify hardware before connection"
+      },
+      "G40": {
+        "ref": "J2",
+        "pin": "G40",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "H1": {
+        "ref": "J2",
+        "pin": "H1",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "H2": {
+        "ref": "J2",
+        "pin": "H2",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "H3": {
+        "ref": "J2",
+        "pin": "H3",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "H4": {
+        "ref": "J2",
+        "pin": "H4",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "H5": {
+        "ref": "J2",
+        "pin": "H5",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "H6": {
+        "ref": "J2",
+        "pin": "H6",
+        "net": null,
+        "status": "NC",
+        "note": "Daughtercard contact is NC, not GND"
+      },
+      "H7": {
+        "ref": "J2",
+        "pin": "H7",
+        "net": "DDR_A8",
+        "status": "CONNECTED",
+        "note": "GPIOR_P_24_CLK11_P",
+        "partner": "J1.D11"
+      },
+      "H8": {
+        "ref": "J2",
+        "pin": "H8",
+        "net": "DDR_A9",
+        "status": "CONNECTED",
+        "note": "GPIOR_N_24_CLK11_N",
+        "partner": "J1.D12"
+      },
+      "H9": {
+        "ref": "J2",
+        "pin": "H9",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "H10": {
+        "ref": "J2",
+        "pin": "H10",
+        "net": "DDR_A11",
+        "status": "CONNECTED",
+        "note": "GPIOR_P_23_CLK12_P",
+        "partner": "J1.G13"
+      },
+      "H11": {
+        "ref": "J2",
+        "pin": "H11",
+        "net": "DDR_A10",
+        "status": "CONNECTED",
+        "note": "GPIOR_N_23_CLK12_N",
+        "partner": "J1.G12"
+      },
+      "H12": {
+        "ref": "J2",
+        "pin": "H12",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "H13": {
+        "ref": "J2",
+        "pin": "H13",
+        "net": "DDR_A5",
+        "status": "CONNECTED",
+        "note": "GPIOR_P_26_CLK9_P",
+        "partner": "J1.H8"
+      },
+      "H14": {
+        "ref": "J2",
+        "pin": "H14",
+        "net": "DDR_A4",
+        "status": "CONNECTED",
+        "note": "GPIOR_N_26_CLK9_N",
+        "partner": "J1.H7"
+      },
+      "H15": {
+        "ref": "J2",
+        "pin": "H15",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "H16": {
+        "ref": "J2",
+        "pin": "H16",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "H17": {
+        "ref": "J2",
+        "pin": "H17",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "H18": {
+        "ref": "J2",
+        "pin": "H18",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "H19": {
+        "ref": "J2",
+        "pin": "H19",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "H20": {
+        "ref": "J2",
+        "pin": "H20",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "H21": {
+        "ref": "J2",
+        "pin": "H21",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "H22": {
+        "ref": "J2",
+        "pin": "H22",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "H23": {
+        "ref": "J2",
+        "pin": "H23",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "H24": {
+        "ref": "J2",
+        "pin": "H24",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "H25": {
+        "ref": "J2",
+        "pin": "H25",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "H26": {
+        "ref": "J2",
+        "pin": "H26",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "H27": {
+        "ref": "J2",
+        "pin": "H27",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "H28": {
+        "ref": "J2",
+        "pin": "H28",
+        "net": "DDR_DM0",
+        "status": "CONNECTED",
+        "note": "GPIOB_P_26_CDI16",
+        "partner": "J1.G27"
+      },
+      "H29": {
+        "ref": "J2",
+        "pin": "H29",
+        "net": "DDR_DQ15",
+        "status": "CONNECTED",
+        "note": "GPIOB_N_26_CDI17",
+        "partner": "J1.G37"
+      },
+      "H30": {
+        "ref": "J2",
+        "pin": "H30",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "H31": {
+        "ref": "J2",
+        "pin": "H31",
+        "net": "DDR_DQ2",
+        "status": "CONNECTED",
+        "note": "GPIOB_P_33_CDI31",
+        "partner": "J1.G21"
+      },
+      "H32": {
+        "ref": "J2",
+        "pin": "H32",
+        "net": "DDR_DQ3",
+        "status": "CONNECTED",
+        "note": "GPIOB_N_33_CDI30",
+        "partner": "J1.G22"
+      },
+      "H33": {
+        "ref": "J2",
+        "pin": "H33",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "H34": {
+        "ref": "J2",
+        "pin": "H34",
+        "net": "DDR_DQ6",
+        "status": "CONNECTED",
+        "note": "GPIOB_P_31_CDI27",
+        "partner": "J1.H25"
+      },
+      "H35": {
+        "ref": "J2",
+        "pin": "H35",
+        "net": "DDR_DQ7",
+        "status": "CONNECTED",
+        "note": "GPIOB_N_31_CDI26",
+        "partner": "J1.H26"
+      },
+      "H36": {
+        "ref": "J2",
+        "pin": "H36",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "H37": {
+        "ref": "J2",
+        "pin": "H37",
+        "net": "DDR_DQ11",
+        "status": "CONNECTED",
+        "note": "GPIOB_P_29_CDI22",
+        "partner": "J1.H35"
+      },
+      "H38": {
+        "ref": "J2",
+        "pin": "H38",
+        "net": "DDR_DQ10",
+        "status": "CONNECTED",
+        "note": "GPIOB_N_29_CDI23",
+        "partner": "J1.H34"
+      },
+      "H39": {
+        "ref": "J2",
+        "pin": "H39",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "H40": {
+        "ref": "J2",
+        "pin": "H40",
+        "net": "VADJ",
+        "status": "CONNECTED",
+        "note": "1.5 V; verify hardware before connection"
+      },
+      "J1": {
+        "ref": "J2",
+        "pin": "J1",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "J2": {
+        "ref": "J2",
+        "pin": "J2",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "J3": {
+        "ref": "J2",
+        "pin": "J3",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "J4": {
+        "ref": "J2",
+        "pin": "J4",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "J5": {
+        "ref": "J2",
+        "pin": "J5",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "J6": {
+        "ref": "J2",
+        "pin": "J6",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "J7": {
+        "ref": "J2",
+        "pin": "J7",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "J8": {
+        "ref": "J2",
+        "pin": "J8",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "J9": {
+        "ref": "J2",
+        "pin": "J9",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "J10": {
+        "ref": "J2",
+        "pin": "J10",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "J11": {
+        "ref": "J2",
+        "pin": "J11",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "J12": {
+        "ref": "J2",
+        "pin": "J12",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "J13": {
+        "ref": "J2",
+        "pin": "J13",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "J14": {
+        "ref": "J2",
+        "pin": "J14",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "J15": {
+        "ref": "J2",
+        "pin": "J15",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "J16": {
+        "ref": "J2",
+        "pin": "J16",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "J17": {
+        "ref": "J2",
+        "pin": "J17",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "J18": {
+        "ref": "J2",
+        "pin": "J18",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "J19": {
+        "ref": "J2",
+        "pin": "J19",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "J20": {
+        "ref": "J2",
+        "pin": "J20",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "J21": {
+        "ref": "J2",
+        "pin": "J21",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "J22": {
+        "ref": "J2",
+        "pin": "J22",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "J23": {
+        "ref": "J2",
+        "pin": "J23",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "J24": {
+        "ref": "J2",
+        "pin": "J24",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "J25": {
+        "ref": "J2",
+        "pin": "J25",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "J26": {
+        "ref": "J2",
+        "pin": "J26",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "J27": {
+        "ref": "J2",
+        "pin": "J27",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "J28": {
+        "ref": "J2",
+        "pin": "J28",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "J29": {
+        "ref": "J2",
+        "pin": "J29",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "J30": {
+        "ref": "J2",
+        "pin": "J30",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "J31": {
+        "ref": "J2",
+        "pin": "J31",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "J32": {
+        "ref": "J2",
+        "pin": "J32",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "J33": {
+        "ref": "J2",
+        "pin": "J33",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "J34": {
+        "ref": "J2",
+        "pin": "J34",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "J35": {
+        "ref": "J2",
+        "pin": "J35",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "J36": {
+        "ref": "J2",
+        "pin": "J36",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "J37": {
+        "ref": "J2",
+        "pin": "J37",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "J38": {
+        "ref": "J2",
+        "pin": "J38",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "J39": {
+        "ref": "J2",
+        "pin": "J39",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "J40": {
+        "ref": "J2",
+        "pin": "J40",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "K1": {
+        "ref": "J2",
+        "pin": "K1",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "K2": {
+        "ref": "J2",
+        "pin": "K2",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "K3": {
+        "ref": "J2",
+        "pin": "K3",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "K4": {
+        "ref": "J2",
+        "pin": "K4",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "K5": {
+        "ref": "J2",
+        "pin": "K5",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "K6": {
+        "ref": "J2",
+        "pin": "K6",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "K7": {
+        "ref": "J2",
+        "pin": "K7",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "K8": {
+        "ref": "J2",
+        "pin": "K8",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "K9": {
+        "ref": "J2",
+        "pin": "K9",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "K10": {
+        "ref": "J2",
+        "pin": "K10",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "K11": {
+        "ref": "J2",
+        "pin": "K11",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "K12": {
+        "ref": "J2",
+        "pin": "K12",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "K13": {
+        "ref": "J2",
+        "pin": "K13",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "K14": {
+        "ref": "J2",
+        "pin": "K14",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "K15": {
+        "ref": "J2",
+        "pin": "K15",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "K16": {
+        "ref": "J2",
+        "pin": "K16",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "K17": {
+        "ref": "J2",
+        "pin": "K17",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "K18": {
+        "ref": "J2",
+        "pin": "K18",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "K19": {
+        "ref": "J2",
+        "pin": "K19",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "K20": {
+        "ref": "J2",
+        "pin": "K20",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "K21": {
+        "ref": "J2",
+        "pin": "K21",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "K22": {
+        "ref": "J2",
+        "pin": "K22",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "K23": {
+        "ref": "J2",
+        "pin": "K23",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "K24": {
+        "ref": "J2",
+        "pin": "K24",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "K25": {
+        "ref": "J2",
+        "pin": "K25",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "K26": {
+        "ref": "J2",
+        "pin": "K26",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "K27": {
+        "ref": "J2",
+        "pin": "K27",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "K28": {
+        "ref": "J2",
+        "pin": "K28",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "K29": {
+        "ref": "J2",
+        "pin": "K29",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "K30": {
+        "ref": "J2",
+        "pin": "K30",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "K31": {
+        "ref": "J2",
+        "pin": "K31",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "K32": {
+        "ref": "J2",
+        "pin": "K32",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "K33": {
+        "ref": "J2",
+        "pin": "K33",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "K34": {
+        "ref": "J2",
+        "pin": "K34",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "K35": {
+        "ref": "J2",
+        "pin": "K35",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "K36": {
+        "ref": "J2",
+        "pin": "K36",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "K37": {
+        "ref": "J2",
+        "pin": "K37",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "K38": {
+        "ref": "J2",
+        "pin": "K38",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      },
+      "K39": {
+        "ref": "J2",
+        "pin": "K39",
+        "net": "GND",
+        "status": "CONNECTED",
+        "note": "Common continuous ground plane"
+      },
+      "K40": {
+        "ref": "J2",
+        "pin": "K40",
+        "net": null,
+        "status": "NC",
+        "note": "Unused; no same-number passthrough"
+      }
+    }
+  },
+  "nets": {
+    "GND": [
+      {
+        "ref": "J1",
+        "pin": "A1"
+      },
+      {
+        "ref": "J1",
+        "pin": "A4"
+      },
+      {
+        "ref": "J1",
+        "pin": "A5"
+      },
+      {
+        "ref": "J1",
+        "pin": "A8"
+      },
+      {
+        "ref": "J1",
+        "pin": "A9"
+      },
+      {
+        "ref": "J1",
+        "pin": "A12"
+      },
+      {
+        "ref": "J1",
+        "pin": "A13"
+      },
+      {
+        "ref": "J1",
+        "pin": "A16"
+      },
+      {
+        "ref": "J1",
+        "pin": "A17"
+      },
+      {
+        "ref": "J1",
+        "pin": "A20"
+      },
+      {
+        "ref": "J1",
+        "pin": "A21"
+      },
+      {
+        "ref": "J1",
+        "pin": "A24"
+      },
+      {
+        "ref": "J1",
+        "pin": "A25"
+      },
+      {
+        "ref": "J1",
+        "pin": "A28"
+      },
+      {
+        "ref": "J1",
+        "pin": "A29"
+      },
+      {
+        "ref": "J1",
+        "pin": "A32"
+      },
+      {
+        "ref": "J1",
+        "pin": "A33"
+      },
+      {
+        "ref": "J1",
+        "pin": "A36"
+      },
+      {
+        "ref": "J1",
+        "pin": "A37"
+      },
+      {
+        "ref": "J1",
+        "pin": "A40"
+      },
+      {
+        "ref": "J1",
+        "pin": "B2"
+      },
+      {
+        "ref": "J1",
+        "pin": "B3"
+      },
+      {
+        "ref": "J1",
+        "pin": "B6"
+      },
+      {
+        "ref": "J1",
+        "pin": "B7"
+      },
+      {
+        "ref": "J1",
+        "pin": "B10"
+      },
+      {
+        "ref": "J1",
+        "pin": "B11"
+      },
+      {
+        "ref": "J1",
+        "pin": "B14"
+      },
+      {
+        "ref": "J1",
+        "pin": "B15"
+      },
+      {
+        "ref": "J1",
+        "pin": "B18"
+      },
+      {
+        "ref": "J1",
+        "pin": "B19"
+      },
+      {
+        "ref": "J1",
+        "pin": "B22"
+      },
+      {
+        "ref": "J1",
+        "pin": "B23"
+      },
+      {
+        "ref": "J1",
+        "pin": "B26"
+      },
+      {
+        "ref": "J1",
+        "pin": "B27"
+      },
+      {
+        "ref": "J1",
+        "pin": "B30"
+      },
+      {
+        "ref": "J1",
+        "pin": "B31"
+      },
+      {
+        "ref": "J1",
+        "pin": "B34"
+      },
+      {
+        "ref": "J1",
+        "pin": "B35"
+      },
+      {
+        "ref": "J1",
+        "pin": "B38"
+      },
+      {
+        "ref": "J1",
+        "pin": "B39"
+      },
+      {
+        "ref": "J1",
+        "pin": "C1"
+      },
+      {
+        "ref": "J1",
+        "pin": "C4"
+      },
+      {
+        "ref": "J1",
+        "pin": "C5"
+      },
+      {
+        "ref": "J1",
+        "pin": "C8"
+      },
+      {
+        "ref": "J1",
+        "pin": "C9"
+      },
+      {
+        "ref": "J1",
+        "pin": "C12"
+      },
+      {
+        "ref": "J1",
+        "pin": "C13"
+      },
+      {
+        "ref": "J1",
+        "pin": "C16"
+      },
+      {
+        "ref": "J1",
+        "pin": "C17"
+      },
+      {
+        "ref": "J1",
+        "pin": "C20"
+      },
+      {
+        "ref": "J1",
+        "pin": "C21"
+      },
+      {
+        "ref": "J1",
+        "pin": "C24"
+      },
+      {
+        "ref": "J1",
+        "pin": "C25"
+      },
+      {
+        "ref": "J1",
+        "pin": "C28"
+      },
+      {
+        "ref": "J1",
+        "pin": "C29"
+      },
+      {
+        "ref": "J1",
+        "pin": "C32"
+      },
+      {
+        "ref": "J1",
+        "pin": "C33"
+      },
+      {
+        "ref": "J1",
+        "pin": "C34"
+      },
+      {
+        "ref": "J1",
+        "pin": "C36"
+      },
+      {
+        "ref": "J1",
+        "pin": "C38"
+      },
+      {
+        "ref": "J1",
+        "pin": "C40"
+      },
+      {
+        "ref": "J1",
+        "pin": "D2"
+      },
+      {
+        "ref": "J1",
+        "pin": "D3"
+      },
+      {
+        "ref": "J1",
+        "pin": "D6"
+      },
+      {
+        "ref": "J1",
+        "pin": "D7"
+      },
+      {
+        "ref": "J1",
+        "pin": "D10"
+      },
+      {
+        "ref": "J1",
+        "pin": "D13"
+      },
+      {
+        "ref": "J1",
+        "pin": "D16"
+      },
+      {
+        "ref": "J1",
+        "pin": "D19"
+      },
+      {
+        "ref": "J1",
+        "pin": "D22"
+      },
+      {
+        "ref": "J1",
+        "pin": "D25"
+      },
+      {
+        "ref": "J1",
+        "pin": "D28"
+      },
+      {
+        "ref": "J1",
+        "pin": "D35"
+      },
+      {
+        "ref": "J1",
+        "pin": "D37"
+      },
+      {
+        "ref": "J1",
+        "pin": "D39"
+      },
+      {
+        "ref": "J1",
+        "pin": "E1"
+      },
+      {
+        "ref": "J1",
+        "pin": "E4"
+      },
+      {
+        "ref": "J1",
+        "pin": "E5"
+      },
+      {
+        "ref": "J1",
+        "pin": "E8"
+      },
+      {
+        "ref": "J1",
+        "pin": "E11"
+      },
+      {
+        "ref": "J1",
+        "pin": "E14"
+      },
+      {
+        "ref": "J1",
+        "pin": "E17"
+      },
+      {
+        "ref": "J1",
+        "pin": "E20"
+      },
+      {
+        "ref": "J1",
+        "pin": "E23"
+      },
+      {
+        "ref": "J1",
+        "pin": "E26"
+      },
+      {
+        "ref": "J1",
+        "pin": "E29"
+      },
+      {
+        "ref": "J1",
+        "pin": "E32"
+      },
+      {
+        "ref": "J1",
+        "pin": "E35"
+      },
+      {
+        "ref": "J1",
+        "pin": "E38"
+      },
+      {
+        "ref": "J1",
+        "pin": "E40"
+      },
+      {
+        "ref": "J1",
+        "pin": "F2"
+      },
+      {
+        "ref": "J1",
+        "pin": "F3"
+      },
+      {
+        "ref": "J1",
+        "pin": "F6"
+      },
+      {
+        "ref": "J1",
+        "pin": "F9"
+      },
+      {
+        "ref": "J1",
+        "pin": "F12"
+      },
+      {
+        "ref": "J1",
+        "pin": "F15"
+      },
+      {
+        "ref": "J1",
+        "pin": "F18"
+      },
+      {
+        "ref": "J1",
+        "pin": "F21"
+      },
+      {
+        "ref": "J1",
+        "pin": "F24"
+      },
+      {
+        "ref": "J1",
+        "pin": "F27"
+      },
+      {
+        "ref": "J1",
+        "pin": "F30"
+      },
+      {
+        "ref": "J1",
+        "pin": "F33"
+      },
+      {
+        "ref": "J1",
+        "pin": "F36"
+      },
+      {
+        "ref": "J1",
+        "pin": "F39"
+      },
+      {
+        "ref": "J1",
+        "pin": "G1"
+      },
+      {
+        "ref": "J1",
+        "pin": "G4"
+      },
+      {
+        "ref": "J1",
+        "pin": "G5"
+      },
+      {
+        "ref": "J1",
+        "pin": "G8"
+      },
+      {
+        "ref": "J1",
+        "pin": "G11"
+      },
+      {
+        "ref": "J1",
+        "pin": "G14"
+      },
+      {
+        "ref": "J1",
+        "pin": "G17"
+      },
+      {
+        "ref": "J1",
+        "pin": "G20"
+      },
+      {
+        "ref": "J1",
+        "pin": "G23"
+      },
+      {
+        "ref": "J1",
+        "pin": "G26"
+      },
+      {
+        "ref": "J1",
+        "pin": "G29"
+      },
+      {
+        "ref": "J1",
+        "pin": "G32"
+      },
+      {
+        "ref": "J1",
+        "pin": "G35"
+      },
+      {
+        "ref": "J1",
+        "pin": "G38"
+      },
+      {
+        "ref": "J1",
+        "pin": "G40"
+      },
+      {
+        "ref": "J1",
+        "pin": "H2"
+      },
+      {
+        "ref": "J1",
+        "pin": "H3"
+      },
+      {
+        "ref": "J1",
+        "pin": "H6"
+      },
+      {
+        "ref": "J1",
+        "pin": "H9"
+      },
+      {
+        "ref": "J1",
+        "pin": "H12"
+      },
+      {
+        "ref": "J1",
+        "pin": "H15"
+      },
+      {
+        "ref": "J1",
+        "pin": "H18"
+      },
+      {
+        "ref": "J1",
+        "pin": "H21"
+      },
+      {
+        "ref": "J1",
+        "pin": "H24"
+      },
+      {
+        "ref": "J1",
+        "pin": "H27"
+      },
+      {
+        "ref": "J1",
+        "pin": "H30"
+      },
+      {
+        "ref": "J1",
+        "pin": "H33"
+      },
+      {
+        "ref": "J1",
+        "pin": "H36"
+      },
+      {
+        "ref": "J1",
+        "pin": "H39"
+      },
+      {
+        "ref": "J1",
+        "pin": "J1"
+      },
+      {
+        "ref": "J1",
+        "pin": "J4"
+      },
+      {
+        "ref": "J1",
+        "pin": "J5"
+      },
+      {
+        "ref": "J1",
+        "pin": "J8"
+      },
+      {
+        "ref": "J1",
+        "pin": "J11"
+      },
+      {
+        "ref": "J1",
+        "pin": "J14"
+      },
+      {
+        "ref": "J1",
+        "pin": "J17"
+      },
+      {
+        "ref": "J1",
+        "pin": "J20"
+      },
+      {
+        "ref": "J1",
+        "pin": "J23"
+      },
+      {
+        "ref": "J1",
+        "pin": "J26"
+      },
+      {
+        "ref": "J1",
+        "pin": "J29"
+      },
+      {
+        "ref": "J1",
+        "pin": "J32"
+      },
+      {
+        "ref": "J1",
+        "pin": "J35"
+      },
+      {
+        "ref": "J1",
+        "pin": "J38"
+      },
+      {
+        "ref": "J1",
+        "pin": "J40"
+      },
+      {
+        "ref": "J1",
+        "pin": "K2"
+      },
+      {
+        "ref": "J1",
+        "pin": "K3"
+      },
+      {
+        "ref": "J1",
+        "pin": "K6"
+      },
+      {
+        "ref": "J1",
+        "pin": "K9"
+      },
+      {
+        "ref": "J1",
+        "pin": "K12"
+      },
+      {
+        "ref": "J1",
+        "pin": "K15"
+      },
+      {
+        "ref": "J1",
+        "pin": "K18"
+      },
+      {
+        "ref": "J1",
+        "pin": "K21"
+      },
+      {
+        "ref": "J1",
+        "pin": "K24"
+      },
+      {
+        "ref": "J1",
+        "pin": "K27"
+      },
+      {
+        "ref": "J1",
+        "pin": "K30"
+      },
+      {
+        "ref": "J1",
+        "pin": "K33"
+      },
+      {
+        "ref": "J1",
+        "pin": "K36"
+      },
+      {
+        "ref": "J1",
+        "pin": "K39"
+      },
+      {
+        "ref": "J2",
+        "pin": "A1"
+      },
+      {
+        "ref": "J2",
+        "pin": "A4"
+      },
+      {
+        "ref": "J2",
+        "pin": "A5"
+      },
+      {
+        "ref": "J2",
+        "pin": "A8"
+      },
+      {
+        "ref": "J2",
+        "pin": "A9"
+      },
+      {
+        "ref": "J2",
+        "pin": "A12"
+      },
+      {
+        "ref": "J2",
+        "pin": "A13"
+      },
+      {
+        "ref": "J2",
+        "pin": "A16"
+      },
+      {
+        "ref": "J2",
+        "pin": "A17"
+      },
+      {
+        "ref": "J2",
+        "pin": "A20"
+      },
+      {
+        "ref": "J2",
+        "pin": "A21"
+      },
+      {
+        "ref": "J2",
+        "pin": "A24"
+      },
+      {
+        "ref": "J2",
+        "pin": "A25"
+      },
+      {
+        "ref": "J2",
+        "pin": "A28"
+      },
+      {
+        "ref": "J2",
+        "pin": "A29"
+      },
+      {
+        "ref": "J2",
+        "pin": "A32"
+      },
+      {
+        "ref": "J2",
+        "pin": "A33"
+      },
+      {
+        "ref": "J2",
+        "pin": "A36"
+      },
+      {
+        "ref": "J2",
+        "pin": "A37"
+      },
+      {
+        "ref": "J2",
+        "pin": "A40"
+      },
+      {
+        "ref": "J2",
+        "pin": "B2"
+      },
+      {
+        "ref": "J2",
+        "pin": "B3"
+      },
+      {
+        "ref": "J2",
+        "pin": "B6"
+      },
+      {
+        "ref": "J2",
+        "pin": "B7"
+      },
+      {
+        "ref": "J2",
+        "pin": "B10"
+      },
+      {
+        "ref": "J2",
+        "pin": "B11"
+      },
+      {
+        "ref": "J2",
+        "pin": "B14"
+      },
+      {
+        "ref": "J2",
+        "pin": "B15"
+      },
+      {
+        "ref": "J2",
+        "pin": "B18"
+      },
+      {
+        "ref": "J2",
+        "pin": "B19"
+      },
+      {
+        "ref": "J2",
+        "pin": "B22"
+      },
+      {
+        "ref": "J2",
+        "pin": "B23"
+      },
+      {
+        "ref": "J2",
+        "pin": "B26"
+      },
+      {
+        "ref": "J2",
+        "pin": "B27"
+      },
+      {
+        "ref": "J2",
+        "pin": "B30"
+      },
+      {
+        "ref": "J2",
+        "pin": "B31"
+      },
+      {
+        "ref": "J2",
+        "pin": "B34"
+      },
+      {
+        "ref": "J2",
+        "pin": "B35"
+      },
+      {
+        "ref": "J2",
+        "pin": "B38"
+      },
+      {
+        "ref": "J2",
+        "pin": "B39"
+      },
+      {
+        "ref": "J2",
+        "pin": "C1"
+      },
+      {
+        "ref": "J2",
+        "pin": "C4"
+      },
+      {
+        "ref": "J2",
+        "pin": "C5"
+      },
+      {
+        "ref": "J2",
+        "pin": "C8"
+      },
+      {
+        "ref": "J2",
+        "pin": "C9"
+      },
+      {
+        "ref": "J2",
+        "pin": "C12"
+      },
+      {
+        "ref": "J2",
+        "pin": "C13"
+      },
+      {
+        "ref": "J2",
+        "pin": "C16"
+      },
+      {
+        "ref": "J2",
+        "pin": "C17"
+      },
+      {
+        "ref": "J2",
+        "pin": "C20"
+      },
+      {
+        "ref": "J2",
+        "pin": "C21"
+      },
+      {
+        "ref": "J2",
+        "pin": "C24"
+      },
+      {
+        "ref": "J2",
+        "pin": "C25"
+      },
+      {
+        "ref": "J2",
+        "pin": "C28"
+      },
+      {
+        "ref": "J2",
+        "pin": "C29"
+      },
+      {
+        "ref": "J2",
+        "pin": "C32"
+      },
+      {
+        "ref": "J2",
+        "pin": "C33"
+      },
+      {
+        "ref": "J2",
+        "pin": "C36"
+      },
+      {
+        "ref": "J2",
+        "pin": "C38"
+      },
+      {
+        "ref": "J2",
+        "pin": "C40"
+      },
+      {
+        "ref": "J2",
+        "pin": "D2"
+      },
+      {
+        "ref": "J2",
+        "pin": "D3"
+      },
+      {
+        "ref": "J2",
+        "pin": "D6"
+      },
+      {
+        "ref": "J2",
+        "pin": "D7"
+      },
+      {
+        "ref": "J2",
+        "pin": "D10"
+      },
+      {
+        "ref": "J2",
+        "pin": "D13"
+      },
+      {
+        "ref": "J2",
+        "pin": "D16"
+      },
+      {
+        "ref": "J2",
+        "pin": "D19"
+      },
+      {
+        "ref": "J2",
+        "pin": "D22"
+      },
+      {
+        "ref": "J2",
+        "pin": "D25"
+      },
+      {
+        "ref": "J2",
+        "pin": "D28"
+      },
+      {
+        "ref": "J2",
+        "pin": "D37"
+      },
+      {
+        "ref": "J2",
+        "pin": "D39"
+      },
+      {
+        "ref": "J2",
+        "pin": "E1"
+      },
+      {
+        "ref": "J2",
+        "pin": "E4"
+      },
+      {
+        "ref": "J2",
+        "pin": "E5"
+      },
+      {
+        "ref": "J2",
+        "pin": "E8"
+      },
+      {
+        "ref": "J2",
+        "pin": "E11"
+      },
+      {
+        "ref": "J2",
+        "pin": "E14"
+      },
+      {
+        "ref": "J2",
+        "pin": "E17"
+      },
+      {
+        "ref": "J2",
+        "pin": "E20"
+      },
+      {
+        "ref": "J2",
+        "pin": "E23"
+      },
+      {
+        "ref": "J2",
+        "pin": "E26"
+      },
+      {
+        "ref": "J2",
+        "pin": "E29"
+      },
+      {
+        "ref": "J2",
+        "pin": "E32"
+      },
+      {
+        "ref": "J2",
+        "pin": "E35"
+      },
+      {
+        "ref": "J2",
+        "pin": "E38"
+      },
+      {
+        "ref": "J2",
+        "pin": "E40"
+      },
+      {
+        "ref": "J2",
+        "pin": "F2"
+      },
+      {
+        "ref": "J2",
+        "pin": "F3"
+      },
+      {
+        "ref": "J2",
+        "pin": "F6"
+      },
+      {
+        "ref": "J2",
+        "pin": "F9"
+      },
+      {
+        "ref": "J2",
+        "pin": "F12"
+      },
+      {
+        "ref": "J2",
+        "pin": "F15"
+      },
+      {
+        "ref": "J2",
+        "pin": "F18"
+      },
+      {
+        "ref": "J2",
+        "pin": "F21"
+      },
+      {
+        "ref": "J2",
+        "pin": "F24"
+      },
+      {
+        "ref": "J2",
+        "pin": "F27"
+      },
+      {
+        "ref": "J2",
+        "pin": "F30"
+      },
+      {
+        "ref": "J2",
+        "pin": "F33"
+      },
+      {
+        "ref": "J2",
+        "pin": "F36"
+      },
+      {
+        "ref": "J2",
+        "pin": "F39"
+      },
+      {
+        "ref": "J2",
+        "pin": "G1"
+      },
+      {
+        "ref": "J2",
+        "pin": "G4"
+      },
+      {
+        "ref": "J2",
+        "pin": "G5"
+      },
+      {
+        "ref": "J2",
+        "pin": "G8"
+      },
+      {
+        "ref": "J2",
+        "pin": "G11"
+      },
+      {
+        "ref": "J2",
+        "pin": "G14"
+      },
+      {
+        "ref": "J2",
+        "pin": "G20"
+      },
+      {
+        "ref": "J2",
+        "pin": "G23"
+      },
+      {
+        "ref": "J2",
+        "pin": "G29"
+      },
+      {
+        "ref": "J2",
+        "pin": "G32"
+      },
+      {
+        "ref": "J2",
+        "pin": "G35"
+      },
+      {
+        "ref": "J2",
+        "pin": "G38"
+      },
+      {
+        "ref": "J2",
+        "pin": "G40"
+      },
+      {
+        "ref": "J2",
+        "pin": "H2"
+      },
+      {
+        "ref": "J2",
+        "pin": "H3"
+      },
+      {
+        "ref": "J2",
+        "pin": "H9"
+      },
+      {
+        "ref": "J2",
+        "pin": "H12"
+      },
+      {
+        "ref": "J2",
+        "pin": "H15"
+      },
+      {
+        "ref": "J2",
+        "pin": "H18"
+      },
+      {
+        "ref": "J2",
+        "pin": "H21"
+      },
+      {
+        "ref": "J2",
+        "pin": "H24"
+      },
+      {
+        "ref": "J2",
+        "pin": "H27"
+      },
+      {
+        "ref": "J2",
+        "pin": "H30"
+      },
+      {
+        "ref": "J2",
+        "pin": "H33"
+      },
+      {
+        "ref": "J2",
+        "pin": "H36"
+      },
+      {
+        "ref": "J2",
+        "pin": "H39"
+      },
+      {
+        "ref": "J2",
+        "pin": "J1"
+      },
+      {
+        "ref": "J2",
+        "pin": "J4"
+      },
+      {
+        "ref": "J2",
+        "pin": "J5"
+      },
+      {
+        "ref": "J2",
+        "pin": "J8"
+      },
+      {
+        "ref": "J2",
+        "pin": "J11"
+      },
+      {
+        "ref": "J2",
+        "pin": "J14"
+      },
+      {
+        "ref": "J2",
+        "pin": "J17"
+      },
+      {
+        "ref": "J2",
+        "pin": "J20"
+      },
+      {
+        "ref": "J2",
+        "pin": "J23"
+      },
+      {
+        "ref": "J2",
+        "pin": "J26"
+      },
+      {
+        "ref": "J2",
+        "pin": "J29"
+      },
+      {
+        "ref": "J2",
+        "pin": "J32"
+      },
+      {
+        "ref": "J2",
+        "pin": "J35"
+      },
+      {
+        "ref": "J2",
+        "pin": "J38"
+      },
+      {
+        "ref": "J2",
+        "pin": "J40"
+      },
+      {
+        "ref": "J2",
+        "pin": "K2"
+      },
+      {
+        "ref": "J2",
+        "pin": "K3"
+      },
+      {
+        "ref": "J2",
+        "pin": "K6"
+      },
+      {
+        "ref": "J2",
+        "pin": "K9"
+      },
+      {
+        "ref": "J2",
+        "pin": "K12"
+      },
+      {
+        "ref": "J2",
+        "pin": "K15"
+      },
+      {
+        "ref": "J2",
+        "pin": "K18"
+      },
+      {
+        "ref": "J2",
+        "pin": "K21"
+      },
+      {
+        "ref": "J2",
+        "pin": "K24"
+      },
+      {
+        "ref": "J2",
+        "pin": "K27"
+      },
+      {
+        "ref": "J2",
+        "pin": "K30"
+      },
+      {
+        "ref": "J2",
+        "pin": "K33"
+      },
+      {
+        "ref": "J2",
+        "pin": "K36"
+      },
+      {
+        "ref": "J2",
+        "pin": "K39"
+      }
+    ],
+    "DDR_A6": [
+      {
+        "ref": "J1",
+        "pin": "C10"
+      },
+      {
+        "ref": "J2",
+        "pin": "D15"
+      }
+    ],
+    "DDR_A7": [
+      {
+        "ref": "J1",
+        "pin": "C11"
+      },
+      {
+        "ref": "J2",
+        "pin": "D14"
+      }
+    ],
+    "DDR_CS_N": [
+      {
+        "ref": "J1",
+        "pin": "C14"
+      },
+      {
+        "ref": "J2",
+        "pin": "G19"
+      }
+    ],
+    "DDR_CKE": [
+      {
+        "ref": "J1",
+        "pin": "C15"
+      },
+      {
+        "ref": "J2",
+        "pin": "G18"
+      }
+    ],
+    "DDR_DM1": [
+      {
+        "ref": "J1",
+        "pin": "C26"
+      },
+      {
+        "ref": "J2",
+        "pin": "C23"
+      }
+    ],
+    "3V3": [
+      {
+        "ref": "J1",
+        "pin": "C39"
+      },
+      {
+        "ref": "J1",
+        "pin": "D32"
+      },
+      {
+        "ref": "J1",
+        "pin": "D36"
+      },
+      {
+        "ref": "J1",
+        "pin": "D38"
+      },
+      {
+        "ref": "J1",
+        "pin": "D40"
+      },
+      {
+        "ref": "J2",
+        "pin": "C39"
+      },
+      {
+        "ref": "J2",
+        "pin": "D32"
+      },
+      {
+        "ref": "J2",
+        "pin": "D36"
+      },
+      {
+        "ref": "J2",
+        "pin": "D38"
+      },
+      {
+        "ref": "J2",
+        "pin": "D40"
+      }
+    ],
+    "DDR_A8": [
+      {
+        "ref": "J1",
+        "pin": "D11"
+      },
+      {
+        "ref": "J2",
+        "pin": "H7"
+      }
+    ],
+    "DDR_A9": [
+      {
+        "ref": "J1",
+        "pin": "D12"
+      },
+      {
+        "ref": "J2",
+        "pin": "H8"
+      }
+    ],
+    "DDR_RAS_N": [
+      {
+        "ref": "J1",
+        "pin": "D14"
+      },
+      {
+        "ref": "J2",
+        "pin": "C18"
+      }
+    ],
+    "DDR_WE_N": [
+      {
+        "ref": "J1",
+        "pin": "D15"
+      },
+      {
+        "ref": "J2",
+        "pin": "G15"
+      }
+    ],
+    "DDR_DQ8": [
+      {
+        "ref": "J1",
+        "pin": "D26"
+      },
+      {
+        "ref": "J2",
+        "pin": "G36"
+      }
+    ],
+    "DDR_DQ9": [
+      {
+        "ref": "J1",
+        "pin": "D27"
+      },
+      {
+        "ref": "J2",
+        "pin": "G37"
+      }
+    ],
+    "VADJ": [
+      {
+        "ref": "J1",
+        "pin": "E39"
+      },
+      {
+        "ref": "J1",
+        "pin": "F40"
+      },
+      {
+        "ref": "J1",
+        "pin": "G39"
+      },
+      {
+        "ref": "J1",
+        "pin": "H40"
+      },
+      {
+        "ref": "J2",
+        "pin": "E39"
+      },
+      {
+        "ref": "J2",
+        "pin": "F40"
+      },
+      {
+        "ref": "J2",
+        "pin": "G39"
+      },
+      {
+        "ref": "J2",
+        "pin": "H40"
+      }
+    ],
+    "DDR_A0": [
+      {
+        "ref": "J1",
+        "pin": "G9"
+      },
+      {
+        "ref": "J2",
+        "pin": "D9"
+      }
+    ],
+    "DDR_A1": [
+      {
+        "ref": "J1",
+        "pin": "G10"
+      },
+      {
+        "ref": "J2",
+        "pin": "D8"
+      }
+    ],
+    "DDR_A10": [
+      {
+        "ref": "J1",
+        "pin": "G12"
+      },
+      {
+        "ref": "J2",
+        "pin": "H11"
+      }
+    ],
+    "DDR_A11": [
+      {
+        "ref": "J1",
+        "pin": "G13"
+      },
+      {
+        "ref": "J2",
+        "pin": "H10"
+      }
+    ],
+    "DDR_A12": [
+      {
+        "ref": "J1",
+        "pin": "G15"
+      },
+      {
+        "ref": "J2",
+        "pin": "C11"
+      }
+    ],
+    "DDR_A13": [
+      {
+        "ref": "J1",
+        "pin": "G16"
+      },
+      {
+        "ref": "J2",
+        "pin": "C10"
+      }
+    ],
+    "DDR_ODT": [
+      {
+        "ref": "J1",
+        "pin": "G18"
+      },
+      {
+        "ref": "J2",
+        "pin": "G6"
+      }
+    ],
+    "DDR_RESET_N": [
+      {
+        "ref": "J1",
+        "pin": "G19"
+      },
+      {
+        "ref": "J2",
+        "pin": "G7"
+      }
+    ],
+    "DDR_DQ2": [
+      {
+        "ref": "J1",
+        "pin": "G21"
+      },
+      {
+        "ref": "J2",
+        "pin": "H31"
+      }
+    ],
+    "DDR_DQ3": [
+      {
+        "ref": "J1",
+        "pin": "G22"
+      },
+      {
+        "ref": "J2",
+        "pin": "H32"
+      }
+    ],
+    "DDR_DQ4": [
+      {
+        "ref": "J1",
+        "pin": "G24"
+      },
+      {
+        "ref": "J2",
+        "pin": "G34"
+      }
+    ],
+    "DDR_DQ5": [
+      {
+        "ref": "J1",
+        "pin": "G25"
+      },
+      {
+        "ref": "J2",
+        "pin": "G33"
+      }
+    ],
+    "DDR_DM0": [
+      {
+        "ref": "J1",
+        "pin": "G27"
+      },
+      {
+        "ref": "J2",
+        "pin": "H28"
+      }
+    ],
+    "DDR_DQ12": [
+      {
+        "ref": "J1",
+        "pin": "G33"
+      },
+      {
+        "ref": "J2",
+        "pin": "G22"
+      }
+    ],
+    "DDR_DQ13": [
+      {
+        "ref": "J1",
+        "pin": "G34"
+      },
+      {
+        "ref": "J2",
+        "pin": "G24"
+      }
+    ],
+    "DDR_DQ14": [
+      {
+        "ref": "J1",
+        "pin": "G36"
+      },
+      {
+        "ref": "J2",
+        "pin": "G25"
+      }
+    ],
+    "DDR_DQ15": [
+      {
+        "ref": "J1",
+        "pin": "G37"
+      },
+      {
+        "ref": "J2",
+        "pin": "H29"
+      }
+    ],
+    "DDR_CK_P": [
+      {
+        "ref": "J1",
+        "pin": "H4"
+      },
+      {
+        "ref": "J2",
+        "pin": "D11"
+      }
+    ],
+    "DDR_CK_N": [
+      {
+        "ref": "J1",
+        "pin": "H5"
+      },
+      {
+        "ref": "J2",
+        "pin": "D12"
+      }
+    ],
+    "DDR_A4": [
+      {
+        "ref": "J1",
+        "pin": "H7"
+      },
+      {
+        "ref": "J2",
+        "pin": "H14"
+      }
+    ],
+    "DDR_A5": [
+      {
+        "ref": "J1",
+        "pin": "H8"
+      },
+      {
+        "ref": "J2",
+        "pin": "H13"
+      }
+    ],
+    "DDR_A2": [
+      {
+        "ref": "J1",
+        "pin": "H10"
+      },
+      {
+        "ref": "J2",
+        "pin": "G9"
+      }
+    ],
+    "DDR_A3": [
+      {
+        "ref": "J1",
+        "pin": "H11"
+      },
+      {
+        "ref": "J2",
+        "pin": "G10"
+      }
+    ],
+    "DDR_BA0": [
+      {
+        "ref": "J1",
+        "pin": "H13"
+      },
+      {
+        "ref": "J2",
+        "pin": "C14"
+      }
+    ],
+    "DDR_BA1": [
+      {
+        "ref": "J1",
+        "pin": "H14"
+      },
+      {
+        "ref": "J2",
+        "pin": "C15"
+      }
+    ],
+    "DDR_BA2": [
+      {
+        "ref": "J1",
+        "pin": "H16"
+      },
+      {
+        "ref": "J2",
+        "pin": "G16"
+      }
+    ],
+    "DDR_CAS_N": [
+      {
+        "ref": "J1",
+        "pin": "H17"
+      },
+      {
+        "ref": "J2",
+        "pin": "C19"
+      }
+    ],
+    "DDR_A14": [
+      {
+        "ref": "J1",
+        "pin": "H19"
+      },
+      {
+        "ref": "J2",
+        "pin": "G13"
+      }
+    ],
+    "DDR_A15": [
+      {
+        "ref": "J1",
+        "pin": "H20"
+      },
+      {
+        "ref": "J2",
+        "pin": "G12"
+      }
+    ],
+    "DDR_DQ0": [
+      {
+        "ref": "J1",
+        "pin": "H22"
+      },
+      {
+        "ref": "J2",
+        "pin": "G30"
+      }
+    ],
+    "DDR_DQ1": [
+      {
+        "ref": "J1",
+        "pin": "H23"
+      },
+      {
+        "ref": "J2",
+        "pin": "G31"
+      }
+    ],
+    "DDR_DQ6": [
+      {
+        "ref": "J1",
+        "pin": "H25"
+      },
+      {
+        "ref": "J2",
+        "pin": "H34"
+      }
+    ],
+    "DDR_DQ7": [
+      {
+        "ref": "J1",
+        "pin": "H26"
+      },
+      {
+        "ref": "J2",
+        "pin": "H35"
+      }
+    ],
+    "DDR_DQS0_P": [
+      {
+        "ref": "J1",
+        "pin": "H31"
+      },
+      {
+        "ref": "J2",
+        "pin": "D26"
+      }
+    ],
+    "DDR_DQS0_N": [
+      {
+        "ref": "J1",
+        "pin": "H32"
+      },
+      {
+        "ref": "J2",
+        "pin": "D27"
+      }
+    ],
+    "DDR_DQ10": [
+      {
+        "ref": "J1",
+        "pin": "H34"
+      },
+      {
+        "ref": "J2",
+        "pin": "H38"
+      }
+    ],
+    "DDR_DQ11": [
+      {
+        "ref": "J1",
+        "pin": "H35"
+      },
+      {
+        "ref": "J2",
+        "pin": "H37"
+      }
+    ],
+    "DDR_DQS1_P": [
+      {
+        "ref": "J1",
+        "pin": "H37"
+      },
+      {
+        "ref": "J2",
+        "pin": "C26"
+      }
+    ],
+    "DDR_DQS1_N": [
+      {
+        "ref": "J1",
+        "pin": "H38"
+      },
+      {
+        "ref": "J2",
+        "pin": "C27"
+      }
+    ]
+  },
+  "optional_components": [
+    {
+      "reference": "R_RESET",
+      "value": "4.7 kohm",
+      "between": [
+        "DDR_RESET_N",
+        "GND"
+      ],
+      "population": "DNP until daughtercard RN28 RESET_n-to-VTT 39 ohm branch is confirmed absent or isolated. Never remove other RN28 branches indiscriminately."
+    }
+  ],
+  "mechanical_terminals": "VCU118 connector source includes ST1/ST2 ground terminals outside the 400 signal contacts. Confirm exact Samtec footprint terminals and connect electrical shield terminals to GND; mechanical holes are not assumed electrical pins.",
+  "statistics": {
+    "J1": {
+      "GND": 162,
+      "NC": 179,
+      "CONNECTED": 50,
+      "3V3": 5,
+      "VADJ": 4
+    },
+    "J2": {
+      "GND": 157,
+      "NC": 184,
+      "CONNECTED": 50,
+      "3V3": 5,
+      "VADJ": 4
+    }
+  }
+}

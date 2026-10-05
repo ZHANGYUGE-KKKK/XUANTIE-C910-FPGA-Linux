@@ -1,19 +1,47 @@
 {
-  "schema_version": 1,
-  "revision": "2026-10-04-A",
+  "schema_version": 2,
+  "revision": "2026-10-04-C",
   "device": "xcvu9p-flga2104-2L-e",
   "carrier": "VCU118 Rev2.0",
   "carrier_connector": "J2 FMC_HPC1 (not J22 FMCP_HSPC)",
   "subcard": "Efinix FMC DDR3 GPIO daughtercard",
   "subcard_connector": "J4 ASP-134488-01",
   "memory_voltage_volts": 1.5,
+  "adapter_connectors": {
+    "J1": {"mount": "bottom", "part": "ASP-134488-01", "mates_with": "VCU118 J2 ASP-134486-01"},
+    "J2": {"mount": "top", "part": "ASP-134486-01", "mates_with": "daughtercard J4 ASP-134488-01"}
+  },
+  "ground_contacts": {
+    "standard_carrier_ground_by_row": {
+      "A": [1,4,5,8,9,12,13,16,17,20,21,24,25,28,29,32,33,36,37,40],
+      "B": [2,3,6,7,10,11,14,15,18,19,22,23,26,27,30,31,34,35,38,39],
+      "C": [1,4,5,8,9,12,13,16,17,20,21,24,25,28,29,32,33,36,38,40],
+      "D": [2,3,6,7,10,13,16,19,22,25,28,37,39],
+      "E": [1,4,5,8,11,14,17,20,23,26,29,32,35,38,40],
+      "F": [2,3,6,9,12,15,18,21,24,27,30,33,36,39],
+      "G": [1,4,5,8,11,14,17,20,23,26,29,32,35,38,40],
+      "H": [3,6,9,12,15,18,21,24,27,30,33,36,39],
+      "J": [1,4,5,8,11,14,17,20,23,26,29,32,35,38,40],
+      "K": [2,3,6,9,12,15,18,21,24,27,30,33,36,39]
+    },
+    "carrier_add_to_ground": ["C34", "D35", "H2"],
+    "carrier_add_note": "C34 GA0 and D35 GA1 already grounded on VCU118; H2 PRSNT_M2C intentionally tied to GND on adapter to indicate presence.",
+    "subcard_remove_from_standard_ground": ["G17", "G26", "H6"],
+    "subcard_add_to_ground": ["H2"],
+    "subcard_note": "Revision C independently traced all 400 exterior pin leads in source PDF: B2/F2 GND; G17/G26/H6 NC; H2 GND; C35/C37 NC. 157 actual ground contacts join one common ground plane, not isolated one-to-one wires.",
+    "mechanical_terminals": "VCU118 connector source includes ST1/ST2 ground terminals outside the 400 signal contacts. Confirm exact Samtec footprint terminals and connect electrical shield terminals to GND; mechanical holes are not assumed electrical pins."
+  },
+  "unlisted_contacts": "NC on adapter: no implicit same-number passthrough. In particular carrier G6/G7 are unused, not MIG reference clock.",
+  "optional_components": [
+    {"reference": "R_RESET", "value": "4.7 kohm", "between": ["DDR_RESET_N", "GND"], "population": "DNP until daughtercard RN28 RESET_n-to-VTT 39 ohm branch is confirmed absent or isolated. Never remove other RN28 branches indiscriminately."}
+  ],
   "power_connections": [
     {"carrier_contacts": ["C39", "D32", "D36", "D38", "D40"], "subcard_contacts": ["C39", "D32", "D36", "D38", "D40"], "voltage_volts": 3.3, "net": "3V3"},
     {"carrier_contacts": ["E39", "F40", "G39", "H40"], "subcard_contacts": ["E39", "F40", "G39", "H40"], "voltage_volts": 1.5, "net": "VADJ", "requirement": "Set and measure carrier shared VADJ regulator at 1.5 V first"}
   ],
   "prohibited_straight_through": [
-    {"contact": "C35", "carrier_net": "12V", "subcard_net": "GND", "action": "Isolate carrier contact; connect subcard contact to adapter ground"},
-    {"contact": "C37", "carrier_net": "12V", "subcard_net": "GND", "action": "Isolate carrier contact; connect subcard contact to adapter ground"},
+    {"contact": "C35", "carrier_net": "12V", "subcard_net": "NC", "action": "NC on BOTH adapter connectors; corrected from revision A after inspecting exterior pin numbers"},
+    {"contact": "C37", "carrier_net": "12V", "subcard_net": "NC", "action": "NC on BOTH adapter connectors; never connect to GND"},
     {"contact": "D1", "carrier_net": "VADJ_PGOOD", "subcard_net": "3V3_B via R2", "action": "Do not connect; audit daughtercard power-source jumpers"}
   ],
   "signals": [
@@ -720,25 +748,27 @@
   ],
   "reference_clock": {
     "frequency_hz": 250000000,
-    "source": "External LVDS clock source on adapter; NOT daughtercard DDR CK",
-    "differential_termination": "100 ohms external near receiver; DIFF_TERM_ADV TERM_NONE",
+    "source": "VCU118 U18 Si570 -> U157 Q2 -> USER_SI570_CLOCK1; no FMC reference-clock contacts",
+    "setup": "Install board J8; program U18 to 250 MHz after every power cycle (default 156.25 MHz). J8 open selects fixed 300 MHz.",
+    "distribution": "IBUFDS -> board_sysclk_bufg_0 -> MIG and clk_wiz; BUFGCE_X1Y120 and dedicated BACKBONE",
+    "differential_termination": "Existing carrier receiver network; DIFF_TERM_ADV TERM_NONE; no adapter termination",
     "ports": [
       {
         "top_port": "BADJ_CLK_clk_p[0]",
-        "fpga_pin": "AY9",
-        "bank": 66,
-        "carrier_net": "FMC_HPC1_LA00_CC_P",
-        "carrier_connector": "J2",
-        "carrier_contact": "G6",
+        "fpga_pin": "AW23",
+        "bank": 64,
+        "carrier_net": "USER_SI570_CLOCK1_P",
+        "carrier_connector": null,
+        "carrier_contact": null,
         "subcard_contact": null
       },
       {
         "top_port": "BADJ_CLK_clk_n[0]",
-        "fpga_pin": "BA9",
-        "bank": 66,
-        "carrier_net": "FMC_HPC1_LA00_CC_N",
-        "carrier_connector": "J2",
-        "carrier_contact": "G7",
+        "fpga_pin": "AW22",
+        "bank": 64,
+        "carrier_net": "USER_SI570_CLOCK1_N",
+        "carrier_connector": null,
+        "carrier_contact": null,
         "subcard_contact": null
       }
     ]

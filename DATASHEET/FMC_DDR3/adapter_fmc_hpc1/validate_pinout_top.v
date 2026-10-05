@@ -15,10 +15,11 @@ module validate_pinout_top (
   output [0:0] jtag_tdo,
   output tx
 );
-  wire sys_clk, ui_clk, ui_reset, calibrated;
+  wire sys_clk_raw, sys_clk, ui_clk, ui_reset, calibrated;
   wire reset_i, jtag_clk_i, jtag_tdi_i, jtag_tms_i, jtag_trstn_i, rx_i;
   wire debug_bit_out, tx_out;
-  IBUFDS sysclk_ibuf (.I(BADJ_CLK_clk_p[0]), .IB(BADJ_CLK_clk_n[0]), .O(sys_clk));
+  IBUFDS sysclk_ibuf (.I(BADJ_CLK_clk_p[0]), .IB(BADJ_CLK_clk_n[0]), .O(sys_clk_raw));
+  board_sysclk_bufg board_sysclk_bufg_0 (.clk_in(sys_clk_raw), .clk_out(sys_clk));
   IBUF reset_ibuf (.I(sys_rst[0]), .O(reset_i));
   IBUF jtag_tclk_IBUF_inst (.I(jtag_tclk), .O(jtag_clk_i));
   IBUF jtag_tdi_ibuf (.I(jtag_tdi), .O(jtag_tdi_i));

@@ -49,6 +49,7 @@ if {$argc == 2} {
   read_verilog [file join $gen_dir C910_SOC_ddr3_0_0_stub.v]
   puts "ADAPTER_VALIDATION_MODE current_project"
 }
+read_verilog [file join $soc_dir rtl board_sysclk_bufg.v]
 read_verilog [file join $adapter_dir validate_pinout_top.v]
 synth_design -top validate_pinout_top -part xcvu9p-flga2104-2L-e -no_iobuf
 # Standalone IP is automatically stitched by synth_design; default stub is not.
