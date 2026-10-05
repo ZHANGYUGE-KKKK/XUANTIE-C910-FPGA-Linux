@@ -4,6 +4,8 @@
 
 本工程围绕开源 RISC-V C910 处理器核心开展 FPGA 验证与上板工作
 目标是运行Coremark_Pro裸机测试程序用于测试不同L2CACHE大小的性能表现
+主要测试L2CACHE被配置为：1MB & 512KB & 256KB 情况下的性能表现。
+输出结果通过串口打印，保存位置为：D:\Xilinx_FPGA\C910_SOC_L2CACHE_Coremark_Pro_Test\XUANTIE-C910-FPGA-Linux\MAKEFILE\CoreMark-PRO\RESULTS
 
 本工程的开发板平台有两块，二选其一：AXVU13P & VCU118,可以根据git的分支名确定,当前使用的开发板应该是VCU118。
 Z注意，VCU118的复位按键为松开为低、按下为高，与AXVU13P相反
