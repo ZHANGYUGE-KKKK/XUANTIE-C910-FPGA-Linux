@@ -241,17 +241,19 @@ Micron官方产品页确认当前配置MT41K512M16HA-125:A属于x16、96-ball封
 
 ## 8. 本次资料指纹
 
+> 目录整理说明（2026-10-15）：转接板资料迁至 EDA/adapter_fmc_hpc1，本文路径已同步更新；下列 SHA256 保留原审核时记录，不表示迁移后经路径修订文件的当前哈希。
+
 下表对原始证据和主要待审产物记录SHA256。报告写入后复读这些文件确认哈希未变化；11个SVG也纳入该保护检查。本次唯一仓库新增文件是本报告。
 
 | 文件（仓库相对路径） | SHA256 |
 | --- | --- |
 | README.md | e879a18e3074ec8d47db87de12a7acc5dfa55520f06138b407ee75657dc19122 |
-| DATASHEET/FMC_DDR3/adapter_fmc_hpc1/HANDOFF_SCHEMATIC_REVIEW.md | bebbebb303dc0a71e2fc1ff8b0f30bc6cc5c80b7483ec264711554e07a5afc56 |
-| DATASHEET/FMC_DDR3/adapter_fmc_hpc1/pinmap.json | 547dab68aece1769af5dbc1c9737dd6a5960d390cb0e9d6366763e9585d5347f |
-| DATASHEET/FMC_DDR3/adapter_fmc_hpc1/connections.md | 7b446933906a3ef73fb59d7b0e1b58a2264e4f35f93ea42b617c4d95855d47de |
-| DATASHEET/FMC_DDR3/adapter_fmc_hpc1/README.md | 94a4ead1dd88c0e61f4586fe4e55165a8b67951baa5606f44a2209ed6d9c07a2 |
-| DATASHEET/FMC_DDR3/adapter_fmc_hpc1/output/adapter_netlist.json | b8e2b7c67e990844bfcd43cb8fa8c5a7b06a2d06e566080a7abf837307faaad6 |
-| DATASHEET/FMC_DDR3/adapter_fmc_hpc1/output/pdf/FMC_DDR3_passive_adapter.pdf | 917d01aeb60771fe8a5fdf26126a601e21ccd45ca6c71b66d88c5aa55d82b5d9 |
+| EDA/adapter_fmc_hpc1/HANDOFF_SCHEMATIC_REVIEW.md | bebbebb303dc0a71e2fc1ff8b0f30bc6cc5c80b7483ec264711554e07a5afc56 |
+| EDA/adapter_fmc_hpc1/pinmap.json | 547dab68aece1769af5dbc1c9737dd6a5960d390cb0e9d6366763e9585d5347f |
+| EDA/adapter_fmc_hpc1/connections.md | 7b446933906a3ef73fb59d7b0e1b58a2264e4f35f93ea42b617c4d95855d47de |
+| EDA/adapter_fmc_hpc1/README.md | 94a4ead1dd88c0e61f4586fe4e55165a8b67951baa5606f44a2209ed6d9c07a2 |
+| EDA/adapter_fmc_hpc1/output/adapter_netlist.json | b8e2b7c67e990844bfcd43cb8fa8c5a7b06a2d06e566080a7abf837307faaad6 |
+| EDA/adapter_fmc_hpc1/output/pdf/FMC_DDR3_passive_adapter.pdf | 917d01aeb60771fe8a5fdf26126a601e21ccd45ca6c71b66d88c5aa55d82b5d9 |
 | DATASHEET/FMC_DDR3/fmc-ddr-gpio-card-schematics-v1.0(1).pdf | 56640b95dcdade8e5a4da6736a55b0062b0142913f98f535ada9aaa6167ef1c2 |
 | DATASHEET/VCU118/HW-U1-VCU118_REV2_0_SCHEMATIC_7-14-2017.pdf | 1668aff38f777b480e76b491925eeb4f109ccc0a58b948c9c4ecef3e945cc21d |
 | DATASHEET/VCU118/vcu118-schematic-xtp450_cluster/vcu118-xdc-rdf0400/vcu118_rev2.0_12082017.xdc | 5fca111d82b43b30b27f585f0934ff37b512b46bb67c8dee1c91cfde5bbe19ea |
@@ -261,14 +263,14 @@ Micron官方产品页确认当前配置MT41K512M16HA-125:A属于x16、96-ball封
 | VIVADO/C910_SOC/C910_SOC.gen/sources_1/bd/C910_SOC/hdl/C910_SOC_wrapper.v | 5a53688dc85aa6ef6d38bbe4285011ff871968e637af482e5584b21bd306ce3b |
 | VIVADO/C910_SOC/C910_SOC.srcs/constrs_1/new/VCU118.xdc | bda680898ab16204b703d32027b9ba90bb777809b69629579477e6eaec65e4d7 |
 | VIVADO/C910_SOC/C910_SOC.srcs/sources_1/bd/C910_SOC/ip/C910_SOC_ddr3_0_0/C910_SOC_ddr3_0_0.xci | 88e70edac914e203ff0132f6ed7ea05d817d932ae7c3c29cdbb76dcc3de90428 |
-| DATASHEET/FMC_DDR3/adapter_fmc_hpc1/output/svg/sheet_01.svg | 76a461e253fcbf72e56707c569224f018e66323d2867df9d7667ec2318d582b4 |
-| DATASHEET/FMC_DDR3/adapter_fmc_hpc1/output/svg/sheet_02.svg | cca26bfb481ed59e8a908c3cb4ff285402836f4994da06b1d52baba8b91c191e |
-| DATASHEET/FMC_DDR3/adapter_fmc_hpc1/output/svg/sheet_03.svg | c36f4b8b8ee5ef5b8cf683112b77c0bef519d1dcd3a3e233efe4bcf5b293b475 |
-| DATASHEET/FMC_DDR3/adapter_fmc_hpc1/output/svg/sheet_04.svg | ffd3d6246c8ac3d3dbede57ab91b95036a311829893d77b3c1c70008b817c4ec |
-| DATASHEET/FMC_DDR3/adapter_fmc_hpc1/output/svg/sheet_05.svg | f124e282591f322e84ec650c511cd7c6a1107f6fcfacb02d15fc97291902451f |
-| DATASHEET/FMC_DDR3/adapter_fmc_hpc1/output/svg/sheet_06.svg | b87f30c4dab5061e21c10d765d02498b0b2b99386d5bd47d124ef3e7b5f5b64a |
-| DATASHEET/FMC_DDR3/adapter_fmc_hpc1/output/svg/sheet_07.svg | 04931e6caa410f1c7fe9d799fe2e74ed8b6d1ac6471ac4ec85440e2061b68276 |
-| DATASHEET/FMC_DDR3/adapter_fmc_hpc1/output/svg/sheet_08.svg | 6e3a129e533ac176be3eef1852180652066163b29bc3e1c14fd35d3c39a2bcac |
-| DATASHEET/FMC_DDR3/adapter_fmc_hpc1/output/svg/sheet_09.svg | 555d15cf68db78c389a4351832f246adee4f637da8f5ec5ef7184daa707ce026 |
-| DATASHEET/FMC_DDR3/adapter_fmc_hpc1/output/svg/sheet_10.svg | 03ec45b4f9f3fea76f51269330590a391a8ceab85c199b3131e64f92eb1dedf4 |
-| DATASHEET/FMC_DDR3/adapter_fmc_hpc1/output/svg/sheet_11.svg | e6efb6739da4e145b1e37b31755eabb4d997aa0bbd7d791a96aa4ab241b46c73 |
+| EDA/adapter_fmc_hpc1/output/svg/sheet_01.svg | 76a461e253fcbf72e56707c569224f018e66323d2867df9d7667ec2318d582b4 |
+| EDA/adapter_fmc_hpc1/output/svg/sheet_02.svg | cca26bfb481ed59e8a908c3cb4ff285402836f4994da06b1d52baba8b91c191e |
+| EDA/adapter_fmc_hpc1/output/svg/sheet_03.svg | c36f4b8b8ee5ef5b8cf683112b77c0bef519d1dcd3a3e233efe4bcf5b293b475 |
+| EDA/adapter_fmc_hpc1/output/svg/sheet_04.svg | ffd3d6246c8ac3d3dbede57ab91b95036a311829893d77b3c1c70008b817c4ec |
+| EDA/adapter_fmc_hpc1/output/svg/sheet_05.svg | f124e282591f322e84ec650c511cd7c6a1107f6fcfacb02d15fc97291902451f |
+| EDA/adapter_fmc_hpc1/output/svg/sheet_06.svg | b87f30c4dab5061e21c10d765d02498b0b2b99386d5bd47d124ef3e7b5f5b64a |
+| EDA/adapter_fmc_hpc1/output/svg/sheet_07.svg | 04931e6caa410f1c7fe9d799fe2e74ed8b6d1ac6471ac4ec85440e2061b68276 |
+| EDA/adapter_fmc_hpc1/output/svg/sheet_08.svg | 6e3a129e533ac176be3eef1852180652066163b29bc3e1c14fd35d3c39a2bcac |
+| EDA/adapter_fmc_hpc1/output/svg/sheet_09.svg | 555d15cf68db78c389a4351832f246adee4f637da8f5ec5ef7184daa707ce026 |
+| EDA/adapter_fmc_hpc1/output/svg/sheet_10.svg | 03ec45b4f9f3fea76f51269330590a391a8ceab85c199b3131e64f92eb1dedf4 |
+| EDA/adapter_fmc_hpc1/output/svg/sheet_11.svg | e6efb6739da4e145b1e37b31755eabb4d997aa0bbd7d791a96aa4ab241b46c73 |

@@ -9,7 +9,8 @@ import re
 import pdfplumber
 
 ROOT = Path(__file__).resolve().parent
-SOURCE = ROOT.parent / "fmc-ddr-gpio-card-schematics-v1.0(1).pdf"
+REPO_ROOT = ROOT.parents[1]
+SOURCE = REPO_ROOT / "DATASHEET" / "FMC_DDR3" / "fmc-ddr-gpio-card-schematics-v1.0(1).pdf"
 # Each bus was traced to its local ground symbol in the rendered source.
 GROUND_BUS_X = dict(A=64.56, B=113.88, C=131.52, D=272.64, E=286.8,
                     F=389.16, G=406.8, H=565.56, J=576.12, K=632.52)
@@ -69,7 +70,7 @@ if __name__ == "__main__":
         pin = contacts[s["subcard_contact"]]
         assert not pin["ground"] and not pin["nc"], s
         assert pin["gpio_net"] == [s["subcard_net"]], (s, pin)
-    carrier_pdf = ROOT.parents[1] / "VCU118" / "HW-U1-VCU118_REV2_0_SCHEMATIC_7-14-2017.pdf"
+    carrier_pdf = REPO_ROOT / "DATASHEET" / "VCU118" / "HW-U1-VCU118_REV2_0_SCHEMATIC_7-14-2017.pdf"
     with pdfplumber.open(carrier_pdf) as pdf:
         carrier_words = {r: pdf.pages[i].extract_words() for i, rows in
                          [(38, "CD"), (39, "G"), (40, "H")] for r in rows}

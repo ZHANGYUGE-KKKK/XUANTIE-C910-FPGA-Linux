@@ -1,6 +1,6 @@
 ## VCU118 Rev2.0 - C910 wrapper / x16 DDR3 on J2 FMC_HPC1.
 ## This pinout REQUIRES a signal-remapping adapter; it is NOT a straight-through cable.
-## Canonical connector mapping: DATASHEET/FMC_DDR3/adapter_fmc_hpc1/pinmap.json
+## Canonical connector mapping: EDA/adapter_fmc_hpc1/pinmap.json
 ## Carrier VADJ/VCCO and DRAM VDD/VDDQ MUST be 1.5 V; internal VREF = 0.75 V.
 ## VADJ is shared with other FMC banks: review external JTAG voltage before hardware use.
 

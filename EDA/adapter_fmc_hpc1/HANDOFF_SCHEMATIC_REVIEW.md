@@ -51,7 +51,7 @@
 
 ### 待审产物：不是独立证明
 
-以下路径均在 `DATASHEET/FMC_DDR3/adapter_fmc_hpc1/` 下：
+以下路径均在 `EDA/adapter_fmc_hpc1/` 下：
 
 | 文件 | 用途/局限 |
 | --- | --- |

@@ -1,7 +1,7 @@
 # Static consistency check; no file or project modifications.
 $ErrorActionPreference = 'Stop'
 $adapterRoot = $PSScriptRoot
-$repoRoot = [IO.Path]::GetFullPath((Join-Path $adapterRoot '../../..'))
+$repoRoot = [IO.Path]::GetFullPath((Join-Path $adapterRoot '../..'))
 $socRoot = Join-Path $repoRoot 'VIVADO/C910_SOC'
 $pinDoc = Get-Content -Encoding UTF8 -Raw -LiteralPath (Join-Path $adapterRoot 'pinmap.json') | ConvertFrom-Json
 $xdcText = Get-Content -Encoding UTF8 -Raw -LiteralPath (Join-Path $socRoot 'C910_SOC.srcs/constrs_1/new/VCU118.xdc')

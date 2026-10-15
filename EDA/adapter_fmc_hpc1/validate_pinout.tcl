@@ -3,7 +3,7 @@
 # isolated_250 creates ONLY a temporary standalone MIG, not an edit to the SoC.
 set_param general.maxThreads 1
 set adapter_dir [file dirname [file normalize [info script]]]
-set repo_dir [file normalize [file join $adapter_dir ../../..]]
+set repo_dir [file normalize [file join $adapter_dir ../..]]
 set soc_dir [file join $repo_dir VIVADO C910_SOC]
 if {$argc < 1 || $argc > 2} { error "Usage: -tclargs <output-directory> [isolated_250]" }
 set check_dir [file normalize [lindex $argv 0]]
